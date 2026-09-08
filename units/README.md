@@ -11,7 +11,7 @@ renames, and closes with the citation line.
 | `data-rules.md` | 300 | Sensitivity classes, the never-public line, and what each way in reads. The router's precondition. | planned |
 | `stages/govern.md` | 600 | Situation, AI uses, minimum controls, method, prompts, case example, level. | planned |
 | `stages/embed.md` | 600 | As above, for Embed. | planned |
-| `stages/analyse.md` | 600 | As above, for Analyse. | planned |
+| `stages/analysis.md` | 600 | Situation, AI uses, minimum controls, method, prompts, case example, level. The pattern the other five stage units follow. | present |
 | `stages/design.md` | 600 | As above, for Design. | planned |
 | `stages/implement.md` | 600 | As above, for Implement. | planned |
 | `stages/validate.md` | 600 | As above, for Validate. | planned |
