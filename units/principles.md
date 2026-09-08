@@ -11,7 +11,7 @@ The more sensitive the information, and the more serious the consequence of erro
 
 ## 3. Sources only, state gaps, cite
 
-Bind the model to approved internal repositories and official external sources; require it to answer from those alone, name what is missing instead of filling it, and cite the document behind each statement. Retrieval reduces invention; it does not review. A stale register is amplified as readily as a current one.
+Bind the model to approved internal repositories and official external sources; require it to answer from those alone, name what is missing instead of filling it, and cite the document behind each statement. Retrieval reduces invention; it does not review. A stale register may be amplified rather than solved.
 
 ## 4. What AI never does alone
 
@@ -28,7 +28,7 @@ Automation may assist the process, but the authority remains human.
 
 ## 5. Value, not speed
 
-Success is not that the work got faster. It is whether quality, usability, timeliness, insight and governance improved. A bulky document that looks complete is not accurate or operationally credible; volume is the failure mode AI makes cheapest. No bulk plan generation.
+Success is not that the work got faster. It is whether quality, usability, timeliness, insight and governance improved. A bulky document that looks complete is not necessarily useful, accurate or operationally credible; volume is the failure mode AI makes cheapest. No bulk plan generation.
 
 ## Minimum control checklist
 
