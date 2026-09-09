@@ -5,7 +5,7 @@
 
 Embedding is explanation, repeated for audiences who do not share your vocabulary. AI is good at that: it tailors one approved message for executives, line managers, new starters and a site that works in another language, and it does the twentieth version as willingly as the first.
 
-That is also the failure mode. The measure of this stage is not how much material exists but whether people understand and act. Repeated AI-generated messages that read as generic reduce engagement rather than improve it, and culture is not produced by volume.
+That is also the failure mode. The measure of this stage is whether people understand and act. Repeated AI-generated messages that read as generic reduce engagement rather than improve it, and culture is not produced by volume.
 
 ## Typical AI uses
 

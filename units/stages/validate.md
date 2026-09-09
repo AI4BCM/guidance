@@ -5,7 +5,7 @@
 
 Validation produces more evidence than anyone reads. Exercise reports, debrief notes, audit observations and post-incident material accumulate, and the finding that matters is usually the one that appears in three of them.
 
-That is where AI earns its place here: after the event, turning volume into a pattern; before it, producing variation so the fourth exercise is not the third one again. It does not replace the exercise director, facilitator or auditor. And the material is sensitive — debriefs and incident records name people and weaknesses, so they stay in approved environments.
+AI earns its place after the event, turning volume into a pattern, and before it, producing variation so the fourth exercise is not the third one again. It does not replace the exercise director, facilitator or auditor. And the material is sensitive — debriefs and incident records name people and weaknesses, so they stay in approved environments.
 
 ## Typical AI uses
 
@@ -22,14 +22,14 @@ The one control that matters: **AI proposes a theme; a person makes it a finding
 
 - Scenarios are checked for plausibility and learning value before delivery. An unrealistic inject teaches the wrong lesson convincingly.
 - Debrief records, transcripts and incident material are analysed in approved environments only, under notice, consent and retention rules.
-- Improvement actions keep human owners and human closure. Progress reporting may be assisted; sign-off is not.
+- Improvement actions keep human owners and human closure, and while progress reporting may be assisted, the sign-off is not.
 
 ## Method
 
 1. State what the activity is meant to test before asking for content. A scenario written without an objective will be entertaining and prove nothing.
 2. Draft the package — scenario, injects, facilitator notes, debrief questions — and have the exercise director judge realism and proportion.
 3. Capture the debrief with approved tools, and keep the raw record separate from the analysis.
-4. Analyse across events, not only within one: what recurs is worth more than what was worst on the day.
+4. Analyse across events: what recurs is worth more than what was worst on the day.
 5. Put the pattern to the people who were there before it becomes a finding, then track the action to a named owner.
 
 ## Prompts

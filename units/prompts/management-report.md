@@ -7,6 +7,6 @@ concise management review narrative. Highlight trends, material gaps, progress o
 issues requiring leadership attention. Do not overstate assurance.
 ```
 
-The last line carries the weight: a narrative that reads as reassuring when the data is not is the failure mode here.
+Without the last line you get a narrative that reads as reassuring when the data is not.
 
 Hoekstra, W., Gerner, K., et al. (2026). AI4BCM: Guideline for using AI by BCM professionals. CC BY 4.0.

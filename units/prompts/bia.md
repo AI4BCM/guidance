@@ -8,6 +8,6 @@ activity. Do not infer recovery requirements unless clearly stated. If informati
 identify the gap explicitly.
 ```
 
-Recovery fields stay empty: a blank is visibly a blank. Every dependency it produces is a question for the activity owner. See `stages/analysis.md`.
+Recovery fields stay empty, and every dependency it produces is a question for the activity owner, for the reasons set out in `stages/analysis.md`.
 
 Hoekstra, W., Gerner, K., et al. (2026). AI4BCM: Guideline for using AI by BCM professionals. CC BY 4.0.

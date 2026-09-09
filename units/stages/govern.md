@@ -53,6 +53,6 @@ Cite: quote the clause behind each action.
 
 ## Level
 
-Level 2, Team-level structured use. A repeatable prompt over a fixed set of attached governance documents: it needs agreed tools and a written data rule, not connectors. It reaches Level 3 when the same question runs against the live governance repository.
+Level 2, Team-level structured use. A repeatable prompt over a fixed set of attached governance documents needs agreed tools and a written data rule, not connectors. It reaches Level 3 when the same question runs against the live governance repository.
 
 Hoekstra, W., Gerner, K., et al. (2026). AI4BCM: Guideline for using AI by BCM professionals. CC BY 4.0.

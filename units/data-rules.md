@@ -1,7 +1,7 @@
 <!-- meta: unit=data-rules version=2026.09 cites=1.4.1,1.4.2,quick-start -->
 # Data Rules
 
-Run this first. It decides where the task may happen, and it is the rule you cannot recover from: what is pasted into the wrong tool cannot be unpasted.
+Run this first. It decides where the task may happen, and you cannot undo it. What is pasted into the wrong tool cannot be unpasted.
 
 ## The rule of thumb
 
@@ -29,7 +29,7 @@ The three ways of using this guidance read different things:
 |---|---|---|---|
 | What it reads | Nothing of yours | Your files, inside your tenant | Your process data |
 
-The chatbot answers from the guidance alone: no classification question arises, and no live data goes in. The skill runs inside your own tenant, so your existing data rules already cover it. The workflow holds process data under its own controls.
+The chatbot answers from the guidance alone, so no classification question arises and no live data goes in. The skill runs inside your own tenant, so your existing data rules already cover it. The workflow holds process data under its own controls.
 
 ## Before you paste
 

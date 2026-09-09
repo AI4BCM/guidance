@@ -18,7 +18,7 @@ Define all eight before the workflow runs on anything real.
 | exception handling | what happens when it breaks | missing source data, empty or low-quality output, connector failure, rejected approval |
 | the fallback procedure | how the work continues without it | manual review process if the workflow or AI service fails |
 
-The fallback row is not paperwork. AI services fail through platform outage, identity failure, rate limiting, licensing, network or local access problems — and a continuity capability that stops when its tooling stops is not one. Identify the manual alternative and exercise it.
+The fallback row is not paperwork. Identify the manual alternative and exercise it, because AI services fail through platform outage, identity failure, rate limiting, licensing, network or local access problems, and a continuity capability that stops when its tooling stops is not one.
 
 ## Suitable and unsuitable
 
@@ -40,6 +40,6 @@ The worked example, and the pattern to copy. Every stage is human-in-the-loop, a
 | 4 Draft | you approve the findings |
 | 5 Handover | the BIA ends here; hand over to solutions design |
 
-Five gates, five places the run can stop. That is the design: the model moves work between the gates, and the gates are where the BCM professional decides. Stage detail for the analysis work itself is in `stages/analysis.md`.
+Five gates, five places the run can stop. The model moves work between the gates. The gates are where the BCM professional decides. Stage detail for the analysis work itself is in `stages/analysis.md`.
 
 Hoekstra, W., Gerner, K., et al. (2026). AI4BCM: Guideline for using AI by BCM professionals. CC BY 4.0.
