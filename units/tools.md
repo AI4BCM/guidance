@@ -1,7 +1,7 @@
 <!-- meta: unit=tools version=2026.09 cites=annex-a2,annex-a3,1.3 -->
 # Tools
 
-No vendor names here, deliberately. Products, licence terms and retention settings change faster than this guidance does; the category and the deployment tier stay useful. Do your own due diligence before selecting.
+No vendor names here, deliberately. Products, licence terms and retention settings change faster than this guidance does; the category and the deployment tier stay useful.
 
 ## Categories
 

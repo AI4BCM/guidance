@@ -7,6 +7,6 @@ with the following objective: [objective]. Include a short scenario summary, tim
 facilitator notes and debrief questions. Keep the scenario realistic and proportionate.
 ```
 
-State the objective first or the scenario will be entertaining and prove nothing. The exercise director judges realism before delivery.
+The exercise director judges realism before delivery, and `stages/validate.md` states the objective rule this prompt depends on.
 
 Hoekstra, W., Gerner, K., et al. (2026). AI4BCM: Guideline for using AI by BCM professionals. CC BY 4.0.

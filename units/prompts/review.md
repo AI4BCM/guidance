@@ -8,6 +8,6 @@ assumptions and practical weaknesses. Present the result as: 1) strengths, 2) ke
 3) assumptions requiring validation, 4) follow-up questions.
 ```
 
-Usually worth more than the drafting prompt. Run it on your own drafts, not only on other people's.
+`stages/govern.md` method step 3 weighs this prompt against the drafting one. Run it on your own drafts, not only on other people's.
 
 Hoekstra, W., Gerner, K., et al. (2026). AI4BCM: Guideline for using AI by BCM professionals. CC BY 4.0.

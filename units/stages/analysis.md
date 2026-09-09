@@ -3,7 +3,7 @@
 
 ## Situation
 
-Analysis is the stage that runs on what nobody has written down yet. The blank page comes before the first interview: someone must produce a candidate activity list, a dependency structure and a set of questions. AI moves that starting line, not the interview behind it. It drafts from what your other sites already know; it cannot know what only the acquired site's staff know.
+Analysis is the stage that runs on what nobody has written down yet. The blank page comes before the first interview: someone must produce a candidate activity list, a dependency structure and a set of questions. AI moves that starting line. It drafts from what your other sites already know; it cannot know what only the acquired site's staff know.
 
 Analysis also involves some of the most sensitive material in BCM. Live BIA and risk data goes into an approved environment or nowhere.
 
@@ -21,11 +21,11 @@ The one control that matters: **a drafted dependency is a question for the owner
 
 - **AI may test whether a proposed RTO is consistent with impact criteria; it does not set it.** The same holds for MTPD.
 - The draft names its source data and that data's date. An out-of-date inventory yields a confident, current-looking, wrong BIA.
-- Recovery fields stay empty in anything AI produces: a blank is visibly a blank, not an inherited guess.
+- Recovery fields stay empty in anything AI produces, so a blank is visibly a blank, not an inherited guess.
 
 ## Method
 
-1. Fix the sources you will attach, and their dates. What you do not attach is not in the answer: the model fills or skips the gap silently, and neither shows in the output.
+1. Fix the sources you will attach, and their dates. What you do not attach is not in the answer. Whether the model filled the gap or left it out, the output looks the same.
 2. Draft before interviewing — activities, dependencies, questions, recovery fields blank.
 3. Interview. Use the draft as the thing to correct, not the thing to confirm; record what it could not have known.
 4. Compare registers across sites; put every conflict to the two owners, not to the model.
@@ -54,6 +54,6 @@ Cite: name the source document for each dependency.
 
 ## Level
 
-Level 3, Defined. The draft is only worth interviewing against if the method and sources are written down: it can then be regenerated when the inventory changes, and a reviewer can see what it was built from. Level 1 or 2 produces a plausible list nobody can re-derive.
+Level 3, Connected and governed use. The draft is only worth interviewing against if the method and sources are written down: it can then be regenerated when the inventory changes, and a reviewer can see what it was built from. Level 1 or 2 produces a plausible list nobody can re-derive.
 
 Hoekstra, W., Gerner, K., et al. (2026). AI4BCM: Guideline for using AI by BCM professionals. CC BY 4.0.

@@ -3,7 +3,7 @@
 
 ## Situation
 
-Implementation is where the suite grows faster than anyone maintains it: plans, action cards, contact lists, escalation routes. The characteristic failure is not a missing plan but eleven plans that disagree with each other and with the organisation chart.
+Implementation is where the suite grows faster than anyone maintains it: plans, action cards, contact lists, escalation routes. The characteristic failure is eleven plans that disagree with each other and with the organisation chart.
 
 That is retrieval and comparison work, which AI does well. It is also the stage closest to live response, so the boundary matters most here. AI may retrieve, summarise and draft during an incident. It does not invoke a plan, declare anything, or send a message outside the organisation.
 

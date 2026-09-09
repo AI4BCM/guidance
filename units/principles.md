@@ -28,7 +28,7 @@ Automation may assist the process, but the authority remains human.
 
 ## 5. Value, not speed
 
-Success is not that the work got faster. It is whether quality, usability, timeliness, insight and governance improved. A bulky document that looks complete is not necessarily useful, accurate or operationally credible; volume is the failure mode AI makes cheapest. No bulk plan generation.
+Success is whether quality, usability, timeliness, insight and governance improved. Speed alone says nothing. A bulky document that looks complete is not necessarily useful, accurate or operationally credible; volume is the failure mode AI makes cheapest. No bulk plan generation.
 
 ## Minimum control checklist
 

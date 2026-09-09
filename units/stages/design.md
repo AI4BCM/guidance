@@ -26,7 +26,7 @@ The one control that matters: **an option produced by AI is advisory until a nam
 
 ## Method
 
-1. Start from the gap, not the option list: required outcome against current arrangement, with the source and date of each.
+1. Start from the gap: required outcome against current arrangement, with the source and date of each.
 2. Generate broadly and generically — people, premises, technology, suppliers, logistics, records, manual workarounds.
 3. Move the shortlist into the approved environment before the analysis needs real constraints.
 4. Red-team it. Ask what assumptions would have to be true for this option to fail, and which dependency the option quietly shares with the thing it is meant to protect.

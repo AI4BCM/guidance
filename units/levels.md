@@ -23,7 +23,7 @@ The workflow is the middle way, and for most BCM work it is the useful one: a ch
 | 4: Operationally embedded AI support (measured) | multiple governed workflows, approval gates, quality monitoring, fallbacks | hidden operational dependency on workflows, or approval bottlenecks |
 | 5: Advanced and optimised use (optimising) | mature governance, strong data foundations, formal testing of AI-enabled processes | complexity exceeding governance capability, unclear accountability across integrated systems |
 
-Most teams are at 1 to 2. Aim for 3 to 4. Level 5 is an optimisation stage, not the target: maturity is not measured by how many tools are deployed but by whether AI is used in a way that is useful, governed, transparent, resilient and proportionate to business need.
+In our experience most teams are at 1 to 2. Aim for 3 to 4. Level 5 is an optimisation stage. Maturity is measured by whether AI is used in a way that is useful, governed, transparent, resilient and proportionate to business need.
 
 ## Self-check
 
@@ -35,6 +35,6 @@ Five questions decide whether you can move from 2 to 3, and they are answered wi
 4. Is it defined who reviews an AI-supported output and who approves it?
 5. If the tool, connector or identity platform is unavailable, does the work still get done?
 
-A "no" is not a reason to stop using AI. It is the next thing to fix before connecting anything further.
+Each "no" is the next thing to fix before connecting anything further; none of them is a reason to stop using AI.
 
 Hoekstra, W., Gerner, K., et al. (2026). AI4BCM: Guideline for using AI by BCM professionals. CC BY 4.0.
