@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>AI4BCM — Principles and minimum controls (handout)</title>
+<style>
+  /* ------------------------------------------------------------------
+     Machine-edition unit `principles` rendered as the A4 handout a team
+     or a board can be handed: the scope statement, the five rules and
+     the minimum control checklist. Source of record is principles.md
+     next to this file; this page is the render, never the second copy
+     to edit by hand. It is published guidance, and no organisation's
+     adopted policy (docs/issues/ai4bcm-guidance-follow-up/CONTEXT.md).
+
+     Tokens copied from 02-Projects/bc-consulting/praesentation.html and
+     from playbook-a4.html, not invented here. Every font-size below is
+     one of the five steps. Nothing sits below --t-klein except the
+     running footer, which is --t-label's documented job.
+
+     PAGE COUNT IS THE OUTPUT. Until 2026-09-09 this file was pinned to
+     one page by a 400-word budget on the unit; the owner lifted both
+     that day (follow-up ticket 03, docs/issues/ai4bcm-guidance-follow-up).
+     A sheet is one A4 page and never overflows; each sheet declares what
+     it carries, and when a sheet overflows a sheet is added or a block
+     moves to the next one. Type size, leading and padding stay as they
+     are, whatever the page count. Two sheets today: the scope statement
+     and principles 1 to 4 on the first; principle 5, the checklist and
+     the rule on the second.
+
+     Two columns because A4 portrait at --t-text gives ~95 characters a
+     line across the full width, which reads badly for a wall document.
+     ------------------------------------------------------------------ */
+  :root {
+    --papier: #FBFAF7;
+    --tinte: #16232E;
+    --tafel: #1E3B56;
+    --stahl: #23577E;
+    --bernstein: #A85B1D;
+    --grau: #5F6A75;
+    --linie: #D8D5CC;
+
+    --t-gross: 1.25rem;
+    --t-titel: 1.05rem;
+    --t-text:  0.92rem;
+    --t-klein: 0.8rem;
+    --t-label: 0.7rem;
+
+    --mono: "Cascadia Mono", Consolas, "DejaVu Sans Mono", monospace;
+    --sans: -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; }
+
+  @page { size: A4 portrait; margin: 12mm; }
+
+  html { background: #E9E6DF; }
+  body {
+    font-family: var(--sans);
+    font-size: var(--t-text);
+    color: var(--tinte);
+    line-height: 1.35;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* min-height, not height, and never overflow:hidden: a fixed-height box
+     cuts silently, and this renders with DejaVu here and Segoe UI on
+     Windows, whose metrics wrap differently. Overflow is visible and
+     diagnosable; clipping is not. html-check.py asserts every sheet
+     renders to the same height, which is how an overflow announces
+     itself. */
+  .blatt {
+    width: 186mm;
+    min-height: 273mm;
+    margin: 10mm auto;
+    padding: 0;
+    background: var(--papier);
+    box-shadow: 0 2px 14px rgba(22, 35, 46, 0.18);
+    display: flex;
+    flex-direction: column;
+    break-after: page;
+  }
+  .blatt:last-child { break-after: auto; }
+
+  @media print {
+    html { background: var(--papier); }
+    .blatt { width: auto; min-height: 272mm; margin: 0; box-shadow: none; }
+  }
+
+  header {
+    border-bottom: 2px solid var(--tafel);
+    padding-bottom: 3mm;
+    margin-bottom: 4mm;
+  }
+  header.kopf {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 4mm;
+    padding-bottom: 2.5mm;
+  }
+  .werk {
+    font-family: var(--mono);
+    font-size: var(--t-label);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--stahl);
+  }
+  .marke { color: var(--grau); white-space: nowrap; }
+  h1 {
+    font-size: var(--t-gross);
+    color: var(--tafel);
+    line-height: 1.2;
+    margin-top: 1mm;
+  }
+  .untertitel {
+    font-size: var(--t-klein);
+    color: var(--grau);
+    margin-top: 1mm;
+  }
+
+  .inhalt { flex: 1; }
+
+  /* The scope statement runs full width above the columns: it is one
+     paragraph, and the reader meets it before the rules it scopes. */
+  .umfang { margin-bottom: 4mm; }
+
+  .spalten {
+    column-count: 2;
+    column-gap: 7mm;
+    column-rule: 1px solid var(--linie);
+  }
+
+  /* Each principle and each block stays whole. This and the sheet split
+     are the only page-count levers used here. */
+  .regel, .kasten {
+    break-inside: avoid;
+    margin-bottom: 3.5mm;
+  }
+
+  h2 {
+    font-size: var(--t-titel);
+    color: var(--tafel);
+    line-height: 1.25;
+    margin-bottom: 1mm;
+  }
+  h2 .nr {
+    font-family: var(--mono);
+    color: var(--bernstein);
+    margin-right: 1.5mm;
+  }
+  p { margin-bottom: 1.5mm; }
+
+  ul { margin: 1mm 0 0 0; padding-left: 4mm; }
+  li { margin-bottom: 0.6mm; }
+
+  .kasten {
+    background: #F3F1EA;
+    border-left: 3px solid var(--stahl);
+    padding: 3mm 3.5mm;
+  }
+  .kasten h2 { font-size: var(--t-text); text-transform: none; }
+  .boxen { list-style: none; padding-left: 0; }
+  .boxen li { padding-left: 6mm; text-indent: -6mm; }
+  .boxen .box {
+    font-family: var(--mono);
+    color: var(--stahl);
+    margin-right: 2mm;
+  }
+
+  .merksatz {
+    border-top: 2px solid var(--bernstein);
+    border-bottom: 2px solid var(--bernstein);
+    padding: 2.5mm 0;
+    margin-top: 4mm;
+    font-size: var(--t-titel);
+    color: var(--tafel);
+    line-height: 1.3;
+  }
+
+  footer {
+    margin-top: 4mm;
+    padding-top: 2mm;
+    border-top: 1px solid var(--linie);
+    font-size: var(--t-label);
+    color: var(--grau);
+    display: flex;
+    justify-content: space-between;
+    gap: 4mm;
+  }
+</style>
+</head>
+<body>
+
+<!-- ============================================ 1 · scope and principles 1 to 4 -->
+<section class="blatt">
+
+  <header>
+    <div class="werk">AI4BCM: Guideline for using AI by BCM professionals</div>
+    <h1>Principles and minimum controls</h1>
+    <div class="untertitel">A handout: the five rules for AI-assisted BCM work and the minimum
+    control checklist. Published guidance to hand to a team or a board; an organisation's own AI
+    policy is adopted through its own governance route.</div>
+  </header>
+
+  <div class="inhalt">
+
+    <!-- 2026-09-09, follow-up ticket 03: the scope statement is the opening paragraph of
+         units/principles.md, restored there so the machine edition says what the guidance is
+         for and is not for, and carried here so the handout stands on its own. -->
+    <p class="umfang">This guidance helps BCM professionals choose AI tools for BCM tasks, apply
+    them safely and bring them into BCM work without weakening governance, control or resilience.
+    It does not cover continuity planning for AI systems or AI-dependent services, the design,
+    training or procurement of AI platforms, cybersecurity architecture for AI, or the legal
+    interpretation of AI regulation, and it replaces none of the organisation's own BCM framework,
+    policies, information security requirements, legal advice or professional judgement. Where
+    those questions arise, the BCM professional works with the specialists who own them, and where
+    this guidance and an internal rule differ, the stricter control applies. The guidance assumes
+    no particular standard. A reader working to ISO 22301:2019, to BSI-Standard 200-4, to the
+    practices of a professional body, or to a method their organisation has established over
+    years, can use it as it stands; the guidance is neither derived from nor certified against
+    any of them.</p>
+
+    <div class="spalten">
+
+      <div class="regel">
+        <h2><span class="nr">1</span>Accountability stays human</h2>
+        <p>AI does not own the BCMS. Any AI-generated output entering a BCMS artefact, report or
+        decision is reviewed before it is relied upon by a competent person holding the sources and
+        time to reject it. Where either is missing, the reviewer escalates instead of approving.
+        Approval counts and override rates are worth tracking, and alone they do not demonstrate
+        effective review; a low override rate may signal rubber-stamping (IMDA, 2026, section
+        2.2.2).</p>
+      </div>
+
+      <!-- 2026-09-09, follow-up ticket 03: contact data and site or architecture detail are back
+           in the list (refresh ticket 04 cut them for budget), so the handout names the classes a
+           reader needs without data-rules.md beside it. Same list in the unit and on print
+           sheet 4. -->
+      <div class="regel">
+        <h2><span class="nr">2</span>Match the tool to the sensitivity</h2>
+        <p>The more sensitive the information, and the more serious the consequence of error, the
+        more controlled the AI environment. Public and free online tools are never used for BCM
+        data: BIA data, risk assessment detail, incident records, vulnerabilities, contact and
+        personnel lists, recovery strategies, supplier weaknesses and site or architecture detail.
+        Classify the material before it is pasted, not after.</p>
+      </div>
+
+      <!-- 2026-09-09: principle 3's last sentence aligned to units/principles.md and print
+           sheet 3, which both read "may be amplified rather than solved". This page had drifted
+           since the cadence package; owner decided the alignment. Verified again by follow-up
+           ticket 03 the same day, flattened against the unit and the print sheet. -->
+      <div class="regel">
+        <h2><span class="nr">3</span>Sources only, state gaps, cite</h2>
+        <p>Bind the model to approved internal repositories and official external sources; require
+        it to answer from those alone, name what is missing instead of filling it, and cite the
+        document behind each statement. Check the cited passage against the claim it supports.
+        Retrieval reduces invention; it does not review. A stale register may be amplified rather
+        than solved.</p>
+      </div>
+
+      <!-- 2026-09-09, follow-up ticket 03: the never-alone list is in two parts. The first seven
+           are restricted and a person may authorise them; the two under "Prohibited outright"
+           are never acceptable, whoever approves, and review rather than permissions enforces
+           them. Legal or regulatory interpretation without expert review, fabrication and the
+           welfare, ethical or safety judgement are the three items the refresh package dropped
+           from the source's principle 8 (coverage audit R1). -->
+
+    </div>
+
+  </div>
+
+  <!-- 2026-09-09, follow-up ticket 01: principles 1 and 4 carry the citations the unit carries,
+       and this line resolves them, because the handout is read on its own. Sources verified from
+       primary content the same day; full entries in units/references.md. Kept on this sheet by
+       follow-up ticket 03, because this is the sheet that cites. -->
+  <footer>
+    <span>Hoekstra, W., Gerner, K., et al. (2026). AI4BCM: Guideline for using AI by BCM
+    professionals. CC BY 4.0. Sources: IMDA MGF for Agentic AI V1.5 (2026); NCSC/CISA Guidelines
+    for Secure AI System Development V1.0 (2023).</span>
+    <span class="werk marke">2026.09 &middot; principles &middot; 1 of 2</span>
+  </footer>
+
+</section>
+
+<!-- ======================================== 2 · principle 5, the checklist, the rule -->
+<section class="blatt">
+
+  <header class="kopf">
+    <span class="werk">AI4BCM: Guideline for using AI by BCM professionals</span>
+    <span class="werk marke">Principles &middot; continued</span>
+  </header>
+
+  <div class="inhalt">
+
+    <div class="spalten">
+
+      <!-- 2026-09-09, publish-and-audit ticket 02: principle 4 moved here from page 1, which
+           the standard-agnostic sentence in the scope statement took past its box. Two pages
+           still, and no type size changed. -->
+      <div class="regel">
+        <h2><span class="nr">4</span>What AI never does alone</h2>
+        <p>Prohibited or tightly restricted:</p>
+        <ul>
+          <li>declaring an incident or crisis without authorisation</li>
+          <li>invoking plans autonomously</li>
+          <li>sending external communications unsupervised</li>
+          <li>approving policy or strategy changes</li>
+          <li>accepting risk</li>
+          <li>altering controlled records without review</li>
+          <li>interpreting law or regulation without expert review</li>
+        </ul>
+        <p style="margin-top:1.5mm">Permissions enforce these limits; prompt wording only requests
+        them, and the authority remains human (IMDA, 2026, section 2.3.1; NCSC and CISA, 2023).</p>
+        <p>Prohibited outright, and no approval makes it acceptable:</p>
+        <ul>
+          <li>fabricating evidence, audit material or records</li>
+          <li>replacing human welfare, ethical or safety judgement</li>
+        </ul>
+        <p style="margin-top:1.5mm">Review enforces these two. A record that fails the citation
+        check in principle 3 is rejected whoever approved the task, and a welfare, ethical or
+        safety judgement is made by the person accountable for it.</p>
+      </div>
+      <!-- 2026-09-09: principle 5 regains "necessarily useful", matching units/principles.md
+           and the print edition. Same drift, same decision. Verified again by follow-up ticket 03. -->
+      <div class="regel">
+        <h2><span class="nr">5</span>Value, not speed</h2>
+        <p>Success is whether quality, usability, timeliness, insight and governance improved.
+        Speed alone says nothing. A bulky document that looks complete is not necessarily
+        useful, accurate or operationally credible. No bulk plan generation.</p>
+      </div>
+
+      <div class="kasten">
+        <h2>Minimum control checklist</h2>
+        <p>Before any AI-assisted BCM task, confirm that:</p>
+        <ul class="boxen">
+          <li><span class="box">&#9744;</span>the tool is approved for the type of data involved</li>
+          <li><span class="box">&#9744;</span>the information is suitable for that environment</li>
+          <li><span class="box">&#9744;</span>the task is clearly defined and bounded</li>
+          <li><span class="box">&#9744;</span>the output is grounded in approved and current sources, citations checked</li>
+          <li><span class="box">&#9744;</span>a competent reviewer has the sources, the time and a route to escalate</li>
+          <li><span class="box">&#9744;</span>any actions or record changes have approval gates</li>
+          <li><span class="box">&#9744;</span>traceability is sufficient for accountability</li>
+          <li><span class="box">&#9744;</span>fallback methods exist if the tool is unavailable</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="merksatz">
+      Ask AI to prepare, compare, summarise, retrieve, and challenge. But require people to decide,
+      approve, and act.
+    </div>
+
+  </div>
+
+  <footer>
+    <span>Hoekstra, W., Gerner, K., et al. (2026). AI4BCM: Guideline for using AI by BCM
+    professionals. CC BY 4.0.</span>
+    <span class="werk marke">2026.09 &middot; principles &middot; 2 of 2</span>
+  </footer>
+
+</section>
+
+</body>
+</html>

@@ -4,6 +4,25 @@ The router is one folder, `ask-ai4bcm/`, holding `SKILL.md` and `agents/openai.y
 Agent Skills format (https://agentskills.io/specification, read 2026-09-10), so a client that reads
 that format reads this one.
 
+**Edit `ask-ai4bcm/`, never `skills/ask-ai4bcm/`.** The second one is generated. A portable plugin
+package finds skills only under `skills/<name>/`, and a skill carries its own reference files, so
+`tools/build_chatgpt_package.py` writes a copy of the router there with `units/` inside it and the
+router's links repointed to match. Regenerate it after any change to `ask-ai4bcm/` or `units/`;
+`tools/build_chatgpt_package.py --check` fails if the two have drifted apart.
+
+## Three words this page uses
+
+You do not need them for the guidance itself, only for installing it. They are here rather than in
+`units/glossary.md`, which is a BCM glossary.
+
+- **Plugin** — a packaged folder a client installs in one step, so you do not copy files by hand.
+  This repository is packaged as one.
+- **Marketplace** — the place a client fetches plugins from. It need not be a shop: here it is this
+  GitHub repository, which lists itself, and nothing is bought.
+- **MCP** — Model Context Protocol, a way for a client to reach a live server while it answers.
+  **The router uses none.** It is named here only because the ChatGPT page explains why the package
+  deliberately declares no MCP server.
+
 ## Three routes, and what each one brings
 
 **As a Claude Code plugin.** Two commands, and the units come with it, so every link in the router

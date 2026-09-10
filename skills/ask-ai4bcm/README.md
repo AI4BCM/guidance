@@ -8,4 +8,4 @@ single source for that routing, and every client reads that one file.
 
 `agents/openai.yaml` carries the same contract for the clients that read it:
 `policy.allow_implicit_invocation: false`. Installing it, by plugin, by the `skills` CLI or by
-hand in each of the four clients: [`install/`](../install/README.md).
+hand in each of the four clients: [`install/`](https://github.com/AI4BCM/guidance/blob/main/install/README.md).

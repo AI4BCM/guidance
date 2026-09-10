@@ -1,0 +1,24 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "ai4bcm-guidance",
+  "version": "2026.9.0",
+  "description": "The AI4BCM guidance and its router. /ask-ai4bcm names the unit to read, the prompt to run and the maturity level the work needs, for AI use in business continuity management.",
+  "author": { "name": "AI4BCM", "url": "https://ai4bcm.org" },
+  "homepage": "https://ai4bcm.org/guidance",
+  "repository": "https://github.com/AI4BCM/guidance",
+  "license": "CC-BY-4.0",
+  "keywords": ["business-continuity", "bcm", "bia", "ai-governance", "iso-22301"],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "AI4BCM guidance",
+        "shortDescription": "Route a BCM situation to a unit, a prompt and a level",
+        "longDescription": "The AI4BCM guidance units, and the /ask-ai4bcm router that reads a situation and names the unit to read, the prompt to run, the maturity level the work needs and the data rule that runs first. It routes and hands over; it never runs a prompt itself.",
+        "developerName": "AI4BCM",
+        "category": "Productivity",
+        "websiteURL": "https://ai4bcm.org/guidance"
+      }
+    },
+    "org.ai4bcm": { "releaseTag": "2026.09" }
+  }
+}

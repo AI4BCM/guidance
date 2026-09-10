@@ -1,0 +1,5 @@
+interface:
+  display_name: "Ask AI4BCM"
+  short_description: "Route a BCM situation to a unit, a prompt and a level"
+policy:
+  allow_implicit_invocation: false
