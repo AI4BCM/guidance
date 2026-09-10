@@ -12,6 +12,25 @@ edition published at `ai4bcm.org/guidance`, so text is written once and publishe
 - **`/ask-ai4bcm` skill** — a router you invoke in your own assistant; it points you at the unit, the prompt and the maturity level for your situation, and reads your files inside your own tenant.
 - **BIA workflow** — the five-stage business impact analysis run against your own process data.
 
+## Installing the router
+
+In Claude Code, where the units install alongside the router:
+
+```
+/plugin marketplace add AI4BCM/guidance
+/plugin install ai4bcm-guidance@ai4bcm
+```
+
+In Codex, GitHub Copilot and anything else the `skills` CLI knows:
+
+```
+npx skills@latest add AI4BCM/guidance
+```
+
+That second route copies the skill folder alone, so the units stay here. One page per client, with
+the folder paths each one scans and what each does about a skill it was not asked for, is in
+[install/](install/README.md).
+
 ## Layout
 
 - `units/` — the guidance itself, one file per topic.

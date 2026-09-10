@@ -8,5 +8,5 @@ single source for that routing, served verbatim with the release tag to Claude, 
 Copilot and GPT alike.
 
 `agents/openai.yaml` carries the same contract for the clients that read it:
-`policy.allow_implicit_invocation: false`. Installing the folder in each of the four
-clients: [`install/`](../install/README.md).
+`policy.allow_implicit_invocation: false`. Installing it, by plugin, by the `skills` CLI or by
+hand in each of the four clients: [`install/`](../install/README.md).

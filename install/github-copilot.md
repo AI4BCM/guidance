@@ -21,6 +21,17 @@ Personal, shared across your projects:
 ~/.agents/skills
 ```
 
+## The short way
+
+```
+npx skills@latest add AI4BCM/guidance
+```
+
+The `skills` CLI finds `ask-ai4bcm` in the repository and copies it into the agent directories it
+detects, recording what it installed in `skills-lock.json`; `npx skills update` refreshes it. It
+copies the skill folder alone, so the units named in the router are not beside it. Either read them
+from the repository, or take the folder route below, which puts `units/` where the router expects.
+
 ## Steps
 
 1. Clone or download this repository.

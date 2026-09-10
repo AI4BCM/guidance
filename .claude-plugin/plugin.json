@@ -1,0 +1,13 @@
+{
+  "name": "ai4bcm-guidance",
+  "displayName": "AI4BCM guidance",
+  "description": "The AI4BCM guidance and its router. /ask-ai4bcm names the unit to read, the prompt to run and the maturity level the work needs, for AI use in business continuity management.",
+  "version": "2026.9.0",
+  "author": { "name": "AI4BCM" },
+  "homepage": "https://ai4bcm.org/guidance",
+  "repository": "https://github.com/AI4BCM/guidance",
+  "license": "CC-BY-4.0",
+  "keywords": ["business-continuity", "bcm", "bia", "ai-governance", "iso-22301"],
+  "metadata": { "releaseTag": "2026.09" },
+  "skills": ["./"]
+}
