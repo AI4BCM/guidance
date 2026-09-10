@@ -9,8 +9,19 @@ Sources, each with the UTC time it was read:
 - [Build skills](https://learn.chatgpt.com/docs/build-skills), 2026-09-10 10:50
 - [Skill controls](https://learn.chatgpt.com/docs/enterprise/skills), 2026-09-10 10:50
 
-The three `help.openai.com` articles were read in a browser; they answer HTTP 403 to `curl` from
-some networks. The `learn.chatgpt.com` pages serve Markdown at a `.md` suffix.
+Re-read 2026-09-10 for the plugin package, with the sources that decided its shape:
+
+- [Skills in ChatGPT](https://help.openai.com/en/articles/20001066-skills-in-chatgpt), 17:49
+- [Plugins in ChatGPT and Codex](https://help.openai.com/en/articles/20001256-plugins-in-chatgpt-and-codex), 17:51
+- [Importing and syncing plugin marketplaces from GitHub](https://help.openai.com/en/articles/20001504-importing-and-syncing-plugin-marketplaces-from-github), 17:52
+- [Package your plugin](https://developers.openai.com/plugins/build/plugins.md), 17:48
+- [Submit your Claude Code plugin to OpenAI](https://developers.openai.com/plugins/guides/submit-claude-plugin.md), 17:48
+- [Agent Skills specification](https://agentskills.io/specification.md), 17:50
+
+The `help.openai.com` articles were read in a browser; they answer HTTP 403 to `curl` from some
+networks, and a check reporting them unreachable has hit that 403 rather than a dead page. The
+`learn.chatgpt.com`, `developers.openai.com` and `agentskills.io` pages serve Markdown at a `.md`
+suffix and answer plain `curl`.
 
 ## Who can install this in ChatGPT
 
@@ -43,16 +54,71 @@ This is a developer action. It needs a checkout of the repository, a terminal an
 control, and it reaches that one machine and nobody else in your team. Workspace skill features stay
 subject to the plan gate above whatever sits on your disk.
 
-## The plugin route, once the package exists
+## The plugin route
 
 A plugin can bundle skills, and plugins work in Chat and Work across ChatGPT on the web, desktop and
 mobile. That is the route worth having, because it reaches the phone and the browser as well as the
 laptop, and a workspace administrator can hand it to everyone at once rather than to one machine at
-a time. Administrators can also import a plugin marketplace straight from a GitHub repository and
-keep it in daily sync.
+a time.
 
-The package for this guidance is being built and no date is promised for it. It will carry the
-router and the units, and it will declare no MCP server. That is a deliberate choice: a plugin
-declaring an MCP server is labelled **Desktop only** and cannot run on ChatGPT on the web, even when
-the server sits behind a remote HTTPS URL. Until the package exists, the folder route above and the
-plain units are what this guidance offers ChatGPT readers.
+The package exists now. It carries the router and the units together, which is the whole point: the
+router names units by relative link, and a router whose links dangle is worse for you than no router
+at all. The units travel inside the skill folder, at `skills/ask-ai4bcm/units/`, so the links resolve
+wherever the folder lands.
+
+**It declares no MCP server.** **MCP**, the Model Context Protocol, is a way for a client to reach a
+live server while it answers a question; the router needs none, because it routes you to files
+rather than fetching anything. Declaring one anyway would cost you the web: a plugin that declares an
+MCP server is labelled **Desktop only** and cannot run on ChatGPT on the web, even when the server
+sits behind a remote HTTPS URL. That is the one change that would silently take away the surface this
+package exists to reach, so the package contains no `mcp.json` and no `.mcp.json`.
+
+### Route A: import the marketplace from GitHub
+
+For a workspace administrator who wants the guidance to stay current. ChatGPT re-reads the
+repository daily.
+
+1. Go to **Workspace settings > Plugins**, select **Add**, then **Import marketplace**.
+2. In **Source**, enter `https://github.com/AI4BCM/guidance`. Enter the repository URL only, with no
+   branch and no folder path after it.
+3. Leave **Path** empty. The catalogue this repository publishes is at
+   `.claude-plugin/marketplace.json` in its root, which is one of the manifest names the importer
+   accepts.
+4. Leave **Branch, tag, or commit** empty to follow the default branch, or name a tag to pin the
+   wording your organisation reviewed. A pinned commit stays where you put it and never syncs
+   forward.
+5. Select **Import marketplace** and authorise GitHub access when prompted.
+6. Open the imported `ai4bcm-guidance` plugin and set its **Installation policy**: *Available* lets
+   eligible members install it themselves, *Installed* puts it on their accounts for them.
+
+Import does not read the policy values written in the repository, so step 6 is not optional — until
+you set a policy, nobody has the plugin. To pull a change before the next daily sync, open
+**Marketplaces**, select the marketplace and choose **Sync now**.
+
+The GitHub account you import with needs read access to the repository, and future syncs keep using
+that account. If that person leaves, a new administrator imports the same source again with their own
+GitHub connection rather than repairing the old one.
+
+### Route B: upload the skill folder
+
+For a workspace with no GitHub connection, or for one person testing the router before the
+organisation commits to it. This installs the skill alone rather than the plugin.
+
+Take `skills/ask-ai4bcm/` from the repository — the whole folder, including the `units/` directory
+inside it — and upload it under **Plugins > Skills > Create > Upload from your computer**. An
+administrator can do the same from the admin **Skills** page with **+ Add skill**, which puts it in
+front of the workspace instead of one account.
+
+ChatGPT scans an uploaded skill before it becomes available, and may mark it **Needs Review** before
+you can use it. Review it yourself as well: it is a folder of instructions and text, it came from
+outside your organisation, and the scan is not a substitute for your own judgement about what your
+people are told to do with BCM material.
+
+### What is not being claimed here
+
+Neither route has been run in a real Business, Enterprise, Healthcare or Edu workspace, because this
+guidance was packaged on a machine that has no such workspace. What has been checked is the package:
+the archive was built, extracted, and every one of the router's 46 relative links resolved from
+inside it. Whether ChatGPT accepts the upload, and what its scan says about a router that asks not to
+be invoked on its own, are answered the first time an administrator with a workspace tries it. If you
+are that person and something here is wrong, the repository takes issues.
