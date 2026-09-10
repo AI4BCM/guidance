@@ -12,6 +12,8 @@ this directory — so the corpus and the release tag cannot disagree.
 | `sources.json` | the source registry: identifier, edition, licence, citation |
 | `test_source_registry.py` | 12 tests over the registry and the gate |
 | `retrieval.py` | the search/fetch index, stdlib only |
+| `guidance_tools.py` | the five guidance tools a connector exposes; no BIA imports |
+| `test_guidance_tools.py` | 12 tests over those five |
 | `brand.py` | the visual tokens, masthead and footer; no imports at all |
 | `build_kb_pages.py` | one static HTML page per chunk, so citation URLs resolve |
 | `literature/` | four converters, run by hand when a source is added |
@@ -24,7 +26,7 @@ Stdlib only, on system `python3` — this repo needs no virtualenv.
 python3 tools/build_chunks.py                          # 96 chunks: the units
 python3 tools/build_chunks.py --source-dir literature  # 383 chunks: units + eight sources
 python3 tools/build_kb_pages.py --chunks data/chunks.json --out <dir>
-python3 -m pytest tools/test_source_registry.py -q     # 12 passed
+python3 -m pytest tools/ -q                            # 24 passed
 ```
 
 ## Two names that have not moved yet
