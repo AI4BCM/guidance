@@ -1,4 +1,4 @@
-<!-- meta: unit=stages/implement pp=5 version=2026.09 cites=6.1,6.2,6.4,6.5,6.6 -->
+<!-- meta: unit=stages/implement version=2026.09 -->
 # Implementing Continuity Arrangements
 
 ## Situation

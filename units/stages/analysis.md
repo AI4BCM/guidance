@@ -1,4 +1,4 @@
-<!-- meta: unit=stages/analysis pp=3 version=2026.09 cites=4.1,4.2,4.4,4.5,4.6 -->
+<!-- meta: unit=stages/analysis version=2026.09 -->
 # Analysis: Business Impact and Risk
 
 ## Situation

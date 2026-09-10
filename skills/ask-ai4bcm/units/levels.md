@@ -1,4 +1,4 @@
-<!-- meta: unit=levels version=2026.09 cites=1.6,1.6.1,annex-c1,annex-c2,quick-start -->
+<!-- meta: unit=levels version=2026.09 -->
 # Where You Stand
 
 ## Three ways of working

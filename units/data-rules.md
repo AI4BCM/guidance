@@ -1,4 +1,4 @@
-<!-- meta: unit=data-rules version=2026.09 cites=1.4.1,1.4.2,quick-start -->
+<!-- meta: unit=data-rules version=2026.09 -->
 # Data Rules
 
 Run this first. It decides where the task may happen, and what is pasted into the wrong tool cannot be unpasted.

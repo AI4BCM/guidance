@@ -1,4 +1,4 @@
-<!-- meta: unit=stages/validate pp=6 version=2026.09 cites=7.1,7.2,7.4,7.5,7.6 -->
+<!-- meta: unit=stages/validate version=2026.09 -->
 # Validation, Exercising, Review and Improvement
 
 ## Situation

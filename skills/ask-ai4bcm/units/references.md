@@ -1,4 +1,4 @@
-<!-- meta: unit=references version=2026.09 dated=2026-09 cites=none -->
+<!-- meta: unit=references version=2026.09 dated=2026-09 -->
 # References and further reading
 
 Two kinds of entry. A supporting citation names the passage behind a claim in these units, and the unit that carries it. Further reading is offered with the question it helps answer. None of the works below validates this guidance's five maturity levels or its framing of where teams stand; a resemblance of vocabulary is a resemblance, and no crosswalk between ladders is asserted. Every entry names the edition read, checked for a successor on 2026-09-09.

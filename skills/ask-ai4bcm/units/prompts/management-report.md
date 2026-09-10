@@ -1,4 +1,4 @@
-<!-- meta: unit=prompts/management-report version=2026.09 dated=2026-09 cites=annex-b1 -->
+<!-- meta: unit=prompts/management-report version=2026.09 dated=2026-09 -->
 # Management reporting
 
 ```
