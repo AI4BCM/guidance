@@ -1,2 +1,6 @@
 build/
 *.pdf
+__pycache__/
+# The corpus build output. build_chunks.py writes it here by default and the server reads
+# it from here; it is generated, and publishing it is publish_knowledge.sh, not git.
+data/

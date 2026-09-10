@@ -1,0 +1,18 @@
+# The connector's dependencies — and ONLY the connector's.
+#
+# Everything else in tools/ is stdlib: build_chunks.py, retrieval.py, guidance_tools.py,
+# brand.py, build_kb_pages.py and all 28 tests run on system python3 with nothing installed,
+# and that stays true. `python3 -m pytest tools/ -q` needs no virtualenv; server.py does.
+#
+#   python3 -m venv .venv && .venv/bin/pip install -r tools/requirements.txt
+#
+# Pinned to the version the BIA server has run on since 2026-08 and the version the payload
+# comparison in ticket 04 was measured against. Bump deliberately.
+mcp==1.28.0
+# Imported directly by server.py rather than merely pulled in by mcp: the health and root
+# routes are starlette responses, and main() serves with uvicorn. They arrive transitively
+# today, so a different mcp pin would break the import with no line here to explain why.
+starlette>=1.6
+uvicorn>=0.52
+# The server tests skip themselves when mcp is absent; pytest itself is not a runtime need.
+pytest>=8.0
