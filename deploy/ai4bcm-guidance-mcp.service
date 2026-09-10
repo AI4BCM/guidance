@@ -1,0 +1,71 @@
+# ai4bcm-guidance-mcp — the AI4BCM guidance connector (https://mcp.ai4bcm.org/mcp).
+# Canonical copy; the running one would be /etc/systemd/system/ai4bcm-guidance-mcp.service.
+# NOT INSTALLED. Round two of kb-move ticket 06, and a kgadmin round.
+#
+# It runs BESIDE bia-workflow-mcp, not instead of it: 8787 stays the BIA endpoint on
+# agent.ai4bcm.org, 8788 is this one on mcp.ai4bcm.org. Two names, two ports, two processes,
+# no shared state — which is the whole point of the move.
+#
+# Three things this unit does NOT have, each on purpose:
+#
+#   - no token, no secret, no /etc/brain/*.env. The connector is open (owner, 2026-09-10): it
+#     serves CC BY 4.0 guidance already public as static pages at /demo/kb/. The BIA server's
+#     MCP_SCOPES and its bearer file stayed with the BIA server. There is nothing here to leak,
+#     and therefore no recovery story to write — which is why svc-ai4bcm can be a uid that holds
+#     no secret at all, without breaking the estate's one-secret-holder-per-uid rule.
+#   - no ReadWritePaths. The corpus is BUILT by the root round (tools/publish_knowledge.sh) and
+#     only READ here. A service that never writes should not be given a path it could write, so
+#     ProtectSystem=strict stands alone. If a future change makes this service write anything,
+#     that is the moment to reconsider the design, not the moment to add a path.
+#   - no rate limit. That is nginx's job and it is in deploy/nginx-mcp-ai4bcm.conf, where it can
+#     answer 429 without waking this process at all.
+#
+# svc-ai4bcm must exist before this starts:
+#   adduser --system --group --no-create-home --home /nonexistent svc-ai4bcm
+[Unit]
+Description=AI4BCM guidance MCP connector (127.0.0.1:8788)
+After=network-online.target
+Wants=network-online.target
+OnFailure=brain-failure-notify@%n.service
+# Never give up retrying — the same self-heal posture as every other public surface on brain.
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+User=svc-ai4bcm
+Group=svc-ai4bcm
+WorkingDirectory=/opt/apps/ai4bcm-guidance
+# The corpus. Explicit rather than left to the file-relative default, because the default is a
+# property of the source tree and this is a deployment: a reader of this unit should be able to
+# see which bytes get served without opening server.py. It is the SAME variable the builder
+# reads (build_kb_pages.py), so one knob points the build and the serve at one corpus.
+Environment=AI4BCM_DATA_DIR=/opt/apps/ai4bcm-guidance/data
+# The one knob ticket 06 had to set. server.py defaults this to agent.ai4bcm.org, which is the
+# OTHER endpoint; leaving the default here would make every /mcp request answer 421 through
+# DNS-rebinding protection, and a 421 reads as a broken connector rather than a missing setting.
+Environment=AI4BCM_MCP_ALLOWED_HOSTS=mcp.ai4bcm.org
+# svc-ai4bcm has no home directory; caches land somewhere it owns instead of failing under
+# ProtectHome. /nonexistent is deliberate — nothing here should be writing a dotfile.
+Environment=HOME=/nonexistent
+Environment=PYTHONDONTWRITEBYTECODE=1
+ExecStart=/opt/apps/venvs/ai4bcm-guidance/bin/python /opt/apps/ai4bcm-guidance/tools/server.py --host 127.0.0.1 --port 8788
+Restart=always
+RestartSec=5s
+# The corpus is ~5 MB of JSON held in one index. 256M is generous for that and small enough that
+# a leak trips the limit rather than the box.
+MemoryMax=256M
+ProtectSystem=strict
+ProtectHome=yes
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
+
+# Hardening otherwise comes from security/install.sh's nonroot-baseline and private-tmp
+# drop-ins, exactly as it does for bia-workflow-mcp. Do not paste those lines in here — a second
+# copy is a second thing to keep in step with the baseline.
+#
+# Reading them back afterwards: `systemctl show -p A -p B --value` prints in systemd's own
+# property order, not the order you asked for, which has already been misread here as a live
+# hardening flag being off. Use `systemctl show ai4bcm-guidance-mcp | grep -E '^(NoNewPriv|Protect)'`.

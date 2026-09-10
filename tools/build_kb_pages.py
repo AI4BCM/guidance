@@ -69,7 +69,22 @@ def load_sources(path) -> dict:
     return {str(r.get("id")): r for r in rows if r.get("id")}
 
 
-DEFAULT_CHUNKS = Path(os.environ.get("BIA_WORKFLOW_DATA_DIR",
+# The three deploy-path names, settled by kb-move ticket 06 (2026-09-10). Two of the three
+# deliberately did NOT change, and the reason is the same one in both cases: they are the public
+# URL contract, not an implementation detail.
+#
+#   AI4BCM_DATA_DIR  — renamed here from BIA_WORKFLOW_DATA_DIR. It names the data directory, which
+#     is this repo's business now, and it is the same knob server.py already reads, so the builder
+#     and the connector are pointed at one corpus by one variable instead of two. Renaming it
+#     changes no rendered byte: it is only consulted when the environment sets it, and the
+#     byte-identical proof against baseline/MANIFEST.sha256 was re-run after this edit.
+#   DEFAULT_OUT      — UNCHANGED. /var/www/ai4bcm-demo/kb is where nginx's `alias /var/www/
+#     ai4bcm-demo/` resolves /demo/kb/, and the directory name is a served path, not a product
+#     claim. Moving it would move 383 published citation URLs.
+#   PUBLIC_BASE_URL  — UNCHANGED, and the most load-bearing of the three. It is baked into every
+#     rendered page and is the target of the chunk-id citation contract (ticket 07). It moves only
+#     when the corpus is republished under a new name, never as part of a repository move.
+DEFAULT_CHUNKS = Path(os.environ.get("AI4BCM_DATA_DIR",
                                      Path(__file__).resolve().parent.parent / "data")) / "chunks.json"
 DEFAULT_OUT = Path("/var/www/ai4bcm-demo/kb")
 PUBLIC_BASE_URL = "https://agent.ai4bcm.org/demo/kb"
