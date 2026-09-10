@@ -94,8 +94,25 @@ AI4BCM_APP_ROOT=<clone> AI4BCM_DATA_DIR=<clone>/data AI4BCM_KB_ROOT=/tmp/kb \
 
 ## Deploying the connector
 
-`deploy/ai4bcm-guidance-mcp.service` and `deploy/nginx-mcp-ai4bcm.conf`. Neither is installed;
-both are kgadmin rounds, and the nginx one is blocked on the owner adding `mcp` A + AAAA records
-at All-Inkl. Read the header of each file before installing it — the DNS records, the reason the
-connector took the new hostname rather than moving the BIA endpoint, and the `svc-ai4bcm` uid are
-all stated there.
+`deploy/ai4bcm-guidance-mcp.service` and `deploy/nginx-mcp-ai4bcm.conf`. **Both are installed and
+live**, each by a kgadmin round on 2026-09-10: the unit into `/etc/systemd/system/` at 15:43:30Z,
+the vhost into `/etc/nginx/sites-available/mcp-ai4bcm` at 15:43:47Z with the `sites-enabled`
+symlink a second later. The `mcp` A + AAAA records the vhost once waited on exist —
+`95.217.162.203` and `2a01:4f9:c013:a840::1` — so nothing here is blocked. Read the header of each
+file before editing it: the reason the connector took the new hostname rather than moving the BIA
+endpoint, and the `svc-ai4bcm` uid, are stated there.
+
+Neither file deploys itself, and an edit to either reaches nothing until it is copied into place:
+
+```sh
+sudo cp deploy/ai4bcm-guidance-mcp.service /etc/systemd/system/ && sudo systemctl daemon-reload
+sudo cp deploy/nginx-mcp-ai4bcm.conf /etc/nginx/sites-available/mcp-ai4bcm && sudo nginx -t && sudo systemctl reload nginx
+```
+
+A comment-only change needs no restart: `ExecMainStartTimestamp` should not move, and if it does,
+something other than the comment changed. Check the artefact rather than this file — and without
+a `--resolve` pin, so that DNS is part of what you prove:
+
+```sh
+curl https://mcp.ai4bcm.org/health
+```
