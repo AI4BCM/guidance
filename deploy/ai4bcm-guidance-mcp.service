@@ -1,9 +1,13 @@
 # ai4bcm-guidance-mcp — the AI4BCM guidance connector (https://mcp.ai4bcm.org/mcp).
-# Canonical copy; the running one is /etc/systemd/system/ai4bcm-guidance-mcp.service.
+# Canonical copy; the running one is /etc/systemd/system/ai4bcm-guidance-mcp.service, which has
+# carried this same text since 2026-09-10 19:49Z.
 # INSTALLED AND LIVE since 2026-09-10 15:43:30Z (kb-move ticket 06, round two, run by the owner).
-# The header said NOT INSTALLED until kb-move ticket 08 checked it against systemctl -- the line
-# outlived the round it described. Verify by the artefact, never this comment:
-#   curl --resolve mcp.ai4bcm.org:443:95.217.162.203 https://mcp.ai4bcm.org/health
+# The header said NOT INSTALLED for the first hour after the round that installed it, and the copy
+# in /etc went on saying so for three hours more. Verify by the artefact, never by this comment:
+#   curl https://mcp.ai4bcm.org/health
+# Unpinned on purpose. mcp.ai4bcm.org resolves on both A (95.217.162.203) and AAAA
+# (2a01:4f9:c013:a840::1), so a bare curl proves DNS, TLS, nginx and this unit in one line. The
+# --resolve pin this line used to carry predates those records and now skips the first of them.
 # An edit here reaches the running service only through a kgadmin round; the file is the source,
 # not the deployment.
 #
