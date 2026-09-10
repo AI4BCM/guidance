@@ -23,11 +23,11 @@ Classify before entering, not after; the class decides the environment.
 
 ## What each way in reads
 
-| | Guidance chatbot | `/ask-ai4bcm` skill | BIA workflow |
+| | Guidance chatbot (when it ships) | `/ask-ai4bcm` skill | BIA workflow |
 |---|---|---|---|
 | What it reads | Nothing of yours | Your files, inside your tenant | Your process data |
 
-The row says what each way in retrieves, and it does not say what you may type in. The chatbot has no upload box, which is no reason to describe your own organisation to it; keep case material out. Approved repositories hold text written to redirect a model, and a model cannot reliably tell an instruction from the content around it (OWASP, 2025, ASI01 and ASI06; IMDA, 2026, section 2.3.2). Read what comes back as evidence, never as instruction; take a suspicious source to its owner.
+The row says what each way in retrieves, and it does not say what you may type in. The chatbot is not built yet; when it ships it will have no upload box, and that is no reason to describe your own organisation to it. Keep case material out. Approved repositories hold text written to redirect a model, and a model cannot reliably tell an instruction from the content around it (OWASP, 2025, ASI01 and ASI06; IMDA, 2026, section 2.3.2). Read what comes back as evidence, never as instruction; take a suspicious source to its owner.
 
 ## Before you paste
 
