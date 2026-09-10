@@ -25,11 +25,23 @@ The first release of the machine edition. Nothing is tagged: `releases/2026.09.j
 commit it was cut against and carries `"tagged": false` until the tag is minted. Until then the
 edition is a draft, and a citation should quote a commit rather than the release name.
 
+**2026-09-10 — resynced from the source of record.** The vault at
+`02-Projects/ai4bcm/guidance-rewrite` is the source of record and this repository is its mirror.
+Eleven files were brought forward: the prompt pattern in `units/prompts/README.md`, the six task
+prompts, the three stage prompts in `units/stages/design.md`, `implement.md` and `validate.md`, and
+the interview order in `units/workflow-design.md`. `units/prompts/evaluations.md`, the thirty
+evaluation cases, joined the repository with this resync and is the 24th citable file. Three files
+stay in the vault only: `units/index.md`, `units/prompts/index.md` and `units/stages/index.md` are
+vault-side navigation and say so in their own opening paragraph. So does `units/principles-a4.html`,
+which is a sheet of a print edition this repository does not carry. `ask-ai4bcm/README.md` has no
+vault counterpart because it says how this repository is used rather than what the guidance says.
+
 What this release contains:
 
 - Nineteen guidance units under `units/`, one file per topic, each opening with a `<!-- meta -->`
   anchor and closing with the citation line.
-- Six task prompts and the prompt pattern under `units/prompts/`, with thirty evaluation cases.
+- Six task prompts and the prompt pattern under `units/prompts/`, with thirty evaluation
+  cases in `units/prompts/evaluations.md`, three for each of the ten prompts in the guidance.
 - `ask-ai4bcm/`, the router: it names the unit, the prompt, the maturity level and the gate that
   level turns on, and it never runs a prompt itself.
 - `install/`, one page per client for Claude Code, Codex, GitHub Copilot and ChatGPT, and a

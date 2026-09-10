@@ -42,6 +42,8 @@ Impact categories, time horizons and thresholds are method parameters. They are 
 | 4 List the requirements (RTO, MTPD, RPO) | list of resource requirements carrying the numbers | impacts over time are evidenced; the owner set the recovery fields |
 | 5 Consolidate the requirements and sanity check, then handover | approved BIA report | requirements are consolidated across departments, checked, recorded and retained |
 
+The interview takes impacts over time first, then the MTPD, then the resource requirements in their four classes, then the dependencies.
+
 The outcome of a BIA is a list of requirements. A requirement names what an activity needs in order to run; it does not assert that the thing exists today. Conducting the stage does not pass its gate. The BC professional checks the deliverable against the condition beside it. This guidance places the approvals with the activity owner, who approves the data and sets MTPD and RTO, and with top management, which approves the BIA results before solutions design starts. A deliverable that fails stops the run there and is reworked or done by hand before a later stage uses it. Stage detail for the analysis work is in `stages/analysis.md`.
 
 Hoekstra, W., Gerner, K., et al. (2026). AI4BCM: Guideline for using AI by BCM professionals. CC BY 4.0.
