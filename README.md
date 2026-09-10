@@ -57,4 +57,5 @@ Nothing is tagged yet. What each release contains and how to cite a unit at one:
 
 ## Licence
 
-CC BY 4.0. See [LICENSE](LICENSE).
+CC BY 4.0. See [LICENSE](LICENSE) for the full legal text and [NOTICE](NOTICE) for the
+attribution and provenance the licence requires.
