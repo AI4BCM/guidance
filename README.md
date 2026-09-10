@@ -8,7 +8,7 @@ edition published at `ai4bcm.org/guidance`, so text is written once and publishe
 
 ## The three ways in
 
-- **Guidance chatbot** — ask the guidance questions in the browser; it reads nothing of yours.
+- **Guidance chatbot** — not built yet; when it ships, ask the guidance questions in the browser, and it reads nothing of yours.
 - **`/ask-ai4bcm` skill** — a router you invoke in your own assistant; it points you at the unit, the prompt and the maturity level for your situation, and reads your files inside your own tenant.
 - **BIA workflow** — the five-stage business impact analysis run against your own process data.
 
@@ -37,6 +37,8 @@ the folder paths each one scans and what each does about a skill it was not aske
 - `ask-ai4bcm/` — the router, `SKILL.md`. See [ask-ai4bcm/README.md](ask-ai4bcm/README.md).
 - `install/` — installing the router in Claude Code, Codex, GitHub Copilot or ChatGPT.
   See [install/README.md](install/README.md).
+- `releases/` — one manifest per release, resolving its tag to a commit and to a hash per
+  citable file.
 
 ## Sending changes
 
@@ -48,7 +50,10 @@ of every unit intact. The terms, the review cycle and who owns the living prompt
 ## Releases
 
 Releases are tagged by calendar month, `YYYY.MM`. The first is `2026.09`; the next is
-`2026.11`. A citation naming a tag names the text as it stood at that tag.
+`2026.11`. A citation naming a tag names the text as it stood at that tag, and
+[`releases/<tag>.json`](releases/) resolves the tag to a commit and a hash per citable file.
+Nothing is tagged yet. What each release contains and how to cite a unit at one:
+[CHANGELOG.md](CHANGELOG.md).
 
 ## Licence
 
