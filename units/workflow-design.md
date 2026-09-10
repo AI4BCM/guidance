@@ -1,4 +1,4 @@
-<!-- meta: unit=workflow-design version=2026.09 cites=1.4.9,1.5.2,annex-b2 -->
+<!-- meta: unit=workflow-design version=2026.09 -->
 # Workflow Design
 
 A workflow is a conversation you do not have to remember. It runs a defined process over approved inputs with named human gates, so two runs are comparable and a third person can see what happened.

@@ -1,4 +1,4 @@
-<!-- meta: unit=stages/design pp=4 version=2026.09 cites=5.1,5.2,5.4,5.5,5.6 -->
+<!-- meta: unit=stages/design version=2026.09 -->
 # Continuity Strategies and Solutions Design
 
 ## Situation

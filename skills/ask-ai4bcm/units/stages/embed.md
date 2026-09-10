@@ -1,4 +1,4 @@
-<!-- meta: unit=stages/embed pp=2 version=2026.09 cites=3.1,3.2,3.4,3.5,3.6 -->
+<!-- meta: unit=stages/embed version=2026.09 -->
 # Embedding BCM in the Organisation
 
 ## Situation
