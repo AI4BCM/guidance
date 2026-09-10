@@ -91,6 +91,22 @@ REQUIRED_SECTION_TYPES = frozenset({"prompt", "workflow", "do_not_use", "compari
 STAGE_UNITS = ("govern", "embed", "analysis", "design", "implement", "validate")
 STAGE_REQUIRED_SECTIONS = ("typical-ai-uses", "minimum-controls", "method", "level")
 
+# --- The reserved set (kb-move ticket 07, 2026-09-10) ----------------------------------
+#
+# The ids this repository promises to keep across releases, because a file in ANOTHER
+# repository names them. See CITATION-CONTRACT.md; that document and this constant are the
+# same fact twice, and test_citation_contract.py fails if they disagree.
+#
+# Ids are minted from headings (`<unit-slug>-<slugified-heading>`), so an editor rewording a
+# heading renames a chunk. That is fine for an id nobody cites and fatal for one that is
+# cited from outside — hence a build-time refusal rather than a note. The 24 stage ids were
+# already enforced below; `prompts-bia` and `prompts-review` were not, and `run-bia.yaml`
+# has cited both since 26880b5. Measured 2026-09-10: 9 distinct ids cited, 7 guaranteed.
+RESERVED_CHUNK_IDS = frozenset(
+    {f"stages-{stage}-{section}" for stage in STAGE_UNITS for section in STAGE_REQUIRED_SECTIONS}
+    | {"prompts-bia", "prompts-review"}
+)
+
 
 # --- The source registry (improvements ticket 05, 2026-09-10) --------------------------
 #
@@ -449,14 +465,12 @@ def validate(chunks: list[Chunk], release_tag: str) -> None:
 
     ids = {chunk.id for chunk in chunks}
 
-    required = {
-        f"stages-{stage}-{section}"
-        for stage in STAGE_UNITS
-        for section in STAGE_REQUIRED_SECTIONS
-    }
-    missing = sorted(required - ids)
+    missing = sorted(RESERVED_CHUNK_IDS - ids)
     if missing:
-        raise SystemExit(f"missing required chunks: {', '.join(missing)}")
+        raise SystemExit(
+            f"missing reserved chunk ids: {', '.join(missing)} — these are cited from outside "
+            "this repository; see CITATION-CONTRACT.md before changing a heading"
+        )
 
     # The upper bound was 300 while the corpus was the guidance units alone. Improvements
     # ticket 08 added the class A literature beside them (EUR-Lex, UK Cabinet Office, the
