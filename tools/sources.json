@@ -1,0 +1,164 @@
+{
+  "schema": 1,
+  "_readme": [
+    "The source registry for the served knowledge base. Every input file the chunk build",
+    "reads must be claimed by a row here, and only licence class A may become chunks.",
+    "Classes are the AI4BCM guidance audit's R10 vocabulary (2026-09-10):",
+    "  A              open licence permitting inclusion with attribution",
+    "  A-share-alike  open but share-alike against the guidance's CC BY: quote, never chunk",
+    "  B              free to read and quotable with attribution",
+    "  C              citation only",
+    "  D              unverified",
+    "Required on every row: id, title, edition, licence, licence_class, citation, paths.",
+    "A missing field is a build error, not a default. `edition: \"@release\"` means the",
+    "guidance release tag; `{edition}` and `{source_file}` in a citation are filled in per",
+    "chunk. Paths are fnmatch patterns where `*` crosses directory separators."
+  ],
+  "sources": [
+    {
+      "id": "ai4bcm-guidance",
+      "title": "AI4BCM: Guideline for using AI by BCM professionals",
+      "publisher": "AI4BCM",
+      "edition": "@release",
+      "licence": "CC BY 4.0",
+      "licence_class": "A",
+      "citation": "Hoekstra, W., Gerner, K., et al. (2026). AI4BCM: Guideline for using AI by BCM professionals, {edition}, {source_file}. CC BY 4.0.",
+      "paths": [
+        "units/*"
+      ]
+    },
+    {
+      "id": "eur-lex-dora",
+      "title": "Regulation (EU) 2022/2554 on digital operational resilience for the financial sector (DORA)",
+      "publisher": "European Union (Publications Office)",
+      "edition": "OJ L 333, 27.12.2022, pp. 1-79, as adopted",
+      "fetched": "2026-09-10",
+      "source_url": "https://eur-lex.europa.eu/eli/reg/2022/2554/oj",
+      "retrieved_from": "http://publications.europa.eu/resource/celex/32022R2554",
+      "converted_from": "XHTML",
+      "conversion": "Converted to Markdown on 2026-09-10 by scripts/literature/eurlex_to_md.py; enacting terms only (recitals, citations, footnote texts and the signature block left out). The structure is a conversion; the text on EUR-Lex is authoritative.",
+      "licence": "Commission Decision 2011/833/EU (reuse of Commission documents, including commercial reuse, authorised with acknowledgement of source)",
+      "licence_class": "A",
+      "citation": "European Union (2022). Regulation (EU) 2022/2554 (DORA), {edition}, {source_file}. (c) European Union. Reuse authorised under Commission Decision 2011/833/EU. Markdown conversion of the EUR-Lex XHTML, 2026-09-10; EUR-Lex is authoritative.",
+      "paths": [
+        "literature/eur-lex/dora-regulation-2022-2554.md"
+      ]
+    },
+    {
+      "id": "eur-lex-delegated-2024-1774",
+      "title": "Commission Delegated Regulation (EU) 2024/1774 on ICT risk management tools, methods, processes and policies",
+      "publisher": "European Union (Publications Office)",
+      "edition": "OJ L series, 25.6.2024, as adopted",
+      "fetched": "2026-09-10",
+      "source_url": "https://eur-lex.europa.eu/eli/reg_del/2024/1774/oj",
+      "retrieved_from": "http://publications.europa.eu/resource/celex/32024R1774",
+      "converted_from": "XHTML",
+      "conversion": "Converted to Markdown on 2026-09-10 by scripts/literature/eurlex_to_md.py; enacting terms only (recitals, citations, footnote texts and the signature block left out). The structure is a conversion; the text on EUR-Lex is authoritative.",
+      "licence": "Commission Decision 2011/833/EU (reuse of Commission documents, including commercial reuse, authorised with acknowledgement of source)",
+      "licence_class": "A",
+      "citation": "European Union (2024). Commission Delegated Regulation (EU) 2024/1774, {edition}, {source_file}. (c) European Union. Reuse authorised under Commission Decision 2011/833/EU. Markdown conversion of the EUR-Lex XHTML, 2026-09-10; EUR-Lex is authoritative.",
+      "paths": [
+        "literature/eur-lex/delegated-regulation-2024-1774.md"
+      ]
+    },
+    {
+      "id": "eur-lex-ai-act-arts",
+      "title": "Regulation (EU) 2024/1689 (AI Act), Articles 4, 26 and 50",
+      "publisher": "European Union (Publications Office)",
+      "edition": "OJ L series, 12.7.2024, as adopted; Articles 4, 26 and 50 only",
+      "fetched": "2026-09-10",
+      "source_url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj",
+      "retrieved_from": "http://publications.europa.eu/resource/celex/32024R1689",
+      "converted_from": "XHTML",
+      "conversion": "Converted to Markdown on 2026-09-10 by scripts/literature/eurlex_to_md.py, then reduced to Articles 4, 26 and 50. A subset, not the Regulation entire. The structure is a conversion; the text on EUR-Lex is authoritative.",
+      "licence": "Commission Decision 2011/833/EU (reuse of Commission documents, including commercial reuse, authorised with acknowledgement of source)",
+      "licence_class": "A",
+      "citation": "European Union (2024). Regulation (EU) 2024/1689 (AI Act), {edition}, {source_file}. (c) European Union. Reuse authorised under Commission Decision 2011/833/EU. Markdown conversion of the EUR-Lex XHTML, 2026-09-10; EUR-Lex is authoritative.",
+      "paths": [
+        "literature/eur-lex/ai-act-2024-1689-articles-4-26-50.md"
+      ]
+    },
+    {
+      "id": "uk-cabinet-office-organisational-resilience",
+      "title": "Organisational Resilience Guidance for UK Government Departments, Agencies and Arm's Length Bodies",
+      "publisher": "UK Cabinet Office (Cross Government Business Continuity Forum)",
+      "edition": "HTML edition, published 1 August 2024, last updated 6 February 2025",
+      "fetched": "2026-09-10",
+      "source_url": "https://www.gov.uk/government/publications/organisational-resilience-guidance-for-uk-government-departments-agencies-and-arms-length-bodies/organisational-resilience-guidance-for-uk-government-departments-agencies-and-arms-length-bodies-albs-html",
+      "retrieved_from": "https://www.gov.uk/api/content/government/publications/organisational-resilience-guidance-for-uk-government-departments-agencies-and-arms-length-bodies/organisational-resilience-guidance-for-uk-government-departments-agencies-and-arms-length-bodies-albs-html",
+      "converted_from": "HTML",
+      "conversion": "Converted to Markdown on 2026-09-10 by scripts/literature/html_to_md.py; headings, numbered paragraphs, lists and the one table carried across, cell line breaks shown as ' / '. The structure is a conversion; the page on GOV.UK is authoritative.",
+      "licence": "Open Government Licence v3.0",
+      "licence_class": "A",
+      "citation": "UK Cabinet Office (2025). Organisational Resilience Guidance for UK Government Departments, Agencies and Arm's Length Bodies, {edition}, {source_file}. Contains public sector information licensed under the Open Government Licence v3.0. Markdown conversion of the GOV.UK HTML, 2026-09-10; GOV.UK is authoritative.",
+      "paths": [
+        "literature/uk-cabinet-office/*"
+      ]
+    },
+    {
+      "id": "ch-fones-ict-minimum-standard",
+      "title": "Minimum standard for improving ICT resilience",
+      "publisher": "Federal Office for National Economic Supply (FONES), Switzerland; published via BACS",
+      "edition": "English edition, Version May 2023, with update NIST SP 800-53 Rev. 5 and ISO 27001:2022",
+      "fetched": "2026-09-10",
+      "source_url": "https://www.bacs.admin.ch/dam/en/sd-web/dJRSfIeFXoTP/ikt-minimalstandard-2023-en.pdf",
+      "retrieved_from": "https://www.bacs.admin.ch/en/ict-minimum-standard",
+      "converted_from": "PDF (44 pages)",
+      "conversion": "Converted to Markdown on 2026-09-10 by scripts/literature/ch_ikt_to_md.py using pdftotext in two modes (-raw for the two-column prose, -layout for the task, reference and glossary tables). Changes indicated as CC BY requires: the glossary (pp. 41-42), the assessment charts (pp. 38-39), the figures, the cover, the contents and the credits are NOT carried. The structure is a conversion; the PDF is authoritative.",
+      "licence": "CC BY 4.0 (the document states share and adapt, for any purpose, even commercially, with attribution and an indication of changes)",
+      "licence_class": "A",
+      "citation": "Federal Office for National Economic Supply FONES: 'Minimum standard for improving ICT resilience', Bern, 2018. Revision May 2023, NIST SP 800-53 Rev. 5 and ISO 27001:2022. {edition}, {source_file}. CC BY 4.0. Markdown conversion, 2026-09-10, with sections left out as noted in the file; the PDF is authoritative.",
+      "paths": [
+        "literature/swiss-fones/*"
+      ]
+    },
+    {
+      "id": "nist-sp-800-34r1",
+      "title": "NIST SP 800-34 Rev. 1, Contingency Planning Guide for Federal Information Systems (Chapters 1 to 5)",
+      "publisher": "National Institute of Standards and Technology (US)",
+      "edition": "Revision 1, May 2010; body only (PDF pages 13-72), appendices not carried",
+      "fetched": "2026-09-10",
+      "source_url": "https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-34r1.pdf",
+      "converted_from": "PDF (149 pages)",
+      "conversion": "Converted to Markdown on 2026-09-10 by scripts/literature/pdf_prose_to_md.py using pdftotext -raw. Subset: Executive Summary and Chapters 1-5 only; the appendices (templates, sample BIA, control tables) are not carried. Tables are shown as raw extraction in fenced blocks, marked as such; figures are not carried. The structure is a conversion; the PDF is authoritative.",
+      "licence": "US Government work, not subject to copyright protection in the United States (17 U.S.C. 105); available free of charge from NIST",
+      "licence_class": "A",
+      "citation": "Swanson, M., Bowen, P., Phillips, A.W., Gallup, D. and Lynes, D. (2010). Contingency Planning Guide for Federal Information Systems, NIST Special Publication 800-34 Rev. 1, {edition}, {source_file}. US Government work, public domain. Markdown conversion, 2026-09-10, tables not reconstructed; the NIST PDF is authoritative.",
+      "paths": [
+        "literature/nist/sp-800-34r1-contingency-planning-body.md"
+      ]
+    },
+    {
+      "id": "nist-ai-100-1",
+      "title": "NIST AI 100-1, Artificial Intelligence Risk Management Framework (AI RMF 1.0)",
+      "publisher": "National Institute of Standards and Technology (US)",
+      "edition": "AI RMF 1.0, January 2023 (DOI 10.6028/NIST.AI.100-1); from PDF page 6, front matter not carried",
+      "fetched": "2026-09-10",
+      "source_url": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf",
+      "converted_from": "PDF (48 pages)",
+      "conversion": "Converted to Markdown on 2026-09-10 by scripts/literature/pdf_prose_to_md.py using pdftotext -raw, from PDF page 6. The four Core tables are shown as raw extraction in fenced blocks, marked as such; figures are not carried. The structure is a conversion; the PDF is authoritative.",
+      "licence": "US Government work, not subject to copyright protection in the United States (17 U.S.C. 105); available free of charge from NIST",
+      "licence_class": "A",
+      "citation": "National Institute of Standards and Technology (2023). Artificial Intelligence Risk Management Framework (AI RMF 1.0), NIST AI 100-1, {edition}, {source_file}. US Government work, public domain. Markdown conversion, 2026-09-10, tables not reconstructed; the NIST PDF is authoritative.",
+      "paths": [
+        "literature/nist/ai-100-1-ai-rmf-1-0.md"
+      ]
+    },
+    {
+      "id": "esas-jc-2026-25",
+      "title": "ESA Statement JC 2026 25: toward a consistent and risk-based approach for ICT risks from frontier AI models (statement body)",
+      "publisher": "Joint Committee of the European Supervisory Authorities (EBA, EIOPA, ESMA)",
+      "edition": "JC 2026 25, 31 July 2026; paragraphs 1-9 only, the Annex is not carried",
+      "fetched": "2026-09-10",
+      "source_url": "https://www.esma.europa.eu/sites/default/files/2026-07/JC_2026_25_ESA_statement_on_frontier_AI_models.pdf",
+      "converted_from": "PDF (8 pages)",
+      "conversion": "Converted to Markdown on 2026-09-10 by scripts/literature/pdf_prose_to_md.py using pdftotext -raw; PDF pages 1-3 only. The Annex (a three-column table of mitigation strategies) is NOT carried, because plain extraction runs its columns together. As ESMA's legal notice requires for transformed material, the file carries the mandatory disclaimer verbatim. The structure is a conversion; the PDF is authoritative.",
+      "licence": "ESMA legal notice: reproduction authorised provided the source is acknowledged; transformed material must carry ESMA's disclaimer verbatim (carried in the file)",
+      "licence_class": "A",
+      "citation": "Joint Committee of the European Supervisory Authorities (2026). ESA Statement JC 2026 25 on ICT risks from frontier AI models, {edition}, {source_file}. Reproduced under ESMA's legal notice with the source acknowledged. 'This document has been drafted using material downloaded from ESMA's website'; 'ESMA does not endorse this publication and in no way is liable for copyright or other intellectual property rights infringements nor for any damages caused to third parties through this publication'. Markdown conversion, 2026-09-10; the PDF is authoritative.",
+      "paths": [
+        "literature/esas/*"
+      ]
+    }
+  ]
+}
