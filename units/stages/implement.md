@@ -16,6 +16,8 @@ That is retrieval and comparison work, which AI does well. It is also the stage 
 - drafting holding statements and staff messages in peacetime for approval
 - retrieving plan content and summarising response meeting notes during an incident
 
+The capability and environment for each use are in the selection guide in `tools.md`.
+
 ## Minimum controls
 
 The one control that matters: **no live plan changes without its owner's approval and a version.** A proposal to update eleven documents is a list for a person to work through, not an instruction to proceed.
@@ -33,6 +35,8 @@ The one control that matters: **no live plan changes without its owner's approva
 5. Keep the change triggers rather than the output: which system, structure or supplier change should reopen which plan next time.
 
 ## Prompts
+
+This is the stage's own prompt, with one home here; review its output with the checks in `prompts/README.md`, and use `prompts/review.md` on each plan it flags.
 
 ```
 Role: you are a BCM analyst maintaining a suite of continuity plans.

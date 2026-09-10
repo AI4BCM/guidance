@@ -15,6 +15,10 @@ That is also the failure mode. The measure of this stage is whether people under
 - creating FAQs, onboarding text, quiz items and microlearning content
 - clustering anonymised survey or workshop feedback into themes
 - answering routine staff questions through an assistant bounded to approved staff-facing content
+- finding recent public incidents in the sector for awareness use, once a person has verified the facts
+- scheduling recurring awareness drafts and manager reminders through a workflow, with publication held for human approval
+
+The capability and environment for each use are in the selection guide in `tools.md`.
 
 ## Minimum controls
 
@@ -32,16 +36,22 @@ The one control that matters: **the organisation stays the visible author.** Sta
 4. Require the model to flag what it cannot fix rather than repair it silently: wrong footage, a number that no longer answers, an example from the wrong site.
 5. Publish through the normal route and review the effect with participation data and feedback, not with output count.
 
+## Case studies and scheduled awareness
+
+Two methods sit beside the core message. A recent public incident makes an awareness message concrete, and a workflow keeps the programme running when nobody has time to write the next reminder. Both keep the organisation as the visible author, and neither publishes anything on its own.
+
+| | Current public case studies | Scheduled awareness |
+|---|---|---|
+| Inputs | public reporting on recent incidents in the sector, with nothing about your organisation entered | the approved awareness plan and its calendar, the approved core message and the manager list |
+| Capability | the public research row of the `tools.md` selection guide | the scheduled awareness row of the same guide, built on the checklist in `workflow-design.md` |
+| Output | a short case note carrying the source and date of each fact and the lesson it holds for this audience | a dated draft or reminder in the reviewer's queue, with nothing published from it |
+| Review boundary | the BCM professional verifies each fact against the original report before the case is used, and a case that cannot be verified is dropped | a named person approves every publication; the workflow drafts and reminds, and sends nothing |
+
+A case study borrowed from another organisation's incident becomes your message once it carries your lesson, and a scheduled reminder is still yours when it reaches a manager's inbox; the reviewer who will be asked about either is the one who releases it.
+
 ## Prompts
 
-```
-Role: you are an internal communications adviser supporting BCM awareness.
-Task: rewrite the attached induction script for staff at a newly acquired site.
-Sources: use only the attached induction script and BC policy extract. Keep the approved intent unchanged.
-Output: the revised script, then a separate list of items you changed for audience fit.
-Gaps: flag anything that is inaccurate for this site rather than correcting it yourself, and list what is missing.
-Cite: name the source version you worked from.
-```
+The awareness prompt is `prompts/awareness.md`; the case below runs its tailoring task on the induction script with the BC policy extract attached. A case note from a public incident uses the same prompt with the verified report as its only source.
 
 ## Case example
 
