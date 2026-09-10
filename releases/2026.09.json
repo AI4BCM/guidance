@@ -1,7 +1,7 @@
 {
   "tag": "2026.09",
   "tagged": true,
-  "commit": "ad2fc6e4216ddefac32be3247faeb4cc597c3131",
+  "commit": "1f137d3a68f4fb3bb76edb1e08a751160eac4124",
   "citation": "Hoekstra, W., Gerner, K., et al. (2026). AI4BCM: Guideline for using AI by BCM professionals, 2026.09, <unit path>. CC BY 4.0.",
   "generated_by": "ai4bcm-release-manifest.py",
   "files": {
@@ -10,7 +10,7 @@
     "ask-ai4bcm/agents/openai.yaml": "f8fd49f3d2ebbae18644f08693f301a6acfbaa5c4db13a9790f6f13d6dfa1491",
     "units/data-rules.md": "4862242a34219a98ed39575143902e672dd58115f506bb579fae69e5d35e9c0b",
     "units/glossary.md": "7151d8562c3be15d1dd17807fcf1f1384ef7d7348188a86628f613230da2defd",
-    "units/levels.md": "a546504adbcd0c5bea179ef9bd3a277902ec784e28f03a23b73762a0c8b6d413",
+    "units/levels.md": "aac471d64a48e47e6495da78a2f3c88557301d4d1ebc496f0e5a837a4a5e0445",
     "units/principles-a4.html": "9c9f403f6caba5746ce651b955b5cc1dad7a49c44128fad7e49b8a649ce3bc39",
     "units/principles.md": "27c30ca9c36ca98a00d444ddd153f99e3765e050592682ea9e0917972d7862a0",
     "units/prompts/README.md": "9b9ad6c96d5afb1c636cb2e2c3d7e5c4873f92b2a05ae232ebd83221164f1d04",
@@ -21,7 +21,7 @@
     "units/prompts/exercise.md": "c3f3776fdde9c7c1740c31ad57bd90e55c34994a0f0bcf035071a3806eb5d8c3",
     "units/prompts/management-report.md": "39d7be79f7c36e5751d6615f345f076c98d7d9bc733c778329ce7c846e453d3e",
     "units/prompts/review.md": "51a0922ddf0b8cafe46d9015e3c0752b422d03ed4d286e7bdf0bca0f17cd7740",
-    "units/references.md": "13b7e06208bf403b433217c2801c768fd6e85186218629c8698ed9daade853c1",
+    "units/references.md": "8cb6b91fc2620231c1e758c6206cf318db91cb7ad02a9b691fb6f901feb1226b",
     "units/stages/analysis.md": "223fdfbc651d3f43ea0dfa9b41d23ecadf653b41e358be10c2d175b01d218bb6",
     "units/stages/design.md": "d3f91fb7e5d544e349b91544324fa3b8991f73acc0ed950b76435f5fe13b01db",
     "units/stages/embed.md": "87c4769201e93132244f392406bcc3f6c423cccf13a0956a7234cd6c9759ec5d",

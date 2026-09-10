@@ -17,13 +17,13 @@ For most BCM work the workflow is the useful middle. Picking a step is not autho
 
 | Level | Typical characteristics | Common pitfall at this level |
 |---|---|---|
-| 1: Assisted individual productivity (ad hoc) | approved but ad hoc individual use, low-risk tasks, no integration | uncontrolled individual use and accidental disclosure of sensitive information |
-| 2: Team-level structured use (repeatable) | approved tools, basic guidance, repeatable prompts or skills | poor prompt patterns repeated, uneven quality across the team |
-| 3: Connected and governed use (defined) | retrieval over approved repositories, role-based access, documented use cases, auditable | overconfidence in retrieval quality or in connector-fed data |
-| 4: Operationally embedded AI support (measured) | multiple governed workflows, approval gates, quality monitoring, fallbacks | hidden operational dependency on workflows, or approval bottlenecks |
-| 5: Advanced and optimised use (optimising) | mature governance, strong data foundations, continuing measurement of AI-enabled processes | complexity exceeding governance capability, unclear accountability across integrated systems |
+| 1: Assisted individual productivity | approved but ad hoc individual use, low-risk tasks, no integration | uncontrolled individual use and accidental disclosure of sensitive information |
+| 2: Team-level structured use | approved tools, basic guidance, repeatable prompts or skills | poor prompt patterns repeated, uneven quality across the team |
+| 3: Connected and governed use | retrieval over approved repositories, role-based access, documented use cases, auditable | overconfidence in retrieval quality or in connector-fed data |
+| 4: Operationally embedded AI support | multiple governed workflows, approval gates, quality monitoring, fallbacks | hidden operational dependency on workflows, or approval bottlenecks |
+| 5: Advanced and optimised use | mature governance, strong data foundations, continuing measurement of AI-enabled processes | complexity exceeding governance capability, unclear accountability across integrated systems |
 
-In our experience most teams are at 1 to 2. Aim for 3 to 4. Level 5 is an optimisation stage. Proportionate testing comes before operational use at every level; Level 5 adds continuing measurement. Integration or automation alone is not evidence. Level 4 needs recorded quality and failures, review that changes outputs, a named workflow owner and a tested fallback. Two published instruments show what evidence of adoption looks like, gathered from assigned roles, artefacts, interviews and sampled documents rather than from questionnaires (SEI, 2026; OWASP AIMA, 2025). Their levels are their own and do not map onto these five; `references.md` says when each helps.
+In our experience most teams are at 1 to 2. Aim for 3 to 4. Level 5 is an optimisation stage. Proportionate testing comes before operational use at every level; Level 5 adds continuing measurement. Integration or automation alone is not evidence. Level 4 needs recorded quality and failures, review that changes outputs, a named workflow owner and a tested fallback. Two published instruments show what evidence of adoption looks like, gathered from assigned roles, artefacts, interviews and sampled documents rather than from questionnaires (SEI, 2026; OWASP AIMA, 2025). Their levels are their own and do not map onto these five; `references.md` says when each helps. AI4BCM also publishes the *AI Maturity Playbook for BCM* (Gerner, 2026; CC BY 4.0), which scores practice on four axes and asks for four numbers where these five levels give one. It is a separate instrument with its own levels, and a number on one ladder does not equal a number on the other.
 
 ## Self-check
 
