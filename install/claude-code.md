@@ -2,6 +2,19 @@
 
 Source: https://code.claude.com/docs/en/skills, read 2026-09-10.
 
+## The short way, as a plugin
+
+This repository is its own plugin marketplace. Two commands, and the units are installed alongside
+the router, so its links resolve:
+
+```
+/plugin marketplace add AI4BCM/guidance
+/plugin install ai4bcm-guidance@ai4bcm
+```
+
+`/plugin` then lists it as `ai4bcm-guidance@ai4bcm`, carrying one skill, `ask-ai4bcm`. Updates come
+through `/plugin update ai4bcm-guidance`.
+
 ## Where the folder goes
 
 Personal, available in every project on your machine:

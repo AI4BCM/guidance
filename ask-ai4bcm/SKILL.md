@@ -15,6 +15,8 @@ This routes. Every answer names the unit to read, the prompt file to run, the le
 
 Give every answer in that shape. A route without its gate is a number, and a route without the data-rules line is a hope.
 
+The unit links below are relative, and they resolve when the units travel with this file, which they do in a clone of the guidance repository and in the plugin install. In a bare skill-folder install they do not, and the units are read from github.com/AI4BCM/guidance under `units/`.
+
 ## The main flow: the six lifecycle stages
 
 The route most BCM work travels, in order. The worked example is one case: a food company acquires a processor in another country. Figures in the units are illustrative.

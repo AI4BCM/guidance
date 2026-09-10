@@ -1,0 +1,15 @@
+{
+  "name": "ai4bcm",
+  "owner": {
+    "name": "AI4BCM",
+    "url": "https://ai4bcm.org"
+  },
+  "description": "The AI4BCM guidance for using AI in business continuity management: the units, and the /ask-ai4bcm router that points at the right one.",
+  "plugins": [
+    {
+      "name": "ai4bcm-guidance",
+      "source": "./",
+      "description": "The AI4BCM guidance units and the /ask-ai4bcm router, installed together so the router's links resolve."
+    }
+  ]
+}
