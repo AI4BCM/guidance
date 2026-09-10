@@ -1,6 +1,11 @@
 # ai4bcm-guidance-mcp — the AI4BCM guidance connector (https://mcp.ai4bcm.org/mcp).
-# Canonical copy; the running one would be /etc/systemd/system/ai4bcm-guidance-mcp.service.
-# NOT INSTALLED. Round two of kb-move ticket 06, and a kgadmin round.
+# Canonical copy; the running one is /etc/systemd/system/ai4bcm-guidance-mcp.service.
+# INSTALLED AND LIVE since 2026-09-10 15:43:30Z (kb-move ticket 06, round two, run by the owner).
+# The header said NOT INSTALLED until kb-move ticket 08 checked it against systemctl -- the line
+# outlived the round it described. Verify by the artefact, never this comment:
+#   curl --resolve mcp.ai4bcm.org:443:95.217.162.203 https://mcp.ai4bcm.org/health
+# An edit here reaches the running service only through a kgadmin round; the file is the source,
+# not the deployment.
 #
 # It runs BESIDE bia-workflow-mcp, not instead of it: 8787 stays the BIA endpoint on
 # agent.ai4bcm.org, 8788 is this one on mcp.ai4bcm.org. Two names, two ports, two processes,
