@@ -69,6 +69,6 @@ The task prompt is `prompts/bia.md`, whose first task line is the pre-interview 
 
 ## Level
 
-Level 3, Connected and governed use. The draft is only worth interviewing against if the method and sources are written down: it can then be regenerated when the inventory changes, and a reviewer can see what it was built from. Level 1 or 2 produces a plausible list nobody can re-derive.
+Level 2, Team-level structured use. The pre-interview draft needs no connector: it works from the sources you attach, so what it takes is agreed tools, a written data rule, a named reviewer and the normal approval route. Write down the method and the dates of those sources as you go, so a reviewer can see what the draft was built from. BIA support and threat relevance over connected records are Level 3, Connected and governed use, where retrieval reaches the live inventory, the draft can be regenerated when the inventory changes, and all five self-check questions in `levels.md` answer yes with evidence.
 
 Hoekstra, W., Gerner, K., et al. (2026). AI4BCM: Guideline for using AI by BCM professionals. CC BY 4.0.
