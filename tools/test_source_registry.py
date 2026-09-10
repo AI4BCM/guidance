@@ -131,12 +131,14 @@ def test_the_corpus_may_hold_more_chunks_than_the_units_alone(tmp_path):
     units = write_units(tmp_path)
     registry = bc.load_sources(write_registry(tmp_path, [ROW]))
     chunks = bc.build_all(units, "2026.09", registry)
+    # Derived from the reserved set rather than restated, so ticket 07 adding an id to
+    # CITATION-CONTRACT.md does not silently turn this fixture into a false failure.
     stage_fillers = [
-        bc.Chunk(id=f"stages-{stage}-{section}", unit=f"stages-{stage}", section_type="section",
-                 title=section, breadcrumb=section, text="body", url="u", char_count=4,
+        bc.Chunk(id=cid, unit=cid.rsplit("-", 1)[0], section_type="section",
+                 title=cid, breadcrumb=cid, text="body", url="u", char_count=4,
                  release_tag="2026.09", source_id="test-source", source_edition="1.0",
                  licence="CC BY 4.0", citation="c")
-        for stage in bc.STAGE_UNITS for section in bc.STAGE_REQUIRED_SECTIONS
+        for cid in sorted(bc.RESERVED_CHUNK_IDS)
     ]
     filler = [
         bc.Chunk(id=f"literature-filler-{n}", unit="literature", section_type="section",
