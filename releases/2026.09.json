@@ -1,0 +1,32 @@
+{
+  "tag": "2026.09",
+  "tagged": false,
+  "commit": "6639727726eb6bec9fa0c83a056f625d49879588",
+  "citation": "Hoekstra, W., Gerner, K., et al. (2026). AI4BCM: Guideline for using AI by BCM professionals, 2026.09, <unit path>. CC BY 4.0.",
+  "generated_by": "ai4bcm-release-manifest.py",
+  "files": {
+    "ask-ai4bcm/README.md": "337e4a9484a971e3402bc42d7283300c3161012f89045ab7f28509582b38b16d",
+    "ask-ai4bcm/SKILL.md": "e237e66710e1e897d3271eb8cb3435cf8847771343c4b6adc66dd42a80ab78cd",
+    "ask-ai4bcm/agents/openai.yaml": "f8fd49f3d2ebbae18644f08693f301a6acfbaa5c4db13a9790f6f13d6dfa1491",
+    "units/data-rules.md": "8704bf07f1fc3940cff2d8f04d1c4ed813b2a44a1aedd46b3d612780a4b4c7fc",
+    "units/glossary.md": "be2346e9b1210ca7b984f98680ff97a5b0e08eed1847d6ec1d4ee64b761d757b",
+    "units/levels.md": "9fd9380c0c7a29bd2dc9a32f3528d14427942f645cb35cd9964fd4f10bff15ca",
+    "units/principles.md": "eda0e26cb679b1176fe7996e2b3eb3a0f7303a2fe12f5701577873349b6f17b0",
+    "units/prompts/README.md": "43161a0c2d0d367e5fa4615ac3f1e439dd2d4f4dbd24e96788af36650252021e",
+    "units/prompts/awareness.md": "55978d2d957cedaaccfecfdc6999b6df414ff763c1233f090eb817dcf5a8776e",
+    "units/prompts/bia.md": "742d58543e64a1ed1e416752e92b45c54322e9b8c75c51e12f39ba866ee083dc",
+    "units/prompts/draft.md": "23d648940d13ae3ec128da0d629d21f68b83f25754a116c6a9e5ed5dbf832ec1",
+    "units/prompts/exercise.md": "ad7144c53a54073f92a7d1a3b45cf786ea6b0749403e7c9bcb431f3b957e5fba",
+    "units/prompts/management-report.md": "8e1f716fbf34f1daf9d429d01c5d491cf123b2c36bcd3ed4c88f21fde2f96664",
+    "units/prompts/review.md": "f8badc60699a80d19d4c5873835c450625177e6d8faa85387cf9467d77fe2a04",
+    "units/references.md": "70fad30a8abb6f0b66a3811ba7846e28c69146f4d1e89e6b23d6920581dd6725",
+    "units/stages/analysis.md": "eefed719036c8fa0725b2d6d4ec4c52291c96322b01035d01febdf44d26ff577",
+    "units/stages/design.md": "5cd18b22df1e04d9e5bceb678061fd38af30d99096c8d8c02bb91f77fad3db66",
+    "units/stages/embed.md": "e0814111d71d660247800ff48ad73c5e62813adb47213d282616f1c00a93a493",
+    "units/stages/govern.md": "e9c624359e63741d120cb7a7c4873fc1108e83bb1c876085f881d69ff8fc3345",
+    "units/stages/implement.md": "699d6d9de69c6c99dcfac3a7e2e71e89b90503a4652c83085ad841b71594a713",
+    "units/stages/validate.md": "39355be4593ae2913bf17e11fb6cb11c24737b2486ea3ea6e8470d69f4c8edd3",
+    "units/tools.md": "13979cbc0f7d27d14ab98d91d9ca6977cbb2a0804dd8c824593ce8939502f46f",
+    "units/workflow-design.md": "ecda4a480f6c012fc4b8a967ef2324347a3af0994ff2f63e705d83992d4747b7"
+  }
+}
