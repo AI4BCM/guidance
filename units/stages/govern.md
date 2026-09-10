@@ -14,7 +14,10 @@ The line is fixed. AI may prepare and challenge governance material. It cannot s
 - preparing implementation roadmaps and governance work plans
 - turning BCMS metrics and open actions into a management report draft
 - producing role and responsibility summaries for review
-- summarising changes in official guidance or regulation for a person to interpret
+- summarising changes in official guidance or regulation for a person to interpret, on request or from a workflow that watches approved official sources
+- helping a newer practitioner learn the BCMS's structure, vocabulary and expected outputs from approved governance material
+
+The capability and environment for each use are in the selection guide in `tools.md`.
 
 ## Minimum controls
 
@@ -32,16 +35,22 @@ The one control that matters: **a claim of compliance or alignment is never acce
 4. Take it to the people who will live with it — legal, compliance, information security, document owners — before it enters approval.
 5. Approve and control it normally. Then review the use case: keep it only while it improves governance, not because it is fast.
 
+## Learning the practice
+
+A newer practitioner learns the BCMS faster from its own documents than from a generic explanation, and a bounded assistant over those documents is the lowest-risk use of AI in this stage. This is practitioner learning. Staff induction is the embedding stage's work and has its own method in `stages/embed.md`.
+
+| | Learning the practice |
+|---|---|
+| Inputs | the approved policy, framework, scope statement, procedures and glossary, with their dates; licensed standards text only where the licence permits |
+| Capability | the "Learning BCM terms and methods as a newer practitioner" row of the `tools.md` selection guide |
+| Output | an explanation of a term, a structure or an expected output, tied to the document that defines it here and marked where the documents are silent |
+| Review boundary | the practitioner or a colleague checks the explanation against the source before acting on it; the assistant explains what the documents say and does not interpret a standard or decide a case |
+
+Where the documents are silent, the answer is a question for the BC manager, and the practitioner learns that too.
+
 ## Prompts
 
-```
-Role: you are supporting a BCM professional preparing governance material.
-Task: draft the scope change and onboarding actions for adding a newly acquired site to an existing BCM policy.
-Sources: use only the attached policy, scope statement, steering group terms of reference and organisation chart. Do not supply requirements from general knowledge.
-Output: two action lists, one for the parent organisation and one for the site, each with the clause it follows from.
-Gaps: name what the attached documents do not settle. Never state that anything complies.
-Cite: quote the clause behind each action.
-```
+The drafting prompt is `prompts/draft.md`; the case below runs it with the policy, scope statement, steering group terms of reference and organisation chart attached and two action lists as the named structure. `prompts/review.md` is step 3 of the method, and `prompts/management-report.md` is the other governance prompt.
 
 ## Case example
 

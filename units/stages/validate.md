@@ -16,6 +16,8 @@ AI earns its place after the event, turning volume into a pattern, and before it
 - scanning BCMS material against a checklist for possible evidence gaps
 - turning validation metrics and action progress into a management review narrative
 
+The capability and environment for each use are in the selection guide in `tools.md`.
+
 ## Minimum controls
 
 The one control that matters: **AI proposes a theme; a person makes it a finding.** Nothing enters the exercise report, the lessons log or the audit note without the accountable reviewer deciding it belongs there.
@@ -33,6 +35,8 @@ The one control that matters: **AI proposes a theme; a person makes it a finding
 5. Put the pattern to the people who were there before it becomes a finding, then track the action to a named owner.
 
 ## Prompts
+
+This is the stage's own prompt, with one home here; review its output with the checks in `prompts/README.md`, and use `prompts/exercise.md` once a theme is worth exercising.
 
 ```
 Role: you are supporting a BCM professional planning an exercise programme.
