@@ -31,7 +31,7 @@ documentation with the URL and the date it was read:
 - [Claude Code](claude-code.md)
 - [Codex](codex.md)
 - [GitHub Copilot](github-copilot.md)
-- [ChatGPT](chatgpt.md)
+- [ChatGPT](chatgpt.md) — the plugin route needs a Business, Enterprise, Healthcare or Edu workspace
 
 ## What the router does, and what holds it back
 
