@@ -13,13 +13,47 @@ Name the release and the unit path:
 
 The print edition carries the same release as its edition tag, so a citation of a printed page
 names the release the same way and gives the sheet instead of the unit path. Where a claim needs
-to be checkable rather than merely attributed, add the commit from `releases/2026.09.json`.
+to be checkable rather than merely attributed, add the commit from the release's manifest:
+`releases/<tag>.json` for the current release, `releases/archive/<tag>.json` for an earlier one.
 
 Prompts move faster than the rest of the guidance. `units/prompts/` is the living part, so a
 citation of a prompt without a release names nothing durable — cite the release or quote the
 prompt in full.
 
-## 2026.09 — not yet tagged
+## 2026.09.1
+
+A point release in September, published ahead of the November final `2026.11` by owner decision
+on 2026-09-11. `2026.09` stays exactly as minted (`1f137d3`), so everyone who cited it keeps the
+text they cited. Its manifest moved to `releases/archive/2026.09.json`; `releases/2026.09.1.json`
+is now the one manifest the corpus builder reads.
+
+What changed:
+
+- **The plain-English rewrite is the default text** of every unit and of the router: shorter
+  declarative sentences in place of the earlier register. The guarded strings, the BIA vocabulary,
+  the prompt fences and every citation stayed as they were.
+- **A new maturity ladder.** The five levels are now `Ad hoc/Initial`, `Repeatable`, `Defined`,
+  `Quantitatively managed` and `Optimised`, in the lineage of CMM/CMMI and cited as such. They
+  replace the five earlier names, and the descriptions were rewritten to the process-maturity
+  meaning. `units/levels.md`, the starting guide and every stage unit's `## Level` section changed
+  with them.
+- **The Quick Start** returns in the print edition, as a sheet after the cover.
+- **The glossary** gained the terms a newcomer needs (AI, machine learning, prompt, invention,
+  RPO; generative AI, LLM and RAG extended) and prints as its own sheet.
+- "From prompt to team method" joins `units/prompts/README.md`.
+- Every unit's `<!-- meta -->` anchor reads `version=2026.09.1`. The anchor is stripped before a
+  chunk is built, so it changes no chunk id and no chunk text.
+
+**No reserved id changed.** All 26 ids of `CITATION-CONTRACT.md` are still built, and so are the 9
+distinct ids `run-bia.yaml` cites: `prompts-bia`, `prompts-review`, `stages-analysis-level`,
+`stages-analysis-method`, `stages-analysis-minimum-controls`, `stages-analysis-typical-ai-uses`,
+`stages-design-method`, `stages-design-minimum-controls`, `stages-design-typical-ai-uses`. Chunk
+text is not covered by the contract, and much of it changed.
+
+## 2026.09 — minted 2026-09-10, tag at `1f137d3`
+
+*Written before the mint, and kept as written below; the manifest now lives at
+`releases/archive/2026.09.json`.*
 
 The first release of the machine edition. Nothing is tagged: `releases/2026.09.json` records the
 commit it was cut against and carries `"tagged": false` until the tag is minted. Until then the
