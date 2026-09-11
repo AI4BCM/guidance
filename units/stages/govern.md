@@ -1,4 +1,4 @@
-<!-- meta: unit=stages/govern version=2026.09 -->
+<!-- meta: unit=stages/govern version=2026.09.1 -->
 # Establishing and Governing BCM
 
 ## Situation

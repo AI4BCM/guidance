@@ -1,4 +1,4 @@
-<!-- meta: unit=stages/design version=2026.09 -->
+<!-- meta: unit=stages/design version=2026.09.1 -->
 # Continuity Strategies and Solutions Design
 
 ## Situation

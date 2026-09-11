@@ -1,4 +1,4 @@
-<!-- meta: unit=prompts/evaluations version=2026.09 dated=2026-09 -->
+<!-- meta: unit=prompts/evaluations version=2026.09.1 dated=2026-09 -->
 # Prompt evaluations
 
 Thirty cases cover the ten prompts in this guidance, three each. They cover the pattern here, the
