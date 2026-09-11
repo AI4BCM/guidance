@@ -50,7 +50,8 @@ rather than an opinion.
 A draft for the next tag lives in `releases/drafts/<tag>.json`. It moves up to `releases/` at the
 mint. The previous tag's manifest stays in the repository but moves out of `releases/` at the same
 time, because the corpus builder stamps every chunk from the one manifest in `releases/` and refuses
-two.
+two. It goes to `releases/archive/<tag>.json`, which the builder's non-recursive `releases/*.json`
+glob does not see; `2026.09` moved there at the `2026.09.1` mint.
 
 **Across release tags, the reserved ids survive.** A reserved id is never renamed or removed without
 a new version of this contract and a `CHANGELOG.md` entry naming the consumers that must move. Every
@@ -127,7 +128,7 @@ whole comment before a chunk is built, so the anchors are invisible in the outpu
 
 **Removing them is therefore an editorial change, deferred — owner: Konstantin Gerner, as AI4BCM
 guidance editor. Trigger: the next release tag after `2026.09`.** Two reasons it is not done here.
-The unit files' sha256 are pinned in `releases/2026.09.json`, so editing them now would falsify the
+The unit files' sha256 are pinned in `releases/2026.09.json` (now `releases/archive/2026.09.json`), so editing them now would falsify the
 manifest of a tag that is already live and serving. And `units/` has a second copy — the editorial
 source in the vault, `02-Projects/ai4bcm/guidance-rewrite/units/` — so the edit is two trees, not
 one, and belongs in an editing round rather than a plumbing one. At the next tag the manifest is
