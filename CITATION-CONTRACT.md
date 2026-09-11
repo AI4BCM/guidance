@@ -47,6 +47,11 @@ and a test run.
 pins the sha256 of every unit file in that tag, so "same tag, changed bytes" is a detectable defect
 rather than an opinion.
 
+A draft for the next tag lives in `releases/drafts/<tag>.json`. It moves up to `releases/` at the
+mint. The previous tag's manifest stays in the repository but moves out of `releases/` at the same
+time, because the corpus builder stamps every chunk from the one manifest in `releases/` and refuses
+two.
+
 **Across release tags, the reserved ids survive.** A reserved id is never renamed or removed without
 a new version of this contract and a `CHANGELOG.md` entry naming the consumers that must move. Every
 other id may change whenever an editor rewords a heading, and carries no promise at all.
