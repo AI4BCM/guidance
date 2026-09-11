@@ -3,9 +3,9 @@
 
 ## Situation
 
-Implementation is where the suite grows faster than anyone maintains it: plans, action cards, contact lists, escalation routes. The characteristic failure is eleven plans that disagree with each other and with the organisation chart.
+Implementation is where the number of documents grows faster than anyone can keep up: plans, action cards, contact lists, escalation routes. The typical problem is eleven plans that do not match each other or the organisation chart.
 
-That is retrieval and comparison work, which AI does well. It is also the stage closest to live response, so the boundary matters most here. AI may retrieve, summarise and draft during an incident. It does not invoke a plan, declare anything, or send a message outside the organisation.
+Finding and comparing documents is work that AI does well. This stage is also the closest to a real incident, so the rules matter most here. During an incident, AI may find, summarise and draft. It does not invoke a plan, declare anything, or send messages outside the organisation.
 
 ## Typical AI uses
 
@@ -20,11 +20,11 @@ The capability and environment for each use are in the selection guide in `tools
 
 ## Minimum controls
 
-The one control that matters: **no live plan changes without its owner's approval and a version.** A proposal to update eleven documents is a list for a person to work through, not an instruction to proceed.
+The one control that matters: **no live plan changes without the owner's approval and a new version.** A proposal to update eleven documents is a list for a person to work through, not an instruction to go ahead.
 
 - The team expected to use the plan confirms that activation criteria, roles and actions are realistic. AI cannot test usability under pressure.
 - Material decisions during an incident stay under human authority, and external communications are never sent unsupervised.
-- Fallback methods exist for every AI-supported step. If the response only works while the tool works, the arrangement is not resilient.
+- Every AI-supported step needs a fallback method. If the response only works while the tool works, the arrangement is not resilient.
 
 ## Method
 
@@ -51,12 +51,12 @@ Cite: document and section behind each entry, quoting the out-of-date line in qu
 
 **Prompt.** The new site is in scope. Which plans and contact lists are now out of date?
 
-**Response.** Eleven documents. Nine carry old contact details; two change the out-of-hours escalation route; no responsible person is named on any of the new site's plans. Offered to update them, and did not.
+**Response.** Eleven documents. Nine have old contact details; two change the out-of-hours escalation route; no responsible person is named on any of the new site's plans. Offered to update them, and did not.
 
-**What changed.** Eleven documents were found and corrected. Finding them took a minute; getting them signed off took three weeks — the review load is the constraint, and it is the part AI does not remove.
+**What changed.** Eleven documents were found and corrected. Finding them took a minute; getting them signed off took three weeks. The review load is the bottleneck, and AI does not remove it.
 
 ## Level
 
-Level 3, Connected and governed use. Consistency checking across a suite needs retrieval over the approved plan repository and a documented, auditable use case. The change-triggered version, where a structural change reopens plans on its own, is Level 4 and needs approval gates and a tested fallback first.
+Level 3, Defined. Consistency checking across a suite needs retrieval over the approved plan repository and a written, auditable use case. The change-triggered version, where a structural change reopens plans on its own, is Level 4, Quantitatively managed, and needs a named owner, approval gates, counted results and a tested fallback first.
 
 Hoekstra, W., Gerner, K., et al. (2026). AI4BCM: Guideline for using AI by BCM professionals. CC BY 4.0.

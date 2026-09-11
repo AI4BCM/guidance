@@ -3,9 +3,9 @@
 
 ## Situation
 
-Embedding is explanation, repeated for audiences who do not share your vocabulary. AI is good at that: it tailors one approved message for executives, line managers, new starters and a site that works in another language, and it does the twentieth version as willingly as the first.
+Embedding means explaining, over and over, to people who do not use your vocabulary. AI is good at that: it tailors one approved message for executives, line managers, new starters and a site that works in another language. AI writes the twentieth version as easily as the first.
 
-That is also the failure mode. The measure of this stage is whether people understand and act. Repeated AI-generated messages that read as generic reduce engagement rather than improve it, and culture is not produced by volume.
+That is also where it can go wrong. Success at this stage means people understand and act. Repeated AI-generated messages that read as generic reduce engagement rather than improve it, and culture is not produced by volume.
 
 ## Typical AI uses
 
@@ -38,14 +38,14 @@ The one control that matters: **the organisation stays the visible author.** Sta
 
 ## Case studies and scheduled awareness
 
-Two methods sit beside the core message. A recent public incident makes an awareness message concrete, and a workflow keeps the programme running when nobody has time to write the next reminder. Both keep the organisation as the visible author, and neither publishes anything on its own.
+Two methods sit beside the core message. A recent public incident makes an awareness message concrete. A workflow keeps the programme running when nobody has time to write the next reminder. Both keep the organisation as the visible author. Neither publishes anything on its own.
 
 | | Current public case studies | Scheduled awareness |
 |---|---|---|
 | Inputs | public reporting on recent incidents in the sector, with nothing about your organisation entered | the approved awareness plan and its calendar, the approved core message and the manager list |
 | Capability | the public research row of the `tools.md` selection guide | the scheduled awareness row of the same guide, built on the checklist in `workflow-design.md` |
 | Output | a short case note carrying the source and date of each fact and the lesson it holds for this audience | a dated draft or reminder in the reviewer's queue, with nothing published from it |
-| Review boundary | the BCM professional verifies each fact against the original report before the case is used, and a case that cannot be verified is dropped | a named person approves every publication; the workflow drafts and reminds, and sends nothing |
+| Review boundary | the BCM professional verifies each fact against the original report before the case is used; a case that cannot be verified is dropped | a named person approves every publication; the workflow drafts and reminds, and sends nothing |
 
 A case study borrowed from another organisation's incident becomes your message once it carries your lesson, and a scheduled reminder is still yours when it reaches a manager's inbox; the reviewer who will be asked about either is the one who releases it.
 
@@ -57,12 +57,12 @@ The awareness prompt is `prompts/awareness.md`; the case below runs its tailorin
 
 **Prompt.** Rewrite our induction e-learning script for the newly acquired site.
 
-**Response.** A draft script from Induction v4.2. Flagged and not fixed: the footage shows the existing sites; the emergency number is the parent organisation's; no version exists in the language the new site works in.
+**Response.** A draft script based on Induction v4.2. Flagged but not fixed: the footage shows the existing sites; the emergency number is the parent company's; there is no version in the language the new site uses.
 
-**What changed.** Induction training became available in the site's own language. The script took an afternoon; the dubbing took three weeks, which is where the real timeline sat.
+**What changed.** Induction training is now available in the site's own language. The script took an afternoon. The dubbing took three weeks, and that is where the real timeline was.
 
 ## Level
 
-Level 2, Team-level structured use. Awareness drafting works from a defined content base with a repeatable prompt and a named reviewer; it needs no connector. The bounded staff assistant is Level 3, because it retrieves from a controlled repository under access control.
+Level 2, Repeatable. Awareness drafting works from a fixed content base with a saved prompt and a named reviewer; it needs no connector. The bounded staff assistant is Level 3, Defined, because its sources, its access control and its limits must be written down and owned before staff can ask it anything.
 
 Hoekstra, W., Gerner, K., et al. (2026). AI4BCM: Guideline for using AI by BCM professionals. CC BY 4.0.

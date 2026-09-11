@@ -12,6 +12,6 @@ Cite: document and section behind each requirement, with quotation marks around 
 
 Use it for policy, plan and governance first drafts.
 
-**Review.** The draft enters the normal approval route with its status unchanged. Check each cited clause against the wording it is said to support, answer every open compliance question yourself, and apply the checks in `README.md` before anyone relies on the text.
+**Review.** The draft goes into the normal approval route with its status unchanged. Check each cited clause against the wording it is said to support. Answer every open compliance question yourself. Apply the checks in `README.md` before anyone relies on the text.
 
 Hoekstra, W., Gerner, K., et al. (2026). AI4BCM: Guideline for using AI by BCM professionals. CC BY 4.0.

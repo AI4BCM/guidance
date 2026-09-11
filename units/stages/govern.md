@@ -3,7 +3,7 @@
 
 ## Situation
 
-Governance work is mostly writing: policy, scope, roles, management reporting. That makes it the stage where AI drafts fastest and where a fluent draft does most damage. A well-worded policy reads as agreed long before anyone agreed to it.
+Governance work is mostly writing: policy, scope, roles, management reporting. It is the stage where AI drafts fastest. It is also where a smooth draft does most harm, because a well-written policy looks agreed long before anyone actually agreed to it.
 
 The line is fixed. AI may prepare and challenge governance material. It cannot set management intent, assign accountability, or declare a BCMS compliant. Those are decided through the organisation's own governance route, by people who can be held to them.
 
@@ -21,7 +21,7 @@ The capability and environment for each use are in the selection guide in `tools
 
 ## Minimum controls
 
-The one control that matters: **a claim of compliance or alignment is never accepted from a model.** Any statement that the organisation meets a standard, a regulation or its own policy is verified by a person against the source text.
+The one control that matters: **never accept a claim of compliance or alignment from a model.** Any statement that the organisation meets a standard, a regulation or its own policy is verified by a person against the source text.
 
 - Final policy, scope and governance decisions stay with management. A draft enters the normal approval route with its status unchanged.
 - Only approved tools touch internal governance content; licensed standards text only where the licence permits.
@@ -37,7 +37,7 @@ The one control that matters: **a claim of compliance or alignment is never acce
 
 ## Learning the practice
 
-A newer practitioner learns the BCMS faster from its own documents than from a generic explanation, and a bounded assistant over those documents is the lowest-risk use of AI in this stage. This is practitioner learning. Staff induction is the embedding stage's work and has its own method in `stages/embed.md`.
+A newer practitioner learns the BCMS faster from its own documents than from a generic explanation. A bounded assistant over those documents is the lowest-risk use of AI in this stage. This is practitioner learning. Staff induction is the embedding stage's work and has its own method in `stages/embed.md`.
 
 | | Learning the practice |
 |---|---|
@@ -46,7 +46,7 @@ A newer practitioner learns the BCMS faster from its own documents than from a g
 | Output | an explanation of a term, a structure or an expected output, tied to the document that defines it here and marked where the documents are silent |
 | Review boundary | the practitioner or a colleague checks the explanation against the source before acting on it; the assistant explains what the documents say and does not interpret a standard or decide a case |
 
-Where the documents are silent, the answer is a question for the BC manager, and the practitioner learns that too.
+Where the documents are silent, the answer is a question for the BC manager. The practitioner learns that too.
 
 ## Prompts
 
@@ -54,14 +54,14 @@ The drafting prompt is `prompts/draft.md`; the case below runs it with the polic
 
 ## Case example
 
-**Prompt.** A new site has been acquired. What do we change, and what must the site comply with?
+**Prompt.** A new site has been acquired. What do we change, and what must the site follow?
 
-**Response.** The scope statement names four sites and not the fifth. No role exists for onboarding a site at all. At the acquired site: no BC coordinator, no seat on the steering group, no local plan owner. Four actions for the parent, nine for the site.
+**Response.** The scope statement names four sites and not the fifth. No role exists for bringing a new site on board. At the acquired site: no BC coordinator, no seat on the steering group, no local plan owner. Four actions for the parent company, nine for the site.
 
-**What changed.** Onboarding actions exist for both sides and the work can start. The organisation had no onboarding checklist before — it had whoever did it last time.
+**What changed.** Onboarding actions now exist for both sides and the work can start. Before this, the company had no onboarding checklist, only the person who did it last time.
 
 ## Level
 
-Level 2, Team-level structured use. A repeatable prompt over a fixed set of attached governance documents needs agreed tools and a written data rule, not connectors. It reaches Level 3 when the same question runs against the live governance repository.
+Level 2, Repeatable. A saved prompt over a fixed set of attached governance documents lets the team repeat the work with agreed tools and a written data rule, and it needs no connector. It reaches Level 3, Defined, when the use case, its sources and its review point are written down and the same question runs against the live governance repository.
 
 Hoekstra, W., Gerner, K., et al. (2026). AI4BCM: Guideline for using AI by BCM professionals. CC BY 4.0.

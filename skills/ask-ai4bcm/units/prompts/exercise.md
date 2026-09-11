@@ -10,8 +10,8 @@ Gaps: what the material does not settle about the organisation, and which invent
 Cite: document and section behind each organisational assumption, with quotation marks around any wording taken verbatim; invented detail is exempt and needs no citation.
 ```
 
-The exercise director judges realism, and `stages/validate.md` states the objective rule.
+The exercise director judges realism. `stages/validate.md` states the objective rule.
 
-**Review.** Before delivery, confirm that every sourced fact is current and that no invented detail contradicts one, then judge realism and proportion against the objective; the checks in `README.md` apply to the sourced facts only.
+**Review.** Before delivery, check that every sourced fact is still current. Check that no invented detail contradicts a sourced fact. Then judge realism and proportion against the objective. The checks in `README.md` apply to the sourced facts only.
 
 Hoekstra, W., Gerner, K., et al. (2026). AI4BCM: Guideline for using AI by BCM professionals. CC BY 4.0.

@@ -3,7 +3,7 @@
 
 ## Situation
 
-Analysis is the stage that runs on what nobody has written down yet. The blank page comes before the first interview: someone must produce a candidate activity list, a set of resource requirements and a set of questions. AI moves that starting line. It drafts from what your other sites already know; it cannot know what only the acquired site's staff know.
+Analysis is the stage that runs on what nobody has written down yet. The blank page comes before the first interview: someone has to produce a candidate activity list, a set of resource requirements and a set of questions. AI moves that starting line. It drafts from what your other sites already know. It cannot know what only the acquired site's staff know.
 
 Analysis also involves some of the most sensitive material in BCM. Live BIA and risk data goes into an approved environment or nowhere.
 
@@ -22,9 +22,9 @@ The capability and environment for each use are in the selection guide in `tools
 
 The one control that matters: **a drafted resource requirement is a question for the owner, never an entry in the register.** It stays unconfirmed until an owner of the activity says otherwise.
 
-- **AI may test whether a proposed RTO is consistent with impact criteria; it does not set it.** The same holds for MTPD.
+- **AI can test whether a proposed RTO fits the impact criteria. It does not set the RTO.** The same holds for MTPD.
 - The draft names its source data and that data's date. An out-of-date inventory yields a confident, current-looking, wrong BIA.
-- Recovery fields stay empty in anything AI produces, so a blank is visibly a blank, not an inherited guess.
+- Recovery fields stay empty in anything AI produces. That way a blank is clearly a blank, not an inherited guess.
 
 ## Method
 
@@ -40,20 +40,20 @@ Requirements come in four classes. Once the impacts and the MTPD are settled, th
 
 Dependencies are a separate item and keep the narrower meaning of up- and downstream relationships with other departments, each recorded with the RTO the relationship carries, so that a relationship one department records appears in the other department's BIA.
 
-The five-stage BIA workflow — identification of scope, structured interview, conversion to the standardised template, listing the requirements, consolidation and handover — is specified in `workflow-design.md`.
+The five-stage BIA workflow — identification of scope, structured interview, conversion to the standardised template, listing the requirements, consolidation and handover — is set out in `workflow-design.md`.
 
 ## Risk assessment
 
-The BIA method above does not cover the risk half of this stage. Risk assessment with AI support has a public half and an internal half, and the data rule draws the line between them. Public threat, regulatory and incident reporting may be gathered in any approved tool because it says nothing about your organisation; the moment relevance is judged against your own records, the work is high-sensitivity and moves to the approved environment.
+The BIA method above does not cover the risk part of this stage. Risk assessment with AI support has a public side and an internal side. The data rule draws the line between them. You can collect public threat, regulatory and incident reporting in any approved tool. This is because it says nothing about your organisation. Once you judge relevance against your own records, the work becomes high-sensitivity. It then moves to the approved environment.
 
 | | Risk assessment with AI support |
 |---|---|
-| Inputs | public threat, regulatory and incident reporting for the sector and the regions you operate in; the approved risk register, the requirements register and the BIA output, each with its date |
-| Capability | the two rows of the `tools.md` selection guide that carry it, public research in any approved tool and threat relevance in the approved environment |
-| Output | a relevance note per threat that states how certain the public evidence is, links each point to the public source and to the internal record it touches, and ends in questions or themes for the risk owner |
-| Review boundary | a person assesses the threat, decides the treatment and accepts the risk; a model proposes relevance and does not rate a risk, accept it or change a risk record |
+| Inputs | public threat, regulatory and incident reporting for the sector and the regions you work in; the approved risk register, the requirements register and the BIA output, each with its date |
+| Capability | the two rows of the `tools.md` selection guide that cover this, one for public research in any approved tool and one for threat relevance in the approved environment |
+| Output | a relevance note per threat. It states how certain the public evidence is. It links each point to the public source and to the internal record it touches. It ends in questions or themes for the risk owner |
+| Review boundary | a person assesses the threat, decides the treatment and accepts the risk. A model proposes relevance. It does not rate a risk, accept it or change a risk record |
 
-When a system, supplier, site or process changes, the comparison runs the other way. A workflow over approved source systems flags the risk and BIA records the change touches and hands them to their owners for review, on the checklist in `workflow-design.md`; the record itself changes only through the normal approval route.
+When a system, supplier, site or process changes, the comparison runs the other way. A workflow over approved source systems flags the risk and BIA records that the change affects. It hands them to their owners for review, on the checklist in `workflow-design.md`. The record itself changes only through the normal approval route.
 
 ## Prompts
 
@@ -63,12 +63,12 @@ The task prompt is `prompts/bia.md`, whose first task line is the pre-interview 
 
 **Prompt.** Draft the activities, resource requirements and interview questions for the acquired site. Leave recovery times blank.
 
-**Response.** Fourteen candidate activities, drawn from the four existing sites. Resource requirements listed per activity in the four classes. Thirty-one interview questions. RTO and MTPD fields empty as instructed.
+**Response.** Fourteen candidate activities, drawn from the four existing sites. Resource requirements listed per activity in the four classes. Thirty-one interview questions. RTO and MTPD fields left empty as instructed.
 
-**What changed.** The interview guide existed before the first interview. The interviews then added what the draft could not have known: the site slaughters wild boar, seasonally, and it is cash-relevant.
+**What changed.** The interview guide existed before the first interview. The interviews then added what the draft could not have known: the site slaughters wild boar, seasonally, and it matters for cash flow.
 
 ## Level
 
-Level 2, Team-level structured use. The pre-interview draft needs no connector: it works from the sources you attach, so what it takes is agreed tools, a written data rule, a named reviewer and the normal approval route. Write down the method and the dates of those sources as you go, so a reviewer can see what the draft was built from. BIA support and threat relevance over connected records are Level 3, Connected and governed use, where retrieval reaches the live inventory, the draft can be regenerated when the inventory changes, and all five self-check questions in `levels.md` answer yes with evidence.
+Level 2, Repeatable. The pre-interview draft needs no connector: it works from the sources you attach, so what it takes is agreed tools, a written data rule, a saved prompt, a named reviewer and the normal approval route. Write down the method and the dates of those sources as you go, so a reviewer can see what the draft was built from. BIA support and threat relevance over connected records are Level 3, Defined, where retrieval reaches the live inventory under a written, owned method, the draft can be regenerated when the inventory changes, and all five self-check questions in `levels.md` answer yes with evidence.
 
 Hoekstra, W., Gerner, K., et al. (2026). AI4BCM: Guideline for using AI by BCM professionals. CC BY 4.0.

@@ -3,9 +3,9 @@
 
 ## Situation
 
-Design is where analysis becomes spending. The work is comparison: what the BIA requires against what the organisation can currently do, and which option is worth its money, its complexity and its trade-off.
+Design is where analysis becomes spending. The work is comparison: what the BIA requires against what the organisation can currently do, and which option is worth its money, its complexity, and its trade-off.
 
-AI is useful here for two things that are hard to do by hand — holding many registers in view at once, and attacking an option that everyone in the room already likes. It does not decide. Investment, priority and risk acceptance are business decisions, taken with stakeholders and approved through governance.
+AI is useful here for two things that are hard to do by hand — holding many registers in view at once, and attacking an option that everyone in the room already likes. It does not decide. Investment, priority, and risk acceptance are business decisions, taken with stakeholders and approved through governance.
 
 ## Typical AI uses
 
@@ -20,7 +20,7 @@ The capability and environment for each use are in the selection guide in `tools
 
 ## Minimum controls
 
-The one control that matters: **an option produced by AI is advisory until a named owner confirms it is workable here.** Plausibility is not feasibility.
+The one control that matters: **an option produced by AI is advisory until a named owner confirms it works here.** Plausibility is not feasibility.
 
 - Internal design, architecture, cost and supplier detail is handled in approved environments only. Generic brainstorming may happen elsewhere, with no internal detail disclosed.
 - Financial and commercial assumptions are checked by finance or procurement. AI does not justify an investment on its own authority.
@@ -53,10 +53,10 @@ Cite: name the register, entry and section behind each shared requirement, with 
 
 **Response.** Three shared suppliers. Refrigerated transport is the sharpest: one shipping company serves both sites and no second one is recorded anywhere. The existing site's plan names the acquired site's carrier as its backup — the same company under a different name.
 
-**What changed.** A single point of failure across both sites was identified and procurement began contracting a second carrier. It surfaced only because both registers were in one place; neither register alone contained the finding.
+**What changed.** A single point of failure across both sites was found, and procurement began contracting a second carrier. It only came to light because both registers were in one place, and neither register alone contained the finding.
 
 ## Level
 
-Level 3, Connected and governed use. Comparing registers means retrieval across approved repositories with role-based access and a documented use case, so the comparison can be repeated when either register changes. Below that, the same question is answered from whatever someone happened to paste in.
+Level 3, Defined. Comparing registers needs a written use case and approved repositories with role-based access, so the comparison runs the same way each time either register changes. Below that, the same question is answered from whatever someone happened to paste in.
 
 Hoekstra, W., Gerner, K., et al. (2026). AI4BCM: Guideline for using AI by BCM professionals. CC BY 4.0.
