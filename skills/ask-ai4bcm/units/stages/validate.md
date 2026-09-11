@@ -3,9 +3,9 @@
 
 ## Situation
 
-Validation produces more evidence than anyone reads. Exercise reports, debrief notes, audit observations and post-incident material accumulate, and the finding that matters is usually the one that appears in three of them.
+Validation produces more evidence than anyone reads. Exercise reports, debrief notes, audit observations and post-incident material pile up, and the finding that matters is usually the one that shows up in three of them.
 
-AI earns its place after the event, turning volume into a pattern, and before it, producing variation so the fourth exercise is not the third one again. It does not replace the exercise director, facilitator or auditor. And the material is sensitive — debriefs and incident records name people and weaknesses, so they stay in approved environments.
+AI is useful after the event, turning volume into a pattern, and before it, adding variation so the fourth exercise is not the third one again. It does not replace the exercise director, facilitator or auditor. The material is sensitive — debriefs and incident records name people and weaknesses, so they stay in approved environments.
 
 ## Typical AI uses
 
@@ -20,7 +20,7 @@ The capability and environment for each use are in the selection guide in `tools
 
 ## Minimum controls
 
-The one control that matters: **AI proposes a theme; a person makes it a finding.** Nothing enters the exercise report, the lessons log or the audit note without the accountable reviewer deciding it belongs there.
+The one control that matters: **AI proposes a theme; a person makes it a finding.** Nothing goes into the exercise report, the lessons log or the audit note unless the accountable reviewer decides it belongs there.
 
 - Scenarios are checked for plausibility and learning value before delivery. An unrealistic inject teaches the wrong lesson convincingly.
 - Debrief records, transcripts and incident material are analysed in approved environments only, under notice, consent and retention rules.
@@ -57,6 +57,6 @@ Cite: report and section behind each finding, quoting the finding text in quotat
 
 ## Level
 
-Level 3, Connected and governed use. Comparing findings across years means retrieval over the controlled validation record with a documented use case, so the same comparison can be re-run after the next exercise and the conclusion can be traced to the reports behind it.
+Level 3, Defined. Comparing findings across years means retrieval over the controlled validation record under a written use case, so the same comparison can be re-run after the next exercise and the conclusion can be traced to the reports behind it.
 
 Hoekstra, W., Gerner, K., et al. (2026). AI4BCM: Guideline for using AI by BCM professionals. CC BY 4.0.

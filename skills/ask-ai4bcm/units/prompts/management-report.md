@@ -10,8 +10,8 @@ Gaps: what the data does not settle, and what would settle it.
 Cite: the record and section behind each trend and each gap, with quotation marks around any wording taken verbatim.
 ```
 
-Drop the assurance line and the narrative reads as reassuring when the data is not.
+If you remove the assurance line, the narrative can sound reassuring even when the data does not support that.
 
-**Review.** Compare each trend against the record it cites before the narrative reaches the review, and apply the checks in `README.md`. Any statement of compliance or readiness is the reviewer's to make and stays out of the draft.
+**Review.** Before the narrative goes to the review, compare each trend with the record it cites. Also apply the checks in `README.md`. The reviewer must make any statement about compliance or readiness. Such statements do not belong in the draft narrative.
 
 Hoekstra, W., Gerner, K., et al. (2026). AI4BCM: Guideline for using AI by BCM professionals. CC BY 4.0.

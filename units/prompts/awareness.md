@@ -10,8 +10,8 @@ Gaps: what the sources do not settle; where the approved intent does not fit thi
 Cite: policy document and section behind each message, with quotation marks around any wording taken verbatim.
 ```
 
-Tailoring changes the wording, never the approved intent.
+Tailoring changes the wording. It never changes the approved intent.
 
-**Review.** Publication waits for the person who will be asked about the message afterwards. They check accuracy, tone and local credibility, rule on each flagged mismatch, and apply the checks in `README.md`; the authorship rule is in `stages/embed.md`.
+**Review.** Do not publish until the person who will be asked about the message afterwards has checked it. They check accuracy, tone and local credibility. They decide on each flagged mismatch. They apply the checks in `README.md`. The authorship rule for the message is in `stages/embed.md`.
 
 Hoekstra, W., Gerner, K., et al. (2026). AI4BCM: Guideline for using AI by BCM professionals. CC BY 4.0.
