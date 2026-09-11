@@ -4,7 +4,7 @@ description: Ask which unit, prompt and level fit your BCM situation. A router o
 license: CC BY 4.0. LICENSE in the guidance repository carries the full terms.
 disable-model-invocation: true
 metadata:
-  version: "2026.09"
+  version: "2026.09.1"
 ---
 
 # Ask AI4BCM

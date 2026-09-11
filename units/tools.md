@@ -1,4 +1,4 @@
-<!-- meta: unit=tools version=2026.09 -->
+<!-- meta: unit=tools version=2026.09.1 -->
 # Tools
 
 No vendor names, on purpose. Products, licence terms and retention settings change faster than this guidance does. The category and the deployment tier stay useful. This unit is the one place that pairs a BCM task with a capability and an environment, and the one place that lists what a tool is checked against before it is approved. The stage units point here rather than repeating it.

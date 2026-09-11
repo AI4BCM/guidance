@@ -1,4 +1,4 @@
-<!-- meta: unit=principles version=2026.09 -->
+<!-- meta: unit=principles version=2026.09.1 -->
 # Principles
 
 This guidance helps BCM professionals choose AI tools for BCM tasks. It helps them use these tools safely. It helps them add these tools to BCM work without weakening governance, control or resilience. It does not cover continuity planning for AI systems or AI-dependent services. It does not cover the design, training or buying of AI platforms. It does not cover cybersecurity architecture for AI. It does not cover the legal meaning of AI rules. It does not replace the organisation's own BCM framework, policies, information security needs, legal advice or professional judgement. When these questions come up, the BCM professional works with the specialists who own them. When this guidance and an internal rule differ, the stricter control applies. The guidance works with any standard. A reader using ISO 22301:2019, BSI-Standard 200-4, the practices of a professional body, or a method their organisation has used for years can use it as it is. The guidance does not come from any of these standards. It is not certified against any of them.

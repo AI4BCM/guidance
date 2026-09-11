@@ -1,4 +1,4 @@
-<!-- meta: unit=prompts/README version=2026.09 dated=2026-09 -->
+<!-- meta: unit=prompts/README version=2026.09.1 dated=2026-09 -->
 # Prompts
 
 The living part of this guidance. Prompts date faster than principles; this set is dated 2026-09 and the online copy is the reference. Three evaluation cases for each prompt are in [evaluations.md](evaluations.md); run one before you rely on a prompt you have edited.
