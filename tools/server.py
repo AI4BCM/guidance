@@ -279,6 +279,20 @@ async def health(_request):
     return JSONResponse(health_payload())
 
 
+@mcp.custom_route("/index.json", methods=["GET"], include_in_schema=False)
+async def index_json(_request):
+    """The corpus index — every chunk id with the citation it resolves to.
+
+    Contract version 2 (2026-09-12). Version 1 left this unpublished, and the contract's own
+    "what a consumer may not assume" said publishing it would make the contract checkable in
+    one request instead of one per id. It now has to be: a citation is a GitHub blob URL with
+    an anchor, so a consumer can no longer construct one from a chunk id, and the daily drift
+    gate has nothing else to read. Unauthenticated, like /health, because the whole point of
+    this contract is that anyone can check it over plain HTTP with no credentials.
+    """
+    return JSONResponse(get_index().index)
+
+
 @mcp.custom_route("/", methods=["GET"], include_in_schema=False)
 async def root(_request):
     return PlainTextResponse("AI4BCM guidance MCP server. Use /mcp for MCP clients.")

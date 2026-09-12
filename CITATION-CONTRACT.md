@@ -3,7 +3,8 @@
 **Producer:** `AI4BCM/guidance` — this repository mints chunk identifiers and publishes the corpus.
 **Consumers:** anything outside this repository that names a chunk id in a file it ships. Today that
 is `KoGerner/workflow-design` (`run-bia.yaml`, 16 citations across 9 distinct ids).
-**Contract version:** 1. **Written:** 2026-09-10.
+**Contract version:** 2. **Written:** 2026-09-10. **Revised:** 2026-09-12 — the citation base moved
+from `agent.ai4bcm.org/demo/kb` to this repository on GitHub.
 
 Until 2026-09-10 the citing file and the corpus that answered it lived in one working tree, so the
 coupling needed no words. They are now in two organisations on two release cadences. This file is
@@ -59,12 +60,24 @@ other id may change whenever an editor rewords a heading, and carries no promise
 
 ## What a consumer may assume
 
-- A reserved id resolves as a page at `https://agent.ai4bcm.org/demo/kb/<id>/` for every published
-  release. Measured 2026-09-10: all 9 ids `run-bia.yaml` cites answer 200 there.
+- **A chunk's citation is this repository, pinned to the release tag, anchored on the chunk's
+  heading** — `https://github.com/AI4BCM/guidance/blob/<tag>/<source_file>#<anchor>`, e.g.
+  `https://github.com/AI4BCM/guidance/blob/2026.09.1/units/stages/govern.md#level`.
+  Measured 2026-09-12: all 26 reserved ids and a sample of the literature answer 200 with the
+  anchor landing on the named heading.
+- **The anchor is GitHub's, not the chunk id's.** GitHub lowercases a heading, deletes its
+  punctuation rather than hyphenating it (`Client/Server` → `clientserver`, `TT&E` → `tte`) and
+  suffixes a repeat `-1`, `-2`, where a repeated chunk id gets `-2`, `-3`. The two are different
+  strings for the same heading and neither can be derived from the other. `build_chunks.py`
+  mints the anchor with `github_anchors()`, verified against GitHub's own rendering of all 29
+  source files at `2026.09.1` — 436 of 436 headings, duplicates included.
 - The corpus's own release tag is served, unauthenticated, at `https://mcp.ai4bcm.org/health` —
   `release_tag`, alongside `chunks` and `built_at`.
-- `data/index.json` in a build lists every chunk with its `id`, `title`, `breadcrumb`, `unit`,
-  `section_type` and `url`.
+- **The whole index is served, unauthenticated, at `https://mcp.ai4bcm.org/index.json`** — every
+  chunk with its `id`, `title`, `breadcrumb`, `unit`, `section_type` and `url`, beside the
+  `release_tag` and `chunk_count`. This contract is therefore checkable in one request rather
+  than one per id. Version 1 left it unpublished; version 2 has to publish it, because a
+  citation can no longer be constructed from an id.
 
 ## What a consumer may not assume
 
@@ -72,14 +85,16 @@ other id may change whenever an editor rewords a heading, and carries no promise
 - **`chunk_count` is not stable.** It was 96 units-only, then 383 once the class A literature was
   published on 2026-09-10. Never assert on it.
 - **Non-reserved ids are not stable**, including every literature chunk.
-- **The base URL is not permanent.** `PUBLIC_BASE_URL` is still `agent.ai4bcm.org/demo/kb`, baked
-  into 383 published pages — the other product's hostname, inherited from before the split. Moving it
-  is a republish of the corpus, tracked as the website's v2 work. A consumer should read the URL from
-  the index rather than construct it, and should treat a base-URL change as a corpus release.
-- **`data/index.json` is not published.** It exists in a build, not on the public surface;
-  `/demo/kb/index.json` is 404 today. Publishing it would make this contract checkable in one
-  request instead of one per id, and is worth doing at the next corpus republish — not before, since
-  it changes a published tree that was just proved byte-identical.
+- **A citation cannot be constructed from a chunk id.** It carries the source file and a GitHub
+  anchor, neither of which is recoverable from the id. Version 1's shape,
+  `<base>/<chunk-id>/`, could be built by string concatenation; this one cannot, and a consumer
+  that tries will produce a URL that does not 404 — it silently lands at the top of some file.
+  **Read the `url` from the index.** That is what the index is for, and it is now published.
+- **A citation names one release, and only that release.** The tag is in the URL, so a citation
+  written against `2026.09.1` keeps resolving after `2026.10` ships — GitHub keeps the tag — but
+  it keeps showing the *old* text. A consumer that wants the current wording re-reads the index
+  at the current tag. This is the trade the tag pin buys: a citation that never rots, and never
+  silently updates either.
 
 ## Which side breaks, and who finds out
 
