@@ -36,25 +36,25 @@ PUBLIC_INDEX="${AI4BCM_PUBLIC_INDEX:-https://agent.ai4bcm.org/demo/kb/}"
 STAGE="$KB_ROOT.new"
 PREV="$KB_ROOT.prev"
 
-echo "1/6 pull"
+echo "1/7 pull"
 git -C "$APP_ROOT" pull --ff-only
 
 # literature/ is passed explicitly, not discovered: a file there becomes a chunk only if
 # sources.json claims it, and an unclaimed file stops this build rather than publishing text
 # whose licence nobody checked. Dropping --source-dir here builds the 96-chunk units-only corpus
 # and would silently unpublish 287 pages — the flag is the difference between the two corpora.
-echo "2/6 build chunks -> $DATA_DIR"
+echo "2/7 build chunks -> $DATA_DIR"
 "$PYTHON" "$APP_ROOT/tools/build_chunks.py" --data-dir "$DATA_DIR" \
   --source-dir "$APP_ROOT/literature"
 
-echo "3/6 render pages -> $STAGE"
+echo "3/7 render pages -> $STAGE"
 rm -rf "$STAGE"
 "$PYTHON" "$APP_ROOT/tools/build_kb_pages.py" --chunks "$DATA_DIR/chunks.json" --out "$STAGE"
 
 # Ownership and mode are set on the STAGE tree, before the swap, so the live tree is never
 # briefly unreadable. Public static content is served through the OTHER bits — group www-data is
 # there to match its neighbours under /var/www, not to carry the read permission.
-echo "4/6 permissions"
+echo "4/7 permissions"
 find "$STAGE" -type d -exec chmod 755 {} +
 find "$STAGE" -type f -exec chmod 644 {} +
 if [ "$(id -u)" -eq 0 ]; then
@@ -67,13 +67,26 @@ else
   echo "  not root — skipping chown (rehearsal); the real round runs as root"
 fi
 
-echo "5/6 swap into place (previous tree kept as $PREV)"
+echo "5/7 swap into place (previous tree kept as $PREV)"
 test -s "$STAGE/index.html" || { echo "stage has no index.html — refusing to swap" >&2; exit 1; }
 rm -rf "$PREV"
 if [ -e "$KB_ROOT" ]; then mv "$KB_ROOT" "$PREV"; fi
 mv "$STAGE" "$KB_ROOT"
 
-echo "6/6 verify the served pages, not the build"
+# The connector builds its index ONCE, on first use, and keeps it in a module global. So a
+# rebuilt chunks.json changes nothing it serves until the process restarts — and /health lies
+# convincingly in the meantime, because `built_at` is read from the file's mtime on every
+# request while `search` and `fetch` still answer out of the old index. This step was missing
+# until 2026-09-12, when a citation change made the difference visible for the first time.
+echo "6/7 restart the connector"
+systemctl restart ai4bcm-guidance-mcp
+for i in $(seq 1 15); do
+  curl -fsS -m 5 http://127.0.0.1:8788/health >/dev/null 2>&1 && break
+  [ "$i" -eq 15 ] && { echo "the connector did not come back after 15s" >&2; exit 1; }
+  sleep 1
+done
+
+echo "7/7 verify the served pages, not the build"
 # `active` is not `working`, and a directory that exists is not a page that answers. Resolve a
 # real citation URL through nginx, not a path on disk.
 # Report the corpus count, not a directory count. /demo/kb/ holds one directory per chunk PLUS
@@ -85,4 +98,13 @@ echo "  $chunks chunks -> $pages page directories (chunks + t/)"
 curl -fsS -o /dev/null -w '  index      %{http_code}\n' "$PUBLIC_INDEX"
 sample=$(find "$KB_ROOT" -mindepth 1 -maxdepth 1 -type d -printf '%f\n' | LC_ALL=C sort | sed -n '1p')
 curl -fsS -o /dev/null -w "  $sample  %{http_code}\n" "$PUBLIC_INDEX$sample/"
+# The citation a reader actually gets, resolved through the connector rather than read off disk.
+# `active` is not `working`: this is the one line that proves the restart above took.
+served=$(curl -fsS -m 10 https://mcp.ai4bcm.org/index.json \
+  | "$PYTHON" -c 'import json,sys; print(json.load(sys.stdin)["topics"][0]["url"])')
+echo "  citation   $served"
+case "$served" in
+  https://github.com/AI4BCM/guidance/blob/*\#*) ;;
+  *) echo "the connector is still serving $served — the restart did not take" >&2; exit 1;;
+esac
 echo "published AI4BCM knowledge — $chunks chunks"
