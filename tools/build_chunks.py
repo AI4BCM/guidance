@@ -25,7 +25,19 @@ DEFAULT_UNITS_DIR = _REPO / "units"
 DEFAULT_RELEASES_DIR = _REPO / "releases"
 DEFAULT_DATA_DIR = _REPO / "data"
 DEFAULT_SOURCES_FILE = _HERE / "sources.json"
-PUBLIC_BASE_URL = "https://agent.ai4bcm.org/demo/kb"
+
+# Where a citation points. Contract version 2, 2026-09-12: the source of truth is this
+# repository on GitHub, pinned to the release tag the chunk was built from, anchored on the
+# heading the chunk was cut at:
+#
+#   https://github.com/AI4BCM/guidance/blob/2026.09.1/units/stages/govern.md#level
+#
+# Version 1 pointed at `agent.ai4bcm.org/demo/kb/<chunk-id>/` — the OTHER product's hostname,
+# in its design system, under a /demo/ tree that is being retired. That base was inherited from
+# before the 2026-09-10 split, not chosen, and CITATION-CONTRACT.md always named it as the one
+# thing a consumer may not assume is permanent. This is that move.
+CITATION_REPO = "AI4BCM/guidance"
+CITATION_BASE_URL = f"https://github.com/{CITATION_REPO}/blob"
 
 
 HEADING_RE = re.compile(r"^(#{1,6})\s+(.+?)\s*$")
@@ -249,6 +261,49 @@ class Chunk:
     source_file: str = ""
 
 
+# GitHub's heading-anchor rules are NOT the chunk-id rules, and the difference is silent: a
+# wrong anchor does not 404, it lands the reader at the top of the file. GitHub lowercases,
+# DELETES punctuation rather than replacing it (`Client/Server` -> `clientserver`, `TT&E` ->
+# `tte`), turns spaces into hyphens, and suffixes a repeated anchor `-1`, `-2` — where a
+# repeated chunk id gets `-2`, `-3`. Do not reuse one for the other.
+#
+# Verified 2026-09-12 against the live rendering: the `user-content-*` ids were scraped from all
+# 29 blob pages at tag 2026.09.1 and compared with this function heading by heading — 436 of
+# 436 matched, duplicate suffixes included.
+_ANCHOR_PUNCT_RE = re.compile(r"[^\w\- ]", re.UNICODE)
+
+
+def github_anchor(title: str) -> str:
+    """One heading's GitHub anchor, before de-duplication."""
+    return _ANCHOR_PUNCT_RE.sub("", title.strip().lower()).replace(" ", "-")
+
+
+def github_anchors(text: str) -> dict[int, str]:
+    """Every heading's final anchor in one file, keyed by line — GitHub's de-duplication runs
+    over the whole document, so an anchor cannot be computed from its own heading alone.
+
+    Headings are found with the same HEADING_RE, over the same `splitlines()` indices, that
+    parse_sections uses. That is deliberate: the two must agree on what a heading is, or a
+    chunk could exist with no anchor to point at.
+    """
+    seen: dict[str, int] = {}
+    anchors: dict[int, str] = {}
+    for idx, line in enumerate(text.splitlines()):
+        match = HEADING_RE.match(line)
+        if not match:
+            continue
+        base = github_anchor(match.group(2).strip())
+        count = seen.get(base, 0)
+        seen[base] = count + 1
+        anchors[idx] = base if count == 0 else f"{base}-{count}"
+    return anchors
+
+
+def citation_url(source_file: str, release_tag: str, anchor: str) -> str:
+    """The public citation for a chunk: this repository, at this tag, at this heading."""
+    return f"{CITATION_BASE_URL}/{release_tag}/{source_file}#{anchor}"
+
+
 def slugify(value: str) -> str:
     value = value.lower()
     value = re.sub(r"[^a-z0-9]+", "-", value)
@@ -341,6 +396,7 @@ def build_unit_chunks(
     # parse_sections — which used to leave every breadcrumb reading "Situation > Level".
     h1_title = next((m.group(2).strip() for line in text.splitlines()
                      if (m := HEADING_RE.match(line)) and len(m.group(1)) == 1), unit)
+    anchors = github_anchors(text)
 
     for heading, body in parse_sections(text):
         meta, clean_body = extract_meta(body)
@@ -378,7 +434,7 @@ def build_unit_chunks(
                 title=heading.title,
                 breadcrumb=breadcrumb,
                 text=chunk_text,
-                url=f"{PUBLIC_BASE_URL}/{chunk_id}/",
+                url=citation_url(source_file, release_tag, anchors[heading.line]),
                 char_count=len(chunk_text),
                 release_tag=release_tag,
                 source_id=source.id,
@@ -496,6 +552,20 @@ def validate(chunks: list[Chunk], release_tag: str) -> None:
     untagged = sorted(chunk.id for chunk in chunks if chunk.release_tag != release_tag)
     if untagged:
         raise SystemExit(f"chunks without the release tag: {', '.join(untagged[:10])}")
+
+    # A citation that names the wrong tag, or carries no anchor, is the defect this contract
+    # exists to prevent — and neither is visible in the rendered page, so it has to fail here.
+    miscited = sorted(
+        chunk.id
+        for chunk in chunks
+        if chunk.url != citation_url(chunk.source_file, release_tag, chunk.url.partition("#")[2])
+        or "#" not in chunk.url
+    )
+    if miscited:
+        raise SystemExit(
+            f"chunks whose citation does not resolve to {CITATION_REPO} at {release_tag}: "
+            f"{', '.join(miscited[:10])} — see CITATION-CONTRACT.md"
+        )
 
     bad = [chunk.id for chunk in chunks if "{#" in chunk.text or "Table of content" in chunk.text]
     if bad:

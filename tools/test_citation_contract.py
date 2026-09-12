@@ -78,7 +78,49 @@ def test_a_missing_reserved_id_fails_the_build_and_says_why():
 
 
 def test_reserved_ids_carry_a_public_url_in_the_index():
-    """What the contract promises a consumer: a page URL per reserved id, from the index."""
+    """What the contract promises a consumer: a citation per reserved id, from the index.
+
+    Contract version 2 (2026-09-12): the citation is this repository on GitHub, pinned to the
+    release tag, anchored on the chunk's own heading. Version 1 was
+    `agent.ai4bcm.org/demo/kb/<id>/` and is retired with the /demo/ tree.
+    """
+    chunks = {c.id: c for c in _units_build()}
     urls = {t["id"]: t["url"] for t in bc.build_index(_units_build(), _tag())["topics"]}
+    tag = _tag()
     for cid in sorted(bc.RESERVED_CHUNK_IDS):
-        assert urls[cid] == f"{bc.PUBLIC_BASE_URL}/{cid}/"
+        base, hash_, anchor = urls[cid].partition("#")
+        assert base == f"https://github.com/AI4BCM/guidance/blob/{tag}/{chunks[cid].source_file}"
+        assert hash_ == "#" and anchor, urls[cid]
+
+
+def test_the_reserved_citations_point_at_a_heading_that_exists():
+    """The anchor is the trap: a wrong one does not 404, it lands at the top of the file.
+
+    So the anchor is checked against the file it names, with GitHub's own de-duplication —
+    offline, because a test that needs the network is a test that gets skipped.
+    """
+    for chunk in _units_build():
+        if chunk.id not in bc.RESERVED_CHUNK_IDS:
+            continue
+        anchor = chunk.url.partition("#")[2]
+        text = (REPO / chunk.source_file).read_text(encoding="utf-8")
+        assert anchor in set(bc.github_anchors(text).values()), (chunk.id, anchor)
+
+
+def test_github_anchor_follows_githubs_rules_not_the_chunk_id_rules():
+    """Punctuation is deleted, not hyphenated, and a repeat gets `-1` where an id gets `-2`.
+
+    The pairs below were read off GitHub's own rendering of this repository at 2026.09.1
+    (the `user-content-*` ids on the blob pages) on 2026-09-12.
+    """
+    assert bc.github_anchor("5.2 Client/Server Systems") == "52-clientserver-systems"
+    assert bc.github_anchor("3.5 Plan Testing, Training, and Exercises (TT&E)") == (
+        "35-plan-testing-training-and-exercises-tte"
+    )
+    assert bc.github_anchor("3.2 Description of an organisation’s tier level") == (
+        "32-description-of-an-organisations-tier-level"
+    )
+    assert bc.github_anchor("Article 12 — Backup policies") == "article-12--backup-policies"
+
+    duplicated = "# Method\n\nbody\n\n## Method\n\nbody\n\n## Method\n\nbody\n"
+    assert list(bc.github_anchors(duplicated).values()) == ["method", "method-1", "method-2"]

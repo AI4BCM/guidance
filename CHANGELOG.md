@@ -20,6 +20,41 @@ Prompts move faster than the rest of the guidance. `units/prompts/` is the livin
 citation of a prompt without a release names nothing durable — cite the release or quote the
 prompt in full.
 
+## Citation contract version 2 — 2026-09-12
+
+Not a release of the guidance: no unit changed, no chunk id changed, no chunk text changed. What
+changed is **where a citation points.**
+
+Until now every chunk carried `https://agent.ai4bcm.org/demo/kb/<chunk-id>/`. That base was
+inherited, not chosen — until the 2026-09-10 split the corpus and the BIA product shared one tree,
+and that is simply where the built pages landed. It is the *other* product's hostname, in the
+other product's design system, under a `/demo/` tree that is now being retired, and a reader who
+followed a citation from `ai4bcm.org` landed on a page that looked like someone else's product.
+
+A citation is now this repository, pinned to the release tag, anchored on the chunk's heading:
+
+```
+https://github.com/AI4BCM/guidance/blob/2026.09.1/units/stages/govern.md#level
+```
+
+`data/index.json` is published at `https://mcp.ai4bcm.org/index.json`, unauthenticated, beside
+`/health`. It has to be: a citation carries a source file and a GitHub anchor, so it can no longer
+be built from a chunk id by string concatenation, and the index is where a consumer reads it.
+
+**Consumers, and what each must do.**
+
+| consumer | effect | action |
+|---|---|---|
+| `KoGerner/workflow-design` — `run-bia.yaml` | none. It cites chunk **ids**, and no id changed | none |
+| the question box on `ai4bcm.org` (`bia-workflow` `/ask`) | the `url` in every answer's source list | rebuild its corpus; it runs its own copy of `build_chunks.py` |
+| the connector on `mcp.ai4bcm.org` | `search` and `fetch` both return the new `url` | rebuild and restart |
+| `brain`'s `ai4bcm-citation-drift.sh` | it probes the old base and will alarm daily once `/demo/` dies | repoint it at `/index.json` |
+| anything holding a `/demo/kb/<id>/` link | the page is going away | read the `url` from `/index.json` |
+
+The reserved set, the id-minting rule and the guarantee are all unchanged, so this is a version of
+the contract rather than a version of the corpus. `CITATION-CONTRACT.md` carries the detail,
+including why a GitHub anchor is not a chunk id and must never be derived from one.
+
 ## 2026.09.1
 
 A point release in September, published ahead of the November final `2026.11` by owner decision

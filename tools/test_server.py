@@ -23,6 +23,13 @@ pytest.importorskip("mcp", reason="the connector's transport needs tools/require
 REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
+# Read from the release manifest, never spelled out: these tests were written at 2026.09 and
+# the 2026.09.1 mint made two of them fail — invisibly, because this file skips on the system
+# interpreter that the repo's usual `pytest tools` run uses.
+import build_chunks as _bc  # noqa: E402
+
+TAG = _bc.release_tag_from(REPO / "releases")
+
 
 @pytest.fixture(scope="module")
 def server(tmp_path_factory):
@@ -151,8 +158,21 @@ def test_health_reports_chunk_count_version_and_build_date(client, server):
     assert body["ok"] is True
     assert body["chunks"] == len(server.get_index().chunks) == 96
     assert body["version"] == server.SERVER_VERSION
-    assert body["release_tag"] == "2026.09"
+    assert body["release_tag"] == TAG
     assert body["built_at"] and body["built_at"].endswith("+00:00")
+
+
+def test_index_json_publishes_every_chunks_citation(client, server):
+    """Contract version 2: a consumer can no longer construct a citation from a chunk id, so
+    the index that carries them is published — unauthenticated, like /health."""
+    body = client.get("/index.json").json()
+    assert body["release_tag"] == TAG
+    assert body["chunk_count"] == len(body["topics"]) == len(server.get_index().chunks)
+    for topic in body["topics"]:
+        assert topic["url"].startswith(f"https://github.com/AI4BCM/guidance/blob/{TAG}/")
+        assert "#" in topic["url"]
+    ids = {t["id"] for t in body["topics"]}
+    assert "stages-govern-level" in ids
 
 
 def test_nothing_here_reads_an_authorization_header(client):

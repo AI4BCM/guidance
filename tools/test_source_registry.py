@@ -135,14 +135,18 @@ def test_the_corpus_may_hold_more_chunks_than_the_units_alone(tmp_path):
     # CITATION-CONTRACT.md does not silently turn this fixture into a false failure.
     stage_fillers = [
         bc.Chunk(id=cid, unit=cid.rsplit("-", 1)[0], section_type="section",
-                 title=cid, breadcrumb=cid, text="body", url="u", char_count=4,
+                 title=cid, breadcrumb=cid, text="body", char_count=4,
+                 url=bc.citation_url("units/filler.md", "2026.09", "filler"),
+                 source_file="units/filler.md",
                  release_tag="2026.09", source_id="test-source", source_edition="1.0",
                  licence="CC BY 4.0", citation="c")
         for cid in sorted(bc.RESERVED_CHUNK_IDS)
     ]
     filler = [
         bc.Chunk(id=f"literature-filler-{n}", unit="literature", section_type="section",
-                 title="t", breadcrumb="t", text="body", url="u", char_count=4,
+                 title="t", breadcrumb="t", text="body", char_count=4,
+                 url=bc.citation_url("literature/filler.md", "2026.09", "filler"),
+                 source_file="literature/filler.md",
                  release_tag="2026.09", source_id="test-source", source_edition="1.0",
                  licence="CC BY 4.0", citation="c")
         for n in range(400)
