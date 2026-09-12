@@ -3,22 +3,22 @@
 #
 #   sudo /opt/apps/ai4bcm-guidance/tools/publish_knowledge.sh
 #
-# It replaces steps 2 and 3 of bia-workflow's publish_knowledge.sh, which built this corpus and
-# these pages out of a repository named after a different product (kb-move ticket 06, 2026-09-10).
-# What it does NOT do is as important: it does not touch the BIA MCP service, its data directory,
-# its manager's guide or its demo rooms. Those stay in bia-workflow's round.
+# It replaced step 2 of bia-workflow's publish_knowledge.sh, which built this corpus out of a
+# repository named after a different product (kb-move ticket 06, 2026-09-10). Since 2026-09-12 it
+# publishes a corpus and nothing else: the static knowledge base it also rendered is retired, and
+# the guidance is read on GitHub.
 #
 # ---------------------------------------------------------------------------------------------
-# ROLLBACK — one line, and it is written here BEFORE the first cutover rather than after it:
+# ROLLBACK — `git -C /opt/apps/ai4bcm-guidance checkout <previous tag>` and run this again.
 #
-#   rm -rf /var/www/ai4bcm-demo/kb && mv /var/www/ai4bcm-demo/kb.prev /var/www/ai4bcm-demo/kb
+# Until 2026-09-12 this script also rendered 383 static pages into /var/www/ai4bcm-demo/kb, and
+# most of its machinery was there to make that tree replaceable in one rename (build into a
+# scratch dir, swap, keep kb.prev). Those pages are retired: the guidance is published on GitHub
+# and every citation resolves there. What is left writes ONE directory, $DATA_DIR, and restarts
+# one service, so the rollback is the checkout that produced the previous corpus.
 #
-# That works because this script never edits the served tree in place. It builds into a scratch
-# directory, and only once the build has succeeded does it swap the two with a pair of renames.
-# A failed build leaves the live pages untouched; a bad build is one rename from undone. The
-# previous tree is kept as kb.prev — one generation, overwritten by the next publish. Older
-# archives beside it (kb.retired-2026-09-10) are the owner's to prune; this script never deletes
-# anything it did not create in this run.
+# It still does NOT touch the BIA MCP service, its data directory or its demo rooms. Those are
+# bia-workflow's round.
 # ---------------------------------------------------------------------------------------------
 #
 # Stdlib only. This repository needs no virtualenv and this script needs no venv python — that is
@@ -27,58 +27,32 @@ set -euo pipefail
 
 APP_ROOT="${AI4BCM_APP_ROOT:-/opt/apps/ai4bcm-guidance}"
 DATA_DIR="${AI4BCM_DATA_DIR:-$APP_ROOT/data}"
-KB_ROOT="${AI4BCM_KB_ROOT:-/var/www/ai4bcm-demo/kb}"
 PYTHON="${AI4BCM_PYTHON:-/usr/bin/python3}"
-# A published page's own citation URL. Spot-checked at the end, because a page tree that built
-# perfectly and is not reachable is the failure this estate has already had.
-PUBLIC_INDEX="${AI4BCM_PUBLIC_INDEX:-https://agent.ai4bcm.org/demo/kb/}"
 
-STAGE="$KB_ROOT.new"
-PREV="$KB_ROOT.prev"
 
-echo "1/7 pull"
+echo "1/4 pull"
 git -C "$APP_ROOT" pull --ff-only
 
 # literature/ is passed explicitly, not discovered: a file there becomes a chunk only if
 # sources.json claims it, and an unclaimed file stops this build rather than publishing text
 # whose licence nobody checked. Dropping --source-dir here builds the 96-chunk units-only corpus
 # and would silently unpublish 287 pages — the flag is the difference between the two corpora.
-echo "2/7 build chunks -> $DATA_DIR"
+echo "2/4 build chunks -> $DATA_DIR"
 "$PYTHON" "$APP_ROOT/tools/build_chunks.py" --data-dir "$DATA_DIR" \
   --source-dir "$APP_ROOT/literature"
 
-echo "3/7 render pages -> $STAGE"
-rm -rf "$STAGE"
-"$PYTHON" "$APP_ROOT/tools/build_kb_pages.py" --chunks "$DATA_DIR/chunks.json" --out "$STAGE"
+# Step 3 was "render the knowledge-base pages", and it is GONE — owner decision 2026-09-12.
+# /demo/kb/ answers 410 now: this repository on GitHub is the source of truth and every citation
+# resolves there (CITATION-CONTRACT.md version 2). build_kb_pages.py and brand.py went with the
+# step, because the 383 pages were their only consumer here. bia-workflow keeps its own copy of
+# build_kb_pages.py, which is a different thing: there it is the rendering library
+# interview_guide.py imports STYLE and render_markdown from.
+#
+# What this removes from the round: the scratch build, the permissions pass, the swap and the
+# kb.prev rollback. They existed to make a 7.5M page tree replaceable in one rename. There is no
+# page tree any more, so the round is a corpus build and a restart.
 
-# Ownership and mode are set on the STAGE tree, before the swap, so the live tree is never
-# briefly unreadable. Public static content is served through the OTHER bits — group www-data is
-# there to match its neighbours under /var/www, not to carry the read permission.
-echo "4/7 permissions"
-find "$STAGE" -type d -exec chmod 755 {} +
-find "$STAGE" -type f -exec chmod 644 {} +
-if [ "$(id -u)" -eq 0 ]; then
-  chown -R root:www-data "$STAGE"
-else
-  # Deliberately not fatal. Everything above this line is unprivileged, so an agent can rehearse
-  # this exact script into a scratch KB_ROOT and see the swap and the spot-check run for real
-  # instead of reading them. Only the group matters here and only for tidiness: the pages are
-  # served through the OTHER bits, so a tree that never got chowned still serves.
-  echo "  not root — skipping chown (rehearsal); the real round runs as root"
-fi
-
-echo "5/7 swap into place (previous tree kept as $PREV)"
-test -s "$STAGE/index.html" || { echo "stage has no index.html — refusing to swap" >&2; exit 1; }
-rm -rf "$PREV"
-if [ -e "$KB_ROOT" ]; then mv "$KB_ROOT" "$PREV"; fi
-mv "$STAGE" "$KB_ROOT"
-
-# The connector builds its index ONCE, on first use, and keeps it in a module global. So a
-# rebuilt chunks.json changes nothing it serves until the process restarts — and /health lies
-# convincingly in the meantime, because `built_at` is read from the file's mtime on every
-# request while `search` and `fetch` still answer out of the old index. This step was missing
-# until 2026-09-12, when a citation change made the difference visible for the first time.
-echo "6/7 restart the connector"
+echo "3/4 restart the connector"
 systemctl restart ai4bcm-guidance-mcp
 for i in $(seq 1 15); do
   curl -fsS -m 5 http://127.0.0.1:8788/health >/dev/null 2>&1 && break
@@ -86,18 +60,13 @@ for i in $(seq 1 15); do
   sleep 1
 done
 
-echo "7/7 verify the served pages, not the build"
-# `active` is not `working`, and a directory that exists is not a page that answers. Resolve a
-# real citation URL through nginx, not a path on disk.
-# Report the corpus count, not a directory count. /demo/kb/ holds one directory per chunk PLUS
-# t/ (the prompt-template pages), so the top-level directory count is 384 while the corpus is 383,
-# and quoting the wrong one of those two is how "96" survived in four documents.
+echo "4/4 verify the citation a reader gets, not the build"
+# `active` is not `working`. Until 2026-09-12 this block counted page directories under
+# /var/www/ai4bcm-demo/kb and curled two of them; there are no pages now, so what it proves
+# instead is the one thing a reader depends on — that the connector serves a citation, and that
+# the citation points at this repository.
 chunks=$("$PYTHON" -c 'import json,sys; print(len(json.load(open(sys.argv[1]))))' "$DATA_DIR/chunks.json")
-pages=$(find "$KB_ROOT" -mindepth 1 -maxdepth 1 -type d | wc -l)
-echo "  $chunks chunks -> $pages page directories (chunks + t/)"
-curl -fsS -o /dev/null -w '  index      %{http_code}\n' "$PUBLIC_INDEX"
-sample=$(find "$KB_ROOT" -mindepth 1 -maxdepth 1 -type d -printf '%f\n' | LC_ALL=C sort | sed -n '1p')
-curl -fsS -o /dev/null -w "  $sample  %{http_code}\n" "$PUBLIC_INDEX$sample/"
+echo "  $chunks chunks built"
 # The citation a reader actually gets, resolved through the connector rather than read off disk.
 # `active` is not `working`: this is the one line that proves the restart above took.
 served=$(curl -fsS -m 10 https://mcp.ai4bcm.org/index.json \
