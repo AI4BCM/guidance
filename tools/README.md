@@ -15,13 +15,11 @@ this directory — so the corpus and the release tag cannot disagree.
 | `retrieval.py` | the search/fetch index, stdlib only |
 | `guidance_tools.py` | the five guidance tools a connector exposes; no BIA imports |
 | `test_guidance_tools.py` | 12 tests over those five |
-| `server.py` | the connector: those five over MCP, plus `/health`. Open, no token |
+| `server.py` | the connector: those five over MCP, plus `/health` and `/index.json`. Open, no token |
 | `test_server.py` | 14 tests over the transport; skips when `mcp` is not installed |
 | `requirements.txt` | the SERVER's dependencies. Nothing else in this directory needs them |
-| `brand.py` | the visual tokens, masthead and footer; no imports at all |
-| `build_kb_pages.py` | one static HTML page per chunk, so citation URLs resolve |
 | `literature/` | four converters, run by hand when a source is added |
-| `publish_knowledge.sh` | the root round: build the corpus, render the pages, swap them into `/var/www` |
+| `publish_knowledge.sh` | the root round: build the corpus, restart the connector, prove a citation |
 
 ## Build
 
@@ -30,7 +28,6 @@ Stdlib only, on system `python3` — this repo needs no virtualenv.
 ```sh
 python3 tools/build_chunks.py                          # 96 chunks: the units
 python3 tools/build_chunks.py --source-dir literature  # 383 chunks: units + eight sources
-python3 tools/build_kb_pages.py --chunks data/chunks.json --out <dir>
 python3 -m pytest tools/ -q                            # 28 passed, 1 skipped
 ```
 
@@ -54,43 +51,43 @@ every `/mcp` request. `/health` is outside that check and answers on any Host.
 public as static pages. The rate limit that makes that safe is nginx's, in
 `deploy/nginx-ai4bcm-mcp.conf`. Not installed; where `/mcp` lands is ticket 06's call.
 
-## The three deploy-path names, settled (ticket 06, 2026-09-10)
+## Where a citation points (contract version 2, 2026-09-12)
 
-| Name | What happened | Why |
-|---|---|---|
-| `BIA_WORKFLOW_DATA_DIR` | **renamed** to `AI4BCM_DATA_DIR` in `build_kb_pages.py` | it is the same variable `server.py` already read, so one knob now points the build and the serve at one corpus. Renaming it changes no rendered byte, and the proof against `baseline/MANIFEST.sha256` was re-run afterwards: 529 of 529, empty diff |
-| `DEFAULT_OUT` = `/var/www/ai4bcm-demo/kb` | **unchanged** | it is where nginx's `alias /var/www/ai4bcm-demo/` resolves `/demo/kb/`. A served path, not a product claim |
-| `PUBLIC_BASE_URL` = `https://agent.ai4bcm.org/demo/kb` | **unchanged**, and the one to be careful with | it is baked into every rendered page and is the target of the chunk-id citation contract (ticket 07). It moves only when the corpus is republished under a new name |
+`build_chunks.PUBLIC_BASE_URL` is gone. A chunk's `url` is this repository, pinned to the release
+tag, anchored on the chunk's heading:
 
-**The consequence, stated rather than discovered later.** The connector is published as
-`mcp.ai4bcm.org` and every citation it emits points at `agent.ai4bcm.org/demo/kb/`. That is
-correct today — those are the URLs that exist, all four in a live search spot-check answer 200 —
-but it means AI4BCM's own connector cites a hostname named after the other product. Closing that
-is a republish of the corpus under a new base URL, which is the website's v2 work and ticket 07's
-contract, not a repository move.
+```
+https://github.com/AI4BCM/guidance/blob/2026.09.1/units/stages/govern.md#level
+```
+
+Version 1 pointed at `agent.ai4bcm.org/demo/kb/<chunk-id>/` — the other product's hostname, and
+383 static pages this directory used to render. **Those pages are retired**, and
+`build_kb_pages.py` and `brand.py` went with them: the guidance is read on GitHub now. The two
+consequences worth knowing before changing anything here:
+
+- **A citation cannot be built from a chunk id.** It carries a source file and a GitHub anchor,
+  and GitHub's anchor rules are not the chunk-id rules — see `CITATION-CONTRACT.md`. Read the
+  `url` from the index; `build_chunks.github_anchors()` is the one implementation of the rule.
+- **The index is published**, at `https://mcp.ai4bcm.org/index.json`, unauthenticated. It has to
+  be, for the reason above.
 
 ## Publishing
 
-`tools/publish_knowledge.sh` is the root round the owner runs, and it replaced steps 2 and 3 of
-`bia-workflow`'s script of the same name. That script no longer renders these pages — both wrote
-`/var/www/ai4bcm-demo/kb`, and leaving two writers on one directory would have let the old round
-overwrite the new one and destroy its rollback tree on the way past.
+`tools/publish_knowledge.sh` is the root round the owner runs. It builds the corpus into
+`$DATA_DIR`, restarts the connector and proves a citation — four steps, and it writes exactly one
+directory.
 
-It never edits the served tree in place: it builds into `kb.new`, swaps, and keeps the previous
-tree as `kb.prev`. **Rollback is one line**, and it is in the script's header rather than in
-someone's memory:
+**The restart is a step, not an afterthought.** `server.py` builds its index once into a module
+global, so a rebuilt `chunks.json` changes nothing the connector serves until the process
+restarts — and `/health` keeps answering convincingly in the meantime, because `built_at` is the
+file's mtime read fresh on every request while `search` and `fetch` answer out of the old index.
 
-```sh
-rm -rf /var/www/ai4bcm-demo/kb && mv /var/www/ai4bcm-demo/kb.prev /var/www/ai4bcm-demo/kb
-```
+**A change to this script takes effect one round late.** Step 1 pulls the tree the running script
+lives in, and bash keeps executing the file it started with. That is not theoretical: the
+2026-09-12 round rebuilt the corpus and skipped a restart step that was already on disk.
 
-Everything before the swap is unprivileged, so the exact script can be rehearsed into a scratch
-directory without root:
-
-```sh
-AI4BCM_APP_ROOT=<clone> AI4BCM_DATA_DIR=<clone>/data AI4BCM_KB_ROOT=/tmp/kb \
-  bash <clone>/tools/publish_knowledge.sh
-```
+**Rollback** is `git checkout <previous tag>` and a re-run: there is no page tree to
+swap back since 2026-09-12.
 
 ## Deploying the connector
 
