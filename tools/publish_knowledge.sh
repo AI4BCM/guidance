@@ -69,7 +69,15 @@ chunks=$("$PYTHON" -c 'import json,sys; print(len(json.load(open(sys.argv[1]))))
 echo "  $chunks chunks built"
 # The citation a reader actually gets, resolved through the connector rather than read off disk.
 # `active` is not `working`: this is the one line that proves the restart above took.
-served=$(curl -fsS -m 10 https://mcp.ai4bcm.org/index.json \
+#
+# 127.0.0.1:8788, NOT https://mcp.ai4bcm.org/index.json. What this step proves is that the
+# process reloaded its index — a property of the service, not of the vhost in front of it. Going
+# through nginx made this round depend on a `location = /index.json` being installed, which on
+# 2026-09-12 it was not: the publish round ran BEFORE the nginx round in the same sitting, the
+# curl 404'd, `set -e` aborted the whole thing, and a corpus that had in fact published
+# correctly looked like a failure. Whether the public route works is the nginx round's business.
+INDEX_URL="${AI4BCM_INDEX_URL:-http://127.0.0.1:8788/index.json}"
+served=$(curl -fsS -m 10 "$INDEX_URL" \
   | "$PYTHON" -c 'import json,sys; print(json.load(sys.stdin)["topics"][0]["url"])')
 echo "  citation   $served"
 case "$served" in
