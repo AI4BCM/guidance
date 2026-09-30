@@ -69,10 +69,12 @@ column (`tools.md:34-51`). An editorial note on one table row. Quotable verbatim
 never presented as a sensitivity class, despite `tools.md:32`.
 _Avoid_: class, sensitivity class, the five classes
 
-**Tier**:
-One of the five deployment tiers at `tools.md:22-28`, from free public service to private
-self-hosted. A closed list, and the thing a sensitivity class points at.
-_Avoid_: environment, plan, licence, deployment level
+**Where the tool runs**:
+One of the five rows of the table under "Where a tool can run" at `tools.md:22-28`, from free public
+service to private self-hosted. A closed list, and the thing a sensitivity class points at. The
+reader-facing name since 2026-09-29 (ai4bcm-final-edition, owner-approved word list row 5); it was
+"Tier" or "deployment tier" before. In running text: "where the tool runs", or "where it may run".
+_Avoid_: tier, deployment tier, environment, plan, licence, deployment level
 
 **Never-alone action**:
 One of the ten actions in `principles.md:18-38`: eight that are "not allowed or tightly limited"
@@ -80,8 +82,11 @@ and enforced by permissions, two that are "fully prohibited" and enforced by rev
 _Avoid_: prohibited task, banned use, red line, do-not-use
 
 **Level**:
-One of the five maturity levels at `levels.md:16-26`. A level the guidance names for a piece of work,
-never a level the guidance assesses a reader as holding.
+One of the five maturity levels at `levels.md:16-26`: Ad hoc, Repeatable, Defined, Measured,
+Optimising (since 2026-09-29, the BCI World deck names; "Ad hoc/Initial", "Quantitatively managed"
+and "Optimised" before). Levels 1 to 3 and the ladder follow CMM and CMMI; the names of levels 4
+and 5 are AI4BCM's own plain words. A level the guidance names for a piece of work, never a level
+the guidance assesses a reader as holding.
 _Avoid_: maturity score, rating, stage
 
 **Gate**:
