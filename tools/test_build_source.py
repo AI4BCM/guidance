@@ -23,8 +23,9 @@ pytestmark = pytest.mark.skipif(
 
 # 2026-09-28, remver-lessons ticket 08: units/keep-it-running.md adds six chunks and the
 # other units of that package one more, 96 -> 103. Ticket 13 of the same package adds the
-# standards block to units/references.md, 103 -> 104.
-EXPECTED_CHUNKS = 104
+# standards block to units/references.md, 103 -> 104; the owner's further reading in
+# units/prompts/README.md (2026-09-29), 104 -> 105.
+EXPECTED_CHUNKS = 105
 
 
 def test_source_constants_are_local_not_vault():

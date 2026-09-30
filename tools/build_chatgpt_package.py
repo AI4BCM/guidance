@@ -92,6 +92,12 @@ def build(repo: Path, dest: Path) -> None:
     shutil.copy2(src / "agents" / "openai.yaml", skill / "agents" / "openai.yaml")
 
     shutil.copytree(repo / "units", skill / "units")
+    # The package goes to a provider's skill directory, whose conversion guide asks for
+    # provider-neutral wording, so the vendor prompting guides stay in the citable units only
+    # (owner, 2026-09-29: they are a reference there, not a vendor name).
+    readme_unit = skill / "units" / "prompts" / "README.md"
+    readme_unit.write_text(re.sub(r"(?ms)^## Further reading\n.*?(?=^Hoekstra, W\.)", "",
+                                  readme_unit.read_text(encoding="utf-8")), encoding="utf-8")
     for extra in ("principles-a4.html",):
         target = skill / "units" / extra
         if not target.exists() and (VAULT_UNITS / extra).exists():

@@ -65,13 +65,4 @@ Then ask five questions about the output as a whole.
 - Does it overstate compliance, readiness or certainty?
 - Would it hold up when the people who have to use it see it?
 
-## Further reading
-
-The vendors' own prompting guides. The links were checked on 29 September 2026 and are checked again with the rest of this page.
-
-- Anthropic, *Prompting best practices*, Claude Platform Docs. <https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices>
-- Anthropic, *Reduce hallucinations*, Claude Platform Docs. <https://platform.claude.com/docs/en/test-and-evaluate/strengthen-guardrails/reduce-hallucinations>
-- OpenAI, *Prompting*, ChatGPT Learn. <https://learn.chatgpt.com/docs/prompting>
-- OpenAI, *Prompt engineering*, OpenAI API documentation. <https://developers.openai.com/api/docs/guides/prompt-engineering>
-
 Hoekstra, W., Gerner, K., et al. (2026). AI4BCM: Guideline for using AI by BCM professionals. CC BY 4.0.
