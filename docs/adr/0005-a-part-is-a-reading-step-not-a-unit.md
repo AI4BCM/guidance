@@ -4,12 +4,17 @@ status: accepted
 
 # A part is a reading step, not a unit
 
-From release `2026.11` the print edition and the website follow a red thread of eight **parts**,
-0 to 7, each answering one reader question: is this for me, what must I remember, where do I stand,
-which rules can I never break, where in my BCM work does AI help, what do I type, which tool may I
-use, and how do I keep it running and defend it. The units keep their files and their headings; only
-the print order and the site's `READING_ORDER` and groups change (owner, 2026-09-28). The word is
-"part" (owner, 2026-09-28), and readers see each part's question, never its number.
+From release `2026.11` the print edition follows a red thread of six **parts**, each titled by a
+short plain label: Where do I stand? · The rules that always apply · AI across the BCM lifecycle ·
+Prompts that work · Choosing a tool · Looking after your prompts and tools (owner, 2026-09-29). The
+units keep their files and their headings; only the print order changes. The word is "part" (owner,
+2026-09-28), and readers see each part's title, never its number.
+
+_Amended 2026-09-29 (owner):_ the first version of this record had eight parts, 0 to 7, each titled
+by a reader question, and grouped the website by them too. The owner replaced the questions with the
+six labels above, and the website keeps no guidance text or grouping of its own: it provides the
+guidance as PDF, as `.md`, through the chatbot and through plug-it-in. The decision recorded here, a
+part is a reading step and never a unit, is unchanged.
 
 This is recorded because the obvious next move is wrong. A contributor who sees the website grouped
 by parts will want to rename or split unit files to match them, or to cite "Part 5". Units are what
@@ -30,8 +35,8 @@ points at.
 
 ## Consequences
 
-- A site group is headed by its part's question. The `GROUP_NOTES` line "One part for each stage of
-  the work" in `ai4bcm-site` is reworded, since a stage unit is no longer a part.
+- Parts exist in the print edition only; the website shows no part titles of its own (amended
+  2026-09-29, replacing "a site group is headed by its part's question").
 - Reordering parts, or moving a unit between parts, changes no chunk and no citation. Renaming a
   unit or its headings still does, and needs a release.
 - The print edition may show a part as a run of sheets; nothing requires a sheet to belong to a
