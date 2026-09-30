@@ -1,7 +1,7 @@
 <!-- meta: unit=tools version=2026.09.1 -->
 # Tools
 
-No vendor names, on purpose. Products, licence terms and retention settings change faster than this guidance does. The category and the deployment tier stay useful. This unit is the one place that pairs a BCM task with a capability and an environment, and the one place that lists what a tool is checked against before it is approved. The stage units point here rather than repeating it.
+No vendor is named here, on purpose. Products, licence terms and retention settings change faster than this guidance does. The category and the deployment tier stay useful. This unit is the only place for tool choice and tool checks; the stage units point here.
 
 ## Categories
 
@@ -29,7 +29,7 @@ No vendor names, on purpose. Products, licence terms and retention settings chan
 
 ## Selection guide
 
-Which capability fits the task, and where it may run. Sensitivity follows the classes in `data-rules.md`. The environment column names a tier and no vendor. Public tools appear in the first two rows only, for material that says nothing about your organisation. Once internal detail comes in, the work moves to the approved environment.
+The table shows which capability fits each task and where it may run. Sensitivity follows the classes in `data-rules.md`. The environment column names a tier and no vendor. Public tools appear in the first two rows only, for material that says nothing about your organisation. Once internal detail comes in, the work moves to the approved environment.
 
 | Stage | Task | Sensitivity | Capability | Where it may run |
 |---|---|---|---|---|
@@ -69,6 +69,6 @@ Before you approve a tool for a class of data, check:
 - compliance with internal AI policy and information classification rules
 - a date to check these answers again, at each renewal and whenever the provider changes the model
 
-An enterprise label only names a deployment tier. If you want to upload a licensed standard or a copyrighted publication, the permission comes from the licence you hold for it. What the provider keeps comes from the contract. Read both before the label means anything. Record the answers with the approval. Self-check question 1 in `levels.md` asks whether the team knows them. Most of the list restates the source document's Annex A4 and matches the due-diligence and contract requirements in ETSI EN 304 223 (2025, provisions 5.1.2-7 and 5.2.2-6), the four data-handling questions in the UK Government AI Playbook (2025, "Working with your organisational data"), the supply-chain and failover practice in the NCSC and CISA guidelines (2023, "Secure your supply chain") and the third-party inventory with termination plans in the SEI model (2026, section 4.11.2). You can find the full entries for these four sources in `references.md`. The provider-breach item and the re-check date go beyond Annex A4. ETSI EN 304 223 (2025, provision 5.2.2-5) asks for an AI incident management plan and a recovery plan that are created, tested and maintained, and the SEI model (2026, section 4.11.2) asks for the third-party list to be updated periodically and for third parties to be assessed against their contracts. Neither source says what a provider owes you after a breach of its own, so that term comes from the contract.
+An enterprise label only names a deployment tier. If you want to upload a licensed standard or a copyrighted publication, the permission comes from the licence you hold for it. What the provider keeps is set by the contract, its published retention policy and your admin settings. Read all four before the label means anything. Record the answers with the approval. In a chat app the vendor can switch or retire the model without asking, and you usually cannot pin one, so set a fixed date for the re-check as well. Self-check question 1 in `levels.md` asks whether the team knows them. Most of the list restates the source document's Annex A4 and matches the due-diligence and contract requirements in ETSI EN 304 223 (2025, provisions 5.1.2-7 and 5.2.2-6), the four data-handling questions in the UK Government AI Playbook (2025, "Working with your organisational data"), the supply-chain and failover practice in the NCSC and CISA guidelines (2023, "Secure your supply chain") and the third-party inventory with termination plans in the SEI model (2026, section 4.11.2). You can find the full entries for these four sources in `references.md`. The provider-breach item and the re-check date go beyond Annex A4. ETSI EN 304 223 (2025, provision 5.2.2-5) asks for an AI incident management plan and a recovery plan that are created, tested and maintained, and the SEI model (2026, section 4.11.2) asks for the third-party list to be updated periodically and for third parties to be assessed against their contracts. Neither source says what a provider owes you after a breach of its own, so that term comes from the contract.
 
 Hoekstra, W., Gerner, K., et al. (2026). AI4BCM: Guideline for using AI by BCM professionals. CC BY 4.0.

@@ -9,9 +9,11 @@ and the prompts that `stages/design.md`, `stages/implement.md` and `stages/valid
 and what a failure looks like on the page. Run one before you rely on a prompt you have edited, and
 run the set again when a vendor changes a model under you. A model change is also the date to check
 the tool approval answers again, the last item under *Evaluating a tool* in `tools.md`.
+In a chat app the vendor can switch or retire the model without asking, and you usually cannot pin one. Run the set when the tool announces a change, and on a fixed date as well.
 
 Every case is a paste-and-read check that a person runs by hand. Supply the input as the prompt's
-own Sources line describes it, run the prompt unchanged, and read the answer against the two columns.
+own Sources line describes it, run the prompt unchanged three times, and read each answer against the two columns.
+Compare the three answers as well; answers that disagree on a fact are a finding.
 Where the answer matches the failure column, fix the prompt line the case names and leave the output alone.
 
 ## The pattern, `README.md`

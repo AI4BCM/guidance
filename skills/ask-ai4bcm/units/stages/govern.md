@@ -34,13 +34,13 @@ The one control that matters: **never accept a claim of compliance or alignment 
 
 1. Fix the approved sources and their dates: current policy, the framework, the organisation structure, prior management review output.
 2. Ask for the draft with the output structure named, and require it to mark what the sources do not cover.
-3. Ask the same model to attack the draft: which clauses are ambiguous, unenforceable, or open to two readings. The challenge prompt is worth more than the drafting prompt.
+3. Ask the same model to attack the draft: which clauses are ambiguous, unenforceable, or open to two readings.
 4. Take it to the people who will live with it — legal, compliance, information security, document owners — before it enters approval.
-5. Approve and control it normally. Then review the use case: keep it only while it improves governance, not because it is fast.
+5. Approve and control it normally. Then review the use case, and keep it only while it improves governance.
 
 ## Learning the practice
 
-A newer practitioner learns the BCMS faster from its own documents than from a generic explanation. A bounded assistant over those documents is the lowest-risk use of AI in this stage. This is practitioner learning. Staff induction is the embedding stage's work and has its own method in `stages/embed.md`.
+A newer practitioner learns the BCMS faster from its own documents than from a generic explanation. A bounded assistant over those documents is the lowest-risk use of AI in this stage. Staff induction is the embedding stage's work and has its own method in `stages/embed.md`.
 
 | | Learning the practice |
 |---|---|
@@ -49,7 +49,7 @@ A newer practitioner learns the BCMS faster from its own documents than from a g
 | Output | an explanation of a term, a structure or an expected output, tied to the document that defines it here and marked where the documents are silent |
 | Review boundary | the practitioner or a colleague checks the explanation against the source before acting on it; the assistant explains what the documents say and does not interpret a standard or decide a case |
 
-Where the documents are silent, the answer is a question for the BC manager. The practitioner learns that too.
+Where the documents are silent, the answer is a question for the BC manager.
 
 ## Prompts
 

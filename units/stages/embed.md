@@ -3,9 +3,9 @@
 
 ## Situation
 
-Embedding means explaining, over and over, to people who do not use your vocabulary. AI is good at that: it tailors one approved message for executives, line managers, new starters and a site that works in another language. AI writes the twentieth version as easily as the first.
+Embedding means explaining, over and over, to people who do not use your vocabulary. AI tailors one approved message for executives, line managers, new starters and a site that works in another language. AI writes the twentieth version as easily as the first.
 
-That is also where it can go wrong. Success at this stage means people understand and act. Repeated AI-generated messages that read as generic reduce engagement rather than improve it, and culture is not produced by volume.
+Success at this stage means people understand and act. Repeated AI-generated messages that read as generic reduce engagement.
 
 ## Typical AI uses
 
@@ -32,11 +32,11 @@ The one control that matters: **the organisation stays the visible author.** Sta
 
 ## Method
 
-1. Name the behaviour you want to change — plan ownership, interview attendance, knowing who to call — not the artefact you want produced.
+1. Name the behaviour you want to change (plan ownership, interview attendance, knowing who to call).
 2. Assemble the approved content base and its dates: policy extract, awareness notes, role descriptions, existing induction material.
 3. Draft the core message once, then adapt it per audience. Adaptation changes the wording, never the approved intent.
 4. Require the model to flag what it cannot fix rather than repair it silently: wrong footage, a number that no longer answers, an example from the wrong site.
-5. Publish through the normal route and review the effect with participation data and feedback, not with output count.
+5. Publish through the normal route and review the effect with participation data and feedback.
 
 ## Case studies and scheduled awareness
 
@@ -49,7 +49,7 @@ Two methods sit beside the core message. A recent public incident makes an aware
 | Output | a short case note carrying the source and date of each fact and the lesson it holds for this audience | a dated draft or reminder in the reviewer's queue, with nothing published from it |
 | Review boundary | the BCM professional verifies each fact against the original report before the case is used; a case that cannot be verified is dropped | a named person approves every publication; the workflow drafts and reminds, and sends nothing |
 
-A case study borrowed from another organisation's incident becomes your message once it carries your lesson, and a scheduled reminder is still yours when it reaches a manager's inbox; the reviewer who will be asked about either is the one who releases it.
+A borrowed case study that carries your lesson and a scheduled reminder in a manager's inbox both speak for your organisation. The reviewer who will be asked about either one releases it.
 
 ## Prompts
 
@@ -61,7 +61,7 @@ The awareness prompt is `prompts/awareness.md`; the case below runs its tailorin
 
 **Response.** A draft script based on Induction v4.2. Flagged but not fixed: the footage shows the existing sites; the emergency number is the parent company's; there is no version in the language the new site uses.
 
-**What changed.** Induction training is now available in the site's own language. The script took an afternoon. The dubbing took three weeks, and that is where the real timeline was.
+**What changed.** Induction training is now available in the site's own language. The script took an afternoon. The dubbing took three weeks.
 
 ## Level
 

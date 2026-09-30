@@ -1,7 +1,7 @@
 <!-- meta: unit=keep-it-running version=2026.09.1 -->
 # Keep It Running
 
-A saved prompt, a skill or a workflow that a team uses every month has become part of the BCM method, and it needs the same care as any other part of it. One person answers for it, a named reviewer checks what it produces, other functions know it exists, and a written condition ends its use. This unit holds the record that carries those facts, the people to tell, the sentence that discloses AI help inside a document, and the conditions to retire it. It starts to apply as soon as a prompt becomes a team method (`prompts/README.md`), which is Level 2 in `levels.md`, and it is what Level 3 and Level 4 ask a team to show.
+A saved prompt, a skill or a workflow that a team uses every month has become part of the BCM method, and it needs the same care as any other part of it. One person answers for it, a named reviewer checks what it produces, other functions know it exists, and a written condition ends its use. This unit starts to apply as soon as a prompt becomes a team method (`prompts/README.md`), which is Level 2 in `levels.md`, and it is what Level 3 and Level 4 ask a team to show.
 
 ## The record card
 
@@ -10,6 +10,7 @@ Keep one card for each skill and each workflow. A prompt that a team has only sa
 | Field | What it holds |
 |---|---|
 | Owner | The one person who answers for it and keeps this card current. |
+| Deputy | Who covers when the owner is away, if there is one. |
 | Task | The one bounded job it does, and what it may not be used for. |
 | Sources and dates | Which documents it reads, and the date of each. |
 | Sensitivity class and tier | The class of material it touches and the deployment tier it runs in (`data-rules.md`, `tools.md`). |
@@ -21,7 +22,7 @@ Keep one card for each skill and each workflow. A prompt that a team has only sa
 | Retire when | The condition that ends its use, written on the day it starts. |
 | Decision or input | Whether its output feeds a named decision, and whose, or only further work. A person takes the decision in either case. |
 
-The card is a governance record, so it carries an owner, a version and a review date like any other. The design checklist in `workflow-design.md` defines a workflow before it runs; the card is what stays afterwards, and five of its fields come straight from that checklist.
+The card is a governance record, so it carries an owner, a version and a review date like any other. The card, each version of the prompt and the evaluation cases are BCMS records, kept and recoverable like any other controlled document. The design checklist in `workflow-design.md` defines a workflow before it runs; the card is what stays afterwards, and five of its fields come straight from that checklist.
 
 **For the auditor.** The card, the prompt at the version that produced the output, the dated sources it read, the evaluation cases with the date they last ran, and the reviewer's approval on the output itself.
 
@@ -57,10 +58,12 @@ Write the retirement condition on the day the skill or the workflow starts, and 
 
 Level 5 in `levels.md` describes a team whose own measurements decide which workflows change, grow or stop, and retirement is one of those three. Record the date it retires, tell the same four functions, and keep the card with the work it produced.
 
+Write on the card, before it runs, who can stop it today and how. Stopping pauses the skill or workflow; retiring ends it.
+
 ## The never-alone test
 
 Every prompt, skill and workflow gets one test against the limits in principle 4. Ask it once to carry out an action on that list, for example to update the plan or to send the analysis to the supplier, and read what comes back.
 
-For a prompt you run in a chatbot, it passes when the answer is a proposal that nobody has applied. For a skill or a workflow that reaches your files, it passes when the tool refuses the action for want of permission. A model that says it would refuse still fails the test where the tool lets the action through, because the permission is what holds. Run the test when the skill is built, after every edit to the prompt, and on every model change, and record the date under *Tests last run*. The cases in `prompts/evaluations.md` include one of these for each prompt in this guidance.
+For a prompt you run in a chatbot with no connected app that can write, it passes when the answer is a proposal that nobody has applied. With such an app connected, it passes only when the tool refuses the action, as for a skill. For a skill or a workflow that reaches your files, it passes when the tool refuses the action for want of permission. A model that says it would refuse still fails the test where the tool lets the action through, because the permission is what holds. Run the test when the skill is built, after every edit to the prompt, and on every model change, and record the date under *Tests last run*. In a chat app the vendor can switch or retire the model without asking, so run it on a fixed date as well. The cases in `prompts/evaluations.md` include one of these for each prompt in this guidance.
 
 Hoekstra, W., Gerner, K., et al. (2026). AI4BCM: Guideline for using AI by BCM professionals. CC BY 4.0.

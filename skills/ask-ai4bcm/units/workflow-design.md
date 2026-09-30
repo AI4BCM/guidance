@@ -1,7 +1,7 @@
 <!-- meta: unit=workflow-design version=2026.09.1 -->
 # Workflow Design
 
-A workflow is a conversation you do not have to remember. It runs a defined process over approved inputs with named human gates, so two runs can be compared and a third person can see what happened.
+A workflow runs a defined process over approved inputs with named human gates, so two runs can be compared and a third person can see what happened.
 
 ## The design checklist
 
@@ -16,7 +16,7 @@ Define all eight before the workflow runs on anything real. Five of them stay wi
 | the named reviewer or approver | who decides | the BC manager approves next steps |
 | logging and traceability | what is recorded | steps taken, sources used, the approver |
 | exception handling | what happens when it breaks | missing source data, low-quality output, connector failure, rejected approval |
-| the fallback procedure | how the work continues without it | manual review if the workflow or AI service fails |
+| the fallback procedure | how the work continues without it, who may start the manual alternative, and that this person has done it once | manual review if the workflow or AI service fails, started by a named person who has run it before |
 
 Identify the manual alternative and exercise it. AI services fail through platform outage, identity failure, rate limiting, licensing changes and network or access problems, and the deliverable is still owed that day. Exception handling covers the approver as well as the tool; when the named reviewer is unreachable, the run stops instead of proceeding (IMDA, 2026, section 2.2.2). Fallback may be manual processing (NIST AI 600-1, 2024, GV-6.2-006), and the incident and recovery plan for the workflow is written and tested like any other (ETSI EN 304 223, 2025, provision 5.2.2-5).
 
@@ -30,7 +30,7 @@ Also unsuitable: bulk generation of generic BCM documentation that carries no op
 
 ## The BIA workflow, five stages
 
-The worked example, and the pattern to copy. Every stage is human-in-the-loop.
+This is the worked example to copy. Every stage is human-in-the-loop.
 
 Impact categories, time horizons and thresholds are method parameters. They are agreed and supplied before stage 1 runs, and no stage of the workflow sets them.
 
@@ -44,6 +44,6 @@ Impact categories, time horizons and thresholds are method parameters. They are 
 
 The interview takes impacts over time first, then the MTPD, then the resource requirements in their four classes, then the dependencies.
 
-The outcome of a BIA is a list of requirements. A requirement names what an activity needs in order to run; it does not assert that the thing exists today. Conducting the stage does not pass its gate. The BC professional checks the deliverable against the condition beside it. This guidance places the approvals with the activity owner, who approves the data and sets MTPD and RTO, and with top management, which approves the BIA results before solutions design starts. A deliverable that fails stops the run there and is reworked or done by hand before a later stage uses it. Stage detail for the analysis work is in `stages/analysis.md`.
+The outcome of a BIA is a list of requirements. A requirement names what an activity needs to run; it does not assert that the thing exists today. Conducting the stage does not pass its gate. The BCM professional checks the deliverable against the condition beside it. This guidance places the approvals with the activity owner, who approves the data and sets MTPD and RTO, and with top management, which approves the BIA results before solutions design starts. A deliverable that fails stops the run there and is reworked or done by hand before a later stage uses it. Stage detail for the analysis work is in `stages/analysis.md`.
 
 Hoekstra, W., Gerner, K., et al. (2026). AI4BCM: Guideline for using AI by BCM professionals. CC BY 4.0.

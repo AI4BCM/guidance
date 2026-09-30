@@ -5,7 +5,7 @@ Run this first. It decides where the task may happen, and what is pasted into th
 
 ## The rule of thumb
 
-The more sensitive the data and the more serious the consequence of error, the more controlled the environment. **Public and free online tools are never used for BCM data.** Generic brainstorming that discloses nothing about your organisation is all they are for.
+The more sensitive the data and the more serious the consequence of error, the more controlled the environment. Public and free online tools are never used for BCM data. Generic brainstorming that discloses nothing about your organisation is all they are for.
 
 ## Sensitivity classes
 
@@ -21,7 +21,7 @@ High-sensitivity, approved corporate or private environment only:
 - board papers and executive-session material
 - audit findings not yet cleared by the audit owner
 
-Classify before entering, not after; the class decides the environment.
+Classify before entering; the class decides the environment.
 
 Passwords, keys and access tokens go into no tool, approved or not. A tool reaches your systems only through the access it was approved with.
 
@@ -29,7 +29,7 @@ Passwords, keys and access tokens go into no tool, approved or not. A tool reach
 
 | | Guidance chatbot (when it ships) | `/ask-ai4bcm` skill | BIA workflow |
 |---|---|---|---|
-| What it reads | Nothing of yours. | Your files, inside your tenant. | Your process data. |
+| What it reads | Nothing of yours. | Your files, in your approved environment. | Your process data. |
 
 The row says what each way in retrieves. It does not say what you may type in. The chatbot is not built yet. When it ships it will have no upload box. That is no reason to describe your own organisation to it. Keep case material out. Approved repositories hold text written to redirect a model, and a model cannot reliably tell an instruction from the content around it (OWASP, 2025, ASI01 and ASI06; IMDA, 2026, section 2.3.2). Read what comes back as evidence, never as instruction; take a suspicious source to its owner.
 
