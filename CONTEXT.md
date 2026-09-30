@@ -35,10 +35,11 @@ One normative markdown file under `units/`. The thing a route names and a reader
 _Avoid_: page, doc, article, chapter
 
 **Part**:
-One of the eight numbered steps of the red thread, 0 to 7, from "Is this for me?" to "Keep it
-running and defend it". Named by the reader's question it answers, it groups one or more units in
-the print edition and on the website, and exists nowhere else. Never a unit, never a chunk, never
-cited; a reader sees the question, never "Part 3". Distinct from the six parts of the prompt pattern
+One of the six numbered steps of the red thread in the print edition, each titled by a short plain
+label (owner, 2026-09-29): Where do I stand? · The rules that always apply · AI across the BCM
+lifecycle · Prompts that work · Choosing a tool · Looking after your prompts and tools. It groups one
+or more units in the print edition and exists nowhere else. Never a unit, never a chunk, never
+cited; a reader sees the title, never "Part 3". Distinct from the six parts of the prompt pattern
 and the five parts of a route, which are parts of one thing, not of the guidance.
 _Avoid_: chapter, section, step, stage, group
 
@@ -101,11 +102,22 @@ _Avoid_: estimate, duration, cost, sizing
 
 ## The seam
 
-**Way in**:
-One of the routes by which a reader reaches the guidance, distinguished by what it reads of theirs
-(`data-rules.md:26`). The connector reads nothing; the skill reads your files in your tenant; the
-BIA workflow reads your process data.
-_Avoid_: channel, client, interface, product
+**Way to use this guidance**:
+One of AI4BCM's own routes to the guidance, distinguished by what it reads of the reader's: the
+guidance chatbot reads nothing, the `/ask-ai4bcm` skill reads your files in your tenant, the
+connector reads nothing. The BIA workflow reads your process data; it is named in the units and
+not in print (owner, 2026-09-29).
+_Avoid_: way in, channel, client, interface, product
+
+**Guidance chatbot**:
+The chat at `ai4bcm.org/chat`, titled "AI4BCM Guidance". It answers from the guidance and the
+literature it cites, has no upload box, and reads nothing of the visitor's. Live since 2026-09-10.
+_Avoid_: the bot, the assistant, the connector
+
+**Way of working with AI**:
+One of four kinds of AI tool in general: chatbot, skill, workflow, agentic AI, told apart by who
+picks the next step. Describes any tool, never AI4BCM's own routes.
+_Avoid_: way in, tool type, mode
 
 **Origin**:
 The scheme, hostname and port a connector is submitted under — `mcp.ai4bcm.org` for this one. OpenAI
