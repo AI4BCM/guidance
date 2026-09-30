@@ -12,7 +12,7 @@ a named release, citable, and changed only by a release with a changelog.
 _Avoid_: the knowledge base, the KB, the docs, the content
 
 **Normative corpus**:
-The 96 chunks built from `units/` — the guidance's own text, which it speaks for and is answerable
+The 104 chunks built from `units/` — the guidance's own text, which it speaks for and is answerable
 for. The half of the corpus small enough (about 24,000 tokens at release 2026.09.1) to be carried
 whole rather than retrieved.
 _Avoid_: the guidance chunks, the core, the primary corpus
