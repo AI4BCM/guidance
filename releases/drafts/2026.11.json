@@ -1,7 +1,7 @@
 {
   "tag": "2026.11",
   "tagged": false,
-  "commit": "55fa7bac287e2aa31f094213c68e35ce79c909e7",
+  "commit": "c35159264da5a97c9189bdd89a406ab617eaed9a",
   "citation": "Hoekstra, W., Gerner, K., et al. (2026). AI4BCM: Guideline for using AI by BCM professionals, 2026.11, <unit path>. CC BY 4.0.",
   "generated_by": "ai4bcm-release-manifest.py",
   "files": {
@@ -15,7 +15,7 @@
     "units/levels.md": "bd08b6ec5598065a1827460bfb8f2a5ccade848f8d129d599d684e086e873570",
     "units/principles-a4.html": "fdf5375eab93d92a019ced4af48b5104d5a2875bc753c9b0036f758b36c4f66a",
     "units/principles.md": "0fc465679c3ec8cba38991c5ea843dca9c9facfda369392ceec960f47bdae222",
-    "units/prompts/README.md": "730b876260e98e4cac2cd8fb02e3cf942486b00c4ec55dc85d621e959e9e3e8f",
+    "units/prompts/README.md": "53688cf2c3f0ed13e360db74cb7108e5990b8c083d03e41cacb249e93d7b9ba4",
     "units/prompts/awareness.md": "fa93f23dcad964d4988053294d34f25c300252c0b4c7724bb4e10f114f136b73",
     "units/prompts/bia.md": "470ea114f6a0912626ccc86f105826c306118d790bc1a570965237914761afd1",
     "units/prompts/draft.md": "79ed652ba2690e0c1b013a0cf0f82fdf54cc286c2ea82c678dc3a45b04b5e31d",
