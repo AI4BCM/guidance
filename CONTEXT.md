@@ -33,6 +33,14 @@ _Avoid_: the server, the API, the chatbot, the guidance chatbot
 One normative markdown file under `units/`. The thing a route names and a reader is sent to.
 _Avoid_: page, doc, article, chapter
 
+**Part**:
+One of the eight numbered steps of the red thread, 0 to 7, from "Is this for me?" to "Keep it
+running and defend it". Named by the reader's question it answers, it groups one or more units in
+the print edition and on the website, and exists nowhere else. Never a unit, never a chunk, never
+cited; a reader sees the question, never "Part 3". Distinct from the six parts of the prompt pattern
+and the five parts of a route, which are parts of one thing, not of the guidance.
+_Avoid_: chapter, section, step, stage, group
+
 **Chunk**:
 One addressable fragment of the corpus, keyed on its unit path and heading, carrying its own
 citation, licence and release tag. The unit of retrieval and the unit of attribution.
