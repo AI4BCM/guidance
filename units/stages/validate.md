@@ -3,7 +3,7 @@
 
 ## Situation
 
-Exercise reports, debrief notes, audit observations and post-incident material pile up after each round of validation, often faster than anyone reads them. The finding that matters is usually the one that shows up in three of them.
+Exercise reports, debrief notes, audit observations and post-incident material pile up after each round of validation, often faster than anyone reads them. Read together, they show which weaknesses recur and which failures were severe.
 
 AI is useful after the event, turning volume into a pattern, and before it, adding variation so the fourth exercise is not the third one again. It does not replace the exercise director, facilitator or auditor. The material is sensitive. Debriefs and incident records name people and weaknesses, so they stay in approved environments.
 
@@ -34,7 +34,7 @@ The one control that matters: **AI proposes a theme; a person makes it a finding
 1. State what the activity is meant to test before asking for content. Without that objective, the debrief has nothing to measure the exercise against.
 2. Draft the package (scenario, injects, facilitator notes, debrief questions) and have the exercise director judge realism and proportion.
 3. Capture the debrief with approved tools, and keep the raw record separate from the analysis.
-4. Analyse across events. Give most weight to findings that recur across several exercises or incidents. The worst moment of a single event says less about the arrangements.
+4. Analyse across events. Weigh each finding by its consequences, its evidence and how often it recurs. A single severe failure can matter more than a recurring minor one.
 5. Put the pattern to the people who were there before it becomes a finding, then track the action to a named owner.
 
 ## Prompts
