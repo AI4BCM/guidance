@@ -18,8 +18,12 @@ High-sensitivity, approved corporate or private environment only:
 - recovery strategies and design assumptions
 - supplier weaknesses and contractual dependencies
 - security-related architecture or site detail
+- board papers and executive-session material
+- audit findings not yet cleared by the audit owner
 
 Classify before entering, not after; the class decides the environment.
+
+Passwords, keys and access tokens go into no tool, approved or not. A tool reaches your systems only through the access it was approved with.
 
 ## What each way in reads
 

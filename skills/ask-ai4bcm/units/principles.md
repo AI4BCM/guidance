@@ -1,15 +1,15 @@
 <!-- meta: unit=principles version=2026.09.1 -->
 # Principles
 
-This guidance helps BCM professionals choose AI tools for BCM tasks. It helps them use these tools safely. It helps them add these tools to BCM work without weakening governance, control or resilience. It does not cover continuity planning for AI systems or AI-dependent services. It does not cover the design, training or buying of AI platforms. It does not cover cybersecurity architecture for AI. It does not cover the legal meaning of AI rules. It does not replace the organisation's own BCM framework, policies, information security needs, legal advice or professional judgement. When these questions come up, the BCM professional works with the specialists who own them. When this guidance and an internal rule differ, the stricter control applies. The guidance works with any standard. A reader using ISO 22301:2019, BSI-Standard 200-4, the practices of a professional body, or a method their organisation has used for years can use it as it is. The guidance does not come from any of these standards. It is not certified against any of them.
+This guidance helps BCM professionals choose AI tools for BCM tasks. It helps them use these tools safely. It helps them add these tools to BCM work without weakening governance, control or resilience. It is written for those professionals, for the managers and governance owners above them, and for colleagues in resilience, risk, crisis management, IT, security, facilities and operations who work beside BCM teams. Two readers should look elsewhere. One of them needs continuity plans for the AI systems themselves. The other wants AI to make the decisions. It does not cover continuity planning for AI systems or AI-dependent services. It does not cover the design, training or buying of AI platforms. It does not cover cybersecurity architecture for AI. It does not cover the legal meaning of AI rules. It does not replace the organisation's own BCM framework, policies, information security needs, legal advice or professional judgement. When these questions come up, the BCM professional works with the specialists who own them. When this guidance and an internal rule differ, the stricter control applies. The guidance works with any standard. A reader using ISO 22301:2019, BSI-Standard 200-4, the practices of a professional body, or a method their organisation has used for years can use it as it is. The guidance does not come from any of these standards. It is not certified against any of them.
 
 ## 1. Accountability stays human
 
-AI does not own the BCMS. A competent person must review any AI-generated output before it goes into a BCMS artefact, report or decision. This person must have the sources and time to reject it. If either is missing, the reviewer escalates instead of approving. Approval counts and override rates are worth tracking. But alone they do not show good review. A low override rate may mean rubber-stamping (IMDA, 2026, section 2.2.2).
+AI does not own the BCMS. A competent person must review any AI-generated output before it goes into a BCMS artefact, report or decision. This person must have the sources and time to reject it. If either is missing, the reviewer escalates instead of approving. Until then it is a draft, and nobody presents it as the organisation's position or record. Approval counts and override rates are worth tracking. But alone they do not show good review. A low override rate may mean rubber-stamping (IMDA, 2026, section 2.2.2).
 
 ## 2. Match the tool to the sensitivity
 
-The more sensitive the information, the more controlled the AI environment. The same is true when errors have serious results. Never use public and free online tools for BCM data. This includes BIA data, risk assessment detail, incident records, vulnerabilities, contact and personnel lists, recovery strategies, supplier weaknesses and site or architecture detail. Classify the material before you paste it, not after.
+The more sensitive the information, the more controlled the AI environment. The same is true when errors have serious results. Never use public and free online tools for BCM data. This includes BIA data, risk assessment detail, incident records, vulnerabilities, contact and personnel lists, recovery strategies, supplier weaknesses, site or architecture detail, uncleared audit findings and board papers. Classify the material before you paste it, not after.
 
 ## 3. Sources only, state gaps, cite
 
@@ -22,12 +22,13 @@ Not allowed or tightly limited:
 - declaring an incident or crisis without permission
 - invoking plans on its own
 - sending external communications without supervision
+- making a statement to a regulator, auditor or certification body on the organisation's behalf
 - approving policy or strategy changes
 - accepting risk
 - changing controlled records without review
 - interpreting law or regulation without expert review
 
-Permissions enforce these limits. Prompt wording only asks for them. The authority stays human (IMDA, 2026, section 2.3.1; NCSC and CISA, 2023).
+A person may draft such a statement with AI support, as long as a named person issues it. Permissions enforce these limits. Prompt wording only asks for them. The authority stays human (IMDA, 2026, section 2.3.1; NCSC and CISA, 2023).
 
 Fully prohibited, and no approval makes it acceptable:
 

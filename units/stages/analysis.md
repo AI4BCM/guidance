@@ -26,6 +26,8 @@ The one control that matters: **a drafted resource requirement is a question for
 - The draft names its source data and that data's date. An out-of-date inventory yields a confident, current-looking, wrong BIA.
 - Recovery fields stay empty in anything AI produces. That way a blank is clearly a blank, not an inherited guess.
 
+**For the auditor.** The requirements register with the source, the interview it came from and the date behind each entry, the date the owner confirmed it, and the recovery times the owner set. For risk, each relevance note with its sources and the risk owner's decision.
+
 ## Method
 
 1. Fix the sources you will attach, and their dates. What you do not attach is not in the answer. Whether the model filled the gap or left it out, the output looks the same.

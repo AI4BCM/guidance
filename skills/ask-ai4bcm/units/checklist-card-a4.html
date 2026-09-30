@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>AI4BCM — Minimum control checklist (tick-off card)</title>
+<style>
+  /* ------------------------------------------------------------------
+     2026-09-28, remver-lessons ticket 04. The tick-off card: the eight
+     minimum-control checklist boxes, and nothing else, on one A4 sheet a
+     BC manager pins next to the screen and works through before letting
+     AI near a BCM task. Hans, 2026-09-28: "eight boxes and nothing else
+     … principles 4 and 5 are reading, not ticking", which is why this is
+     a sheet of its own and not page 2 of principles-a4.html.
+
+     Source of record for every box is units/principles.md › Minimum
+     control checklist. The box text and the prepare/decide rule are
+     copied from it byte for byte; ai4bcm-prose-check.py demands each of
+     the eight boxes, the rule and the citation exactly once here, as it
+     does in the standalone handout. No rewording, no ninth box, no
+     principle heading: a heading here would be a fifth uncontrolled
+     copy, and a reworded box would compete with the guarded text.
+
+     Not a unit (grilling answer G3, 2026-09-28): no READING_ORDER entry
+     and no chunk. It is a site download beside the guidance PDF, and it
+     is never bound into print/guideline-a4.html — the eight boxes stand
+     exactly twice in that edition (TWICE_IN_PRINT), so a third copy
+     fails the check by design.
+
+     Tokens copied from 02-Projects/bc-consulting/praesentation.html by
+     way of principles-a4.html, not invented here. Every font-size is one
+     of the five steps. The box lines sit at --t-titel, one step above
+     body text, because this page is read at arm's length from a
+     pinboard; nothing sits below --t-klein except the running footer.
+
+     PAGE COUNT IS THE OUTPUT. One sheet today. The card is one block of
+     eight lines and a rule, so `break-inside: avoid` on the block and
+     the rule is the only lever used; type size, leading and padding stay
+     as they are, whatever the page count.
+     ------------------------------------------------------------------ */
+  :root {
+    --papier: #FBFAF7;
+    --tinte: #16232E;
+    --tafel: #1E3B56;
+    --stahl: #23577E;
+    --bernstein: #A85B1D;
+    --grau: #5F6A75;
+    --linie: #D8D5CC;
+
+    --t-gross: 1.25rem;
+    --t-titel: 1.05rem;
+    --t-text:  0.92rem;
+    --t-klein: 0.8rem;
+    --t-label: 0.7rem;
+
+    --mono: "Cascadia Mono", Consolas, "DejaVu Sans Mono", monospace;
+    --sans: -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; }
+
+  @page { size: A4 portrait; margin: 12mm; }
+
+  html { background: #E9E6DF; }
+  body {
+    font-family: var(--sans);
+    font-size: var(--t-text);
+    color: var(--tinte);
+    line-height: 1.35;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* min-height, not height, and never overflow:hidden, for the reason
+     principles-a4.html gives: a fixed-height box cuts silently, and this
+     renders with DejaVu here and Segoe UI on Windows. html-check.py
+     reads an overflow as a taller sheet. */
+  .blatt {
+    width: 186mm;
+    min-height: 273mm;
+    margin: 10mm auto;
+    padding: 0;
+    background: var(--papier);
+    box-shadow: 0 2px 14px rgba(22, 35, 46, 0.18);
+    display: flex;
+    flex-direction: column;
+    break-after: page;
+  }
+  .blatt:last-child { break-after: auto; }
+
+  @media print {
+    html { background: var(--papier); }
+    .blatt { width: auto; min-height: 272mm; margin: 0; box-shadow: none; }
+  }
+
+  header {
+    border-bottom: 2px solid var(--tafel);
+    padding-bottom: 3mm;
+    margin-bottom: 4mm;
+  }
+  .werk {
+    font-family: var(--mono);
+    font-size: var(--t-label);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--stahl);
+  }
+  .marke { color: var(--grau); white-space: nowrap; }
+  h1 {
+    font-size: var(--t-gross);
+    color: var(--tafel);
+    line-height: 1.2;
+    margin-top: 1mm;
+  }
+  .untertitel {
+    font-size: var(--t-klein);
+    color: var(--grau);
+    margin-top: 1mm;
+  }
+
+  .inhalt { flex: 1; display: flex; flex-direction: column; }
+
+  /* A place to write, not a record: the record of a skill or a workflow
+     belongs on the record card in units/keep-it-running.md. Ruled lines
+     rather than form fields, because this is printed and filled by hand. */
+  .schreibzeile {
+    display: flex;
+    gap: 6mm;
+    margin-bottom: 5mm;
+    font-size: var(--t-klein);
+    color: var(--grau);
+  }
+  .schreibzeile span {
+    flex: 1;
+    border-bottom: 1px solid var(--linie);
+    padding-bottom: 6mm;
+  }
+
+  .kasten { break-inside: avoid; }
+  .kasten > p { margin-bottom: 3mm; }
+
+  .boxen {
+    list-style: none;
+    padding-left: 0;
+    font-size: var(--t-titel);
+    line-height: 1.3;
+  }
+  /* 2026-09-28, the one look: at 3.5mm the eight lines left about 300 px of
+     void above the rule, a third of the sheet. The room went to the lines
+     rather than to the type scale — a tick-off card wants space to tick in.
+     Measured after: sheet 1 still 1032 px, one page. */
+  .boxen li {
+    padding-left: 9mm;
+    text-indent: -9mm;
+    padding-bottom: 8mm;
+    margin-bottom: 8mm;
+    border-bottom: 1px solid var(--linie);
+    break-inside: avoid;
+  }
+  .boxen li:last-child { border-bottom: none; }
+  .boxen .box {
+    font-family: var(--mono);
+    color: var(--stahl);
+    margin-right: 3mm;
+  }
+
+  .merksatz {
+    break-inside: avoid;
+    border-top: 2px solid var(--bernstein);
+    border-bottom: 2px solid var(--bernstein);
+    padding: 3mm 0;
+    margin-top: auto;
+    font-size: var(--t-titel);
+    color: var(--tafel);
+    line-height: 1.3;
+  }
+
+  footer {
+    margin-top: 4mm;
+    padding-top: 2mm;
+    border-top: 1px solid var(--linie);
+    font-size: var(--t-label);
+    color: var(--grau);
+    display: flex;
+    justify-content: space-between;
+    gap: 4mm;
+  }
+</style>
+</head>
+<body>
+
+<!-- ======================================== 1 · the eight boxes and the rule -->
+<section class="blatt">
+
+  <header>
+    <div class="werk">AI4BCM: Guideline for using AI by BCM professionals</div>
+    <h1>Minimum control checklist</h1>
+    <!-- The subtitle said "work through the eight boxes before any AI-assisted BCM task", which
+         the guarded lead-in below repeats two lines later. Cut, not reworded. -->
+    <div class="untertitel">A card to pin next to the screen. The five principles behind the boxes,
+    and the data rules, are in the guidance.</div>
+  </header>
+
+  <div class="inhalt">
+
+    <div class="schreibzeile">
+      <span>Task</span>
+      <span>Date</span>
+      <span>Reviewer</span>
+    </div>
+
+    <div class="kasten">
+      <p>Before any AI-assisted BCM task, check that:</p>
+      <ul class="boxen">
+        <li><span class="box">&#9744;</span>the tool is approved for the type of data involved</li>
+        <li><span class="box">&#9744;</span>the information is suitable for that environment</li>
+        <li><span class="box">&#9744;</span>the task is clearly defined and bounded</li>
+        <li><span class="box">&#9744;</span>the output is grounded in approved and current sources, citations checked</li>
+        <li><span class="box">&#9744;</span>a competent reviewer has the sources, the time and a route to escalate</li>
+        <li><span class="box">&#9744;</span>any actions or record changes have approval gates</li>
+        <li><span class="box">&#9744;</span>traceability is sufficient for accountability</li>
+        <li><span class="box">&#9744;</span>fallback methods exist if the tool is unavailable</li>
+      </ul>
+    </div>
+
+    <div class="merksatz">
+      Ask AI to prepare, compare, summarise, retrieve, and challenge. But require people to decide,
+      approve, and act.
+    </div>
+
+  </div>
+
+  <footer>
+    <span>Hoekstra, W., Gerner, K., et al. (2026). AI4BCM: Guideline for using AI by BCM
+    professionals. CC BY 4.0.</span>
+    <span class="werk marke">2026.09.1 &middot; minimum controls &middot; 1 of 1</span>
+  </footer>
+
+</section>
+
+</body>
+</html>

@@ -55,8 +55,10 @@ _Avoid_: version, build, bump
 
 **Sensitivity class**:
 What `data-rules.md` publishes: either the material is **high-sensitivity BCM material** — one of the
-seven kinds at `data-rules.md:14-20`, approved corporate or private environment only — or it
+nine kinds at `data-rules.md:14-22`, approved corporate or private environment only — or it
 **discloses nothing about the organisation** (`data-rules.md:8`). Two states, not a scale.
+Credentials sit outside both states: passwords, keys and access tokens go into no tool at all
+(`data-rules.md:26`).
 _Avoid_: sensitivity level, classification, risk class, data class
 
 **Sensitivity hint**:
@@ -71,7 +73,7 @@ self-hosted. A closed list, and the thing a sensitivity class points at.
 _Avoid_: environment, plan, licence, deployment level
 
 **Never-alone action**:
-One of the nine actions in `principles.md:18-37`: seven that are "not allowed or tightly limited"
+One of the ten actions in `principles.md:18-38`: eight that are "not allowed or tightly limited"
 and enforced by permissions, two that are "fully prohibited" and enforced by review.
 _Avoid_: prohibited task, banned use, red line, do-not-use
 

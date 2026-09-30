@@ -13,6 +13,8 @@ First, work out which of three things you are using. They fail in different ways
 
 For most BCM work, the workflow is the useful middle option. Picking a step is not the same as having authority. A named person must approve every important action. Results are comparable only when inputs are controlled, the method and output structure are written down, and someone checks the output. A workflow gives you the first three. Checking the output is your job.
 
+These three are kinds of AI tool, whoever built them. The three ways into this guidance — the guidance chatbot, the `/ask-ai4bcm` skill and the BIA workflow — are AI4BCM's own tools, and they are described under "Where to start".
+
 ## The five maturity levels
 
 | Level | Typical characteristics | Common pitfall at this level |
@@ -43,10 +45,10 @@ Here is one typical use per level. Each level has a question that tells you when
 
 | Level | Start with | Ready to work here when |
 |---|---|---|
-| 1 Ad hoc/Initial | summarising your own notes, first-pass drafting and rewriting of text that discloses nothing about the organisation, translation for review, fictional exercise ideas | the tool is approved for low-risk use and nothing confidential is entered (`data-rules.md`) |
+| 1 Ad hoc/Initial | summarising your own notes, first-pass drafting and rewriting of text that discloses nothing about the organisation, translation for review, fictional exercise ideas | the tool is approved for low-risk use, nothing confidential is entered (`data-rules.md`), and you have read the organisation's AI use policy, where one exists |
 | 2 Repeatable | policy, plan and awareness first drafts (`prompts/draft.md`, `prompts/awareness.md`), the pre-interview BIA draft with recovery fields blank (`prompts/bia.md`), exercise injects to a stated objective (`prompts/exercise.md`), debrief summarisation and the management review narrative (`prompts/management-report.md`) | the prompt that worked is saved for reuse, approved tools are named, the data rule is written down, every prompt has a named reviewer, and outputs go through the normal approval route |
-| 3 Defined | retrieval-grounded search across BCMS content, plan consistency checks (`stages/implement.md`), findings across exercise reports (`stages/validate.md`), BIA support and threat relevance over connected records (`stages/analysis.md`) | each use case is written down with its prompt, sources, review point and limits and has an owner, and all five self-check questions answer yes with evidence |
-| 4 Quantitatively managed | change-triggered plan and BIA review, scheduled awareness drafts, evidence-pack assembly and bounded incident-support retrieval, each built on the checklist in `workflow-design.md` | each workflow in use shows the four kinds of Level 4 evidence above, recorded and current |
+| 3 Defined | retrieval-grounded search across BCMS content, plan consistency checks (`stages/implement.md`), findings across exercise reports (`stages/validate.md`), BIA support and threat relevance over connected records (`stages/analysis.md`) | each use case is written down with its prompt, sources, review point and limits (`prompts/README.md`, Build your own skill), has an owner and is entered in the organisation's AI inventory, where one exists, and all five self-check questions answer yes with evidence; a skill or a workflow keeps that record on the card in `keep-it-running.md` |
+| 4 Quantitatively managed | change-triggered plan and BIA review, scheduled awareness drafts, evidence-pack assembly and bounded incident-support retrieval, each built on the checklist in `workflow-design.md` | each workflow in use shows the four kinds of Level 4 evidence above, recorded and current on its card in `keep-it-running.md`, and the people named there have been told it is running |
 | 5 Optimised | changing, extending or retiring workflows on the evidence of their own measurements, multi-source resilience intelligence, tightly bounded agentic support within configured permissions | the Level 4 measurements have run long enough to show what to change, and people set and review the limits of AI use; this level suits large or mature organisations and is a choice rather than a target |
 
 Whatever the level, the prompt pattern in `prompts/README.md` and the capability rows in `tools.md` apply. The data rules come first.

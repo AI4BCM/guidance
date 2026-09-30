@@ -26,6 +26,9 @@ The one control that matters: **never accept a claim of compliance or alignment 
 - Final policy, scope and governance decisions stay with management. A draft enters the normal approval route with its status unchanged.
 - Only approved tools touch internal governance content; licensed standards text only where the licence permits.
 - An AI-supported artefact carries the same document control as any other: owner, version, review date.
+- An AI-supported artefact discloses the AI help inside the document, beside that document control; the sentence to use is in `keep-it-running.md`.
+
+**For the auditor.** The approved document with its owner, version and review date, the dated sources the draft was built from, and the approval that made it policy.
 
 ## Method
 

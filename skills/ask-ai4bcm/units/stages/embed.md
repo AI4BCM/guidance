@@ -28,6 +28,8 @@ The one control that matters: **the organisation stays the visible author.** Sta
 - AI is not used to monitor, score or label individuals.
 - An internal assistant is grounded in approved staff-facing content only, and respects existing access rights.
 
+**For the auditor.** The approved core message and the dated content it came from, the named reviewer who released each version, and the participation and feedback data you judged the effect by.
+
 ## Method
 
 1. Name the behaviour you want to change — plan ownership, interview attendance, knowing who to call — not the artefact you want produced.
