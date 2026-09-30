@@ -1,7 +1,7 @@
 <!-- meta: unit=prompts/README version=2026.09.1 dated=2026-09 -->
 # Prompts
 
-Prompts are the living part of this guidance. They date faster than principles; this set is dated 2026-09 and the online copy is the reference. Evaluation cases for each prompt are in [evaluations.md](evaluations.md); run one before you rely on a prompt you have edited.
+Prompts are the living part of this guidance. They date faster than principles; this set is dated 2026-09 and the online copy is the reference. What this guidance says about AI tools and about prompting was last checked against the vendors' own documentation on 28 September 2026. It is checked again every three months, and the date here moves with each check. Evaluation cases for each prompt are in [evaluations.md](evaluations.md); run one before you rely on a prompt you have edited.
 
 ## The pattern
 
