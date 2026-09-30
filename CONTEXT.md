@@ -18,10 +18,11 @@ whole rather than retrieved.
 _Avoid_: the guidance chunks, the core, the primary corpus
 
 **Literature**:
-The 287 chunks built from the eight class-A documents registered in `tools/sources.json` — NIST
-SP 800-34r1, the NIST AI RMF, DORA, the EU AI Act articles, the delegated regulation, the Swiss
-FONES minimum standard, the UK Cabinet Office guidance and the ESAs statement. Cited on their own
-authority, never as the guidance. Too large to carry whole; reached by retrieval.
+The 296 chunks built from the nine class-A documents registered in `tools/sources.json` — NIST
+SP 800-34r1, the NIST AI RMF, the NIST Cybersecurity Framework (CSF) 2.0, DORA, the EU AI Act
+articles, the delegated regulation, the Swiss FONES minimum standard, the UK Cabinet Office
+guidance and the ESAs statement. Cited on their own authority, never as the guidance. Too large to
+carry whole; reached by retrieval.
 _Avoid_: the standards, the references, the external sources, class A
 
 **Connector**:

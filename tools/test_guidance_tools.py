@@ -36,10 +36,11 @@ def _index(data_dir):
     gt.use_index(None) if False else None
 
 
-def test_corpus_is_the_hundred_and_three(data_dir):
-    """96 until 2026-09-28; units/keep-it-running.md and its pointers made it 103."""
+def test_corpus_is_the_hundred_and_four(data_dir):
+    """96 until 2026-09-28; keep-it-running.md and its pointers made it 103, and the standards
+    block in references.md made it 104."""
     chunks = json.loads((data_dir / "chunks.json").read_text(encoding="utf-8"))
-    assert len(chunks) == 103
+    assert len(chunks) == 104
 
 
 def test_search_returns_hits_with_the_expected_keys():

@@ -145,6 +145,22 @@
       ]
     },
     {
+      "id": "nist-cswp-29",
+      "title": "NIST CSWP 29, The NIST Cybersecurity Framework (CSF) 2.0",
+      "publisher": "National Institute of Standards and Technology (US)",
+      "edition": "CSF 2.0, published 26 February 2024 (DOI 10.6028/NIST.CSWP.29); from PDF page 5, cover, abstract, keywords, acknowledgments and table of contents not carried",
+      "fetched": "2026-09-28",
+      "source_url": "https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.29.pdf",
+      "converted_from": "PDF (32 pages)",
+      "conversion": "Converted to Markdown on 2026-09-28 by tools/literature/pdf_prose_to_md.py using pdftotext -raw, from PDF page 5. Sections 1 to 5 and Appendices A, B and C are carried. Table 1 (the CSF Core Function and Category names) and Table 2 (the CSF Tiers) are shown as raw extraction in fenced blocks, marked as such; figures are not carried. The structure is a conversion; the PDF is authoritative.",
+      "licence": "US Government work, not subject to copyright protection in the United States (17 U.S.C. 105); foreign rights reserved, with a royalty-free worldwide right granted to the public to reprint NIST Technical Series works in all formats, asking that the citation be followed by \"Republished courtesy of the National Institute of Standards and Technology\"; available free of charge from NIST",
+      "licence_class": "A",
+      "citation": "National Institute of Standards and Technology (2024). The NIST Cybersecurity Framework (CSF) 2.0, NIST CSWP 29, {edition}, {source_file}. US Government work, public domain; republished courtesy of the National Institute of Standards and Technology. Markdown conversion, 2026-09-28, tables not reconstructed; the NIST PDF is authoritative.",
+      "paths": [
+        "literature/nist/cswp-29-csf-2-0.md"
+      ]
+    },
+    {
       "id": "esas-jc-2026-25",
       "title": "ESA Statement JC 2026 25: toward a consistent and risk-based approach for ICT risks from frontier AI models (statement body)",
       "publisher": "Joint Committee of the European Supervisory Authorities (EBA, EIOPA, ESMA)",

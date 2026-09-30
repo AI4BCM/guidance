@@ -35,8 +35,9 @@ git -C "$APP_ROOT" pull --ff-only
 
 # literature/ is passed explicitly, not discovered: a file there becomes a chunk only if
 # sources.json claims it, and an unclaimed file stops this build rather than publishing text
-# whose licence nobody checked. Dropping --source-dir here builds the 96-chunk units-only corpus
-# and would silently unpublish 287 pages — the flag is the difference between the two corpora.
+# whose licence nobody checked. Dropping --source-dir here builds the units-only corpus, 104
+# chunks on the remver-lessons text, and would silently unpublish the 296 literature chunks —
+# the flag is the difference between the two corpora.
 echo "2/4 build chunks -> $DATA_DIR"
 "$PYTHON" "$APP_ROOT/tools/build_chunks.py" --data-dir "$DATA_DIR" \
   --source-dir "$APP_ROOT/literature"

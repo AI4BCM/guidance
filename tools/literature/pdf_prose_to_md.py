@@ -18,7 +18,20 @@ import subprocess
 from collections import Counter
 
 CAPTION = re.compile(r"^\s*(Table|Figure)\s+([A-Z]?\d+-\d+|\d+)[.:]\s*(.*)$")
-HEADING = re.compile(r"^\s{0,6}((?:Chapter\s+\d+\.)|(?:Appendix\s+[A-Z][—-])|(?:\d+(?:\.\d+)+))\s+(\S.*)$")
+# A heading is its number and a short title. The number alone is not enough: `-raw` breaks a
+# sentence mid-line, so "2.0 website and through the CSF 2.0 Reference Tool, which allows users"
+# matches the dotted form and would mint a chunk id out of half a sentence. Real headings in
+# these publications run to a handful of words, so the title is capped at HEADING_MAX_WORDS.
+# NIST CSWP 29 also numbers its top level singly ("1. Cybersecurity Framework (CSF) Overview")
+# and its appendices with a full stop ("Appendix A. CSF Core"), neither of which the earlier
+# pattern saw; both are admitted here, and the word cap is what keeps a numbered list item
+# ("1. A Current Profile specifies the Core outcomes that an organization is achieving") out.
+HEADING = re.compile(r"^\s{0,6}((?:Chapter\s+\d+\.)|(?:Appendix\s+[A-Z][—.-])|(?:\d+(?:\.\d+)+)|(?:\d{1,2}\.))\s+([A-Z(\u201c]\S*.*)$")
+HEADING_MAX_WORDS = 10
+# A run-on list item can still be short: SP 800-34r1 has "6. Ensure plan testing, training, and
+# exercises; and". No heading in these publications carries a semicolon or trails off in a
+# conjunction, so both disqualify a candidate.
+HEADING_TAIL_STOP = ("and", "or", "the", "a", "of", "to", "in", "for", "with")
 FOOTER = re.compile(r"^\s*(CHAPTER|APPENDIX|SECTION)\s+[A-Z0-9]{1,4}\s+\d{1,4}\s*$", re.I)
 PAGE_NO = re.compile(r"^\s*(\d{1,3}|[ivxlcdm]{1,7})\s*$", re.I)
 COLUMNAR = re.compile(r"\S {4,}\S")
@@ -125,10 +138,16 @@ def convert(pdf: str, first: int, last: int) -> tuple[list[str], list[str]]:
                 out.append("")
                 continue
             m = HEADING.match(raw)
-            if m and len(s_line) < 100 and not s_line.endswith((".", ",", ";")):
+            if (m and len(s_line) < 100 and not s_line.endswith((".", ",", ";"))
+                    and ";" not in s_line
+                    and len(m.group(2).split()) <= HEADING_MAX_WORDS
+                    and m.group(2).split()[-1].lower() not in HEADING_TAIL_STOP):
                 flush(page_no)
                 num, title = m.group(1), m.group(2).strip()
-                level = 2 if num.startswith(("Chapter", "Appendix")) else min(5, 2 + num.count("."))
+                # A single-level number ("1.") is a top section and sits beside Chapter and
+                # Appendix at level 2; the dotted forms keep the depths they had.
+                top = num.startswith(("Chapter", "Appendix")) or num.count(".") == 1 and num.endswith(".")
+                level = 2 if top else min(5, 2 + num.count("."))
                 out.append("#" * level + " " + num + " " + re.sub(r"\s+", " ", title))
                 out.append("")
                 continue
