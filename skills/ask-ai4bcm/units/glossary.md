@@ -3,11 +3,11 @@
 
 | Term | Meaning |
 |---|---|
-| **Agentic system** | An AI system that autonomously plans and executes multi-step tasks toward a goal. Some vendors also call a fixed, rule-based setup an agent, so judge a tool by who picks the next step. |
+| **Agentic system** | An AI system that autonomously plans and executes multi-step tasks toward a goal. Some vendors also call a fixed, rule-based setup an agent, so judge a tool by who decides what comes next. |
 | **AI** | Computer systems that perform tasks which normally need human judgement, such as reading, summarising, classifying or predicting. In this guidance the term covers generative AI, retrieval tools, machine learning and the workflows built from them. |
 | **Auditable** | Recorded so that someone else can check afterwards what was asked, which sources were used, when, and who approved the result. An output is auditable when those four things can still be retrieved later. |
 | **BCM lifecycle** | The six activities that manage continuity capability. They are governance, embedding, analysis, solutions design, implementation and validation. |
-| **BCMS** | Business Continuity Management System; the management system for business continuity, formalised in ISO 22301:2019. |
+| **BCMS** | Business Continuity Management System; the management system for business continuity, set out in ISO 22301:2019. |
 | **BIA** | Business Impact Analysis; analysis of activities to determine the effects of disruption. |
 | **Connector** | A controlled link between an AI system or workflow and a business system, such as a document repository, an HR directory, a supplier record system, a risk register or an incident management tool. It retrieves or acts on information. Set it to read-only and least privilege unless a write action is approved; many tools switch write actions on by default. |
 | **Gate** | A gate has two senses in this guidance. The first is the condition a maturity level requires before work runs at that level. It is a fact you can show, and an intention does not count. The starting guide states one for each of the five levels. The second is the approval step where a named person approves an action or a record change before it goes ahead, as in the checklist's approval gates. |
@@ -23,7 +23,7 @@
 | **RAG** | Retrieval-Augmented Generation; the model first fetches passages from an approved repository, then answers from them. It reduces invention and does not remove it, so citations are still checked (principle 3). |
 | **Register** | An approved list of record that the organisation maintains and a named person owns, such as the list of activities, risks, suppliers or resource requirements. AI may draft an entry; only the owner makes it a register entry. |
 | **Repository** | The controlled place where approved content is kept, such as the plan library, the document management system or the BCMS content store. Approved means someone is accountable for what is in it and for how current it is. |
-| **Retrieval** | Fetching passages from an approved repository so that an answer is grounded in them rather than in what the model learned in training. The technique is RAG; the control is that the repository is approved and its contents are dated. |
+| **Retrieval** | Fetching passages from an approved repository so that an answer is based on them rather than on what the model learned in training. The technique is RAG; the control is that the repository is approved and its contents are dated. |
 | **Role-based access** | Permission granted by the job someone does, so a retrieval returns only what that person is already entitled to read. With it, a connector speeds up access to a repository without widening it. |
 | **RPO** | Recovery Point Objective; the point to which information used by an activity must be restored to enable the activity to operate on resumption (ISO 22300:2021). |
 | **RTO** | Recovery Time Objective; the time frame within the MTPD for resuming disrupted activities at a specified minimum acceptable capacity (ISO 22301:2019). |

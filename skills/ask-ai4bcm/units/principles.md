@@ -5,11 +5,11 @@ This guidance helps BCM professionals choose AI tools for BCM tasks, use them sa
 
 ## 1. Accountability stays human
 
-AI does not own the BCMS. A competent person must review any AI-generated output before it goes into a BCMS artefact, report or decision. This person must have the sources and time to reject it. If either is missing, the reviewer escalates instead of approving. Until then it is a draft, and nobody presents it as the organisation's position or record. Approval counts and override rates are worth tracking, but alone they do not show good review. A low override rate may mean rubber-stamping (IMDA, 2026, section 2.2.2).
+AI does not own the BCMS. A competent person must review any AI-generated output before it goes into a BCMS document, report or decision. This person must have the sources and time to reject it. If either is missing, the reviewer escalates instead of approving. Until then it is a draft, and nobody presents it as the organisation's position or record. Approval counts and override rates are worth tracking, but alone they do not show good review. A low override rate may mean approving without checking (IMDA, 2026, section 2.2.2).
 
 ## 2. Match the tool to the sensitivity
 
-The more sensitive the information, the more controlled the AI environment. The same is true when errors have serious results. Never use public and free online tools for BCM data. This includes BIA data, risk assessment detail, incident records, vulnerabilities, contact and personnel lists, recovery strategies, supplier weaknesses, site or architecture detail, uncleared audit findings and board papers. Classify the material before you paste it into a tool.
+The more sensitive the information, the more controlled the AI environment. The same is true when errors have serious results. Never use public and free online tools for BCM data. This includes BIA data, risk assessment detail, incident records, vulnerabilities, contact and personnel lists, recovery strategies, supplier weaknesses, site or architecture detail, audit findings not yet cleared by the audit owner, and board papers. Classify the material before you paste it into a tool.
 
 ## 3. Sources only, state gaps, cite
 
@@ -39,7 +39,7 @@ Review enforces these two. A record that fails the citation check in principle 3
 
 ## 5. Value, not speed
 
-Success means quality, usability, timeliness, insight and governance improved. A large document that looks complete is not always useful, accurate or credible in practice. Do not generate plans in bulk.
+Success means better quality, ease of use, insight and governance, and work done on time. A large document that looks complete is not always useful, accurate or credible in practice. Do not generate plans in bulk.
 
 ## Minimum control checklist
 
@@ -47,11 +47,11 @@ Before any AI-assisted BCM task, check that:
 
 - ☐ the tool is approved for the type of data involved
 - ☐ the information is suitable for that environment
-- ☐ the task is clearly defined and bounded
-- ☐ the output is grounded in approved and current sources, citations checked
-- ☐ a competent reviewer has the sources, the time and a route to escalate
+- ☐ the task is narrow and clear
+- ☐ the output is based on approved, current sources, citations checked
+- ☐ the reviewer knows the subject, has the sources and the time, and knows who to pass it to if unsure
 - ☐ any actions or record changes have approval gates
-- ☐ traceability is sufficient for accountability
+- ☐ you can show afterwards who did what, and from which sources
 - ☐ fallback methods exist if the tool is unavailable
 
 ## The rule

@@ -16,11 +16,11 @@ Analysis also involves some of the most sensitive material in BCM. Live BIA and 
 - summarising public threat developments for a person's risk review, and clustering risks, issues and recurring themes
 - re-opening affected BIA and risk records when a system, supplier or site changes
 
-The capability and environment for each use are in the selection guide in `tools.md`.
+The type of tool and the environment for each use are in the selection guide in `tools.md`.
 
 ## Minimum controls
 
-The one control that matters: **a drafted resource requirement is a question for the owner, never an entry in the register.** It stays unconfirmed until an owner of the activity says otherwise.
+The one control that matters: **a resource requirement drafted by AI is only a question for the activity owner.** It goes into the register only when the owner confirms it.
 
 - **AI can test whether a proposed RTO fits the impact criteria. It does not set the RTO.** The same holds for MTPD.
 - The draft names its source data and that data's date. An out-of-date inventory yields a BIA that looks current and is wrong.
@@ -51,7 +51,7 @@ The BIA method above does not cover the risk part of this stage. Risk assessment
 | | Risk assessment with AI support |
 |---|---|
 | Inputs | public threat, regulatory and incident reporting for the sector and the regions you work in; the approved risk register, the requirements register and the BIA output, each with its date |
-| Capability | the two rows of the `tools.md` selection guide that cover this, one for public research in any approved tool and one for threat relevance in the approved environment |
+| Type of tool | for public research, any approved tool; for judging what it means for your own records, only the approved environment (`tools.md`) |
 | Output | a relevance note per threat. It states how certain the public evidence is. It links each point to the public source and to the internal record it touches. It ends in questions or themes for the risk owner |
 | Review boundary | a person assesses the threat, decides the treatment and accepts the risk. A model proposes relevance. It does not rate a risk, accept it or change a risk record |
 
@@ -59,7 +59,7 @@ When a system, supplier, site or process changes, the comparison runs the other 
 
 ## Prompts
 
-The task prompt is `prompts/bia.md`, whose first task line is the pre-interview draft the case below runs; its review line names who confirms each requirement and who sets the recovery fields. The risk-assessment relevance note uses the same six-element pattern from `prompts/README.md`, with the threat evidence and the risk register as its sources and the table above as its output.
+The task prompt is `prompts/bia.md`. The first choice in its Task line is the pre-interview draft that the case below uses. Its Review line names who confirms each requirement and who sets the recovery fields. The risk-assessment relevance note uses the same six-element pattern from `prompts/README.md`, with the threat evidence and the risk register as its sources and the table above as its output.
 
 ## Case example
 

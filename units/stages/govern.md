@@ -17,16 +17,16 @@ The line is fixed. AI may prepare and challenge governance material. It cannot s
 - summarising changes in official guidance or regulation for a person to interpret, on request or from a workflow that watches approved official sources
 - helping a newer practitioner learn the BCMS's structure, vocabulary and expected outputs from approved governance material
 
-The capability and environment for each use are in the selection guide in `tools.md`.
+The type of tool and the environment for each use are in the selection guide in `tools.md`.
 
 ## Minimum controls
 
-The one control that matters: **never accept a claim of compliance or alignment from a model.** Any statement that the organisation meets a standard, a regulation or its own policy is verified by a person against the source text.
+The one control that matters: **never let AI decide that you meet a standard or a policy.** Any statement that the organisation meets a standard, a regulation or its own policy is checked by a person against the source text.
 
 - Final policy, scope and governance decisions stay with management. A draft enters the normal approval route with its status unchanged.
 - Only approved tools touch internal governance content; licensed standards text only where the licence permits.
-- An AI-supported artefact carries the same document control as any other: owner, version, review date.
-- An AI-supported artefact discloses the AI help inside the document, beside that document control; the sentence to use is in `keep-it-running.md`.
+- An AI-supported document carries the same document control as any other: owner, version, review date.
+- An AI-supported document discloses the AI help in its own text, beside that document control; the sentence to use is in `keep-it-running.md`.
 
 **For the auditor.** The approved document with its owner, version and review date, the dated sources the draft was built from, and the approval that made it policy.
 
@@ -34,18 +34,18 @@ The one control that matters: **never accept a claim of compliance or alignment 
 
 1. Fix the approved sources and their dates: current policy, the framework, the organisation structure, prior management review output.
 2. Ask for the draft with the output structure named, and require it to mark what the sources do not cover.
-3. Ask the same model to attack the draft: which clauses are ambiguous, unenforceable, or open to two readings.
+3. Ask the same model to challenge the draft: which clauses are ambiguous, impossible to enforce, or open to two readings.
 4. Take it to the people who will live with it — legal, compliance, information security, document owners — before it enters approval.
 5. Approve and control it normally. Then review the use case, and keep it only while it improves governance.
 
 ## Learning the practice
 
-A newer practitioner learns the BCMS faster from its own documents than from a generic explanation. A bounded assistant over those documents is the lowest-risk use of AI in this stage. Staff induction is the embedding stage's work and has its own method in `stages/embed.md`.
+A newer practitioner learns the BCMS faster from its own documents than from a generic explanation. An assistant limited to those documents is the lowest-risk use of AI in this stage. Onboarding new staff is the embedding stage's work and has its own method in `stages/embed.md`.
 
 | | Learning the practice |
 |---|---|
 | Inputs | the approved policy, framework, scope statement, procedures and glossary, with their dates; licensed standards text only where the licence permits |
-| Capability | the "Learning BCM terms and methods as a newer practitioner" row of the `tools.md` selection guide |
+| Type of tool | the "Learning BCM terms and methods as a newer practitioner" row of the `tools.md` selection guide |
 | Output | an explanation of a term, a structure or an expected output, tied to the document that defines it here and marked where the documents are silent |
 | Review boundary | the practitioner or a colleague checks the explanation against the source before acting on it; the assistant explains what the documents say and does not interpret a standard or decide a case |
 
