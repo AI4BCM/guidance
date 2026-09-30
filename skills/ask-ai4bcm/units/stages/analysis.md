@@ -3,7 +3,7 @@
 
 ## Situation
 
-Analysis is the stage that runs on what nobody has written down yet. Before the first interview, someone has to produce a candidate activity list, a set of resource requirements and a set of questions. AI moves that starting line. It drafts from what your other sites already know. It cannot know what only the acquired site's staff know.
+Much of what Analysis needs has not been written down yet. Before the first interview, someone has to produce a candidate activity list, a set of resource requirements and a set of questions. AI can draft that first version from what your other sites already know. It cannot know what only the acquired site's staff know.
 
 Analysis also involves some of the most sensitive material in BCM. Live BIA and risk data goes into an approved environment or nowhere.
 
