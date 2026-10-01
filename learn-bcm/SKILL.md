@@ -31,7 +31,7 @@ keeps the text if they want it.
 
 - **The lesson:** its objective in one line first, then one tightly scoped thing, short enough to finish in one
   sitting, in plain words and the glossary's terms. Every claim cites its source: the unit and section, or the
-  literature file and article or section; copied wording in quotation marks. One primary source named to read next.
+  literature file and article or section; copied wording in quotation marks. One primary source named to read next: an open text from the literature, with its article or section, never a unit.
 - **Self-test:** three to five retrieval questions on what the lesson taught, answered from memory; feedback after
   each answer, citing the passage. Multiple-choice options of equal length; the right answer's position varies.
 - **Where your organisation decides:** a question about the learner's own organisation that the sources do not
@@ -41,7 +41,7 @@ keeps the text if they want it.
    BIA asks for") and what the learner already knows of it. Done when the lesson has one observable learning
    objective, stated in the chat, and the learner's starting point is stated or marked as skipped.
 2. **Teach the lesson.** Write it in the form above, from the sources above. Done when every claim in the lesson
-   cites its source and one primary source is named to read next.
+   cites its source and one primary source from the literature is named to read next.
 3. **Run the self-test.** Ask one retrieval question at a time and wait for the learner's answer from memory before
    giving its feedback. Done when every retrieval question has an answer or an explicit skip, every answer has had
    feedback citing its passage, and each wrong answer's feedback names the misconception behind it.

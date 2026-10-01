@@ -24,7 +24,7 @@ owner you return is **proposed**, until the accountable reviewer or the owner de
    that worked, the role, the step and the safeguard that held. Where a note you quote names the person who slipped, put their
    role in square brackets in its place. Done when every passage of the notes that bears on
    the objective sits behind a proposed finding or a what-worked line, and each of those names its role, its step,
-   and its missing guard or the safeguard that held.
+   and its missing guard or the safeguard that held; and each proposed finding says which part of the objective it missed.
 3. **Write the actions**, in the shape the same Output sets; naming the owner of an action is assignment, not blame.
    Done when every proposed finding has at least one action or a line under Gaps saying why it has none, and every
    action with no owner named in the notes or the plan is listed under Gaps. The reply ends there, at proposed

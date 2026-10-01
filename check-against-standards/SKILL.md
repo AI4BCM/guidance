@@ -41,14 +41,12 @@ copy.
 1. **Tell the input apart and ask its intake.** A policy, charter or scope statement takes the policy input: ask which
    document (status and date), which frameworks from the list above or a licensed copy (licence confirmed), and which
    parts are in scope, only where the attachments leave it open. A checklist with BCMS records takes the records
-   input: the Intake line of the validate stage prompt, unchanged. Done when the input is named and, for a policy, the
-   selected frameworks are known; for records, every checklist row carries the organisation's own words for its
+   input: the Intake line of the validate stage prompt, unchanged. Done when the input is named and, for a policy, the selected frameworks are known and the reader's typed answers sit under Gaps as their own statements; for records, every checklist row carries the organisation's own words for its
    expected evidence or sits under Gaps.
 2. **Find the gaps with the branch's prompt**, whose Output sets the form of each finding: for a policy the Govern
    stage prompt, one block per selected framework; for records Task choice 3, one row per checklist entry. Done when
    every in-scope provision of each selected framework, or every checklist row, has a cited counterpart, a gap, or an
-   explicit unresolved status under Gaps; every point no selected text holds carries the label "general practice,
-   not in the sources"; and each point on a regulation carries its own mark for legal or compliance review.
+   explicit unresolved status under Gaps; every point no selected text holds carries the label "general practice, not in the sources" and cites nothing, a unit included; and each point on a regulation carries its own mark for legal or compliance review.
 3. **Hand each gap to its owner.** Reconcile coverage against the scope set in step 1, then turn each gap into a
    question: for the policy owner on a policy; for records, for the reviewer below, who decides what is enough. Done
    when every framework and part in scope from step 1 has its block, or every checklist row its row; only selected

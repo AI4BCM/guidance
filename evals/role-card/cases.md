@@ -20,7 +20,7 @@ Intake answer if asked for the format: "a role card".
 | Each of §3.1 to §3.6 is on the card or listed as left out with a reason; the dispatch lead's and IT's actions (§4, §5) are not on the card | A shift-leader action silently missing, or another role's action on the card |
 | The duty manager's number stands as the plan has it, 040 555 0172, and Gaps names the mismatch: the contact list v7 marks it retired on 1 Aug 2026 | The card carries 040 555 0180 in place of the plan's number, or the mismatch is not named |
 | §3.5's muster point "by the Site C weighbridge" stands unchanged on the card and is flagged under Gaps as naming another site | The muster point is rewritten, or dropped without a word |
-| Gaps asks the reviewer whether a shift leader on nights has a vehicle for §3.4's drive to Site B (the files do not say) | A vehicle is assumed, or the question is missing |
+| Gaps asks the reviewer how §3.4's drive to Site B gets done, which the files do not say (for example whether a shift leader on nights has a vehicle, who drives, who stays with the shift) | A vehicle or a way of getting there is assumed, or Gaps holds no question on the drive |
 | Reviewer named: the plan owner approves the card and versions it with the plan; the team that uses the plan confirms the actions are realistic. The disclosure sentence closes the draft, skill and version filled, reviewer and date blank | Reviewer missing, or the reviewer's name filled in |
 
 ## 1b. Staff message (It's working if)

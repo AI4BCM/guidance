@@ -15,7 +15,7 @@ record is the owner's own thinking. The prompt is [`../units/prompts/review.md`]
 follow-up questions are what each round asks.
 
 1. **Read for facts.** Read the plan for facts; keep the decisions for its owner. The plan under review is the
-   subject, not a source: its draft status goes in the stamp, not under Gaps. Done when every question you hold is
+   subject, not a source: its draft status goes in the stamp, not under Gaps, at the close as well. Done when every question you hold is
    tied to its passage and none asks what the plan already says.
 2. **Ask the round.** Ask the frontier: only the questions earlier answers have unblocked, numbered, each with its
    passage and no recommendation, and none more sensitive than this environment is approved to hold. One may be the
