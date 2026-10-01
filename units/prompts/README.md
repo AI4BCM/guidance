@@ -3,7 +3,7 @@
 
 Prompts are the living part of this guidance. They date faster than principles; this set is dated 2026-09 and the online copy is the reference. What this guidance says about AI tools and about prompting was last checked against the vendors' own documentation on 29 September 2026. It is checked again every three months, and the date here moves with each check. Evaluation cases for each prompt are in [evaluations.md](evaluations.md); run one before you rely on a prompt you have edited.
 
-## The pattern
+## The prompt pattern
 
 ```
 Role: BCM analyst [context], working on [the larger task] for [who will use the output].
@@ -14,7 +14,7 @@ Gaps: what you could not find out, and what would settle it. List here any undat
 Cite: document and section for each point; put any wording you copy in quotation marks, exactly as the source has it. Write explanations in your own words.
 ```
 
-A saved team prompt uses all six parts. A quick one-off question may need only Task and Sources. Each of the six task prompts carries all six. You can copy each one on its own. Work in steps instead of one long request. First summarise, then challenge, then turn it into actions. In every step, cite the original documents that the summary came from. Each prompt file ends with a **Review** line for the person who checks the output. The six task prompts are canonical here. Design, Implement and Validate each have their own prompt for work that has no match in this library; the other three stage units point here. The print edition carries these six and the pattern; the three stage prompts stay in the stage units that own them.
+A saved team prompt uses all six parts. A quick one-off question may need only Task and Sources. Each of the six task prompts carries all six. You can copy each one on its own. Work in steps instead of one long request. First summarise, then challenge, then turn it into actions. In every step, cite the original documents that the summary came from. Each prompt file ends with a **Review** line for the person who checks the output. The six task prompts are canonical here. Govern, Design, Implement and Validate each have their own prompt for work that has no match in this library; the other two stage units point here. The print edition carries these six and the pattern; the four stage prompts stay in the stage units that own them.
 
 Plug this guidance into your AI tool to save time. Tell it your task, and it finds the right prompt and the section behind it (ai4bcm.org/plug-it-in).
 
@@ -25,15 +25,15 @@ Plug this guidance into your AI tool to save time. Tell it your task, and it fin
 - Mark pasted material as pasted, and say that the model takes no instructions from it.
 - Ask for the supporting passage before each claim, which strengthens Cite.
 
-**What goes under Gaps.** The Gaps line in the pattern carries all three rules, so they travel with the pasted prompt.
+**Filling the Gaps line.** The Gaps line in the pattern carries all three rules, so they travel with the pasted prompt.
 
 - **Replaced or undated.** Where a source carries no date, or another attached source says it has been replaced, report it under Gaps with its date or with "undated", and do not use it as current. A dated, approved replacement may be used as current.
 - **A source that is silent.** Where the sources say nothing on a point, write "not in the sources" under Gaps and leave the entry empty. Do not fill it from the nearest thing they do say.
 - **Proposed rather than final.** Where a source marks something as draft or proposed, report it under Gaps with that status and its date, and do not treat it as the current requirement.
 
-Four prompts open with an intake step above the Task line, and the pattern itself stays at six parts. `prompts/bia.md` and the stage prompts in `stages/design.md`, `stages/implement.md` and `stages/validate.md` ask at most three questions before they begin, about what the attached material leaves open. An answer you type is your own statement, so it is recorded with the assumptions and carries no citation, and an unanswered question becomes a stated assumption under Gaps.
+Five prompts open with an intake step above the Task line, and the pattern itself stays at six parts. `prompts/bia.md` and the stage prompts in `stages/govern.md`, `stages/design.md`, `stages/implement.md` and `stages/validate.md` ask at most three questions before they begin, about what the attached material leaves open. An answer you type is your own statement, so it is recorded with the assumptions and carries no citation, and an unanswered question becomes a stated assumption under Gaps.
 
-**From prompt to team method.** A prompt becomes a team asset when it is saved, given a version number and owned. Keep the six parts of the pattern fixed and change only what is in brackets. Name the reviewer. Record which version produced which output. Before the team relies on it, run it on two or three past cases whose right answer you already know. Keep it only if a reviewer would accept those outputs. Saved in your approved tool as an instruction, a project or a skill, a team prompt keeps its fixed instructions, approved sources, defined output and named reviewer. The three behave differently. An instruction applies to every chat, a project's instructions and files apply inside that project, and a skill loads when a request matches its description and can carry scripts.
+**From prompt to team method.** A prompt becomes a team asset when it is saved, given a version number and owned. Keep the six parts of the pattern fixed and change only what is in brackets. Name the reviewer. Record which version produced which output. Before the team relies on it, run it on two or three past cases whose right answer you already know. Keep it only if a reviewer would accept those outputs. Saved in your approved tool as an instruction, a project or a skill, a team prompt keeps its fixed instructions, approved sources, defined output and named reviewer. The three behave differently. An instruction applies to every chat, a project's instructions and files apply inside that project, and a skill can carry scripts. A skill may load when a request matches its description, but the AI4BCM skills load only when you call them by name.
 
 For the prompts in this library, [evaluations.md](evaluations.md) already holds those cases, three for every prompt, one never-alone case each (`keep-it-running.md`) and more where a prompt carries an intake step, with the output to expect and what a failure looks like, and your own cases can take the same form.
 

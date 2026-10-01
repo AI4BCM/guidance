@@ -3,9 +3,13 @@
 
 Once your team uses a saved prompt, a skill or a workflow every month, it is part of how you do BCM. Look after it like any other part of your method. One person owns it. Someone checks what it produces. The people who need to know are told. And you decide at the start when you will stop using it. This unit starts to apply as soon as a prompt becomes a team method (`prompts/README.md`), which is Level 2 in `levels.md`, and it is what Level 3 and Level 4 ask a team to show. This unit gives you the card to keep, the people to tell and the test to run.
 
-## The record card
+## A record card for each skill
 
 Keep one card for each skill and each workflow, so for anything that reads your files or acts on them. For a prompt you have only saved for reuse, one line in your organisation's list of AI tools is enough. The line says what it does, who owns it, which approved tool it runs in, and how sensitive the data may be.
+
+Skill: `/check-my-ai-tool` drafts the record card for a skill your team uses.
+
+The AI4BCM skills share one card, because you install them as one tool; the approver is your organisation's AI tool owner, a role you name.
 
 | Field | What it holds |
 |---|---|

@@ -61,6 +61,8 @@ When a system, supplier, site or process changes, the comparison runs the other 
 
 The task prompt is `prompts/bia.md`. The first choice in its Task line is the pre-interview draft that the case below uses. Its Review line names who confirms each requirement and who sets the recovery fields. The risk-assessment relevance note uses the same six-element pattern from `prompts/README.md`, with the threat evidence and the risk register as its sources and the table above as its output.
 
+Skill: `/prepare-bia` drafts the interview guide from your material.
+
 ## Case example
 
 **Prompt.** Draft the activities, resource requirements and interview questions for the acquired site. Leave recovery times blank.

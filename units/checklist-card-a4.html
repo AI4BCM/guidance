@@ -201,6 +201,18 @@
     gap: 8mm;
   }
   footer .marke { white-space: nowrap; color: var(--navy); letter-spacing: 0.06em; }
+
+  /* ------------------------------------------------------------------
+     2026-09-30, final round ticket 30 (owner, 2026-09-30: the card follows the book's rules). Two
+     typefaces: labels in IBM Plex Sans caps, no mono (target spec T1). The book's eight sizes: the
+     12.375 lead-in and subtitle go to 11 (T2). Black text, navy only on the title and the rule, as in
+     the book (D2, "barrierefrei"); the box lines stay 13.75, read at arm's length. Words unchanged.
+     ------------------------------------------------------------------ */
+  :root { --t-scale: 8.25pt 9.625pt 11pt 13.75pt 16.5pt 22pt 33pt 44pt; --slate: #000000; }
+  .werk, .schreibzeile span, .werk.marke { font-family: var(--sans); }
+  .werk.marke { color: var(--muted); }
+  .untertitel, .kasten > p { font-size: var(--t-text); }
+  .boxen li { color: #000000; }
 </style>
 </head>
 <body>

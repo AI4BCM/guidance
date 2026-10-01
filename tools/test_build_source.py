@@ -27,7 +27,8 @@ pytestmark = pytest.mark.skipif(
 # units/prompts/README.md (2026-09-29), 104 -> 105. The final-edition content pass (2026-09-29)
 # drops the 'Case studies and scheduled awareness' heading of stages/embed.md, 105 -> 104;
 # seven other headings renamed.
-EXPECTED_CHUNKS = 104
+# The skill-set units pass (2026-10-01, print GO) adds data-rules.md 'Prompt injection', 104 -> 105.
+EXPECTED_CHUNKS = 105
 
 
 def test_source_constants_are_local_not_vault():

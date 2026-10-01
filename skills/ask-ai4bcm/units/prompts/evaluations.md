@@ -16,7 +16,7 @@ own Sources line describes it, run the prompt unchanged three times, and read ea
 Compare the three answers as well; answers that disagree on a fact are a finding.
 Where the answer matches the failure column, fix the prompt line the case names and leave the output alone.
 
-## The pattern, `README.md`
+## The prompt pattern, `README.md`
 
 | # | Input | Expected | Failure |
 |---|---|---|---|

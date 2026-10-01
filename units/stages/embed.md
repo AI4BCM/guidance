@@ -42,6 +42,8 @@ The one control that matters: **the organisation stays the author.** Staff-facin
 
 The awareness prompt is `prompts/awareness.md`; the case below uses it to adapt the onboarding script, with the BC policy extract attached. A case note from a public incident uses the same prompt with the verified report as its only source.
 
+Skill: `/role-card` rewrites one approved document for one audience.
+
 ## Case example
 
 **Prompt.** Rewrite our onboarding e-learning script for the newly acquired site.
