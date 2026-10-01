@@ -1,0 +1,5 @@
+interface:
+  display_name: "Prepare BIA"
+  short_description: "Draft a BIA interview guide from your material"
+policy:
+  allow_implicit_invocation: false

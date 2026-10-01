@@ -131,3 +131,25 @@ def test_cli_check_exits_zero_on_the_committed_tree():
         capture_output=True, text=True,
     )
     assert proc.returncode == 0, proc.stdout + proc.stderr
+
+
+@pytest.mark.parametrize("name", bp.skill_names(REPO))
+def test_every_skill_is_user_invoked_only(name):
+    """Preflight 4: a skill runs only when the user types its name, on every client that reads a flag."""
+    text = (REPO / name / "SKILL.md").read_text(encoding="utf-8")
+    front = text.split("---", 2)[1]
+    assert re.search(r"^name: " + re.escape(name) + r"$", front, re.M)
+    assert re.search(r"^disable-model-invocation: true$", front, re.M)
+    policy = (REPO / name / "agents" / "openai.yaml").read_text(encoding="utf-8")
+    assert re.search(r"^\s+allow_implicit_invocation: false$", policy, re.M)
+
+
+@pytest.mark.parametrize("name", [n for n in bp.skill_names(REPO) if n != bp.SKILL_NAME])
+def test_task_skills_carry_the_preflight(name):
+    """Every task skill opens on the shared preflight, and its package carries a copy of it."""
+    source = (REPO / name / "SKILL.md").read_text(encoding="utf-8")
+    body = source.split("---", 2)[2]
+    assert body.lstrip().split("\n\n")[1].startswith(f"First run [`../{bp.PREFLIGHT}`](../{bp.PREFLIGHT}).")
+    packaged = (REPO / "skills" / name / "SKILL.md").read_text(encoding="utf-8")
+    assert packaged == source.replace("../units/", "units/").replace(f"../{bp.PREFLIGHT}", bp.PREFLIGHT)
+    assert (REPO / "skills" / name / bp.PREFLIGHT).read_bytes() == (REPO / bp.PREFLIGHT).read_bytes()

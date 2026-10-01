@@ -56,6 +56,15 @@ from pathlib import Path
 
 DEFAULT_REPO = Path(__file__).resolve().parent.parent
 SKILL_NAME = "ask-ai4bcm"
+# The shared preflight every task skill runs first (AI4BCM skill set, 2026.11). It sits at the
+# repository root beside the skill folders, and each packaged skill that links it carries a copy.
+PREFLIGHT = "preflight.md"
+
+
+def skill_names(repo: Path) -> list[str]:
+    """Every source skill: a top-level folder holding a SKILL.md, router first."""
+    names = sorted(p.parent.name for p in repo.glob("*/SKILL.md"))
+    return sorted(names, key=lambda n: n != SKILL_NAME)
 
 # The handout is published guidance the router links to, and it lives in the vault. It is
 # copied in rather than generated; VAULT_ONLY names what the repository does not carry itself.
@@ -73,21 +82,32 @@ ARCHIVE_EXTRAS = ("plugin.json", ".claude-plugin/plugin.json", "LICENSE")
 
 
 def build(repo: Path, dest: Path) -> None:
-    """Write the packaged skill tree at `dest` (which becomes `<dest>/<SKILL_NAME>/`)."""
-    skill = dest / SKILL_NAME
+    """Write every packaged skill tree at `dest/<name>/`."""
+    for name in skill_names(repo):
+        build_one(repo, dest, name)
+
+
+def build_one(repo: Path, dest: Path, name: str) -> None:
+    """Write one packaged skill tree at `dest/<name>/`."""
+    skill = dest / name
     if skill.exists():
         shutil.rmtree(skill)
     (skill / "agents").mkdir(parents=True)
 
-    src = repo / SKILL_NAME
-    # SKILL.md: the one edit. `../units/` becomes `units/` because the units move inside.
+    src = repo / name
+    # SKILL.md: the one edit. `../units/` and `../preflight.md` lose their `../` because both
+    # move inside the skill folder.
     text = (src / "SKILL.md").read_text(encoding="utf-8")
-    (skill / "SKILL.md").write_text(text.replace("../units/", "units/"), encoding="utf-8")
+    text = text.replace("../units/", "units/").replace(f"../{PREFLIGHT}", PREFLIGHT)
+    (skill / "SKILL.md").write_text(text, encoding="utf-8")
+    if PREFLIGHT in text:
+        shutil.copy2(repo / PREFLIGHT, skill / PREFLIGHT)
 
-    readme = (src / "README.md").read_text(encoding="utf-8")
-    for old, new in README_REWRITES.items():
-        readme = readme.replace(old, new)
-    (skill / "README.md").write_text(readme, encoding="utf-8")
+    if (src / "README.md").exists():
+        readme = (src / "README.md").read_text(encoding="utf-8")
+        for old, new in README_REWRITES.items():
+            readme = readme.replace(old, new)
+        (skill / "README.md").write_text(readme, encoding="utf-8")
 
     shutil.copy2(src / "agents" / "openai.yaml", skill / "agents" / "openai.yaml")
 
@@ -164,20 +184,22 @@ def main() -> int:
         return 1 if check_links(args.links.resolve()) else 0
 
     if args.check:
+        names = skill_names(repo)
         with tempfile.TemporaryDirectory() as tmp:
             build(repo, Path(tmp))
-            drift = tree_diff(repo / "skills" / SKILL_NAME, Path(tmp) / SKILL_NAME)
+            drift = tree_diff(repo / "skills", Path(tmp))
         if drift:
-            print("skills/ has drifted from ask-ai4bcm/ and units/:")
+            print("skills/ has drifted from the skill folders, preflight.md and units/:")
             for line in drift:
                 print(f"  {line}")
             print("regenerate with: build_chatgpt_package.py")
             return 1
-        print(f"skills/{SKILL_NAME} is in sync with ask-ai4bcm/ and units/")
+        print(f"skills/ is in sync for {len(names)} skills: {', '.join(names)}")
         return 0
 
     build(repo, repo / "skills")
-    print(f"wrote {repo / 'skills' / SKILL_NAME}")
+    for name in skill_names(repo):
+        print(f"wrote {repo / 'skills' / name}")
     if args.archive:
         write_archive(repo, args.archive.resolve())
         size = os.path.getsize(args.archive.resolve())
