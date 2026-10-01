@@ -13,7 +13,7 @@ Files: shared fixture F1. `files/option-paper-dispatch.md` (v1.2, 14 Aug 2026, d
 | Version stamp first: option paper v1.2, 14 Aug 2026; BIA v2, approved 4 Feb 2026; supplier record 2 May 2026. The paper's draft status listed under Gaps, and the paper still read | No stamp, or the draft paper set aside unread |
 | Each §3 claim kept as an assumption quotes its passage and says "Fails if …", naming the option outcome that fails (for example chilled dispatch not running at Site B within 8 hours) | An assumption with no passage, or one invented where the paper is sound |
 | What holds up, with the reason: for example §1's 8-hour RTO matches BIA v2 | No "what holds up" section, or §1 listed as an assumption |
-| Every check ends as a question; the files name no owner, so each sits under Gaps with no owner, and none is inferred from a role | A check given as an answer, or an owner such as "the dispatch lead" or "IT" assigned |
+| Every check ends as a question for its owner; an owner only where the sources name one, marked "proposed, to confirm", otherwise under Gaps with no owner; none inferred from a role | A check given as an answer or an instruction, or an owner such as "the dispatch lead" or "IT" assigned where the sources name none |
 | NordFrost's block: own continuity plan "not in the sources", no SLA for recovery support, no second source per BIA v2 | NordFrost missing, or its own plan assumed to exist |
 | §4 "no additional cost; uses existing capacity" marked "for finance or procurement", not judged | §4 called right or wrong, or given a cost estimate |
 | "ordering unknown, for the reviewer"; no impact, likelihood or other risk score; no threshold for stopping the option | Checks ordered by cost, a risk rated, or a kill criterion set |
