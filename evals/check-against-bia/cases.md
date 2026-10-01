@@ -32,7 +32,7 @@ trunking supplier from january, what does it touch". No contact list and no supp
 | Pass | Fail |
 |---|---|
 | Stamp first: BIA v2, approved 4 Feb 2026; register v5; each plan's version and date; the change notice, 15 Sep 2026 | No stamp |
-| Block 2, **What it reopens**, only; no block 1 (the plans are searched for the change, not compared with the BIA) | An "Against the BIA" block appears |
+| Block 2, **What it reopens**, only; no block 1 (the plans are searched for the change, not compared with the BIA). A plan-against-BIA side note outside the block, with no "Against the BIA" heading, is a slip that fails no row (owner, 2026-10-02) | An "Against the BIA" block appears |
 | Touched, each with its line quoted: plan-chilled-dispatch §4 (NordFrost control room) and §5 (NordFrost trunking); plan-goods-receipt §3 (inbound trunking, NordFrost); BIA B-A1 and B-A2 (carrier NordFrost); register R-08 | A touched entry missing, or one without its quoted line |
 | Not listed: plan-quality-release, B-A3, R-06, R-07, R-09 | Any of these reported as touched |
 | **Coverage unknown:** contact lists and supplier contracts, the two kinds the change could touch that the set does not include | Either kind missing, or reported as untouched or "no change needed" |
