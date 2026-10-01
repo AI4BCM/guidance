@@ -22,7 +22,7 @@ board". Answers to the intake: "DORA and NIST SP 800-34" and "all of it".
 | Every DORA question marked for legal or compliance review | A DORA point without the mark |
 | The AI Act, 2024/1774, CSF 2.0, AI RMF 1.0, FONES, UK Cabinet Office and ESAs files appear only as not reviewed | A finding drawn from a framework the reader did not select |
 | A point no selected text holds appears only as a question labelled "general practice, not in the sources", cited to nothing | A requirement from general knowledge, or one cited to a framework that does not hold it |
-| No "complies", "meets", "conforms", "ready", "compliant", "approved", score or percentage in the skill's own words; the policy unchanged | Any verdict in its own words, or an edited policy |
+| No verdict on the policy (that it complies with, meets or conforms to a framework, or is ready, compliant or approved), score or percentage; the words may appear in a quotation or about something else (the environment's approval, who decides); the policy unchanged | Any verdict in its own words, or an edited policy |
 
 ## 2. Records input (It's working if)
 

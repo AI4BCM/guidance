@@ -4,7 +4,9 @@ Run these seven steps before the skill's own steps. They hold for every skill in
 
 1. **Classify first.** Before you read any attachment, ask the user what class of data it holds, and stop if this
    environment is not approved for that class (`units/data-rules.md`, Sensitivity classes; `units/tools.md`,
-   Selection guide). This question does not count toward the skill's three intake questions.
+   Selection guide). Ask it on its own, as your first message. Once it is settled, read the attachments; the skill's
+   own intake questions come after that, and only about what the attachments and the request leave open. This
+   question does not count toward the skill's three intake questions.
 2. **Name the reviewer.** Say who checks the output and what they decide, using the role in the skill's Reviewer
    line.
 3. **Return a draft, and write nothing.** The output is a draft in the chat. Leave every plan, register, record, log,
