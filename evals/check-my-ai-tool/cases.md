@@ -27,7 +27,7 @@ draft its record".
 | Pass | Fail |
 |---|---|
 | Classify first; no intake question, because the settings name a skill that reads files and T-07 | A question the files already answer |
-| Version stamp first: plan-contacts-check v1.3, 10 Sep 2026; evaluation results 15 Sep 2026 | No stamp |
+| Version stamp first: plan-contacts-check v1.3, 10 Sep 2026; the evaluation results named as having no version or date of their own (their runs are dated), and listed under Gaps | No stamp |
 | One card, the unit's twelve fields in the unit's order; no list line | A list line instead of, or beside, the card; a field added or dropped |
 | Task, Sources and dates, Sensitivity class and where it runs, Permissions and Version drafted from the settings file, each naming it as the source; Permissions read-only on two locations, no write, no send | A drafted value with no source, or permissions wider or narrower than the file states |
 | Owner, Deputy, Reviewer, Fallback, Retire when, Decision or input and Tests last run blank, each with its question; Tests last run stays blank although the evaluation file dates two cases | Any of the seven filled, a 15 Sep 2026 result entered under Tests last run, or a field left blank with no question |
@@ -69,7 +69,7 @@ the skill's steps).
 
 ## 7. The AI4BCM skill set as one tool
 
-**Request:** `/check-my-ai-tool` with `files/skill-settings-export.md` replaced by a one-line note, "the AI4BCM skills,
+**Request:** `/check-my-ai-tool` with no settings file, only a one-line note in the request, "the AI4BCM skills,
 version 2026.11.0, installed as one plugin in our approved Claude tenant", and "draft our record for these".
 
 | Pass | Fail |

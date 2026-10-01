@@ -14,8 +14,9 @@ brief the reader attaches; with no such document attached, you write the Gaps an
 owner you return is **proposed**, until the accountable reviewer or the owner decides. The prompt is
 [`units/stages/validate.md`](units/stages/validate.md), **Prompts, Task choice 2**.
 
-1. **Find the objective.** Use the prompt's Intake. If no plan or exercise brief is attached, ask for the document
-   that holds the objective. An objective the reader types is their own statement: list it under Gaps and judge
+1. **Find the objective.** With a plan or exercise brief attached, read the objective from it and ask nothing; the
+   prompt's Intake is for what the attachments leave open. With none attached, ask for the document that holds the
+   objective. An objective the reader types is their own statement: list it under Gaps and judge
    nothing against it. Done when the objective is quoted from an attached document, or, with none attached, the
    reply ends at Gaps.
 2. **Draft the proposed findings and what worked** against that objective, in the shape the Output of Task choice 2
