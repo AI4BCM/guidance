@@ -26,7 +26,8 @@ it and a question for the person who can run that check, and you score nothing. 
    what holds up or a retained assumption that names the option outcome that fails if it is false.
 3. **Send the whole list.** Send it in one reply, in the prompt's Output, which sets the check and its owner, the
    supplier fields, the order and the finance-or-procurement mark. Done when every retained assumption and every
-   supplier the option needs is in this one reply, and the reply asks the user nothing further.
+   supplier the option needs is in this one reply, every check ends as a question for its owner, and the reply asks
+   the user nothing further.
 
 **Reviewer:** the BCM manager who owns the option paper checks each assumption against its passage; each check's
 owner answers it; finance or procurement checks financial and commercial assumptions; the stakeholder group owns the
