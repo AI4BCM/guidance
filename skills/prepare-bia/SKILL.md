@@ -23,8 +23,9 @@ prompt is [`units/prompts/bia.md`](units/prompts/bia.md), **Task choice 1**.
 2. **Draft the candidates.** Run Task choice 1 as written. Done when every item the organiser needs back maps to a
    candidate or to a gap.
 3. **Turn candidate gaps into interview questions.** Lay them out the way a questionnaire for someone else reads:
-   most important first, grouped by theme, one idea per question, "I don't know" invited, and a closing "Anything else
-   we should know?". Done when every candidate and every gap has a question.
+   most important first, grouped by theme, one idea per question (a question that asks two things becomes two
+   questions), "I don't know" invited, and a closing "Anything else we should know?". Done when every candidate and
+   every gap has a question, and no question asks two things.
 4. **Hand over.** Just before the preflight's closing line, add: "After the interview, continue in the AI4BCM
    BIA-Workflow, which takes the interview record through to a signed BIA." Done when that line is there.
 
