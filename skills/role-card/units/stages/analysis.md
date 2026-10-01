@@ -3,9 +3,9 @@
 
 ## Situation
 
-Much of what Analysis needs has not been written down yet. Before the first interview, someone has to produce a candidate activity list, a set of resource requirements and a set of questions. AI can draft that first version from what your other sites already know. It cannot know what only the acquired site's staff know.
+Much of what the analysis team needs has not yet been documented. Before the first interview, a candidate activity list, a set of resource requirements and a set of questions must be produced. AI can draft the initial versions using the information from your other sites. However, it cannot know what only the acquired site's staff know.
 
-Analysis also involves some of the most sensitive material in BCM. Live BIA and risk data goes into an approved environment or nowhere.
+Analysis also involves some of the most sensitive material in BCM: live BIA and risk data must be entered into an approved environment.
 
 ## Typical AI uses
 
@@ -46,7 +46,7 @@ The five-stage BIA workflow (identification of scope, structured interview, conv
 
 ## Risk assessment
 
-The BIA method above does not cover the risk part of this stage. Risk assessment with AI support has a public side and an internal side. The data rule draws the line between them. You can collect public threat, regulatory and incident reporting in any approved tool. This is because it says nothing about your organisation. Once you judge relevance against your own records, the work becomes high-sensitivity. It then moves to the approved environment.
+The BIA method does not cover the risk analysis stage. Risk assessment with AI support has public and internal aspects. The data rule distinguishes between the two. Public threat, regulatory and incident reporting data can be collected in any approved tool. This is because it contains no information about your organisation. However, once you judge relevance against your own records, the work becomes high-sensitivity. It then moves to the approved environment.
 
 | | Risk assessment with AI support |
 |---|---|
@@ -55,7 +55,7 @@ The BIA method above does not cover the risk part of this stage. Risk assessment
 | Output | a relevance note per threat. It states how certain the public evidence is. It links each point to the public source and to the internal record it touches. It ends in questions or themes for the risk owner |
 | Review boundary | a person assesses the threat, decides the treatment and accepts the risk. A model proposes relevance. It does not rate a risk, accept it or change a risk record |
 
-When a system, supplier, site or process changes, the comparison runs the other way. A workflow over approved source systems flags the risk and BIA records that the change affects. It hands them to their owners for review, on the checklist in `workflow-design.md`. The record itself changes only through the normal approval route.
+When a system, supplier, site or process changes, the comparison is run in the opposite direction. A workflow in the approved source systems flags the risk, and the BIA records the changes affected by the risk. It then hands them over to their owners for review, on the checklist in `workflow-design.md`. The record itself can only be changed through the normal approval route.
 
 ## Prompts
 

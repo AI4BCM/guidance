@@ -1,11 +1,11 @@
 <!-- meta: unit=keep-it-running version=2026.09.1 -->
 # Looking After Your Prompts and Tools
 
-Once your team uses a saved prompt, a skill or a workflow every month, it is part of how you do BCM. Look after it like any other part of your method. One person owns it. Someone checks what it produces. The people who need to know are told. And you decide at the start when you will stop using it. This unit starts to apply as soon as a prompt becomes a team method (`prompts/README.md`), which is Level 2 in `levels.md`, and it is what Level 3 and Level 4 ask a team to show. This unit gives you the card to keep, the people to tell and the test to run.
+Once your team has used a saved prompt, skill or workflow every month, it becomes part of your BCM process. Treat it as you would any other part of your method. One person should be responsible for it. Someone checks what it produces. Those who need to know are informed. This unit starts to apply as soon as a prompt becomes a team method (`prompts/README.md`), which is Level 2 in `levels.md`, and it is what Level 3 and Level 4 ask a team to show. This unit provides you with the card to keep, the people to inform and the tests to perform.
 
 ## A record card for each skill
 
-Keep one card for each skill and each workflow, so for anything that reads your files or acts on them. For a prompt you have only saved for reuse, one line in your organisation's list of AI tools is enough. The line says what it does, who owns it, which approved tool it runs in, and how sensitive the data may be.
+Keep one card for each skill and workflow that reads or acts on your files. If you have only saved a prompt for reuse, one line in your organisation's list of AI tools is enough. This line should state what the prompt does, who owns it, which approved tool it runs in and how sensitive the data may be.
 
 Skill: `/check-my-ai-tool` drafts the record card for a skill your team uses.
 

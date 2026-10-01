@@ -3,9 +3,9 @@
 
 ## Situation
 
-Exercise reports, debrief notes, audit observations and post-incident material pile up after each round of validation, often faster than anyone reads them. Read together, they show which weaknesses recur and which failures were severe.
+After each round of validation, exercise reports, debrief notes, audit observations and post-incident material pile up, often faster than anyone can read them. Read together, they reveal recurring weaknesses and severe failures.
 
-AI is useful after the event, turning volume into a pattern, and before it, adding variation so the fourth exercise is not the third one again. It does not replace the exercise director, facilitator or auditor. The material is sensitive. Debriefs and incident records name people and weaknesses, so they stay in approved environments.
+AI is useful both before and after the event: before, it adds variation so that the fourth exercise is not just a repeat of the third; after, it turns volume into a pattern. However, it does not replace the exercise director, facilitator or auditor. The material is sensitive. Debriefs and incident records name individuals and weaknesses, so they must remain in approved environments.
 
 ## Typical AI uses
 

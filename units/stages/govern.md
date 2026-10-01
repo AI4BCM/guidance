@@ -3,7 +3,7 @@
 
 ## Situation
 
-Governance work is mostly writing: policy, scope, roles, management reporting. It is the stage where AI drafts fastest. It is also where a smooth draft does most harm, because a well-written policy looks agreed long before anyone actually agreed to it.
+Most of the governance work involves writing: policy, scope, roles, management reporting. It is at this stage that AI produces the fastest results. However, **a smooth draft can be problematic at this stage**, as a well-written policy can appear to have been agreed upon long before it actually has.
 
 The line is fixed. AI may prepare and challenge governance material. It cannot set management intent, assign accountability, or declare a BCMS compliant. Those are decided through the organisation's own governance route, by people who can be held to them.
 
@@ -40,7 +40,7 @@ The one control that matters: **never let AI decide that you meet a standard or 
 
 ## Onboarding new BCM staff
 
-A newer practitioner learns the BCMS faster from its own documents than from a generic explanation. An assistant limited to those documents is the lowest-risk use of AI in this stage. Onboarding new staff is the embedding stage's work, and the table below is its method.
+A new practitioner will learn the BCMS more quickly from its own documents than from a generic explanation. Using an assistant that is limited to these documents is the lowest-risk application of AI in the governance stage. The table below outlines the onboarding process for new staff in the embedding stage.
 
 | | Onboarding new BCM staff |
 |---|---|
@@ -51,7 +51,7 @@ A newer practitioner learns the BCMS faster from its own documents than from a g
 
 Where the documents are silent, the answer is a question for the BC manager.
 
-`/learn-bcm` teaches one part of BCM per session from this guidance and its open sources, then tests you; the review boundary above still holds. You may attach your own licensed copy of a standard once you confirm the licence allows it. The skill quotes only open texts whose reuse terms allow it, and takes a standard's clause numbers only from your licensed copy.
+`/learn-bcm` teaches one part of BCM per session from this guidance and its open sources, then tests you. You may attach your own licensed copy of a standard once you confirm the licence allows it.
 
 ## Prompts
 

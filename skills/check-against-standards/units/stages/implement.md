@@ -3,9 +3,9 @@
 
 ## Situation
 
-Implementation is where the number of documents grows faster than anyone can keep up: plans, action cards, contact lists, escalation routes. The typical problem is eleven plans that do not match each other or the organisation chart.
+The implementation stage is where the number of documents tends to grow faster than anyone can keep up with. These documents include plans, action cards, contact lists and escalation routes. A common issue is having eleven plans that do not align with each other or the organisation chart.
 
-Finding and comparing documents is work that AI does well. This stage is also the closest to a real incident. During an incident, AI may find, summarise and draft. It does not invoke a plan, declare anything, or send messages outside the organisation.
+AI excels at finding and comparing documents. This stage is also the closest to a real incident. During an incident, AI can be used to find, summarise and draft documents. However, it does not invoke a plan, declare anything or send messages outside the organisation.
 
 ## Typical AI uses
 
@@ -20,11 +20,11 @@ The type of tool and the environment for each use are in the selection guide in 
 
 ## Minimum controls
 
-The one control that matters: **no live plan changes without the owner's approval and a new version.** A proposal to update eleven documents is a list for a person to work through.
+The one control that matters: **no live plan can be changed without the owner's approval and the creation of a new version.**
 
 - The team expected to use the plan confirms that activation criteria, roles and actions are realistic. AI cannot test ease of use under pressure.
 - Material decisions during an incident stay under human authority, and external communications are never sent unsupervised.
-- Every AI-supported step needs a fallback method. If the response only works while the tool works, the arrangement is not resilient.
+- Every AI-supported step requires a fallback method. If the response only works while the tool is operational, the arrangement is not resilient.
 
 **For the auditor.** Each plan's new version with its owner's approval, the team's confirmation that roles and actions are realistic, the fallback for every AI-supported step, and the list of changes that reopen which plan.
 

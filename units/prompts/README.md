@@ -1,7 +1,7 @@
 <!-- meta: unit=prompts/README version=2026.09.1 dated=2026-09 -->
 # Prompts
 
-Prompts are the living part of this guidance. They date faster than principles; this set is dated 2026-09 and the online copy is the reference. What this guidance says about AI tools and about prompting was last checked against the vendors' own documentation on 29 September 2026. It is checked again every three months, and the date here moves with each check. Evaluation cases for each prompt are in [evaluations.md](evaluations.md); run one before you rely on a prompt you have edited.
+Prompts are the living part of this guidance. They date faster than principles; this set is dated 2026-09 and the online copy is the reference. Evaluation cases for each prompt are in [evaluations.md](evaluations.md); run one before you rely on a prompt you have edited.
 
 ## The prompt pattern
 
@@ -14,11 +14,11 @@ Gaps: what you could not find out, and what would settle it. List here any undat
 Cite: document and section for each point; put any wording you copy in quotation marks, exactly as the source has it. Write explanations in your own words.
 ```
 
-A saved team prompt uses all six parts. A quick one-off question may need only Task and Sources. Each of the six task prompts carries all six. You can copy each one on its own. Work in steps instead of one long request. First summarise, then challenge, then turn it into actions. In every step, cite the original documents that the summary came from. Each prompt file ends with a **Review** line for the person who checks the output. The six task prompts are canonical here. Govern, Design, Implement and Validate each have their own prompt for work that has no match in this library; the other two stage units point here. The print edition carries these six and the pattern; the four stage prompts stay in the stage units that own them.
+A saved team prompt uses all six parts. A quick one-off question may need only Task and Sources. Each of the six task prompts carries all six. You can copy each one on its own. Work in steps instead of one long request. Each prompt file ends with a **Review** line for the person who checks the output. The six task prompts are canonical here. Govern, Design, Implement and Validate each have their own prompt for work that has no match in this library; the other two stage units point here. The print edition carries these six and the pattern; the four stage prompts stay in the stage units that own them.
 
 Plug this guidance into your AI tool to save time. Tell it your task, and it finds the right prompt and the section behind it (ai4bcm.org/plug-it-in).
 
-**Four practices beside the pattern.** The main vendors' prompting guides recommend all four, and none of them adds a part to the pattern.
+**Four practices beside the pattern:**
 
 - Include an example of a good output, when you have one.
 - Put long source material in one clearly marked block, before or after the task, as your tool's guide recommends.
@@ -31,9 +31,7 @@ Plug this guidance into your AI tool to save time. Tell it your task, and it fin
 - **A source that is silent.** Where the sources say nothing on a point, write "not in the sources" under Gaps and leave the entry empty. Do not fill it from the nearest thing they do say.
 - **Proposed rather than final.** Where a source marks something as draft or proposed, report it under Gaps with that status and its date, and do not treat it as the current requirement.
 
-Five prompts open with an intake step above the Task line, and the pattern itself stays at six parts. `prompts/bia.md` and the stage prompts in `stages/govern.md`, `stages/design.md`, `stages/implement.md` and `stages/validate.md` ask at most three questions before they begin, about what the attached material leaves open. An answer you type is your own statement, so it is recorded with the assumptions and carries no citation, and an unanswered question becomes a stated assumption under Gaps.
-
-**From prompt to team method.** A prompt becomes a team asset when it is saved, given a version number and owned. Keep the six parts of the pattern fixed and change only what is in brackets. Name the reviewer. Record which version produced which output. Before the team relies on it, run it on two or three past cases whose right answer you already know. Keep it only if a reviewer would accept those outputs. Saved in your approved tool as an instruction, a project or a skill, a team prompt keeps its fixed instructions, approved sources, defined output and named reviewer. The three behave differently. An instruction applies to every chat, a project's instructions and files apply inside that project, and a skill can carry scripts. A skill may load when a request matches its description, but the AI4BCM skills load only when you call them by name.
+**From prompt to team method.** A prompt becomes a team asset when it is saved, assigned a version number, and assigned an owner. Keep the six parts of the pattern fixed and only change what is in brackets. Name the reviewer. Record which version produced which output. Before the team relies on it, run it on two or three past cases for which you already know the correct answer. Only keep it if a reviewer would accept those outputs. When saved in your approved tool as an instruction, project or skill, a team prompt retains its fixed instructions, approved sources, defined output and named reviewer. Instructions apply to every chat, project instructions and files apply within the project itself, and skills can carry scripts.
 
 For the prompts in this library, [evaluations.md](evaluations.md) already holds those cases, three for every prompt, one never-alone case each (`keep-it-running.md`) and more where a prompt carries an intake step, with the output to expect and what a failure looks like, and your own cases can take the same form.
 
@@ -69,7 +67,7 @@ Then ask five questions about the output as a whole.
 
 ## Further reading
 
-The vendors' own prompting guides. The links were checked on 29 September 2026 and are checked again with the rest of this page.
+The vendors' own prompting guides.
 
 - Anthropic, *Prompting best practices*, Claude Platform Docs. <https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices>
 - Anthropic, *Reduce hallucinations*, Claude Platform Docs. <https://platform.claude.com/docs/en/test-and-evaluate/strengthen-guardrails/reduce-hallucinations>
@@ -77,10 +75,6 @@ The vendors' own prompting guides. The links were checked on 29 September 2026 a
 - OpenAI, *Prompt engineering*, OpenAI API. <https://developers.openai.com/api/docs/guides/prompt-engineering>
 - Microsoft, *Get started writing prompts in Microsoft Copilot*, Microsoft Support. <https://support.microsoft.com/en-us/microsoft-365-copilot/get-started-writing-prompts-in-microsoft-365-copilot>
 - Microsoft, *Get better Copilot responses with great prompting*, Microsoft Support. <https://support.microsoft.com/en-us/microsoft-365-copilot/get-better-copilot-responses-with-great-prompting>
-- Google, *Google Workspace with Gemini Prompt Guide*, Google Workspace. <https://services.google.com/fh/files/misc/workspace_with_gemini_prompting_guide.pdf>
-- Google, *Prompt design strategies*, Google AI for Developers. <https://ai.google.dev/gemini-api/docs/prompting-strategies>
-
-The vendors' own guides to building a skill, checked on the same date. In Microsoft 365 Copilot the nearest thing is an agent, and in Gemini it is a Gem.
 
 - Anthropic, *How to create custom skills*, Claude Help Center. <https://support.claude.com/en/articles/12512198-how-to-create-custom-skills>
 - Anthropic, *Skill authoring best practices*, Claude Platform Docs. <https://platform.claude.com/docs/en/agents-and-tools/agent-skills/best-practices>

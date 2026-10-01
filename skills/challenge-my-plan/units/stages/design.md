@@ -3,9 +3,9 @@
 
 ## Situation
 
-Design turns the analysis into options that cost money. The work is comparison: what the BIA requires against what the organisation can currently do, and which option is worth what it costs in money and complexity.
+Designing involves turning the analysis into options that cost money. The work involves comparing what the BIA requires with what the organisation can currently do and determining which option is worth the cost in terms of money and complexity.
 
-AI is useful here for two things that are hard to do by hand. It can hold every register in view at once, and it can challenge an option that everyone in the room already likes. It does not decide. Investment, priority, and risk acceptance are business decisions, taken with stakeholders and approved through governance.
+AI is useful here for two tasks that are difficult to perform manually. Firstly, it can consider all the options at once, and secondly, it can challenge an option that everyone in the room already likes. It does not make decisions. Investment, priority and risk acceptance are business decisions that are approved through governance.
 
 ## Typical AI uses
 

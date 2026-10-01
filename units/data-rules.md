@@ -5,7 +5,7 @@ Read this first. It determines where the task can be carried out, and anything p
 
 ## Sensitivity decides the tool
 
-The more sensitive the data and the more serious the consequence of error, the more controlled the environment. Public and free online tools are never used for BCM data. Generic brainstorming that discloses nothing about your organisation is all they are for.
+The more sensitive the data and the more serious the consequences of an error, the more controlled the environment must be. Public, free online tools are never used for BCM data. They are only useful for generic brainstorming that discloses nothing about your organisation.
 
 ## Sensitivity classes
 
@@ -23,7 +23,7 @@ High-sensitivity, approved corporate or private environment only:
 
 Classify before entering; how sensitive the data is decides which tools you may use.
 
-Passwords, keys and access tokens go into no tool, approved or not. A tool reaches your systems only through the access it was approved with.
+**Passwords, keys and access tokens go into no tool**, approved or not.
 
 ## What AI4BCM's own tools read
 
