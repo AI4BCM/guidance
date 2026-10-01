@@ -151,5 +151,8 @@ def test_task_skills_carry_the_preflight(name):
     body = source.split("---", 2)[2]
     assert body.lstrip().split("\n\n")[0].startswith(f"First run [`../{bp.PREFLIGHT}`](../{bp.PREFLIGHT}).")
     packaged = (REPO / "skills" / name / "SKILL.md").read_text(encoding="utf-8")
-    assert packaged == source.replace("../units/", "units/").replace(f"../{bp.PREFLIGHT}", bp.PREFLIGHT)
+    assert packaged == (source.replace("../units/", "units/").replace(f"../{bp.PREFLIGHT}", bp.PREFLIGHT)
+                        .replace("../literature/", "literature/"))
+    if "../literature/" in source:
+        assert (REPO / "skills" / name / "literature").is_dir()
     assert (REPO / "skills" / name / bp.PREFLIGHT).read_bytes() == (REPO / bp.PREFLIGHT).read_bytes()

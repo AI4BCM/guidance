@@ -98,10 +98,17 @@ def build_one(repo: Path, dest: Path, name: str) -> None:
     # SKILL.md: the one edit. `../units/` and `../preflight.md` lose their `../` because both
     # move inside the skill folder.
     text = (src / "SKILL.md").read_text(encoding="utf-8")
+    # A skill that reads the open literature as a source carries it too: preflight 6 allows no web, so a
+    # link to the repository on GitHub would be a source the skill may not open.
+    reads_literature = "../literature/" in text
     text = text.replace("../units/", "units/").replace(f"../{PREFLIGHT}", PREFLIGHT)
+    text = text.replace("../literature/", "literature/")
     (skill / "SKILL.md").write_text(text, encoding="utf-8")
     if PREFLIGHT in text:
         shutil.copy2(repo / PREFLIGHT, skill / PREFLIGHT)
+    if reads_literature:
+        shutil.copytree(repo / "literature", skill / "literature",
+                        ignore=shutil.ignore_patterns("__pycache__"))
 
     if (src / "README.md").exists():
         readme = (src / "README.md").read_text(encoding="utf-8")
