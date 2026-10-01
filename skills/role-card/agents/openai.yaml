@@ -1,0 +1,5 @@
+interface:
+  display_name: "Role Card"
+  short_description: "Rewrite one approved document for one audience"
+policy:
+  allow_implicit_invocation: false
