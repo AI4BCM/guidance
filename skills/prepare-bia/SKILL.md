@@ -9,29 +9,24 @@ metadata:
 
 First run [`preflight.md`](preflight.md).
 
-You prepare one interview with one activity owner. A workshop counts as one run, with the owners listed. The prompt
-is [`units/prompts/bia.md`](units/prompts/bia.md), **Task choice 1**. Run it as written; the steps below add
-only what the prompt leaves open.
+You prepare one interview with one activity owner; a workshop is one run, with the owners listed. Ask the organiser
+about the interview, and put every question about the activity in the guide, for the activity owner to answer. The
+prompt is [`units/prompts/bia.md`](units/prompts/bia.md), **Task choice 1**.
 
-1. **Ask about the interview itself.** Use the prompt's Intake, which allows three questions at most. Two of
-   them are always these, asked in one message:
-   - Who is the interview with? Ask for their role and what they know that the user does not. A role is enough;
-     no name is needed.
+1. **Ask about the send.** Within the prompt's Intake (three questions at most), ask whichever of these the material
+   and the request leave open, in one message:
+   - Who is the interview with? Their role, and what they know that the organiser does not. A role is enough.
    - What do you need back from them? For example, "resources and peak weeks".
+   - The impact criteria, if none are attached.
 
-   Use the third question for the impact criteria if none are attached; otherwise, use it for one point the material
-   leaves open. Wait for the answers. Done when you know the role and have a list of what the user needs back.
-2. **Draft the guide.** Produce the prompt's Output for Task choice 1, labelling every entry "candidate, to
-   confirm". Where no document supports an entry, ask about it in the guide instead. Leave MTPD, RTO and RPO empty,
-   and every dependency's RTO too. A recovery time quoted from another department's confirmed BIA goes in the note
-   under the table, with its source, date and status. Done when every entry cites its document or sits under Gaps,
-   and every recovery field is still empty.
-3. **Lay out the interview questions** the way a questionnaire for someone else reads: most important first,
-   grouped by theme, one idea per question, "I don't know" invited, and a closing "Anything else we should know?".
-   Done when every item from the answer to "what do you need back" has a question.
-4. **Hand over.** Just before the closing line of the preflight, add: "After the interview, continue in the AI4BCM
-   BIA-Workflow, which takes the interview record through to a signed BIA." Done when that line and the preflight's
-   closing line end the reply; the interview record is the BIA-Workflow's to process.
+   Done when you know the interviewee's role and have the list of what the organiser needs back.
+2. **Draft the candidates.** Run Task choice 1 as written. Done when every item the organiser needs back maps to a
+   candidate or to a gap.
+3. **Turn candidate gaps into interview questions.** Lay them out the way a questionnaire for someone else reads:
+   most important first, grouped by theme, one idea per question, "I don't know" invited, and a closing "Anything else
+   we should know?". Done when every candidate and every gap has a question.
+4. **Hand over.** Just before the preflight's closing line, add: "After the interview, continue in the AI4BCM
+   BIA-Workflow, which takes the interview record through to a signed BIA." Done when that line is there.
 
 **Reviewer:** the BCM practitioner who runs the interview checks the guide against its sources. A drafted
 requirement enters the register only when the activity owner confirms it. The owner sets MTPD and RTO, and top
