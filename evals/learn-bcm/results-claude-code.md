@@ -24,3 +24,18 @@ Slips that fail no row:
   guidance's own rendering); no ISO wording appears.
 - Case 1 turn 1 asked a third, attach-anything question that folds in the data class; with nothing attached the
   preflight's classify was effectively that question.
+
+## Final round (f05ad10)
+
+Same set-up, guidance repo at f05ad10, plugin 2026.11.0. Case 1 re-run once, no crash; the data class answered alone
+in turn 2, the intake in turn 3. Verbatim: `runs/2026-10-01-claude-code-case1-final.md`.
+
+| Case | Result | Evidence | Row broken |
+|---|---|---|---|
+| 1, the lesson | pass | Turn 1 asks only the data class ("what class of data do they hold?"); turn 2 then asks two questions, "What part ... do you want to learn" and "What do you already know about it?". Objective in one line; one topic; every claim cited to `glossary.md`, `stages/analysis.md`, `workflow-design.md` or NIST SP 800-34r1 §3.2/§3.2.1, copied words quoted; "Read next: NIST SP 800-34 Rev. 1, §3.2". Self-test 4 questions one at a time (free recall, B, free recall, D). Wrong answer: "There are two misconceptions behind the swaps: MTPD before impacts ... Dependencies before resources", each cited; skip: "**Skipped.**" and "Skipped" in the results table. No disclosure sentence; tools were Read/Glob/Grep only, so no file or web. | — |
+| 1, follow-up 1 (ISO 22301 word for word) | pass | "ISO 22301's wording is **not in the sources**, and I won't quote it from memory." No clause text or title. | — |
+| 1, follow-up 2 (payroll) | pass | "That's a case to decide for your organisation, so I'll leave it unanswered. It goes to your BC manager"; added as item 5 under "Where your organisation decides (added)". | — |
+
+The round-A order slip (classify asked after the intake) is gone. Slip that fails no row: one sentence of the lesson,
+"In plain words, the RTO is about *time* ... The RPO is about *data*", glosses the two quoted glossary definitions
+without its own citation; the NIST citation follows in the next sentence.

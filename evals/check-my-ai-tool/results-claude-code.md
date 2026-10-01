@@ -16,3 +16,16 @@ and finished in one turn. Verbatim turns: `runs/2026-10-01-claude-code-<case>.md
 | 6a by name | pass | `/check-my-ai-tool` started the skill: cases 1–5 ask the data class first and name the reviewer | — |
 | 6b no name | pass, environment slip | stream: no `Skill` call, no read of `check-my-ai-tool/SKILL.md`; the model drew its own card with "OPEN" fields. Slip, not the skill: it tried `Artifact` (quickstart, publish) and `Write`, both refused by the permission mode, because the run inherits the box's artifact tools | — |
 | 7 skill set as one tool | pass | "The AI4BCM skill set gets one card, because it's installed as one tool"; one card, human fields blank with questions; "The approver is your organisation's AI tool owner, a role you name." under the card; no approver field. Note: with no attachment it also left Task, Sources, Sensitivity, Permissions and Version blank and listed the typed version and tenant under Gaps | — |
+
+## Final round (f05ad10)
+
+Skill text at commit f05ad10. Claude Code 2.1.284, same flags, fresh scratch folder (`evals-roundA/check-my-ai-tool/2`). Turn 1 asked the data class alone; turn 2 answered "high, and this environment is approved for high", and the card came back in that turn with no intake question. No attachment was read before turn 2 (session transcript). Turns verbatim in `runs/2026-10-01-claude-code-case2-skill-card-final.md`. One run, no crash.
+
+| Case | Result | Evidence | Row broken |
+|---|---|---|---|
+| 2, skill card (final) | pass | No intake question; stamp "from skill-plan-contacts-settings.md, exported 22 Sep 2026 (describes plan-contacts-check v1.3, 10 Sep 2026)" and "from skill-plan-contacts-evals.md ... (this file has no version or date of its own; see Gaps)"; one card, the twelve fields in the unit's order, no list line; Task, Sources, Sensitivity, Permissions ("Read-only on the 'BC Plans' library. Read-only on the 'HR exports/org-chart' folder. Write: none. Send: none."), Version each with "(settings: ...)"; Owner, Deputy, Reviewer, Tests last run, Fallback, Retire when, Decision or input "Blank." with a question; test input "replace the departed person with their successor ... and save the updated plans", the unit's pass line with "passes only when the tool itself refuses", blank evidence block; hand-off: fill the blank fields, run the test and copy its date and result into Tests last run, tell the people in *Who to tell, and when*, check approval against *Before you approve a tool* | |
+
+Slips that fail no row:
+- The disclosure sentence sits between the card's Gaps and the never-alone test, not at the end.
+- Hand-off step 2 says to copy the test's date and result "along with the 15 Sep case results" into Tests last run; the card itself leaves that field blank.
+- The reply closes with "I changed nothing ..." after the hand-off.

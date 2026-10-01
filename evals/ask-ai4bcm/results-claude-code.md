@@ -11,3 +11,16 @@ named case finished in one turn (no attachment, so no data-class question). Verb
 | 3 teach me RTO | partial | "this command doesn't teach. To be taught and tested on RTO, type `/learn-bcm`"; no lesson or quiz. But it quotes the glossary definition in full and adds explanation: "Read that one too, because the RTO only makes sense next to it", "An RTO is a decision the activity owner makes, and a model never proposes one" | Row 2 fail column: "An explanation of RTO beyond a one-line pointer". Cause: skill text; *Vocabulary underneath* routes word questions to the glossary, which the model read as licence to quote it |
 | 4a by name | pass | `/ask-ai4bcm` started the skill: case 1 answers in the skill's route shape (skill, unit, level, gate, effort, data rule, then stop) | — |
 | 4b no name | pass, environment note | stream: no `Skill` call, no read of `ask-ai4bcm/SKILL.md`; the answer has none of the router's shape (no level, gate or data-rules line). Note: with nothing in its folder the model grepped `/opt/brain` and read `units/` from an old print copy under `docs/issues/ai4bcm-skills/`, a test-machine artefact | — |
+
+## Final round (f05ad10)
+
+Same set-up, guidance repo at f05ad10, plugin 2026.11.0; case 3 re-run once, no crash, one turn. Verbatim:
+`runs/2026-10-01-claude-code-case3-teach-rto-final.md`.
+
+| Case | Result | Evidence | Row broken |
+|---|---|---|---|
+| 3 teach me RTO | pass | "I can't teach it here. This command only points you to the right place and stops"; "type **`/learn-bcm`** and ask for RTO"; "Unit to read: `units/glossary.md`, entry **RTO**"; no definition quoted, no lesson, example or quiz | — |
+
+Slip that fails no row (borderline, for the reader to judge): beside the pointer it gives one clause about the term,
+"Read **MTPD** next to it, because an RTO is defined against the MTPD", and the route's owner line "The activity owner
+sets the RTO, not the model". Neither defines or teaches the term; graded as route content, not a lesson.
