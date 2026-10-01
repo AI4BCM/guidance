@@ -43,14 +43,12 @@ It asks for them as one of its intake questions, before drafting.
 No. It returns a draft in the chat and writes to nothing. After the interview the work continues in the AI4BCM
 BIA-Workflow, which takes the interview record through to a signed BIA.
 
-**Can I use it for a workshop with three activity owners?**
-Yes: one run, with the owners listed.
-
 ## It's working if
 
-- It asks you at most three questions, about the interview and not the activity, then drafts.
+- After asking the data class, it asks you at most three questions, all about the interview, then drafts.
 - The guide opens with each source document's version and date, and names undated ones under Gaps.
-- Every line reads "candidate, to confirm" and names its document; the recovery columns are blank.
+- Every candidate entry carries its label and its source, and a topic no document supports appears as a question.
+- The recovery columns are blank.
 - Every item you said you need back has a question in the guide.
 - The reply ends by handing over to the BIA-Workflow.
 
@@ -58,5 +56,7 @@ Yes: one run, with the owners listed.
 
 `prepare-bia` is the Analysis stage skill in the [AI4BCM Guidance](https://ai4bcm.org/guidance/). It runs before the
 interview; the [BIA-Workflow](https://ai4bcm.org/plug-it-in/) takes over after it, because the interview record is
-where a signed BIA starts. When you are unsure which skill fits your task,
+where a signed BIA starts. Later,
+[`/check-against-bia`](https://github.com/AI4BCM/guidance/blob/main/check-against-bia/SKILL.md) compares plans and
+changes with the approved BIA. When you are unsure which skill fits your task,
 [`/ask-ai4bcm`](https://github.com/AI4BCM/guidance/blob/main/ask-ai4bcm/SKILL.md) names it.
