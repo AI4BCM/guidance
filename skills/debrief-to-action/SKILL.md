@@ -21,7 +21,7 @@ owner you return is **proposed**, until the accountable reviewer or the owner de
    reply ends at Gaps.
 2. **Draft the proposed findings and what worked** against that objective, in the shape the Output of Task choice 2
    sets, **blameless**: for each proposed finding, the role, the step and the guard that was missing; for each thing
-   that worked, the role, the step and the safeguard that held. Where a note you quote names the person who slipped, put their role in square brackets in its place. A passage about how the exercise itself was run, not about what it tested, goes under Gaps for the exercise director, never into a finding. Done when every passage of the notes that bears on
+   that worked, the role, the step and the safeguard that held. Where a note you quote names the person who slipped, put their role in square brackets in its place. A passage about how the exercise itself was run, not about what it tested, goes under Gaps for the accountable reviewer, never into a finding. Done when every passage of the notes that bears on
    the objective sits behind a proposed finding or a what-worked line, and each of those names its role, its step,
    and its missing guard or the safeguard that held; and each proposed finding says which part of the objective it missed.
 3. **Write the actions**, in the shape the same Output sets; naming the owner of an action assigns the action and blames no one.
