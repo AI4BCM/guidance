@@ -149,7 +149,7 @@ def test_task_skills_carry_the_preflight(name):
     """Every task skill opens on the shared preflight, and its package carries a copy of it."""
     source = (REPO / name / "SKILL.md").read_text(encoding="utf-8")
     body = source.split("---", 2)[2]
-    assert body.lstrip().split("\n\n")[1].startswith(f"First run [`../{bp.PREFLIGHT}`](../{bp.PREFLIGHT}).")
+    assert body.lstrip().split("\n\n")[0].startswith(f"First run [`../{bp.PREFLIGHT}`](../{bp.PREFLIGHT}).")
     packaged = (REPO / "skills" / name / "SKILL.md").read_text(encoding="utf-8")
     assert packaged == source.replace("../units/", "units/").replace(f"../{bp.PREFLIGHT}", bp.PREFLIGHT)
     assert (REPO / "skills" / name / bp.PREFLIGHT).read_bytes() == (REPO / bp.PREFLIGHT).read_bytes()
