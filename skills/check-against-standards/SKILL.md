@@ -48,8 +48,7 @@ copy.
    explicit unresolved status under Gaps; every point no selected text holds carries the label "general practice, not in the sources" and cites nothing, a unit included; and each point on a regulation carries its own mark for legal or compliance review.
 3. **Hand each gap to its owner.** Reconcile coverage against the scope set in step 1, then turn each gap into a question: on a policy, for the policy owner; on records, for the reviewer below, who decides what is enough. Done
    when every framework and part in scope from step 1 has its block, or every checklist row its row; only selected
-   frameworks contribute findings and the others appear solely as not reviewed; and every gap and contradiction ends
-   as a question addressed to that role.
+   frameworks contribute findings and the others appear solely as not reviewed; and every gap and contradiction ends as a question addressed to that role; and Gaps lists the reader's typed answers and the status of the document under review, as the prompt's Intake and Gaps lines say.
 
 **Reviewer:** the policy owner answers each question; legal or compliance answers the marked ones; a statement that
 the document meets a framework is a person's, against the source text. Records: the internal auditor or the BCM

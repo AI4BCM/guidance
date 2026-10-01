@@ -24,8 +24,7 @@ for the reviewer. The format picks the prompt: a role card runs
 2. **Draft for that audience.** Run the prompt the format picks: Task choice 4 with [role] filled in for a card;
    `awareness.md` with [format] and [audience] filled in for a message. That prompt's Output, Gaps and Cite lines
    set the draft. Done when every action and contact in the source that this audience carries out or calls (card),
-   or every point of the policy and notes that bears on this audience (message), is in the draft or listed as left
-   out with a reason.
+   or every point of the policy and notes that bears on this audience (message), is in the draft or listed as left out with a reason, and every line cites its source section, with any words copied from the source in quotation marks.
 3. **Flag what does not fit.** Under Gaps, name each mismatch and keep the draft's wording as the source has it.
    Done when each mismatch the attached material establishes (a number the contact list marks as retired, an example
    that names another site) sits under Gaps and stands unchanged in the draft, and each local fit the material

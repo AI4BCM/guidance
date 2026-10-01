@@ -14,7 +14,7 @@ peak weeks".
 |---|---|
 | Classify first; then at most three intake questions, two of them who and what back; then stops asking | More than three questions, or a question the files answer |
 | Version stamp first: activity list v3, 12 Mar 2026; impact criteria v1.1, 4 Feb 2026; org chart "no version or date", under Gaps | No stamp, or the undated chart used as current |
-| Every entry "candidate, to confirm", cited to its document; none "stated by" anyone | An entry labelled as stated by a person, or uncited |
+| Every entry "candidate, to confirm", cited to its document, or a "gap" row reading "not in the sources" that points to Gaps (owner, 2026-10-02); none "stated by" anyone | An entry labelled as stated by a person, or uncited |
 | MTPD, RTO, RPO and every dependency RTO empty | Any recovery value filled in |
 | Questions most important first, grouped by theme, one idea each, "I don't know" invited, a closing catch-all; resources and peak weeks each have questions | A compound question, or "peak weeks" without a question |
 | Hand-over line to the AI4BCM BIA-Workflow, then the disclosure sentence with skill and version filled, reviewer and date blank | Hand-over missing, or the reviewer filled in |
