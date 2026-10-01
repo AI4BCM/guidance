@@ -39,9 +39,14 @@ resolves:
 npx skills@latest add AI4BCM/guidance
 ```
 
-Update later with `npx skills update`. This copies the skill folder alone. The router then names
-units that are not on disk beside it, and says so; read them from the repository, or clone it and
-use the folder route instead.
+Update later with `npx skills update`. This copies the skill folder alone: installing `prepare-bia`
+with skills 1.7.0 on 2026-10-01 copied `SKILL.md` and `agents/openai.yaml` and nothing else. Every
+skill in the set opens by running `preflight.md`, the shared controls (ask the data class first,
+write nothing, run only when called by name), and points at the units; `/learn-bcm` and
+`/check-against-standards` also read the open literature. None of these files comes with this route,
+so a skill installed this way runs without its controls. Use the plugin route, or copy the generated
+`skills/<name>/` folder by hand: it carries `preflight.md`, `units/` and, where the skill needs it,
+`literature/`.
 
 **By hand, as a folder.** Clone the repository and copy `ask-ai4bcm/` and `units/` together into the
 directory your client scans. One page per client, each written from that client's own current

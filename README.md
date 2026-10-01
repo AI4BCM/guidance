@@ -46,7 +46,7 @@ In Codex, GitHub Copilot and anything else the `skills` CLI knows:
 npx skills@latest add AI4BCM/guidance
 ```
 
-That second route copies the skill folder alone, so the units stay here. One page per client, with
+That second route copies the skill folder alone: the units stay here, and a skill arrives without `preflight.md`, its shared controls. One page per client, with
 the folder paths each one scans and what each does about a skill it was not asked for, is in
 [install/](install/README.md).
 
