@@ -15,7 +15,7 @@ interview or workshop, when the material is on your desk and the questions for t
 | --- | --- |
 | Material, and an interview coming | `/prepare-bia` |
 | The interview record, and a BIA to finish | the [AI4BCM BIA-Workflow](https://ai4bcm.org/plug-it-in/) |
-| An approved BIA, and a plan or change to compare with it | [`/check-against-bia`](https://github.com/AI4BCM/guidance/blob/main/check-against-bia/SKILL.md) |
+| An approved BIA, and a plan or change to compare with it | [`/check-against-bia`](https://github.com/AI4BCM/guidance/blob/main/skills/check-against-bia/SKILL.md) |
 
 ## The guide is made of candidates
 
@@ -57,6 +57,6 @@ BIA-Workflow, which takes the interview record through to a signed BIA.
 `prepare-bia` is the Analysis stage skill in the [AI4BCM Guidance](https://ai4bcm.org/guidance/). It runs before the
 interview; the [BIA-Workflow](https://ai4bcm.org/plug-it-in/) takes over after it, because the interview record is
 where a signed BIA starts. Later,
-[`/check-against-bia`](https://github.com/AI4BCM/guidance/blob/main/check-against-bia/SKILL.md) compares plans and
+[`/check-against-bia`](https://github.com/AI4BCM/guidance/blob/main/skills/check-against-bia/SKILL.md) compares plans and
 changes with the approved BIA. When you are unsure which skill fits your task,
-[`/ask-ai4bcm`](https://github.com/AI4BCM/guidance/blob/main/ask-ai4bcm/SKILL.md) names it.
+[`/ask-ai4bcm`](https://github.com/AI4BCM/guidance/blob/main/skills/ask-ai4bcm/SKILL.md) names it.
