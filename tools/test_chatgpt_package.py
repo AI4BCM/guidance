@@ -65,8 +65,9 @@ def test_no_dangling_links(tmp_path):
 def test_the_router_still_carries_all_of_its_links():
     source = relative_links((REPO / "ask-ai4bcm" / "SKILL.md").read_text(encoding="utf-8"))
     packaged = relative_links((SKILL / "SKILL.md").read_text(encoding="utf-8"))
-    # 46 until 2026-09-28; the keep-it-running on-ramp carries two more.
-    assert len(source) == len(packaged) == 48
+    # 46 until 2026-09-28; the keep-it-running on-ramp carries two more. The 2026.11 rebuild (ticket 13) adds
+    # the clause 8.4 on-ramp's two links (data rules, the Validate stage prompt): 50.
+    assert len(source) == len(packaged) == 50
 
 
 def test_no_mcp_declaration_anywhere_in_the_package():
