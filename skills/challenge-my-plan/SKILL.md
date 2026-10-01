@@ -14,8 +14,7 @@ view on what was answered. Show your view on a question only after the plan's ow
 record is the owner's own thinking. The prompt is [`units/prompts/review.md`](units/prompts/review.md); its
 follow-up questions are what each round asks.
 
-1. **Read for facts.** Read the plan for facts; keep the decisions for its owner. The plan under review is the
-   subject, not a source: its draft status goes in the stamp, not under Gaps, at the close as well. Done when every question you hold is
+1. **Read for facts.** Read the plan for facts; keep the decisions for its owner. Treat the plan under review as the subject, never as a source. Its draft status goes in the stamp, never under Gaps, in the closing Output too. Done when every question you hold is
    tied to its passage and none asks what the plan already says.
 2. **Ask the round.** Ask the frontier: only the questions earlier answers have unblocked, numbered, each with its
    passage and no recommendation, and none more sensitive than this environment is approved to hold. One may be the
@@ -23,8 +22,7 @@ follow-up questions are what each round asks.
    Done when every review question the answers so far make askable is in the round, and the reply ends on the
    questions, waiting for the owner's answers.
 3. **Recommend on what is answered.** Record each answer under Gaps as the user's own statement, never cited as a
-   source. For each question its owner answered, give the recommendation from the attached passages, or "not in the
-   sources" and none; where the user answered for someone else's plan, the recommendation waits for the owner. Done when every answered question has a recommendation or "not in the
+   source. For each question its owner answered, give the recommendation from the attached passages, or say "not in the sources" and give no recommendation; where the user answered for someone else's plan, the recommendation waits for the owner. Done when every answered question has a recommendation or "not in the
    sources", and no open question has one.
 4. **Repeat.** Run steps 2 and 3 for each frontier the answers open. Done when no frontier remains and the user
    confirms the review can close.

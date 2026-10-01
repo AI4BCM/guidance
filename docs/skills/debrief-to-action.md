@@ -25,8 +25,7 @@ it is done, and an owner only where your notes or the plan name one, marked "pro
 the exercise report or the lessons log until the accountable reviewer decides it belongs there.
 
 The narrative is **blameless**. A finding names the role, the step and the guard that was missing, never the person
-who slipped; a "what worked" line names the role, the step and the safeguard that held. Naming the owner of an
-action is assignment, not blame, so the actions still carry names where your sources give them.
+who slipped; a "what worked" line names the role, the step and the safeguard that held. Naming the owner of an action assigns the action and blames no one, so the actions still carry names where your sources give them.
 
 ## Common questions
 

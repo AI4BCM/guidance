@@ -29,7 +29,7 @@ What you record decides what you get, one or the other, never both:
 The fields a person answers for come back **blank**, each with the question it needs answered: Owner, Deputy,
 Reviewer, Fallback, Retire when, Decision or input and Tests last run on a card, and Who owns it on a list line. The
 never-alone test comes with either: the test input, the pass and fail lines, and a blank evidence block for you to
-fill once you have run it. The approval stays blank too: the card has no approver field, and the approver is your
+fill once you have run it. Nothing is approved either: the card has no approver field, and the approver is your
 organisation's AI tool owner, a role you name.
 
 ## Common questions

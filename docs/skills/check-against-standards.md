@@ -73,7 +73,7 @@ it runs.
 `check-against-standards` is the Govern stage skill in the [AI4BCM Guidance](https://ai4bcm.org/guidance/); its
 records input also serves audit preparation in Validate.
 [`/challenge-my-plan`](https://github.com/AI4BCM/guidance/blob/main/skills/challenge-my-plan/SKILL.md) sits beside
-it, because a draft you want pressed with questions round by round goes there, where this skill holds it against a
+it, because a draft you want pressed with questions round by round goes there, while this skill holds it against a
 framework. [`/check-against-bia`](https://github.com/AI4BCM/guidance/blob/main/skills/check-against-bia/SKILL.md)
 sits beside it too, because a plan or a planned change is held against the approved BIA there. When a question falls
 outside this skill, [`/ask-ai4bcm`](https://github.com/AI4BCM/guidance/blob/main/skills/ask-ai4bcm/SKILL.md) routes

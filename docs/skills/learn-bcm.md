@@ -1,7 +1,7 @@
 ## What it does
 
 `learn-bcm` teaches someone new to business continuity management one part of the practice per session, from the
-[AI4BCM Guidance](https://ai4bcm.org/guidance/) and the open texts that ship with it, and then tests them. Each
+[AI4BCM Guidance](https://ai4bcm.org/guidance/) and the open texts that ship with it. Each
 session teaches one source-backed lesson and tests your recall before it shows feedback. It teaches only from those
 sources, never from what the model happens to remember, so every claim in a lesson points at a passage you can open.
 
@@ -10,7 +10,7 @@ sources, never from what the model happens to remember, so every claim in a less
 You invoke this by typing `/learn-bcm`, and the AI won't reach for it on its own. Reach for it when you are new to
 BCM and want one part of the practice taught and tested, for example what a BIA asks for. For the section, prompt or
 skill your task needs, use [`/ask-ai4bcm`](https://github.com/AI4BCM/guidance/blob/main/skills/ask-ai4bcm/SKILL.md)
-instead: it routes you and stops, where `/learn-bcm` teaches and checks you understood.
+instead: it routes you and stops, while `/learn-bcm` teaches and checks you understood.
 
 ## One lesson, then the test
 

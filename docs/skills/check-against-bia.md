@@ -33,7 +33,7 @@ The output follows what you gave it, and the blocks stay apart:
 | A change and the documents to search | Block 2, **What it reopens**, then **Coverage unknown** |
 | Both | Block 1, then block 2, never merged |
 
-**Coverage** is the honest edge of a change search. The skill reports what it found in the set you attached, then
+**Coverage** marks the limit of a change search. The skill reports what it found in the set you attached, then
 names each kind of document the change could touch that you did not attach, such as contact lists or supplier
 contracts, as "coverage unknown". A document it could not see is never reported as untouched.
 

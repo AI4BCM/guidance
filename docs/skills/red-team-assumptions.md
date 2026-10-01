@@ -1,8 +1,7 @@
 ## What it does
 
 `red-team-assumptions` lists what the strategy silently relies on, and the check that would settle each. It lists
-only what the option needs to be true, each item ending on the check that would settle it and a question for the
-person who can run that check, and it scores nothing. It is for the strategy or option paper that everyone in the
+only what the option needs to be true, each item ending on that check and a question for the person who can run it, and it scores nothing. It is for the strategy or option paper that everyone in the
 room already likes.
 
 ## When to reach for it
@@ -11,7 +10,7 @@ You invoke this by typing `/red-team-assumptions`, and the AI won't reach for it
 Design stage, when a strategy or option paper is on the table that everyone in the room already likes, and you want
 everything it relies on in one reply, each with the check that would settle it.
 
-The one test against its near-twin: this skill reads the paper and returns its full list in one reply, asking you
+This skill reads the paper and returns its full list in one reply, asking you
 nothing after it; [`/challenge-my-plan`](https://github.com/AI4BCM/guidance/blob/main/skills/challenge-my-plan/SKILL.md) interviews you round by round and waits for
 your answers.
 
@@ -40,15 +39,14 @@ It rates no risk: no impact or likelihood score, and no threshold for stopping t
 
 **Does it check whether the supplier has its own plan?**
 Yes. Every supplier the option needs gets its own block (own continuity plan, written SLA, second source), and what
-your sources do not show reads "not in the sources". "The supplier has its own plan" is the assumption nobody checks.
+your sources do not show reads "not in the sources". 
 
 **Why are the checks not ranked cheapest first?**
 It orders them by cost only where your sources state the effort or cost; otherwise it says "ordering unknown, for the
 reviewer", and cost claims go to finance or procurement. A cost order the sources do not support would be invented.
 
 **Why is this a separate skill from `/challenge-my-plan`?**
-One waits for your answers round by round; this one returns everything at once. A shared test case with one fully
-supplied strategy checks that line for both.
+One waits for your answers round by round; this one returns everything at once. One shared test case, a fully supplied strategy, checks where the line between the two falls.
 
 ## It's working if
 

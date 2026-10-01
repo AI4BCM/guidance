@@ -11,7 +11,7 @@ You invoke this by typing `/challenge-my-plan`, and the AI won't reach for it on
 plan, draft or analysis, or are reviewing one with its owner to hand, and want to be asked the questions you did not
 think of, one round at a time, answering each before you see its view.
 
-The one test against its near-twin: this skill interviews you and waits for your answers after every round;
+This skill interviews you and waits for your answers after every round;
 [`/red-team-assumptions`](https://github.com/AI4BCM/guidance/blob/main/skills/red-team-assumptions/SKILL.md) reads the paper and returns its full list in one reply.
 
 | You want | Reach for |

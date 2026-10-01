@@ -32,10 +32,9 @@ reuse terms:
 A licensed standard counts only as the reader's own copy, the licence confirmed by the reader, and only for its clause
 numbers.
 
-The branch's prompt sets every finding's form. This skill adds three things: you give no verdict on the reader's
+The branch's prompt sets every finding's form. This skill adds three things. First, you give no verdict on the reader's
 document or records (that it complies with, meets or conforms to a framework, or is ready, compliant or approved),
-and a quoted status, record or instruction keeps its own words; on the records branch each gap is a question for the
-reviewer below, no other owner inferred; and a clause appears by its number alone, even from the reader's licensed
+and a quoted status, record or instruction keeps its own words. Second, on the records branch each gap is a question for the reviewer below, no other owner inferred. Third, a clause appears by its number alone, even from the reader's licensed
 copy.
 
 1. **Tell the input apart and ask its intake.** A policy, charter or scope statement takes the policy input: ask which
@@ -47,8 +46,7 @@ copy.
    stage prompt, one block per selected framework; for records Task choice 3, one row per checklist entry. Done when
    every in-scope provision of each selected framework, or every checklist row, has a cited counterpart, a gap, or an
    explicit unresolved status under Gaps; every point no selected text holds carries the label "general practice, not in the sources" and cites nothing, a unit included; and each point on a regulation carries its own mark for legal or compliance review.
-3. **Hand each gap to its owner.** Reconcile coverage against the scope set in step 1, then turn each gap into a
-   question: for the policy owner on a policy; for records, for the reviewer below, who decides what is enough. Done
+3. **Hand each gap to its owner.** Reconcile coverage against the scope set in step 1, then turn each gap into a question: on a policy, for the policy owner; on records, for the reviewer below, who decides what is enough. Done
    when every framework and part in scope from step 1 has its block, or every checklist row its row; only selected
    frameworks contribute findings and the others appear solely as not reviewed; and every gap and contradiction ends
    as a question addressed to that role.

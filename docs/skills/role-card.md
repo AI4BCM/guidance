@@ -46,7 +46,7 @@ approval lets the owner make the edit, never the skill.
 
 - The card or message opens with the plan or policy version and date.
 - Every line names the section it came from.
-- Nothing in it is missing from the approved document.
+- Everything in it comes from the approved document.
 - Each action or contact for your audience that the draft leaves out is listed, with the reason.
 - A mismatch the attached material shows (a number marked as retired, an example from another site) is listed under
   Gaps and still stands in the draft for you to decide.

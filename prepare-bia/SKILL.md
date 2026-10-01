@@ -13,7 +13,7 @@ You prepare one interview with one activity owner; a workshop is one run, with t
 about the interview, and put every question about the activity in the guide, for the activity owner to answer. The
 prompt is [`../units/prompts/bia.md`](../units/prompts/bia.md), **Task choice 1**.
 
-1. **Ask about the send.** Within the prompt's Intake (three questions at most), ask whichever of these the material
+1. **Ask about the interview.** Within the prompt's Intake (three questions at most), ask whichever of these the material
    and the request leave open, in one message:
    - Who is the interview with? Their role, and what they know that the organiser does not. A role is enough.
    - What do you need back from them? For example, "resources and peak weeks".

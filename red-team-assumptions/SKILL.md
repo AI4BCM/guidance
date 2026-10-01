@@ -18,10 +18,8 @@ it and a question for the person who can run that check, and you score nothing. 
    option, which decision, which part of the paper. An owner, a status or a source the files lack is a gap, listed
    under Gaps, never a question. Then wait. Done when every scope question is answered or recorded as skipped, or the
    attachments set the scope and none was asked.
-2. **Steelman, then test.** Steelman the paper (a draft paper is listed under Gaps with its status, as the prompt's
-   Gaps line says, and is still the paper being read), then test each claim the option rests on: it is load-bearing if
-   an option outcome fails when the claim is false. Keep those as assumptions, each with the passage that relies on
-   it; the rest go to what holds up. Each check's owner is a person or body the sources name, marked "proposed, to
+2. **Steelman, then test.** Steelman the paper, then test each claim the option rests on: it is load-bearing if
+   an option outcome fails when the claim is false. Keep those as assumptions, each with the passage that relies on it; the rest go to what holds up. A draft paper is listed under Gaps with its status, as the prompt's Gaps line says, and is still the paper being read. Each check's owner is a person or body the sources name, marked "proposed, to
    confirm", or the check sits under Gaps with no owner. Done when every claim the option rests on is either under
    what holds up or a retained assumption that names the option outcome that fails if it is false.
 3. **Send the whole list.** Send it in one reply, in the prompt's Output, which sets the check and its owner, the
