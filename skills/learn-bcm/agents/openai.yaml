@@ -1,0 +1,5 @@
+interface:
+  display_name: "Learn BCM"
+  short_description: "Learn one part of BCM per session, then test yourself"
+policy:
+  allow_implicit_invocation: false
