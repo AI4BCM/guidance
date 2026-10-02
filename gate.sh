@@ -10,7 +10,7 @@ role="${1:?role}"
 BASE="${BASE:-skills/2026.11}"
 skill="${SKILL:-}"
 if [ -z "$skill" ]; then
-  skill=$( { git diff --name-only "$BASE"...HEAD 2>/dev/null; git status --porcelain | cut -c4-; } \
+  skill=$( { git diff --name-only "$BASE"...HEAD 2>/dev/null; git status --porcelain -uall | cut -c4-; } \
            | grep -E '^[^/]+/SKILL\.md$' | cut -d/ -f1 | sort -u )
   if [ "$(printf '%s\n' "$skill" | grep -c .)" -ne 1 ]; then
     echo "cannot tell which skill this walk is for (changed: ${skill:-none}); set SKILL=<name>"
