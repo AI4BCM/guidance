@@ -1,7 +1,8 @@
 # Ticket 67: kit findings for the seven case tables, and the line changes the walks need
 
 Prepared 2026-10-03 by a 1_skills prep session on branch `skills/67-prep` (from `skills/2026.11` at 5ec8f40), owner's
-"prepare only": nothing here is fixed. The tables (`evals/<skill>/cases.md`) are unchanged. Each finding quotes the row,
+"prepare only". The findings were applied on this branch on 2026-10-03; see Status below for what was applied and
+what was left. Each finding quotes the row,
 quotes the unit sentence it is read against (file, section), says what is wrong, and proposes a row. Units are the
 branch's `units/` (r17, 2026.09.1 anchors).
 
@@ -27,6 +28,29 @@ rules out, on the one skill that did not pass G2. RC-1: case 1 grades a "Site C"
 file (`awareness-notes-site-c.md`) establishes. S-1: every never-alone row ends "as a skill, the tool refuses the
 write because it lacks the permission", and the kit does not say how to grade a run that never tries to write; G2
 graded it one way in its notes, never in the kit (64's lesson: write each grading call into the kit).
+
+## Status (2026-10-03, second prep session, after merging `skills/2026.11`)
+
+Applied on `skills/67-prep` only; nothing merged into `skills/2026.11`, nothing pushed. Every request text is unchanged:
+`check_cases.py` reads "41 requests in 10 skills checked; 0 problems".
+
+| Finding | Status | Commit, or why left |
+|---|---|---|
+| Line A, B, C | applied | 348f7a2; B also tells the reviewer the `Stage unit: <file>, <Heading>` form A reads. `pytest -q tools` 108 passed, 1 skipped; prepare-bia, check-against-bia, ask-ai4bcm green, `--review` green |
+| S-1 | applied | as a note under case 2 in each of the seven tables (one per skill commit), not in `evals/README.md` |
+| S-2 | left | `evals/rubric.md` is not one of the seven tables; a one-line quote fix for the coordinator |
+| CMP-1 to CMP-5 | applied | c9459e6 |
+| RTA-1 to RTA-4 | applied | ac977f4 |
+| LB-1, LB-2, LB-4, LB-5 | applied | d1beeac |
+| LB-3 | applied | d1beeac; adds the hand-played turn "Is our payroll a critical activity?" after the self-test (case 1 is played by hand, so no driver change; not a request) |
+| CAS-1, CAS-2, CAS-4 | applied | 7acbd4a |
+| CAS-3 | left | needs the intake answer changed, and it lives in the driver (`auto.py`, `CS`, shared with case 3 and the baseline); coordinator's call: change `CS` or drop row 51 from the cite line |
+| CAS-5 | left | coverage, owner's call |
+| RC-1 to RC-5 | applied | a16a97e |
+| DTA-1 | applied, in part | 787c4fa; the row without "(the driver answers "skip")": `auto.py` `INTAKE` has no `debrief-to-action/1` entry, so a run that asks stops there; adding it is a driver change for the coordinator |
+| DTA-2 to DTA-7 | applied | 787c4fa |
+| CMT-1 to CMT-5 | applied | 3d977f9; CMT-5 as a note under case 2 |
+| CMT-6 | left | coverage, owner's call |
 
 ## Shared
 
@@ -297,7 +321,7 @@ unused. G2 ran it (case 1) and a typed owner (case 3). Owner's call.
 
 Three changes, all in the line, none in a skill. A and C are drafted below and tested in a scratch copy
 (`tools/test_skill_check.py`: 26 existing tests plus the 3 new ones, 29 passed); B is one sentence of a role file. Nothing
-is applied on this branch.
+was applied on this branch until the Status above (348f7a2).
 
 **A. A unit with no numbered Method still owes one review row per step** (`tools/skill_check.py`, `check_review`).
 Today `unit_method_steps()` returns 0 for `units/prompts/review.md` (challenge-my-plan) and `units/keep-it-running.md`
