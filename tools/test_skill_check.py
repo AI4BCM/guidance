@@ -188,3 +188,9 @@ def test_a_row_marked_missing_is_red(repo):
 
 def test_no_review_is_red(repo):
     assert review_failures(repo) == ["evals/minimal-skill/review.md does not exist"]
+
+
+def test_a_router_on_ramp_label_is_the_users_words_not_a_quote():
+    line = '- **"I inherited forty BIAs and no requirements register."** Stage 3 with `/prepare-bia`.'
+    assert sc.quotes(line, labels=False) == []
+    assert sc.quotes(line) == ["I inherited forty BIAs and no requirements register."]

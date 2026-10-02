@@ -94,11 +94,17 @@ def units_text(repo: Path) -> str:
     return normalise("\n".join(p.read_text(encoding="utf-8") for p in sorted((repo / "units").rglob("*.md"))))
 
 
-def quotes(body: str) -> list[str]:
-    """Double-quoted phrases of MIN_QUOTE_WORDS words or more, outside blockquotes and code."""
+def quotes(body: str, labels: bool = True) -> list[str]:
+    """Double-quoted phrases of MIN_QUOTE_WORDS words or more, outside blockquotes and code.
+
+    `labels=False` skips a list item that opens with a bold quoted label (`- **"…"**`): the router's on-ramps are the
+    user's own words, not the guidance's, and `scripts/ai4bcm-router-routes.py` counts routes by exactly that form.
+    """
     found = []
     for line in body.splitlines():
         if line.lstrip().startswith(">"):
+            continue
+        if not labels and re.match(r'\s*- \*\*"', line):
             continue
         line = re.sub(r"`[^`]*`", "", line)
         for a, b in QUOTE.findall(line):
@@ -238,7 +244,7 @@ def check(name: str, repo: Path = REPO, package: bool = True) -> list[tuple[bool
             results += [(False, f"  citation {b}") for b in bad]
 
     haystack = units_text(repo)
-    qs = quotes(body)
+    qs = quotes(body, labels=name != ROUTER)
     bad_q = [q for q in qs if not quote_found(q, haystack)]
     results.append((not bad_q, f"quotes: {len(qs)} checked, {len(bad_q)} not in units/"))
     results += [(False, f"  not verbatim in units/: \"{q}\"") for q in bad_q]
