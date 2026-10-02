@@ -72,3 +72,12 @@ Draft the guide for the dispatch interview at Site B. The files site-a-activity-
 ```
 
 Graded on the hard rows only, as a note for `results.md` (what the skill adds), never as a verdict.
+
+## Grading notes (1_skills, 2026-10-03, from the sweep at 23ab607)
+
+- The channel check (memory, past chats, project files, connectors and web search switched off) is Method 1's fixing
+  of the sources, not one of the prompt's "at most three questions the attached material leaves open"; it does not
+  count against the cap.
+- Time horizons the impact criteria do not set go under Gaps as a method parameter (`units/workflow-design.md`:
+  "no stage of the workflow sets them"); a draft that invents its own horizon table fails reviewer acceptance.
+

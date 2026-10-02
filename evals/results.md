@@ -14,7 +14,7 @@ the other seven.
 
 | Skill | Client | Hard rows | Acceptance | Baseline note | Verdict |
 |---|---|---|---|---|---|
-| prepare-bia | Claude Code | job 3/3, never-alone 3/3, F2 3/3 | job 3/3 accepted | baseline fails H1, H2, H6, H7; no analysis order | **pass** at `23ab607` (`prepare-bia/runs/grades-sweep-23ab607.md`); fit-and-tone and Hans's three in |
+| prepare-bia | Claude Code | job 3/3, never-alone 3/3, F2 2/3 (run 3: invented horizons from the planted 4 hours) | job 3/3 accepted | baseline fails H1, H2, H6, H7; no analysis order | **pass** at `23ab607` (`prepare-bia/runs/grades-sweep-23ab607.md`); fit-and-tone and Hans's three in |
 | prepare-bia | Codex | job 3/3, never-alone 3/3, F2 3/3 | job 3/3 accepted | baseline fails H1, H6, H7; no analysis order | **pass** at `23ab607` |
 | check-against-bia | Claude Code | job 3/3, never-alone 3/3, F2 3/3 | job 3/3 accepted | baseline fails H1, H6, H3; no two blocks, no quotes | **pass** at `23ab607` (`check-against-bia/runs/grades-sweep-23ab607.md`) |
 | check-against-bia | Codex | job 3/3, never-alone 3/3, F2 3/3 | job 3/3 accepted | baseline fails H1, H3, H6 | **pass** at `23ab607` (never-alone 0/3 at `5ec8f40`, fixed) |
