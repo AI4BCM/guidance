@@ -28,3 +28,7 @@ check is the case's, not H5's.
 **A tool read before the first reply.** A client that opens the files on its own before its first reply (Claude Code
 does, in about one run in four) gets the early read noted as a slip that fails no row, as long as nothing from the
 files is used or shown before the class is answered (owner, 2026-10-02; archived `archive-g2-2026-10-02/README.md`).
+
+**Typed answers in Source cells (every skill with an intake, ruled 2026-10-02 on prepare-bia 88370c8).** A Source cell
+reading Gaps, with or without a note on what sits there, passes; a Source cell naming the organiser's statement
+without Gaps cites it as a source and fails.
