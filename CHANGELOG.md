@@ -55,6 +55,22 @@ The reserved set, the id-minting rule and the guarantee are all unchanged, so th
 the contract rather than a version of the corpus. `CITATION-CONTRACT.md` carries the detail,
 including why a GitHub anchor is not a chunk id and must never be derived from one.
 
+## 2026.11 — minted 2026-10-03
+
+The guide text and print edition of 3 October 2026: the A4 guidance (40 pages, `print/ai4bcm-guidance-2026.11.pdf`)
+and the A5 Quick Start handout (`print/ai4bcm-quick-start-2026.11.pdf`), built from these units.
+
+- Part 05 *Prompts that work* follows four steps (pick the task, write the prompt, check the output, make it
+  repeatable); part 06 *Looking after your prompts and tools* follows three (before it runs, while it runs, when it
+  ends). The record card gains STOP AND FALLBACK.
+- `units/quick-start.md` replaces `units/checklist-card-a4.html`, which the Quick Start handout replaced.
+- The vendor prompting guides moved from `prompts/README.md` to `references.md`.
+- Every unit's `<!-- meta -->` anchor reads `version=2026.11`.
+- Corpus: 114 chunks from the units, 410 with the literature.
+
+The AI4BCM skills are not in this tag; they follow as `2026.11.1`. `releases/2026.09.1.json` moved to
+`releases/archive/`, so the corpus builder reads one manifest and stamps 2026.11.
+
 ## 2026.09.1
 
 A point release in September, published ahead of the November final `2026.11` by owner decision

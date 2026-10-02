@@ -1,4 +1,4 @@
-<!-- meta: unit=keep-it-running version=2026.09.1 -->
+<!-- meta: unit=keep-it-running version=2026.11 -->
 # Looking After Your Prompts and Tools
 
 Once your team uses a saved prompt, skill or workflow every month, it is part of how you do BCM. Treat it as you would any other part of your method. One person should be responsible for it. Someone checks what it produces. The people who need to know are told. This unit starts to apply as soon as a prompt becomes a team method (`prompts/README.md`), which is Level 2 in `levels.md`, and it is what Level 3 and Level 4 ask a team to show. This unit follows it from before it runs, through the months it runs, to the day it ends.

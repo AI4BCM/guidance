@@ -1,4 +1,4 @@
-<!-- meta: unit=levels version=2026.09.1 -->
+<!-- meta: unit=levels version=2026.11 -->
 # Where You Stand
 
 ## Four ways of working with AI

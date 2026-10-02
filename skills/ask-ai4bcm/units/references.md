@@ -1,4 +1,4 @@
-<!-- meta: unit=references version=2026.09.1 dated=2026-09 -->
+<!-- meta: unit=references version=2026.11 dated=2026-09 -->
 # References and further reading
 
 The list holds three kinds of entry. A supporting citation names the passage behind a claim in these units, and the unit that carries it. Further reading comes with the question it helps answer. The third block names the standards a BCM reader is likely to work under already. None of the works below validates this guidance's five AI maturity levels or its framing of where teams stand; shared terms do not make a match, and no crosswalk between ladders is asserted. Every entry names the edition read, checked for a successor on 2026-09-09 and, in the third block, on 2026-09-28.

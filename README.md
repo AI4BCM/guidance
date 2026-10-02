@@ -54,7 +54,7 @@ of every unit intact. The terms, the review cycle and who owns the living prompt
 Releases are tagged by calendar month, `YYYY.MM`. The first is `2026.09`; the next is
 `2026.11`. A citation naming a tag names the text as it stood at that tag, and
 [`releases/<tag>.json`](releases/) resolves the tag to a commit and a hash per citable file.
-Nothing is tagged yet. What each release contains and how to cite a unit at one:
+`2026.09`, `2026.09.1` and `2026.11` are tagged. What each release contains and how to cite a unit at one:
 [CHANGELOG.md](CHANGELOG.md).
 
 ## Licence
