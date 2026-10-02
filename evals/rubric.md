@@ -1,7 +1,7 @@
 # Reviewer acceptance (job case only)
 
 The direction note's question on the job case: "does this run the stage the way the guide says, and would I accept
-it?" The guide's own bar, from `units/prompts/README.md`, *From prompt to team method*: "Before the team relies on it,
+it?" The guide's own bar, from `units/prompts/README.md`, *From prompt to team prompt*: "Before the team relies on it,
 run it on two or three past cases for which you already know the correct answer. Only keep it if a reviewer would
 accept those outputs."
 

@@ -1,6 +1,6 @@
 # Record card: [skill name]
 
-From `units/keep-it-running.md`, *A record card for each skill*. One card for each skill and workflow that reads or
+From `units/keep-it-running.md`, *A record card for each skill or workflow*. One card for each skill and workflow that reads or
 acts on your files; a saved prompt alone gets one line in the organisation's AI inventory instead. The card is a
 governance record: it carries an owner, a version and a review date, and is kept like any other controlled document.
 
@@ -17,14 +17,11 @@ governance record: it carries an owner, a version and a review date, and is kept
 | **How safe** | | |
 | Sensitivity class and where it runs | The class of material it touches and where the tool runs (`data-rules.md`, `tools.md`). | |
 | Permissions | What it may read, write or send, as set in the tool. | |
-| Fallback | How the work still gets done while it is unavailable. | |
+| Stop and fallback | Who can stop it today and how, and how the work still gets done while it is stopped. | |
 | **How long** | | |
 | Version | The current version, its date, and what changed. | |
 | Tests last run | The date the test cases last ran, and the result. | |
 | Retire when | The condition that ends its use, written on the day it starts. | |
-
-**Who can stop it today, and how** (*When to stop*: "Write on the card, before it runs, who can stop it today and
-how."):
 
 **Who was told, and when** (*Who to tell, and when*: model risk, internal audit, information security, compliance;
 "write on the card who you told"):
