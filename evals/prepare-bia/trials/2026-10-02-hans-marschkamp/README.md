@@ -261,3 +261,15 @@ Parts of this document were drafted with AI support (prepare-bia, version 2026.1
 > better, the timing helps and ü-03 sits in the right place. id take it in
 > but 25 min for 5 activities x 7 categories x 6 horizons is still 200 ratings, wont happen. rate chill and frozen store fully, the rest only where it changes
 > put the section 4 conflicts in the first 10 min, frostmark 8h vs our 4h and the cat 3 chilled space are the best questions in there. and the opening line goes, i dont talk to sven like that
+
+## Hans scores the run (asked by the owner, 1 to 10 per class)
+
+> questions 8, frostmark 8h against our 4h, the cat 3 chilled space and the sap 6h outage against an 8h rto are things i would have walked past
+> sources 8, versions and dates on everything and it caught the undated register, but it first said all six files were dated
+> data and safety 9, asked the class first, wrote nothing, mtpd rto rpo stayed blank
+> fit 4, 25 min for 200 ratings and it told me not to cut it. conflicts belong at the start not in section 4
+> tone 4, this is my prep sheet not something sven sees. tables and SMF §7 codes and that opening line, no
+> overall 7, yes for the next one, as my homework before the interview. i still build the sheet i take in myself
+
+Coordinator note: the Sources point is real. Turn 2 says all six files carry a version and a date; `dependency-register.json`
+has neither, which turn 3 then stamps under Gaps.
