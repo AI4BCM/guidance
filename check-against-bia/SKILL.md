@@ -32,9 +32,9 @@ First run [`../preflight.md`](../preflight.md). This is check-against-bia, versi
 5. **Keep the change triggers: block 2, What it reopens,** "which system, structure or supplier change should reopen
    which plan". Task choice 3, over the attached set only. Quote the line each touched plan, BIA entry and register
    entry holds. Block 1 first, neither merged nor ranked. Stamp, findings, Gaps, reviewer, Coverage unknown last.
-   After the AI-help sentence:
+   After the AI-help sentence, one line per flagged plan:
 
-   > Use review.md on each flagged plan, with its owner: type /challenge-my-plan.
+   > Use review.md on [plan], with [owner]: type /challenge-my-plan.
 
    Nothing follows.
 
