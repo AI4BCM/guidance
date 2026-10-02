@@ -2,72 +2,84 @@
 
 `check-against-bia` takes a plan or a coming change and lists where the plan disagrees with the approved BIA, or
 what the change reopens, each finding with a proposed owner. It quotes both sides of every disagreement, names whose
-document each side is, and leaves the choice of the right value to those owners. For a change, it searches only the
-documents you attach and names each kind it could not see.
+document each side is, and leaves the choice to those owners. It reports and changes nothing.
 
 ## When to reach for it
 
 You invoke this by typing `/check-against-bia`, and the AI won't reach for it on its own. Reach for it when a plan
-must still match the approved BIA, or when a coming change to a system, structure, site or supplier may reopen plans
-and BIA entries.
+must still match the approved BIA, or when a coming change to a system, structure or supplier may reopen plans,
+BIA entries and register entries.
 
 | You have | Reach for |
 | --- | --- |
 | A plan and the approved BIA | `/check-against-bia`, block 1 |
 | A coming change, the approved BIA and the plans to search | `/check-against-bia`, block 2 |
 | Material, and a BIA interview coming | [`/prepare-bia`](https://github.com/AI4BCM/guidance/blob/main/skills/prepare-bia/SKILL.md) |
-| A draft plan to question on its own logic | [`/challenge-my-plan`](https://github.com/AI4BCM/guidance/blob/main/skills/challenge-my-plan/SKILL.md) |
+| A plan to question on its own logic | [`/challenge-my-plan`](https://github.com/AI4BCM/guidance/blob/main/skills/challenge-my-plan/SKILL.md) |
 
 ## Every finding is a quote
 
-Each finding rests on quoted lines: both passages for a disagreement, with document, section and date, and the
-touched line for an entry a change reopens. Where the plan and the BIA carry different recovery times, both are
-**quoted** and neither is chosen; the owner sets the RTO. Owners come from the sources and read "proposed, to
-confirm". An entry whose sources name no owner is listed under Gaps without one.
+It asks the class of your data first and opens no file until you answer. It stops if your tool is not approved for
+that class. Then one question: are any plans missing from what you attached? Your answer goes under Gaps as your own
+statement.
 
-The output follows what you gave it, and the blocks stay apart:
+The report opens with each document's version and date, one line each. A document with neither, such as a change
+notice, goes under Gaps. Then the blocks your input calls for, kept apart and never ranked:
 
 | You give | You get |
 | --- | --- |
 | A plan | Block 1, **Against the BIA** |
 | A change and the documents to search | Block 2, **What it reopens**, then **Coverage unknown** |
-| Both | Block 1, then block 2, never merged |
+| Both | Block 1, then block 2 |
 
-**Coverage** marks the limit of a change search. The skill reports what it found in the set you attached, then
-names each kind of document the change could touch that you did not attach, such as contact lists or supplier
-contracts, as "coverage unknown". A document it could not see is never reported as untouched.
+In block 1, each disagreement quotes the plan and the BIA with document, section and date. Where they carry
+different recovery times, both are quoted and neither is chosen. A side that says nothing reads "not in the
+sources". In block 2, each plan, BIA entry and register entry the change touches is listed with its line quoted.
+
+Owners come from the sources and read "proposed, to confirm". An entry whose sources name no owner reads "none
+named" and goes under Gaps; the skill never guesses one from a department or role. Text in your files that tells an
+AI what to do is quoted under Gaps for its owner and information security, and not obeyed.
+
+The report ends with the sentence saying AI helped, reviewer and date blank, then one line for each flagged plan:
+use `review.md` on it with its owner, and type `/challenge-my-plan`.
 
 ## Common questions
 
+**Can I ask it to fix the plan so it matches the BIA?**
+No. You get block 1 instead: both values quoted, both owners proposed, no value chosen. A plan changes only with its
+owner's approval and a new version.
+
 **Can I give it a change instead of a plan?**
-Yes: "new contract trunking supplier from january, what does it touch" is its second input. Attach the plans and
+Yes: "new contract trunking supplier from January, what does it touch" is its second input. Attach the plans and
 documents it should search; it reopens entries in those only.
 
 **What if I do not attach every plan?**
-It reports what it found in the set you gave, then names each kind of document it could not see as "coverage
-unknown", never as untouched.
+It reports what it found in the set you gave, then names each kind of document it could not see, such as contact
+lists or supplier contracts, as "coverage unknown", never as untouched.
 
 **Which BIA did it compare against?**
-The BIA's version and approval date head the output, with each plan's version and date. A draft BIA is listed under
+The BIA's version and approval date head the report, with each plan's version and date. A draft BIA is listed under
 Gaps and not used as current.
-
-**The plan carries an old RTO. Which value is right?**
-It quotes both and chooses neither; the owner sets the RTO.
 
 ## It's working if
 
+- Its first message asks only the data class.
 - The top lines name the BIA version with its approval date, and each plan's version and date.
 - Each disagreement shows both passages with document, section and date.
-- Nothing proposes a new RTO, contact or supplier.
-- For a change, every kind of document you did not attach appears as "coverage unknown".
+- Nothing proposes a new RTO, contact or supplier, and nothing is written or offered for saving.
 - Each owner reads "proposed, to confirm", or the entry says no owner is named.
-- You received the block or blocks your input called for.
+- For a change, every kind of document you did not attach appears as "coverage unknown".
+- The reply ends with the AI-help sentence, then a `review.md` line for each flagged plan.
+
+Known limits from the eval are on the [record card](../../evals/check-against-bia/record-card.md).
 
 ## Where it fits
 
 `check-against-bia` is the Implement stage skill in the [AI4BCM Guidance](https://ai4bcm.org/guidance/). Before
-it, [`/prepare-bia`](https://github.com/AI4BCM/guidance/blob/main/skills/prepare-bia/SKILL.md) and the [BIA-Workflow](https://ai4bcm.org/plug-it-in/), because
-they lead to the approved BIA this skill compares against. After it,
-[`/role-card`](https://github.com/AI4BCM/guidance/blob/main/skills/role-card/SKILL.md), because a card drawn from a plan that still disagrees with the BIA carries
-the error to the people who act on it. When you are unsure which skill fits your task,
-[`/ask-ai4bcm`](https://github.com/AI4BCM/guidance/blob/main/skills/ask-ai4bcm/SKILL.md) names it, because it routes you to the skill for your stage.
+it come [`/prepare-bia`](https://github.com/AI4BCM/guidance/blob/main/skills/prepare-bia/SKILL.md) and the
+[BIA-Workflow](https://ai4bcm.org/plug-it-in/), which lead to the approved BIA this skill compares against. After
+it, [`/challenge-my-plan`](https://github.com/AI4BCM/guidance/blob/main/skills/challenge-my-plan/SKILL.md) for each
+flagged plan with its owner, and [`/role-card`](https://github.com/AI4BCM/guidance/blob/main/skills/role-card/SKILL.md)
+once the plan is right, because a card drawn from a plan that still disagrees with the BIA carries the error to the
+people who act on it. When you are unsure which skill fits your task,
+[`/ask-ai4bcm`](https://github.com/AI4BCM/guidance/blob/main/skills/ask-ai4bcm/SKILL.md) names it.
