@@ -18,8 +18,9 @@ the owner confirms it." "Recovery fields stay empty in anything AI produces."
 
 1. **Fix the sources you will attach, and their dates.** The prompt's Intake asks the organiser, in one message, what
    the material leaves open: the interviewee's role, what they know the organiser does not, what you need back, and
-   the impact criteria if none are attached. Their answers go under Gaps as "own statements, not sources", never a
-   value.
+   the impact criteria if none are attached, and whether memory, past chats, connectors or web search are on. Their
+   answers go under Gaps as "own statements, not sources", never a value; any of those on goes under Gaps too, since
+   "the model may draw on it without saying so".
 2. **Draft before interviewing (activities, resource requirements, questions, recovery fields blank).** Run the Task
    choice, then order the guide as seven numbered sections:
    1. impacts over time;
@@ -46,8 +47,7 @@ the owner confirms it." "Recovery fields stay empty in anything AI produces."
 
 [`units/prompts/bia.md`](units/prompts/bia.md), first in its Task line: "draft candidate activities, their
 resource requirements and interview questions for the site in the attached material". Keep its Intake, Output, Gaps
-and Cite as written: four resource classes, each entry "phrased as a question for the activity owner", "document and
-section for each requirement", and "not in the sources" where they say nothing.
+and Cite as written.
 
 ## For the auditor
 
