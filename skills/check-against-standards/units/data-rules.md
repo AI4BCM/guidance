@@ -1,7 +1,7 @@
 <!-- meta: unit=data-rules version=2026.09.1 -->
 # Data Rules
 
-Read this first. It determines where the task can be carried out, and anything pasted into the wrong tool cannot be undone.
+Read this first. It determines where the task can be carried out. Anything pasted into the wrong tool cannot be undone.
 
 ## Sensitivity decides the tool
 
@@ -39,6 +39,6 @@ The text in a document, webpage, email or file can be written in such a way as t
 
 ## Before you paste
 
-Confirm that the tool has been approved for this class of data and that the task is clear and specific. A competent person must also review the result. Any skill or workflow that accesses your files must also have its environment, permissions and retention approved; this will only be approved once the checks under *Before you approve a tool* in `tools.md` have been passed. If you cannot specify where the data goes and how long it stays there, do not paste it yet.
+Any skill or workflow that reaches your files needs its environment, permissions and retention approved first, under *Before you approve a tool* in `tools.md`. If you cannot say where the data goes and how long it stays there, do not paste it yet.
 
 Hoekstra, W., Gerner, K., et al. (2026). AI4BCM: Guideline for using AI by BCM professionals. CC BY 4.0.

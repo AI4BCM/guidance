@@ -40,7 +40,7 @@ The one control that matters: **never let AI decide that you meet a standard or 
 
 ## Onboarding new BCM staff
 
-A new practitioner will learn the BCMS more quickly from its own documents than from a generic explanation. Using an assistant that is limited to these documents is the lowest-risk application of AI in the governance stage. The table below outlines the onboarding process for new staff in the embedding stage.
+A new practitioner will learn the BCMS more quickly from its own documents than from a generic explanation. Using an assistant that is limited to these documents is the lowest-risk application of AI in the governance stage. The table below outlines the onboarding process for new staff.
 
 | | Onboarding new BCM staff |
 |---|---|
@@ -48,8 +48,6 @@ A new practitioner will learn the BCMS more quickly from its own documents than 
 | Type of tool | the "Learning BCM terms and methods as a newer practitioner" row of the `tools.md` selection guide |
 | Output | an explanation of a term, a structure or an expected output, tied to the document that defines it here and marked where the documents are silent |
 | Review boundary | the practitioner or a colleague checks the explanation against the source before acting on it; the assistant explains what the documents say and does not interpret a standard or decide a case |
-
-Where the documents are silent, the answer is a question for the BC manager.
 
 `/learn-bcm` teaches one part of BCM per session from this guidance and its open sources, then tests you. You may attach your own licensed copy of a standard once you confirm the licence allows it.
 

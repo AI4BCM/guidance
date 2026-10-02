@@ -36,8 +36,6 @@ The one control that matters: **a resource requirement drafted by AI is only a q
 4. Compare registers across sites; put every conflict to the two owners, not to the model.
 5. Hand the register on with the confirmed and unconfirmed marks intact, so the next stage can see which entries were drafted and never challenged.
 
-The outcome of a BIA is a list of requirements. A requirement names what the activity needs to run, and states nothing about what the organisation has today.
-
 Requirements come in four classes. Once the impacts and the MTPD are settled, the interview covers people, with the skills, authorities and mandates the work needs; then seats and buildings; then IT and applications, each with its RTO and its RPO; then suppliers and other third parties.
 
 Dependencies are a separate item and keep the narrower meaning of up- and downstream relationships with other departments, each recorded with the RTO the relationship carries, so that a relationship one department records appears in the other department's BIA.
@@ -46,7 +44,7 @@ The five-stage BIA workflow (identification of scope, structured interview, conv
 
 ## Risk assessment
 
-The BIA method does not cover the risk analysis stage. Risk assessment with AI support has public and internal aspects. The data rule distinguishes between the two. Public threat, regulatory and incident reporting data can be collected in any approved tool. This is because it contains no information about your organisation. However, once you judge relevance against your own records, the work becomes high-sensitivity. It then moves to the approved environment.
+The BIA method does not cover risk assessment. Risk assessment with AI support has public and internal aspects. The data rule distinguishes between the two. Public threat, regulatory and incident reporting data can be collected in any approved tool. This is because it contains no information about your organisation. However, once you judge relevance against your own records, the work becomes high-sensitivity. It then moves to the approved environment.
 
 | | Risk assessment with AI support |
 |---|---|
@@ -54,8 +52,6 @@ The BIA method does not cover the risk analysis stage. Risk assessment with AI s
 | Type of tool | for public research, any approved tool; for judging what it means for your own records, only the approved environment (`tools.md`) |
 | Output | a relevance note per threat. It states how certain the public evidence is. It links each point to the public source and to the internal record it touches. It ends in questions or themes for the risk owner |
 | Review boundary | a person assesses the threat, decides the treatment and accepts the risk. A model proposes relevance. It does not rate a risk, accept it or change a risk record |
-
-When a system, supplier, site or process changes, the comparison is run in the opposite direction. A workflow in the approved source systems flags the risk, and the BIA records the changes affected by the risk. It then hands them over to their owners for review, on the checklist in `workflow-design.md`. The record itself can only be changed through the normal approval route.
 
 ## Prompts
 
@@ -67,7 +63,7 @@ Skill: `/prepare-bia` drafts the interview guide from your material.
 
 **Prompt.** Draft the activities, resource requirements and interview questions for the acquired site. Leave recovery times blank.
 
-**Response.** Fourteen candidate activities, drawn from the four existing sites. Resource requirements listed per activity in the four classes. Thirty-one interview questions. RTO and MTPD fields left empty as instructed.
+**Response.** Fourteen candidate activities, drawn from the four existing sites. Resource requirements listed per activity in four classes (people, seats and buildings, IT and applications, and suppliers). Thirty-one interview questions. RTO and MTPD fields left empty as instructed.
 
 **What changed.** The interview guide existed before the first interview. The interviews then found that the site slaughters wild boar, seasonally, and that it matters for cash flow.
 

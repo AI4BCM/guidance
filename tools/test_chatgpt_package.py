@@ -59,7 +59,7 @@ def test_no_dangling_links(tmp_path):
             checked += 1
             resolved = (md.parent / target.split("#")[0]).resolve()
             assert resolved.exists(), f"{md.relative_to(built)} -> {target}"
-    assert checked >= 48, f"the router carried 48 links; only {checked} were checked"
+    assert checked >= 50, f"the router carried 50 links; only {checked} were checked"
 
 
 def test_the_router_still_carries_all_of_its_links():

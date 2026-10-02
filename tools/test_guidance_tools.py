@@ -42,7 +42,7 @@ def test_corpus_is_the_hundred_and_five(data_dir):
     content pass dropped embed's case-studies heading, back to 104; the skill-set units pass added
     data-rules.md 'Prompt injection', 105."""
     chunks = json.loads((data_dir / "chunks.json").read_text(encoding="utf-8"))
-    assert len(chunks) == 105  # 2026-10-01: skill-set units pass, Prompt injection, 104 -> 105
+    assert len(chunks) == 114  # 2026-10-02: synced to the final units, print r17 (quick-start unit, owner rounds), 105 -> 114
 
 
 def test_search_returns_hits_with_the_expected_keys():

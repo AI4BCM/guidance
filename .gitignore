@@ -7,3 +7,4 @@ data/
 
 # The gauntlet runner's logs and report, per walk; the walk's result is its commits.
 .gauntlet/
+!print/*.pdf
