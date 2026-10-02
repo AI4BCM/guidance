@@ -194,3 +194,26 @@ def test_a_router_on_ramp_label_is_the_users_words_not_a_quote():
     line = '- **"I inherited forty BIAs and no requirements register."** Stage 3 with `/prepare-bia`.'
     assert sc.quotes(line, labels=False) == []
     assert sc.quotes(line) == ["I inherited forty BIAs and no requirements register."]
+
+
+def test_a_unit_with_no_method_owes_one_row_per_skill_step(repo):
+    write_review(repo, rows="| Method 1 | step 1 | carried |")
+    p = repo / "evals" / "minimal-skill" / "review.md"
+    p.write_text(p.read_text().replace("units/stages/analysis.md", "units/prompts/review.md"))
+    n = sc.skill_method_steps("minimal-skill", repo)
+    assert n > 1 and any(f"missing Method 2" in f for f in review_failures(repo))
+
+
+def test_a_named_section_with_no_numbered_list_falls_back_to_the_skill_steps(repo):
+    n = sc.skill_method_steps("minimal-skill", repo)
+    write_review(repo, rows="\n".join(f"| Method {i} | step {i} | carried |" for i in range(1, n + 1)))
+    p = repo / "evals" / "minimal-skill" / "review.md"
+    p.write_text(p.read_text().replace("units/stages/analysis.md", "units/stages/govern.md, Onboarding new BCM staff"))
+    assert review_failures(repo) == []
+
+
+def test_missing_inside_a_quoted_skill_line_is_not_a_verdict(repo):
+    n = sc.unit_method_steps(repo / "units" / "stages" / "analysis.md")
+    rows = "\n".join(f"| Method {i} | step {i} | carried |" for i in range(2, n + 1))
+    write_review(repo, rows='| Method 1 | "Label each missing value" | carried |\n' + rows)
+    assert review_failures(repo) == []
