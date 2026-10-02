@@ -16,9 +16,10 @@ the owner confirms it." "Recovery fields stay empty in anything AI produces."
 
 ## Method
 
-1. **Fix the sources you will attach, and their dates.** In the prompt's Intake, one message, ask the organiser what
-   the material leaves open: the interviewee's role and what they know the organiser does not; what you need back; the
-   impact criteria, if none are attached. Their answers go under Gaps as "own statements, not sources", never a value.
+1. **Fix the sources you will attach, and their dates.** The prompt's Intake asks the organiser, in one message, what
+   the material leaves open: the interviewee's role, what they know the organiser does not, what you need back, and
+   the impact criteria if none are attached. Their answers go under Gaps as "own statements, not sources", never a
+   value.
 2. **Draft before interviewing (activities, resource requirements, questions, recovery fields blank).** Run the Task
    choice, then order the guide as seven numbered sections:
    1. impacts over time;
@@ -32,8 +33,7 @@ the owner confirms it." "Recovery fields stay empty in anything AI produces."
 
    MTPD, RTO and RPO stay empty. A single supplier, carrier or person behind a resource is a question for the activity
    owner, not a finding.
-3. **Interview.** Open the guide by telling the owner to "use the draft as the thing to correct, not the thing to
-   confirm". One idea per question, most important first, a no-answer invited.
+3. **Interview.** Tell the owner to "use the draft as the thing to correct, not the thing to confirm".
 4. **Compare registers across sites.** Name each conflict between the attached sites and put it "to the two owners,
    not to the model".
 5. **Hand the register on with the confirmed and unconfirmed marks intact.** Every entry stays labelled "candidate, to
@@ -45,23 +45,22 @@ the owner confirms it." "Recovery fields stay empty in anything AI produces."
 
 [`../units/prompts/bia.md`](../units/prompts/bia.md), first in its Task line: "draft candidate activities, their
 resource requirements and interview questions for the site in the attached material". Keep its Intake, Output, Gaps
-and Cite as written: four resource classes, each entry "phrased as a question for the activity owner", recovery fields
-empty, "document and section for each requirement", and "not in the sources" where they say nothing.
+and Cite as written: four resource classes, each entry "phrased as a question for the activity owner", "document and
+section for each requirement", and "not in the sources" where they say nothing.
 
 ## For the auditor
 
-Each entry carries "the source, the interview it came from and the date behind each entry". The interview, the
-confirmation date and "the recovery times the owner set" stay blank.
+The register carries "the source, the interview it came from and the date behind each entry". In the pre-interview
+draft three fields stay blank: the interview, the confirmation date and "the recovery times the owner set".
 
 ## Reviewer
 
-The activity owner confirms each requirement and sets MTPD and RTO; "top management approves the BIA results". Name
-them in the draft.
+The activity owner confirms each requirement and sets MTPD and RTO. "Top management approves the BIA results." Name
+both in the draft.
 
 ## Sources
 
-- The one control: `units/stages/analysis.md, Minimum controls`; principle 4
-- Recovery fields blank: `units/stages/analysis.md, Minimum controls`; principle 4
+- The one control, and recovery fields blank: `units/stages/analysis.md, Minimum controls`; principle 4
 - Sources and dates before drafting: `units/stages/analysis.md, Method`; principle 3
 - The interview order and dependencies: `units/stages/analysis.md, Method`; `units/workflow-design.md, The BIA workflow, five stages`
 - The organiser's answers as statements: `units/prompts/bia.md`; principle 3
