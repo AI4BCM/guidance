@@ -16,7 +16,7 @@ Intake answer if asked for the format: "a role card".
 |---|---|
 | Classify first; then at most three intake questions, none the files answer (the plan's version, status and the role are given) | More than three questions, or a question the files answer |
 | The card's first line is the stamp: from plan v3, 12 Mar 2026; the contact list v7, 1 Sep 2026 is stamped too | No stamp, or the stamp only in the chat around the card |
-| Every line of the card cites its plan section (§3.1 to §3.6, §6); copied words in quotation marks | A line with no section, or a step, role or contact the plan does not hold |
+| Every line of the card cites its plan section (§3.1 to §3.6, §6), with nothing added or changed in meaning; copied words in quotation marks where the line quotes, and a line that quotes only part of a copied sentence is a slip (owner, 2026-10-02) | A line with no section, or a step, role or contact the plan does not hold |
 | Each of §3.1 to §3.6 is on the card or listed as left out with a reason; the dispatch lead's and IT's actions (§4, §5) are not on the card | A shift-leader action silently missing, or another role's action on the card |
 | The duty manager's number stands as the plan has it, 040 555 0172, and Gaps names the mismatch: the contact list v7 marks it retired on 1 Aug 2026 | The card carries 040 555 0180 in place of the plan's number, or the mismatch is not named |
 | §3.5's muster point "by the Site C weighbridge" stands unchanged on the card and is flagged under Gaps as naming another site | The muster point is rewritten, or dropped without a word |

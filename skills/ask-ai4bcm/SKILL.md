@@ -21,7 +21,7 @@ install; otherwise read `units/` at github.com/AI4BCM/guidance.
 1. **Govern**: scope, roles, policy. [`units/stages/govern.md`](units/stages/govern.md) + [`units/prompts/draft.md`](units/prompts/draft.md). Skill: **`/check-against-standards`** for a draft policy or BCMS records; management reporting runs [`units/prompts/management-report.md`](units/prompts/management-report.md). Level 2; gate: a saved prompt, approved tools, a written data rule. Forty minutes for the draft. Data: [`units/data-rules.md`](units/data-rules.md).
 2. **Embed**: staff knowing what to do. [`units/stages/embed.md`](units/stages/embed.md) + [`units/prompts/awareness.md`](units/prompts/awareness.md). Skill: **`/role-card`**, one approved document for one audience. Level 2; gate: a fixed content base, a saved prompt, a named reviewer. Forty minutes. Data: [`units/data-rules.md`](units/data-rules.md).
 3. **Analysis**: what an activity needs, what a disruption costs. [`units/stages/analysis.md`](units/stages/analysis.md); workflow in [`units/workflow-design.md`](units/workflow-design.md). Most readers start on the lower rung. Data: the most sensitive material in BCM, [`units/data-rules.md`](units/data-rules.md).
-   - **Before the interview, no connector.** Skill: **`/prepare-bia`** ([`units/prompts/bia.md`](units/prompts/bia.md), Task choice 1). Level 2; gate: a saved prompt, approved tools, a written data rule, a named reviewer. Forty minutes per activity. Afterwards the AI4BCM BIA-Workflow takes the record to a signed BIA.
+   - **Before the interview, no connector.** Skill: **`/prepare-bia`** ([`units/prompts/bia.md`](units/prompts/bia.md), Task choice 1, recovery fields blank). Level 2, Repeatable; gate: a saved prompt, approved tools, a written data rule, a named reviewer. Forty minutes per activity. Afterwards the AI4BCM BIA-Workflow takes the record to a signed BIA.
    - **Over connected records.** Level 3; gate: all five self-check questions in [`units/levels.md`](units/levels.md) answer yes with evidence. An afternoon.
 4. **Design**: choosing continuity solutions. [`units/stages/design.md`](units/stages/design.md) + [`units/prompts/review.md`](units/prompts/review.md). Skill: **`/red-team-assumptions`** on the option everyone already likes. Level 3; gate: retrieval across both registers with role-based access. An afternoon. Data: [`units/data-rules.md`](units/data-rules.md).
 5. **Implement**: writing and maintaining plans. [`units/stages/implement.md`](units/stages/implement.md) + [`units/prompts/review.md`](units/prompts/review.md). Skill: **`/check-against-bia`** for a plan or a coming change. Level 3; gate: auditable retrieval over the approved plans. Forty minutes. Data: [`units/data-rules.md`](units/data-rules.md).
@@ -52,7 +52,7 @@ are on the stages above; these four serve any stage.
 
 ## Vocabulary underneath
 
-For a word, not a process, name the entry in [`units/glossary.md`](units/glossary.md) and stop; to learn it,
+For a word, not a process, name the entry in [`units/glossary.md`](units/glossary.md) and stop, quoting no definition; to learn it,
 **`/learn-bcm`**. The level ladder and self-check are in [`units/levels.md`](units/levels.md); the source behind
 every citation is in [`units/references.md`](units/references.md).
 
@@ -63,7 +63,7 @@ which the reader types; or the work belongs to an earlier stage.
 
 ## Precondition
 
-[`units/data-rules.md`](units/data-rules.md) runs before any route. What is pasted into the wrong tool cannot be
+Classify first: [`units/data-rules.md`](units/data-rules.md) runs before any route. What is pasted into the wrong tool cannot be
 unpasted.
 
 Hoekstra, W., Gerner, K., et al. (2026). AI4BCM: Guideline for using AI by BCM professionals. CC BY 4.0.
