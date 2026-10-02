@@ -162,7 +162,44 @@ def test_task_skills_carry_the_preflight(name):
                         .replace("../literature/", "literature/"))
     if "../literature/" in source:
         assert (REPO / "skills" / name / "literature").is_dir()
-    assert (REPO / "skills" / name / bp.PREFLIGHT).read_bytes() == (REPO / bp.PREFLIGHT).read_bytes()
+
+
+@pytest.mark.parametrize("name", bp.skill_names(REPO))
+def test_every_package_carries_the_preflight_and_the_units(name):
+    """Ticket 68: a package is self-contained, the router's included ("one source file, copied
+    into every package")."""
+    package = REPO / "skills" / name
+    assert (package / bp.PREFLIGHT).read_bytes() == (REPO / bp.PREFLIGHT).read_bytes()
+    assert (package / "units" / "data-rules.md").is_file()
+    assert (package / "literature" / "README.md").is_file()
+
+
+def test_claude_plugin_scans_only_the_packages():
+    """A `skills` key in the Claude manifest adds to the default `skills/` scan; `"./"` there made
+    `claude plugin details` count every skill twice (2.1.284, 2026-10-02), the root copy without
+    its preflight and units. The plugin loads the packages and nothing else."""
+    manifest = json.loads((REPO / ".claude-plugin" / "plugin.json").read_text())
+    assert "skills" not in manifest
+    market = json.loads((REPO / ".claude-plugin" / "marketplace.json").read_text())
+    assert all("skills" not in p for p in market["plugins"])
+
+
+def test_zips_hold_one_package_each_at_the_archive_root(tmp_path):
+    """The ChatGPT upload: `<name>.zip` holding `<name>/SKILL.md`, the preflight and the units,
+    byte for byte the committed package, and the same bytes on every build."""
+    import zipfile
+
+    first = bp.write_zips(REPO, tmp_path / "a")
+    second = bp.write_zips(REPO, tmp_path / "b")
+    assert [p.name for p in first] == [f"{n}.zip" for n in bp.skill_names(REPO)]
+    for a, b in zip(first, second):
+        assert a.read_bytes() == b.read_bytes(), a.name
+    name = "prepare-bia"
+    with zipfile.ZipFile(tmp_path / "a" / f"{name}.zip") as zf:
+        names = set(zf.namelist())
+        assert {f"{name}/SKILL.md", f"{name}/{bp.PREFLIGHT}", f"{name}/units/data-rules.md"} <= names
+        assert all(n.startswith(f"{name}/") for n in names)
+        assert zf.read(f"{name}/SKILL.md") == (REPO / "skills" / name / "SKILL.md").read_bytes()
 
 
 def test_shelf_one_goes_everywhere_and_shelf_two_only_to_the_two(tmp_path):
