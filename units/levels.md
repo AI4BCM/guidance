@@ -50,6 +50,6 @@ The table gives one typical use per level. Each level has a question that tells 
 | Level 4 · Measured | **Count the results.** Plan and BIA review when something changes, awareness reminders on a fixed calendar, evidence-pack assembly and narrow incident-support retrieval, each built on the checklist in `workflow-design.md` | each workflow in use shows the four kinds of Level 4 evidence above, recorded and current on its card in `keep-it-running.md`, and the people named there have been told it is running |
 | Level 5 · Optimising | **Optimise later.** Changing, extending or retiring workflows on the evidence of their own measurements, multi-source resilience intelligence, narrow agentic support within configured permissions | the Level 4 measurements have run long enough to show what to change, and people set and review the limits of AI use; this level suits large or mature organisations and is optional |
 
-Whatever the level, the prompt pattern in `prompts/README.md` and the type-of-tool rows in `tools.md` apply. The data rules come first.
+Whatever the level, the prompt pattern in `prompts/README.md` and the type-of-tool rows in `tools.md` apply.
 
 Hoekstra, W., Gerner, K., et al. (2026). AI4BCM: Guideline for using AI by BCM professionals. CC BY 4.0.

@@ -24,7 +24,7 @@ The one control that matters: **a resource requirement drafted by AI is only a q
 
 - **AI can test whether a proposed RTO fits the impact criteria. It does not set the RTO.** The same holds for MTPD.
 - The draft names its source data and that data's date. An out-of-date inventory yields a BIA that looks current and is wrong.
-- Recovery fields stay empty in anything AI produces. That way a blank stays visibly blank.
+- Recovery fields stay empty in anything AI produces.
 
 **For the auditor.** The requirements register with the source, the interview it came from and the date behind each entry, the date the owner confirmed it, and the recovery times the owner set. For risk, each relevance note with its sources and the risk owner's decision.
 

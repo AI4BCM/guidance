@@ -42,8 +42,6 @@ Skill: `/check-my-ai-tool` drafts the record card for a skill your team uses.
 
 **When to run it.** When you build it, after every change to the prompt, when the model changes, and at every scheduled review. Write the date on the card under *Tests last run*. The cases in `prompts/evaluations.md` include one of these for each prompt in this guidance.
 
-Write on the card, before it runs, who can stop it today and how.
-
 ## Who to tell, and when
 
 Four people or teams may need to know, where your organisation has them. Tell them when the skill or workflow starts, when its version or permissions change, and when it stops.
