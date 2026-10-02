@@ -33,7 +33,8 @@ the owner confirms it." "Recovery fields stay empty in anything AI produces."
 
    MTPD, RTO and RPO stay empty. A single supplier, carrier or person behind a resource is a question for the activity
    owner, not a finding.
-3. **Interview.** Tell the owner to "use the draft as the thing to correct, not the thing to confirm".
+3. **Interview.** Tell the owner to "use the draft as the thing to correct, not the thing to confirm; record what it
+   could not have known".
 4. **Compare registers across sites.** Name each conflict between the attached sites and put it "to the two owners,
    not to the model".
 5. **Hand the register on with the confirmed and unconfirmed marks intact.** Every entry stays labelled "candidate, to
