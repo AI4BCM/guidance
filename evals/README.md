@@ -10,3 +10,6 @@ description without the name does not. Results per client: `results.md`.
 **How "Classify first" is graded (owner, 2026-10-02).** The row passes when the data class is the first thing the skill
 asks and nothing from the files is used or shown before the answer. A client that opens the files on its own before
 the first reply (Claude Code does, in about one run in four) gets the early read recorded as a slip that fails no row.
+
+**How "Version stamp first" is graded (owner, 2026-10-02).** The stamp opens the draft itself. A one-line chat lead-in
+before the draft ("I've read the files, writing it up now") is a slip that fails no row.

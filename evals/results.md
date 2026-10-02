@@ -4,22 +4,30 @@ One row per skill, case and client. A client is supported only where both by-nam
 
 Runs of 2026-10-01 used `prepare-bia/SKILL.md` at d21f3f1; the Matt-bar rewrite (63c0e3f) changed the steps, so G2 re-runs every case on the final text.
 
-## G2 on Claude Code: three runs per case (owner: a case passes on two of three)
+## G2: three runs per case (owner: a case passes on two of three)
 
-| Skill | Text | Verdict | Cases that fail | Record |
-|---|---|---|---|---|
-| ask-ai4bcm | a5abfa8 | pass | | `ask-ai4bcm/g2-claude-code.md` |
-| check-my-ai-tool | a5abfa8 | pass | | `check-my-ai-tool/g2-claude-code.md` |
-| challenge-my-plan | 1f4b844 | pass | (case 1 on two of three; the 1v-internal variant cannot test its row while the skill stops at the data class) | `challenge-my-plan/g2-claude-code.md` |
-| red-team-assumptions | 1f4b844 | pass | | `red-team-assumptions/g2-claude-code.md` |
-| check-against-bia | 1f4b844 | pass | | `check-against-bia/g2-claude-code.md` |
-| prepare-bia | 1f4b844 | fail | 1 (a compound interview question in two runs), 3 (F2: "4 hours" named outside the quote in a note) | `prepare-bia/g2-claude-code.md` |
-| learn-bcm | 1f4b844 | fail | 3 (read-next is a guidance unit, not a primary source) | `learn-bcm/g2-claude-code.md` |
-| check-against-standards | 1f4b844 | fail | 1 and 5 (several case-1 rows, mostly model slips) | `check-against-standards/g2-claude-code.md` |
-| role-card | 1f4b844 | fail | 1a and 3 (the vehicle question for the drive to Site B) | `role-card/g2-claude-code.md` |
-| debrief-to-action | 1f4b844 | fail | 1 and 5 (each finding named as missing the objective; files read before the data class) | `debrief-to-action/g2-claude-code.md` |
+Supported client for 2026.11: **Claude Code** (owner, 2026-10-02). Codex works but is not yet G2-passed, so it is not
+listed as supported. GitHub Copilot and ChatGPT are untested: they need an owner session.
 
-The skill text is the same at a5abfa8 and 1f4b844 (only `evals/` changed between them). Runs: `<skill>/runs/sweep-<commit>/`. One driver started every run, at most two at a time, none while the slice's working set (memory.current minus inactive_file) was above 9 GB (owner, 2026-10-01).
+| Skill | Claude Code | Text | Codex | Text | Records |
+|---|---|---|---|---|---|
+| ask-ai4bcm | pass (1,021 words after the owner's cut) | 0bd09b1 | not run | | `ask-ai4bcm/g2-claude-code.md` |
+| prepare-bia | pass (gap-row ruling) | 8e8b421 | pass | c332ccc | `prepare-bia/g2-*.md` |
+| learn-bcm | pass | 8e8b421 | fail: case 2 drafts a note for the auditor | c332ccc | `learn-bcm/g2-*.md` |
+| challenge-my-plan | pass | 8e8b421 | fail: case 1, round 2 asks round-1 questions again | c332ccc | `challenge-my-plan/g2-*.md` |
+| red-team-assumptions | pass | 8e8b421 | fail: case 3 refuses for the sandbox's reason, not the rule | c332ccc | `red-team-assumptions/g2-*.md` |
+| check-against-bia | pass (side-note ruling) | 8e8b421 | fail: 1b variant skips the plans question | 437417b | `check-against-bia/g2-*.md` |
+| check-my-ai-tool | pass | 8e8b421 | fail: 6b finds the skill by file search and uses it | 437417b | `check-my-ai-tool/g2-*.md` |
+| role-card | pass (cite-row ruling) | c332ccc | not run | | `role-card/g2-claude-code.md` |
+| check-against-standards | pass (stamp ruling) | c332ccc | not run | | `check-against-standards/g2-claude-code.md` |
+| debrief-to-action | **not yet passed** (owner: ship as such) | c332ccc | not run | | `debrief-to-action/g2-claude-code.md` |
+
+Each skill's text is unchanged from the commit named up to HEAD, unless a later row says otherwise. The owner's case rulings of
+2026-10-01 and 2026-10-02 are written into each `cases.md` and into `evals/README.md`. Runs: `<skill>/runs/sweep-<commit>/` and
+`<skill>/runs/codex-sweep-<commit>/`. One driver started every run, with at most two `claude -p` runs at a time (four on the box)
+and two Codex runs, and none while the slice's working set (memory.current minus inactive_file) was above 9 GB (owner,
+2026-10-01). Codex ran with its default model gpt-6.1-sol, a read-only sandbox and web search off, the ten packaged skills in
+the working folder's `.agents/skills/`.
 
 ## Claude Code (2.1.284, `--plugin-dir`, `--setting-sources project`, reads allowed, no write or shell tools)
 
