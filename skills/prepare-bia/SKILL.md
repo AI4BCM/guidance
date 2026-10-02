@@ -7,7 +7,7 @@ metadata:
   version: "2026.11.0"
 ---
 
-First run [`preflight.md`](preflight.md).
+First run [`preflight.md`](preflight.md). This is prepare-bia, version 2026.11.0.
 
 ## The one control
 
@@ -19,7 +19,7 @@ the owner confirms it." "Recovery fields stay empty in anything AI produces."
 1. **Fix the sources you will attach, and their dates.** The prompt's Intake asks the organiser, in one message, what
    the material leaves open: the interviewee's role, what they know the organiser does not, what you need back, and
    the impact criteria if none are attached, and that memory, past chats, project files, connectors and web search are switched off. Their answers go under
-   Gaps as "own statements, not sources", never a value or a Source entry; any channel left on goes under Gaps too, since "the model
+   Gaps as "own statements, not sources", never a value, and an entry only they support has Source `Gaps`; any channel left on goes under Gaps too, since "the model
    may draw on it without saying so".
 2. **Draft before interviewing (activities, resource requirements, questions, recovery fields blank).** Run the Task
    choice, then order the guide as seven numbered sections:
@@ -32,7 +32,7 @@ the owner confirms it." "Recovery fields stay empty in anything AI produces."
    7. dependencies, as their own section: "up- and downstream relationships with other departments, each recorded with
       the RTO the relationship carries".
 
-   MTPD, RTO and RPO stay empty. A single supplier, carrier or person behind a resource is a question for the activity
+   A single supplier, carrier or person behind a resource is a question for the activity
    owner, not a finding.
 3. **Interview.** Tell the owner to "use the draft as the thing to correct, not the thing to confirm; record what it
    could not have known".

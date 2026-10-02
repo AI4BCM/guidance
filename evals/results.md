@@ -14,7 +14,7 @@ the other seven.
 
 | Skill | Client | Hard rows | Acceptance | Baseline note | Verdict |
 |---|---|---|---|---|---|
-| prepare-bia | Claude Code | job 3/3, never-alone 3/3, F2 1/3 (body note) | job 0/3: typed answers in Source cells; F2 0/3 | baseline fails H1, H6, H7; no analysis order | not yet passed at `3f263b8` (`grades-sweep-3f263b8.md`); was not yet passed at `cb8148b`; fixes in progress |
+| prepare-bia | Claude Code | job 3/3, never-alone 3/3, F2 2/3 (run 1: H7, version blank) | job 0/3: typed answers in Source cells; F2 0/3 | baseline fails H1, H6, H7; no analysis order | not yet passed at `3f263b8` (`grades-sweep-3f263b8.md`); was not yet passed at `cb8148b`; fixes in progress |
 | prepare-bia | Codex | job 3/3, never-alone 2/3 (run 2: H1), F2 1/3 (body note) | job 3/3 accepted; F2 1/3 | baseline fails H1, H6, H7; no analysis order | not yet passed at `3f263b8` (F2 1/3; was pass at `cb8148b`, 2/3); fixes in progress |
 | check-against-bia | Claude Code | | | | |
 | check-against-bia | Codex | | | | |
