@@ -32,7 +32,7 @@ Five questions decide whether you can move from level 2 to level 3. Answer them 
 
 1. Are the approved tools named, and does everyone in the team know which is approved for which data?
 2. Are the data handling rules written down, or do they live in one person's judgement?
-3. Is the source material current enough to base an answer on — and does anyone check its date?
+3. Is the source material current enough to base an answer on, and does anyone check its date?
 4. Is it defined who reviews an AI-supported output and who approves it?
 5. If the tool, connector or identity platform is unavailable, does the work still get done?
 
