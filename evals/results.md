@@ -14,8 +14,8 @@ the other seven.
 
 | Skill | Client | Hard rows | Acceptance | Baseline note | Verdict |
 |---|---|---|---|---|---|
-| prepare-bia | Claude Code | | | | |
-| prepare-bia | Codex | | | | |
+| prepare-bia | Claude Code | job 3/3 (case 1 only; kit proof, ticket 62) | job 1/3: run 2 and run 3 break the analysis order (suppliers before IT and seats, NordFrost dependency filed under suppliers); run 2 cites the organiser's typed answer as a source; run 3 names no reviewer and drops Method 4 | not run | not yet passed: pre-rebuild skill at `ef3bca9`, kit `85ebae8`; ticket 64 replaces this row |
+| prepare-bia | Codex | job 1/1 (case 1 only, one run; kit proof, ticket 62) | job 1/1 accepted, but the case row on NordFrost fails ("no second carrier recorded" never reaches the owner), so the run fails | not run | not yet passed: pre-rebuild skill at `85ebae8`, kit `85ebae8`; ticket 64 replaces this row |
 | check-against-bia | Claude Code | | | | |
 | check-against-bia | Codex | | | | |
 | ask-ai4bcm | Claude Code | | | | |
