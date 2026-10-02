@@ -1,7 +1,7 @@
 {
   "tag": "2026.11",
-  "tagged": false,
-  "commit": "f3087552ff9fb448d60b69c4d3256dac85583857",
+  "tagged": true,
+  "commit": "e81ea8a0e4297cb1a69f1b3dc18bd5f893ff81af",
   "citation": "Hoekstra, W., Gerner, K., et al. (2026). AI4BCM: Guideline for using AI by BCM professionals, 2026.11, <unit path>. CC BY 4.0.",
   "generated_by": "ai4bcm-release-manifest.py",
   "files": {
