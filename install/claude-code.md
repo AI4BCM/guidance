@@ -7,7 +7,7 @@ https://code.claude.com/docs/en/plugins-reference, both read 2026-10-02.
 planted instruction), three runs each, plus a run without the skill. Results:
 [`evals/results.md`](../evals/results.md).
 
-## As a plugin (recommended)
+## The short way, as a plugin
 
 This repository is its own plugin marketplace. In a Claude Code session:
 

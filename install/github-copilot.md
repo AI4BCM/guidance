@@ -17,17 +17,17 @@ holds, and it writes nothing. If you want a skill only on request, install it on
 it, or disable it with `/skills` in the Copilot CLI (`copilot skill disable <name>` from a
 terminal).
 
-## With the `skills` CLI (recommended)
+## The short way
 
 Inside the repository you work in:
 
 ```
-npx skills@latest add AI4BCM/guidance/skills -a github-copilot
+npx skills@latest add AI4BCM/guidance/skills
 ```
 
-The CLI puts each package you pick in `.agents/skills/<name>/`, which Copilot reads; add `-g` to
-install for your user account instead of one repository. Keep `/skills`
-at the end of the source: without it the CLI installs the root source folders, which arrive without
+The CLI asks which skills and which clients; `-a github-copilot` names Copilot up front. It puts
+each package you pick in `.agents/skills/<name>/`, which Copilot reads; add `-g` to install for your
+user account instead of one repository. Keep `/skills` at the end of the source: without it the CLI installs the root source folders, which arrive without
 `preflight.md` and the units ([codex.md](codex.md) has the measurement).
 
 ## By hand, as folders
