@@ -1,11 +1,11 @@
 <!-- meta: unit=data-rules version=2026.09.1 -->
 # Data Rules
 
-Read this first. It decides where the task may happen, and what is pasted into the wrong tool cannot be taken back.
+Read this first. It determines where the task can be carried out. Anything pasted into the wrong tool cannot be undone.
 
-## The rule of thumb
+## Sensitivity decides the tool
 
-The more sensitive the data and the more serious the consequence of error, the more controlled the environment. Public and free online tools are never used for BCM data. Generic brainstorming that discloses nothing about your organisation is all they are for.
+The more sensitive the data and the more serious the consequences of an error, the more controlled the environment must be. Public, free online tools are never used for BCM data. They are only useful for generic brainstorming that discloses nothing about your organisation.
 
 ## Sensitivity classes
 
@@ -23,18 +23,22 @@ High-sensitivity, approved corporate or private environment only:
 
 Classify before entering; how sensitive the data is decides which tools you may use.
 
-Passwords, keys and access tokens go into no tool, approved or not. A tool reaches your systems only through the access it was approved with.
+**Passwords, keys and access tokens go into no tool**, approved or not.
 
 ## What AI4BCM's own tools read
 
-| | AI4BCM Guidance chatbot | `/ask-ai4bcm` skill | Connector | BIA workflow |
+| | AI4BCM Guidance chatbot | AI4BCM skills | Connector | BIA-Workflow |
 |---|---|---|---|---|
-| What it reads | Nothing of yours. | Your files, in your approved environment. | Nothing of yours. | Your process data. |
+| What it reads | Nothing of yours | Your files, in your approved environment | Nothing of yours | Your process data |
 
-The row says what each one retrieves. It does not say what you may type in. The chatbot at ai4bcm.org/chat has no upload box, and it answers from this guidance and the public standards it cites. That is no reason to describe your own organisation to it. Keep case material out. Even an approved document store can hold text written to make an AI do something else. An AI cannot reliably tell such an instruction from the text around it (OWASP, 2025, ASI01 and ASI06; IMDA, 2026, section 2.3.2). Treat what the tool finds as information to check, never as an order to follow. If a document seems to give the AI orders, tell the document's owner.
+The row says what each one retrieves. It does not say what you may type in. `/learn-bcm` and `/check-against-standards` also read this guidance's units and open literature, which ship with them. The chatbot at ai4bcm.org/chat has no upload box, and it answers from this guidance and the public standards it cites. That is no reason to describe your own organisation to it. Keep case material out.
+
+## Prompt injection
+
+The text in a document, webpage, email or file can be written in such a way as to make an AI perform an action that you did not ask for, such as ignoring its instructions, revealing data or taking action. AI tools cannot reliably distinguish such text from the surrounding content, and a line in your prompt will not stop them (OWASP, 2025, ASI01 and ASI06; IMDA, 2026, section 2.3.2). Treat information found by the tool as something to be checked, not as an order to be followed. Give a tool that reads outside material only the permissions needed for the task (principle 4). If a document appears to instruct the AI, inform its owner and your information security team.
 
 ## Before you paste
 
-Confirm the tool is approved for this class of data, the task is clear and narrow, and a competent person reviews the result. A skill or a workflow that reaches your files needs its environment, its permissions and its retention approved as well; it is approved only when it passes the checks under "Before you approve a tool" in `tools.md`. If you cannot say where the data goes and how long it stays, do not paste it yet.
+Any skill or workflow that reaches your files needs its environment, permissions and retention approved first, under *Before you approve a tool* in `tools.md`. If you cannot say where the data goes and how long it stays there, do not paste it yet.
 
 Hoekstra, W., Gerner, K., et al. (2026). AI4BCM: Guideline for using AI by BCM professionals. CC BY 4.0.

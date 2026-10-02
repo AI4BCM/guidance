@@ -1,65 +1,69 @@
 ---
 name: ask-ai4bcm
-description: Ask which unit, prompt and level fit your BCM situation. A router over the AI4BCM guidance.
+description: Names the section, prompt, level, gate and data rule for your task, then stops.
 license: CC BY 4.0. LICENSE in the guidance repository carries the full terms.
 disable-model-invocation: true
 metadata:
-  version: "2026.09.1"
+  version: "2026.11.0"
 ---
 
 # Ask AI4BCM
 
-You don't remember fifteen units, so ask.
+You don't remember fifteen units and ten skills, so ask.
 
-This routes. Every answer names the unit to read, the prompt file to run, the level the work needs **and the gate that level turns on**, what it costs in time, and the data rules — which run before all of it. Then it hands over. It never runs a prompt itself.
-
-Give every answer in that shape. A route without its gate is a number, and a route without the data-rules line is a hope.
-
-The unit links below are relative, and they resolve when the units travel with this file, which they do in a clone of the guidance repository and in the plugin install. In a bare skill-folder install they do not, and the units are read from github.com/AI4BCM/guidance under `units/`.
+This routes, then stops. Every answer names the **skill** or prompt to run, the unit to read, the **maturity level**
+the work needs, the **gate** that level turns on, the effort, and the data rule, which runs first. It never runs a
+skill or a prompt: a skill starts only when the reader types its name. Unit links resolve in a clone or a plugin
+install; otherwise read `units/` at github.com/AI4BCM/guidance.
 
 ## The main flow: the six lifecycle stages
 
-The route most BCM work travels, in order. The worked example is one case: an organisation acquires a company in another country. The figures in the units are examples.
-
-1. **Govern** — the site is not in scope and no role exists to put it there. [`units/stages/govern.md`](units/stages/govern.md) + [`units/prompts/draft.md`](units/prompts/draft.md). Level 2, Repeatable — gate: a saved prompt, approved tools and a written data rule; Level 3, Defined, only when the use case and its sources are written down and the same question runs against the live governance repository. Forty minutes for the draft; the approval route is not forty minutes. Classify first: [`units/data-rules.md`](units/data-rules.md). ([`units/prompts/management-report.md`](units/prompts/management-report.md) is the other governance prompt; a newer practitioner learning the BCMS starts in the same unit, under **## Learning the practice**.)
-2. **Embed** — the staff have never heard the message, and not in this language. [`units/stages/embed.md`](units/stages/embed.md) + [`units/prompts/awareness.md`](units/prompts/awareness.md). Level 2 — gate: a fixed content base, a saved prompt and a named reviewer; the staff assistant is Level 3, because its sources, access control and limits must be written down and owned. Forty minutes for the script; in the case the dubbing took three weeks. Classify first: [`units/data-rules.md`](units/data-rules.md).
-3. **Analysis** — nobody has written down what the site does. [`units/stages/analysis.md`](units/stages/analysis.md). This stage has **two rungs, and most readers start on the lower one**. Classify first — this is the most sensitive material in BCM: [`units/data-rules.md`](units/data-rules.md). Workflow behind it: [`units/workflow-design.md`](units/workflow-design.md). Risk assessment is in the same unit, under **## Risk assessment** — a model proposes relevance, a person accepts the risk.
-   - **The pre-interview draft, with no connector.** [`units/prompts/bia.md`](units/prompts/bia.md), recovery fields blank. **Level 2, Repeatable** — gate: the prompt that worked is saved for reuse, approved tools are named, the data rule is written down, every prompt has a named reviewer, and outputs go through the normal approval route. Forty minutes per activity, and what comes back from the activity owners is the actual content. Start here: you do not need a connector, and every drafted resource requirement is a question for the owner, never a register entry.
-   - **BIA support over connected records.** The same unit, once retrieval reaches the live inventory. **Level 3, Defined** — gate: all five self-check questions in [`units/levels.md`](units/levels.md) answer yes with evidence. An afternoon: sources and their dates first, so the draft can be regenerated when the inventory changes.
-4. **Design** — one shipping company quietly serving both sites. [`units/stages/design.md`](units/stages/design.md) + [`units/prompts/review.md`](units/prompts/review.md). Level 3 — gate: retrieval across **both** registers with role-based access and a documented use case; one register alone does not contain the finding. An afternoon, and only once both registers are in one place. Classify first: [`units/data-rules.md`](units/data-rules.md).
-5. **Implement** — the plans now disagree with the organisation chart. [`units/stages/implement.md`](units/stages/implement.md) + [`units/prompts/review.md`](units/prompts/review.md). Level 3 — gate: retrieval over the approved plan repository, auditable; the change-triggered version is Level 4 and needs a named owner, approval gates, counted results and a tested fallback first. Forty minutes to find them; in the case the sign-off took three weeks. Classify first: [`units/data-rules.md`](units/data-rules.md).
-6. **Validate** — no exercise history here, and years of reports nobody read together. [`units/stages/validate.md`](units/stages/validate.md) + [`units/prompts/exercise.md`](units/prompts/exercise.md), once the objective is fixed. Level 3 — gate: retrieval over the controlled validation record, so the comparison re-runs after the next exercise. An afternoon. Classify first — debriefs name people: [`units/data-rules.md`](units/data-rules.md).
-
-Each stage unit closes with a **## Level** section: what the work needs, and what the next rung would take.
+1. **Govern**: scope, roles, policy. [`units/stages/govern.md`](units/stages/govern.md) + [`units/prompts/draft.md`](units/prompts/draft.md). Skill: **`/check-against-standards`** for a draft policy or BCMS records; management reporting runs [`units/prompts/management-report.md`](units/prompts/management-report.md). Level 2; gate: a saved prompt, approved tools, a written data rule. Forty minutes for the draft. Data: [`units/data-rules.md`](units/data-rules.md).
+2. **Embed**: staff knowing what to do. [`units/stages/embed.md`](units/stages/embed.md) + [`units/prompts/awareness.md`](units/prompts/awareness.md). Skill: **`/role-card`**, one approved document for one audience. Level 2; gate: a fixed content base, a saved prompt, a named reviewer. Forty minutes. Data: [`units/data-rules.md`](units/data-rules.md).
+3. **Analysis**: what an activity needs, what a disruption costs. [`units/stages/analysis.md`](units/stages/analysis.md); workflow in [`units/workflow-design.md`](units/workflow-design.md). Most readers start on the lower rung. Data: the most sensitive material in BCM, [`units/data-rules.md`](units/data-rules.md).
+   - **Before the interview, no connector.** Skill: **`/prepare-bia`** ([`units/prompts/bia.md`](units/prompts/bia.md), Task choice 1, recovery fields blank). Level 2, Repeatable; gate: a saved prompt, approved tools, a written data rule, a named reviewer. Forty minutes per activity. Afterwards the AI4BCM BIA-Workflow takes the record to a signed BIA.
+   - **Over connected records.** Level 3; gate: all five self-check questions in [`units/levels.md`](units/levels.md) answer yes with evidence. An afternoon.
+4. **Design**: choosing continuity solutions. [`units/stages/design.md`](units/stages/design.md) + [`units/prompts/review.md`](units/prompts/review.md). Skill: **`/red-team-assumptions`** on the option everyone already likes. Level 3; gate: retrieval across both registers with role-based access. An afternoon. Data: [`units/data-rules.md`](units/data-rules.md).
+5. **Implement**: writing and maintaining plans. [`units/stages/implement.md`](units/stages/implement.md) + [`units/prompts/review.md`](units/prompts/review.md). Skill: **`/check-against-bia`** for a plan or a coming change. Level 3; gate: auditable retrieval over the approved plans. Forty minutes. Data: [`units/data-rules.md`](units/data-rules.md).
+6. **Validate**: exercising and reviewing. [`units/stages/validate.md`](units/stages/validate.md) + [`units/prompts/exercise.md`](units/prompts/exercise.md). Skill: **`/debrief-to-action`** for one exercise's notes. Level 3; gate: retrieval over the controlled validation record. An afternoon. Data: debriefs name people, [`units/data-rules.md`](units/data-rules.md).
 
 ## On-ramps
 
-A starting situation that generates work, then merges onto the flow above.
+- **"I inherited forty BIAs and no requirements register."** Stage 3 with **`/prepare-bia`** per interview: [`units/stages/analysis.md`](units/stages/analysis.md) + [`units/prompts/bia.md`](units/prompts/bia.md). Level 2; gate: approved tools, a written data rule, a named reviewer. An afternoon per site. Data: [`units/data-rules.md`](units/data-rules.md).
+- **"My board wants a one-page AI policy for BCM."** [`units/principles.md`](units/principles.md) (handout: [`units/principles-a4.html`](units/principles-a4.html)), adopted through your own route with [`units/prompts/draft.md`](units/prompts/draft.md); **`/check-against-standards`** holds the draft against your frameworks. Level 2; gate: fixed sources, a named reviewer. Forty minutes. Data: [`units/data-rules.md`](units/data-rules.md).
+- **"Where do we start?"** [`units/levels.md`](units/levels.md), Where to start, by level. **No prompt file here**: the row you land on names it. Level 1 or 2; gate: an approved tool, nothing confidential in. Ten minutes. Data: [`units/data-rules.md`](units/data-rules.md).
+- **"I have three years of exercise reports."** Stage 6: [`units/stages/validate.md`](units/stages/validate.md), its Prompts read-across, then [`units/prompts/exercise.md`](units/prompts/exercise.md). Level 3; gate: retrieval over the whole set. An afternoon. Data: [`units/data-rules.md`](units/data-rules.md).
+- **"What do I hold for clause 8.4?"** **`/check-against-standards`** with your own evidence checklist and records. **No prompt file here**: the skill runs Task choice 3 in [`units/stages/validate.md`](units/stages/validate.md). Level 2; gate: the checklist in your own words, a named reviewer. An hour. Data: [`units/data-rules.md`](units/data-rules.md).
+- **"We are acquiring a company."** The main flow from the top, not from analysis: [`units/stages/govern.md`](units/stages/govern.md) + [`units/prompts/draft.md`](units/prompts/draft.md). Level 2; gate: approved tools, a written data rule, a named reviewer. Weeks in all. Data: [`units/data-rules.md`](units/data-rules.md).
+- **"Which tool may I paste this into?"** [`units/data-rules.md`](units/data-rules.md), then [`units/tools.md`](units/tools.md); the prompt pattern is [`units/prompts/README.md`](units/prompts/README.md). **No prompt needed**. Level 2; gate: the data rules are written down; until then the answer is "none yet". Ten minutes.
+- **"Which type of tool fits, and may we approve it?"** [`units/tools.md`](units/tools.md), the selection guide and Before you approve a tool. Installing these skills is such an approval. **No prompt needed**. Level 2; gate: the answers recorded with the approval. An hour. Data: [`units/data-rules.md`](units/data-rules.md).
+- **"We run this every month now. What do we keep?"** [`units/keep-it-running.md`](units/keep-it-running.md); **`/check-my-ai-tool`** drafts the record. **No prompt needed**. Level 2; gate: the card names an owner, a reviewer and a retire-when condition. An hour for the first card. Data: [`units/data-rules.md`](units/data-rules.md).
+- **Your situation is not listed.** Name the stage the work belongs to and take that route from the main flow; if it spans two, take the earlier. That route names the rest, so this entry names none of its own. Not placeable at all: [`units/principles.md`](units/principles.md) says what the guidance covers.
 
-- **"I inherited forty BIAs and no requirements register."** Stage 3: [`units/stages/analysis.md`](units/stages/analysis.md) + [`units/prompts/bia.md`](units/prompts/bia.md). Every drafted resource requirement is a question for the activity owner, never a register entry; recovery fields stay empty. **Level 2** — gate: approved tools are named, the data rule is written down, and every draft has a named reviewer. You can start this week, without a connector. Not a forty-minute job: an afternoon per site, and the register is what comes back from the owners. Write the method down as you go — that is what makes next year a re-run rather than a repeat, and it is also the step that takes you to Level 3 when retrieval reaches the live records. Classify first: [`units/data-rules.md`](units/data-rules.md).
+## Skills
 
-- **"My board wants a one-page AI policy for BCM."** What exists is a handout, and no policy: [`units/principles.md`](units/principles.md), rendered as [`units/principles-a4.html`](units/principles-a4.html) — the scope statement, five rules, the never-alone list and the eight-box checklist, published guidance to hand to the board. The policy itself is adopted through your own governance route; [`units/prompts/draft.md`](units/prompts/draft.md) fits the house wording, and the five rules stay unchanged. Level 2 — gate: fixed approved sources and a named reviewer, no connector. Forty minutes. Classify first: [`units/data-rules.md`](units/data-rules.md).
+Ten skills, one job each. Each starts only when typed, returns a draft for a named reviewer and writes nothing. Six
+are on the stages above; these four serve any stage.
 
-- **"Where do we start?"** [`units/levels.md`](units/levels.md), **## Starting guide** — one representative use and one readiness question for each of the five levels, built on the self-check above it; then the prompt or stage unit the row names. **No prompt file here** — the row you land on names yours, and that is the point of starting with the ladder rather than with a prompt. Level 1 or 2 — gate: the tool is approved and nothing confidential goes in. Ten minutes to place yourself; the first task is whatever the row names. Classify first: [`units/data-rules.md`](units/data-rules.md).
-
-- **"I have three years of exercise reports."** Stage 6: [`units/stages/validate.md`](units/stages/validate.md); the **## Prompts** section inside that unit carries the read-across that clusters recurring findings, then [`units/prompts/exercise.md`](units/prompts/exercise.md) once a theme is worth exercising. AI proposes a theme; a person makes it a finding. Level 3 — gate: retrieval over the whole set, or you have one person's sample. An afternoon. Classify first: [`units/data-rules.md`](units/data-rules.md).
-
-- **"We are acquiring a company."** The main flow from the top: [`units/stages/govern.md`](units/stages/govern.md) + [`units/prompts/draft.md`](units/prompts/draft.md), Level 2 — gate: approved tools are named, the data rule is written down and stage 1's drafts have a named reviewer; each later stage then carries its own gate. Then stages 2 to 6. Do not start at analysis because the BIA feels urgent: without the scope change nothing you draft has an owner. Weeks, not a sitting — forty minutes buys stage 1's two action lists. Classify first: [`units/data-rules.md`](units/data-rules.md).
-
-- **"Which tool may I paste this into?"** [`units/data-rules.md`](units/data-rules.md) — classes, the never-public line, what AI4BCM's own tools read; where each tool may run is in [`units/tools.md`](units/tools.md); then the pattern in [`units/prompts/README.md`](units/prompts/README.md). **No prompt needed** — this is a classification question, and the prompt comes from whichever stage the work turns out to belong to. Level 2 — gate: the data rules are written down. Until they are you are Level 1 whatever the licence says, and the answer is "none yet". Ten minutes, and it is the ten that saves the rest.
-
-- **"Which type of tool fits this task, and may we approve the tool?"** The selection guide in [`units/tools.md`](units/tools.md) pairs each stage's tasks with a type of tool and where it may run; the checklist under **Before you approve a tool** in the same unit is what a tool is approved against, licence and contract terms included. **No prompt needed** — this is a selection and approval task, and the only route here that runs no prompt at all; the prompts start once the tool is approved and the stage is chosen. Level 2 — gate: the answers are recorded with the approval. An hour with whoever owns the contract. Classify first: [`units/data-rules.md`](units/data-rules.md).
-
-- **"We run this every month now. What do we have to keep, and who needs to know?"** [`units/keep-it-running.md`](units/keep-it-running.md) — the record card that a skill or a workflow carries, the single AI-inventory line a saved prompt gets instead, the four people or teams to inform and when, the sentence that discloses AI help inside a document, and the conditions that retire it. **No prompt needed** — the thing being recorded already carries its own prompt, and this route keeps the record around it. Level 2 — gate: the card names an owner, a reviewer and a written retire-when condition before the next run; Level 3 and Level 4 ask to see that card, its dated sources and the date the evaluation cases last ran. An hour for the first card, ten minutes at each version after it. Classify first: [`units/data-rules.md`](units/data-rules.md) — the card names the sensitivity class and where the work runs.
-
-- **Your situation is not listed.** Do not pick the nearest one. Name the **lifecycle stage** the work belongs to and take that route from the main flow above: scope, roles and policy are Govern; anything about staff knowing what to do is Embed; working out what an activity needs and what a disruption costs is Analysis; choosing continuity solutions is Design; writing or maintaining the plans is Implement; exercising, testing and reviewing is Validate. The stage route you land on carries the level, the gate, the effort and the data rule, so this entry names none of its own. If the work spans two stages, take the earlier one — the later stage inherits its output, and starting late is the failure this router sees most. If you cannot place it in a stage at all, it may not be BCM work, and [`units/principles.md`](units/principles.md) carries the scope statement that says what this guidance does and does not cover.
+- **`/challenge-my-plan`** asks the hard questions about a plan you own, round by round, and gives its view only after you answer.
+- **`/red-team-assumptions`** returns, in one reply, what a paper silently relies on and the check for each. Challenge interviews you; red-team reads the paper and returns the whole list.
+- **`/learn-bcm`** teaches one part of the practice per session, then tests you. This router names a section and stops; learn-bcm teaches.
+- **`/check-my-ai-tool`** drafts the record for one skill, workflow or saved prompt. The AI4BCM skills share one card.
 
 ## Vocabulary underneath
 
-[`units/glossary.md`](units/glossary.md) is the single source for the words: BIA, MTPD, RTO, RA, RAG, LLM, connector, skill, workflow, agentic system, and the seven that the routes and the data row lean on without explaining — auditable, gate, register, repository, retrieval, role-based access, tenant. Reach for it when the **word**, not the process, is the problem. Three words belong to installing a client rather than to BCM: plugin, marketplace and MCP. They are defined where you meet them, in the install page for your client under `install/`, not here. [`units/levels.md`](units/levels.md) holds the ladder itself — three ways of working, five levels with their pitfalls, the five-question self-check that decides whether you can move from 2 to 3, and the starting guide with a representative use and a readiness question per level. [`units/references.md`](units/references.md) holds the source behind every citation in the units and the further reading, each with the question it answers; route there when the reader asks what a claim rests on.
+For a word, not a process, name the entry in [`units/glossary.md`](units/glossary.md) and stop, quoting no definition; to learn it,
+**`/learn-bcm`**. The level ladder and self-check are in [`units/levels.md`](units/levels.md); the source behind
+every citation is in [`units/references.md`](units/references.md).
+
+## After the draft
+
+Every route ends at a draft. Name the next move: the owner the unit names decides; or another skill reads the draft,
+which the reader types; or the work belongs to an earlier stage.
 
 ## Precondition
 
-[`units/data-rules.md`](units/data-rules.md) runs first, before any route above, which is why every route names it again. It decides where the task may happen, and it is the one rule you cannot recover from: what is pasted into the wrong tool cannot be unpasted.
+Classify first: [`units/data-rules.md`](units/data-rules.md) runs before any route. What is pasted into the wrong tool cannot be
+unpasted.
 
 Hoekstra, W., Gerner, K., et al. (2026). AI4BCM: Guideline for using AI by BCM professionals. CC BY 4.0.

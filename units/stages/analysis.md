@@ -3,9 +3,9 @@
 
 ## Situation
 
-Much of what Analysis needs has not been written down yet. Before the first interview, someone has to produce a candidate activity list, a set of resource requirements and a set of questions. AI can draft that first version from what your other sites already know. It cannot know what only the acquired site's staff know.
+Much of what the analysis team needs has not yet been documented. Before the first interview, a candidate activity list, a set of resource requirements and a set of questions must be produced. AI can draft the initial versions using the information from your other sites. However, it cannot know what only the acquired site's staff know.
 
-Analysis also involves some of the most sensitive material in BCM. Live BIA and risk data goes into an approved environment or nowhere.
+Analysis also involves some of the most sensitive material in BCM: live BIA and risk data must be entered into an approved environment.
 
 ## Typical AI uses
 
@@ -36,8 +36,6 @@ The one control that matters: **a resource requirement drafted by AI is only a q
 4. Compare registers across sites; put every conflict to the two owners, not to the model.
 5. Hand the register on with the confirmed and unconfirmed marks intact, so the next stage can see which entries were drafted and never challenged.
 
-The outcome of a BIA is a list of requirements. A requirement names what the activity needs to run, and states nothing about what the organisation has today.
-
 Requirements come in four classes. Once the impacts and the MTPD are settled, the interview covers people, with the skills, authorities and mandates the work needs; then seats and buildings; then IT and applications, each with its RTO and its RPO; then suppliers and other third parties.
 
 Dependencies are a separate item and keep the narrower meaning of up- and downstream relationships with other departments, each recorded with the RTO the relationship carries, so that a relationship one department records appears in the other department's BIA.
@@ -46,7 +44,7 @@ The five-stage BIA workflow (identification of scope, structured interview, conv
 
 ## Risk assessment
 
-The BIA method above does not cover the risk part of this stage. Risk assessment with AI support has a public side and an internal side. The data rule draws the line between them. You can collect public threat, regulatory and incident reporting in any approved tool. This is because it says nothing about your organisation. Once you judge relevance against your own records, the work becomes high-sensitivity. It then moves to the approved environment.
+The BIA method does not cover risk assessment. Risk assessment with AI support has public and internal aspects. The data rule distinguishes between the two. Public threat, regulatory and incident reporting data can be collected in any approved tool. This is because it contains no information about your organisation. However, once you judge relevance against your own records, the work becomes high-sensitivity. It then moves to the approved environment.
 
 | | Risk assessment with AI support |
 |---|---|
@@ -55,17 +53,17 @@ The BIA method above does not cover the risk part of this stage. Risk assessment
 | Output | a relevance note per threat. It states how certain the public evidence is. It links each point to the public source and to the internal record it touches. It ends in questions or themes for the risk owner |
 | Review boundary | a person assesses the threat, decides the treatment and accepts the risk. A model proposes relevance. It does not rate a risk, accept it or change a risk record |
 
-When a system, supplier, site or process changes, the comparison runs the other way. A workflow over approved source systems flags the risk and BIA records that the change affects. It hands them to their owners for review, on the checklist in `workflow-design.md`. The record itself changes only through the normal approval route.
-
 ## Prompts
 
 The task prompt is `prompts/bia.md`. The first choice in its Task line is the pre-interview draft that the case below uses. Its Review line names who confirms each requirement and who sets the recovery fields. The risk-assessment relevance note uses the same six-element pattern from `prompts/README.md`, with the threat evidence and the risk register as its sources and the table above as its output.
+
+Skill: `/prepare-bia` drafts the interview guide from your material.
 
 ## Case example
 
 **Prompt.** Draft the activities, resource requirements and interview questions for the acquired site. Leave recovery times blank.
 
-**Response.** Fourteen candidate activities, drawn from the four existing sites. Resource requirements listed per activity in the four classes. Thirty-one interview questions. RTO and MTPD fields left empty as instructed.
+**Response.** Fourteen candidate activities, drawn from the four existing sites. Resource requirements listed per activity in four classes (people, seats and buildings, IT and applications, and suppliers). Thirty-one interview questions. RTO and MTPD fields left empty as instructed.
 
 **What changed.** The interview guide existed before the first interview. The interviews then found that the site slaughters wild boar, seasonally, and that it matters for cash flow.
 

@@ -3,9 +3,9 @@
 
 ## Situation
 
-Embedding means explaining, over and over, to people who do not use your vocabulary. AI adapts one approved message for executives, line managers, new starters and a site that works in another language. AI writes the twentieth version as easily as the first.
+Embedding means repeatedly explaining to people who are unfamiliar with your vocabulary. AI adapts one approved message for executives, line managers, new starters and a site that works in another language. AI can produce the twentieth version as easily as the first.
 
-Success at this stage means people understand and act. Repeated AI-generated messages that read as generic reduce engagement.
+Success at this stage means that people understand and act. Repeated AI-generated messages that read as generic reduce engagement.
 
 ## Typical AI uses
 
@@ -41,6 +41,8 @@ The one control that matters: **the organisation stays the author.** Staff-facin
 ## Prompts
 
 The awareness prompt is `prompts/awareness.md`; the case below uses it to adapt the onboarding script, with the BC policy extract attached. A case note from a public incident uses the same prompt with the verified report as its only source.
+
+Skill: `/role-card` rewrites one approved document for one audience.
 
 ## Case example
 

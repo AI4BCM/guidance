@@ -37,6 +37,8 @@ the folder paths each one scans and what each does about a skill it was not aske
 - `ask-ai4bcm/` — the router, `SKILL.md`. See [ask-ai4bcm/README.md](ask-ai4bcm/README.md).
 - `install/` — installing the router in Claude Code, Codex, GitHub Copilot or ChatGPT.
   See [install/README.md](install/README.md).
+- `print/` — the print edition as PDF: the full guidance (A4) and the Quick Start handout (A5),
+  built from these units.
 - `releases/` — one manifest per release, resolving its tag to a commit and to a hash per
   citable file.
 

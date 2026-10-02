@@ -1,14 +1,14 @@
 <!-- meta: unit=references version=2026.09.1 dated=2026-09 -->
 # References and further reading
 
-The list holds three kinds of entry. A supporting citation names the passage behind a claim in these units, and the unit that carries it. Further reading comes with the question it helps answer. The third block names the standards a BCM reader is likely to work under already. None of the works below validates this guidance's five maturity levels or its framing of where teams stand; shared terms do not make a match, and no crosswalk between ladders is asserted. Every entry names the edition read, checked for a successor on 2026-09-09 and, in the third block, on 2026-09-28.
+The list holds three kinds of entry. A supporting citation names the passage behind a claim in these units, and the unit that carries it. Further reading comes with the question it helps answer. The third block names the standards a BCM reader is likely to work under already. None of the works below validates this guidance's five AI maturity levels or its framing of where teams stand; shared terms do not make a match, and no crosswalk between ladders is asserted. Every entry names the edition read, checked for a successor on 2026-09-09 and, in the third block, on 2026-09-28.
 
 ## Cited in the units
 
 | Source | Edition read | What it supports here | Where |
 |---|---|---|---|
 | ISO 22301:2019, *Security and resilience — Business continuity management systems — Requirements* | Second edition, 2019; current | The RTO definition and the BCMS definition | `glossary.md` |
-| ISO 22300:2021, *Security and resilience — Vocabulary* | 2021; not read from ISO 22300 itself, because iso.org answers 403, and its current status was not checked. The same wording stands in ISO/TS 22317:2015 and, attributed to ISO 22300:2021, in the BCI *Good Practice Guidelines* Edition 7.0 | The RPO definition | `glossary.md` |
+| ISO 22300:2025, *Security and resilience — Vocabulary* | 2025; entry 3.1.57 read on iso.org's Online Browsing Platform on 2026-10-02. It replaced ISO 22300:2021, now withdrawn | The RPO definition | `glossary.md` |
 | IMDA, [*Model AI Governance Framework for Agentic AI*](https://www.imda.gov.sg/-/media/imda/files/about/emerging-tech-and-research/artificial-intelligence/mgf-for-agentic-ai.pdf) | Version 1.5, published 20 May 2026, updated 5 June 2026; read from a held copy because the live site answers a bot challenge | Section 2.2.2 on auditing whether human oversight is effective ("Human override rate … A low rate may signal rubber-stamping behaviours"), reviewer domain expertise, denying action by default when approval infrastructure fails; section 2.3.1 on system-level controls in place of prompt-layer safeguards; section 2.3.2 on indirect prompt injection | `principles.md` 1 and 4, `data-rules.md`, `workflow-design.md` |
 | NCSC, CISA and partner agencies, [*Guidelines for Secure AI System Development*](https://www.ncsc.gov.uk/collection/guidelines-secure-ai-system-development) | Version 1.0, 27 November 2023; still the current version on the NCSC collection page; the NSA and CISA sheet *Deploying AI Systems Securely* (April 2024) is a separate document, not a successor | Secure design: "apply appropriate restrictions to the possible actions" and least privilege for AI components that trigger actions; secure development: require suppliers to meet your own standards and be ready to fail over | `principles.md` 4, `tools.md` |
 | ETSI, [*EN 304 223 V2.1.1, Securing Artificial Intelligence (SAI); Baseline Cyber Security Requirements for AI Models and Systems*](https://www.etsi.org/deliver/etsi_en/304200_304299/304223/02.01.01_60/en_304223v020101p.pdf) | European Standard, adopted 8 December 2025, published December 2025; latest version in the ETSI directory | Provision 5.1.2-6 (permissions on other systems only as required and risk assessed), 5.1.2-7 (due diligence on an external provider), 5.2.2-6 (contracts with cloud operators must support the requirements), 5.4.2-1 (log system and user actions), 5.2.2-5 (create, test and maintain an incident management and a recovery plan) | `tools.md`, `workflow-design.md` |
@@ -29,6 +29,23 @@ The list holds three kinds of entry. A supporting citation names the passage beh
 | Gerner, K. (2026). *AI Maturity Playbook for BCM*. Published by AI4BCM. CC BY 4.0 | v0.4, 2026-09-10, draft | When a BCM team wants to rate its own practice rather than pick one level. It uses the same five levels, scored separately on four axes (method and impact criteria, validation and accountability, record currency and traceability, limits and autonomy), one number per axis. Its own footnote says no organisation is "at level 3", so a single guidance level is not four playbook scores and no crosswalk between the two is asserted |
 | NCSC, [*Managing the cyber risk of agentic AI*](https://www.ncsc.gov.uk/blogs/managing-the-cyber-risk-of-agentic-ai) | Blog post, 20 August 2026; interim advice that formal guidance "will build upon, and ultimately supersede" | When an agent, not a workflow, is proposed. Controls matched to the level of autonomy, sandboxing with four network and four compute isolation levels, logs that cannot be changed, and the ability to stop the agent at once |
 | UK Government, *Artificial Intelligence Playbook for the UK Government* | as above | When a team is starting out. Ten principles, a plain account of hallucination and prompt injection, and the FCDO Services sensitivity-review case, where the tool clusters and deduplicates records and "does not remove or replace the responsibilities of the reviewer"; its reported effort figures are the department's own and do not transfer to a BIA |
+
+### Prompting and skill guides
+
+The vendors' own prompting guides.
+
+- Anthropic, *Prompting best practices*, Claude Platform Docs. <https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices>
+- Anthropic, *Reduce hallucinations*, Claude Platform Docs. <https://platform.claude.com/docs/en/test-and-evaluate/strengthen-guardrails/reduce-hallucinations>
+- Anthropic, *How to create custom skills*, Claude Help Center. <https://support.claude.com/en/articles/12512198-how-to-create-custom-skills>
+- Anthropic, *Skill authoring best practices*, Claude Platform Docs. <https://platform.claude.com/docs/en/agents-and-tools/agent-skills/best-practices>
+- OpenAI, *Prompting*, ChatGPT Learn. <https://learn.chatgpt.com/docs/prompting>
+- OpenAI, *Prompt engineering*, OpenAI API. <https://developers.openai.com/api/docs/guides/prompt-engineering>
+- OpenAI, *Skills in ChatGPT*, OpenAI Help Center. <https://help.openai.com/en/articles/20001066-skills-in-chatgpt>
+- Microsoft, *Get started writing prompts in Microsoft Copilot*, Microsoft Support. <https://support.microsoft.com/en-us/microsoft-365-copilot/get-started-writing-prompts-in-microsoft-365-copilot>
+- Microsoft, *Get better Copilot responses with great prompting*, Microsoft Support. <https://support.microsoft.com/en-us/microsoft-365-copilot/get-better-copilot-responses-with-great-prompting>
+- Microsoft, *Agent Builder in Microsoft 365 Copilot*, Microsoft Learn. <https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/agent-builder>
+- Microsoft, *Write effective instructions for declarative agents*, Microsoft Learn. <https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/declarative-agent-instructions>
+- Google, *Tips for creating custom Gems*, Gemini Apps Help. <https://support.google.com/gemini/answer/15235603?hl=en>
 
 ## Standards this guidance works alongside
 

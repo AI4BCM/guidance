@@ -59,14 +59,14 @@ def test_no_dangling_links(tmp_path):
             checked += 1
             resolved = (md.parent / target.split("#")[0]).resolve()
             assert resolved.exists(), f"{md.relative_to(built)} -> {target}"
-    assert checked >= 48, f"the router carried 48 links; only {checked} were checked"
+    assert checked >= 50, f"the router carried 50 links; only {checked} were checked"
 
 
 def test_the_router_still_carries_all_of_its_links():
     source = relative_links((REPO / "ask-ai4bcm" / "SKILL.md").read_text(encoding="utf-8"))
     packaged = relative_links((SKILL / "SKILL.md").read_text(encoding="utf-8"))
     # 46 until 2026-09-28; the keep-it-running on-ramp carries two more.
-    assert len(source) == len(packaged) == 48
+    assert len(source) == len(packaged) == 50  # 48 until the r15 sync (2026-10-02)
 
 
 def test_no_mcp_declaration_anywhere_in_the_package():

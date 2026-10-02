@@ -5,15 +5,15 @@ This guidance helps BCM professionals choose AI tools for BCM tasks, use them sa
 
 ## 1. Accountability stays human
 
-AI does not own the BCMS. A competent person must review any AI-generated output before it goes into a BCMS document, report or decision. This person must have the sources and time to reject it. If either is missing, the reviewer escalates instead of approving. Until then it is a draft, and nobody presents it as the organisation's position or record. Approval counts and override rates are worth tracking, but alone they do not show good review. A low override rate may mean approving without checking (IMDA, 2026, section 2.2.2).
+AI does not own the BCMS. Any AI-generated output must be reviewed by a competent person before it is included in a BCMS document, report or decision. This person must have the necessary resources and time to do so. If either of these is missing, the reviewer must escalate the issue instead of approving it. Until then, the output is a draft and must not be presented as the organisation's position or record. Approval counts and override rates are worth tracking, but they alone do not demonstrate effective review. A low override rate may indicate approval without checking (IMDA, 2026, section 2.2.2).
 
 ## 2. Match the tool to the sensitivity
 
-The more sensitive the information, the more controlled the AI environment. The same is true when errors have serious results. Never use public and free online tools for BCM data. This includes BIA data, risk assessment detail, incident records, vulnerabilities, contact and personnel lists, recovery strategies, supplier weaknesses, site or architecture detail, audit findings not yet cleared by the audit owner, and board papers. Classify the material before you paste it into a tool.
+The more sensitive the information, the more strictly the AI environment is controlled. The same applies when errors can have serious consequences. Never use public, free online tools for BCM data. This includes business impact analysis (BIA) data, risk assessment details, incident records, vulnerabilities, contact and personnel lists, recovery strategies, supplier weaknesses, site or architectural details, and audit findings not yet cleared by the audit owner. Classify the material before pasting it into a tool.
 
 ## 3. Sources only, state gaps, cite
 
-Bind the model to approved internal repositories and official external sources. Make it answer from those alone. Make it name what is missing instead of filling gaps. Make it cite the document behind each statement. Check the cited passage against the claim it supports. Retrieval reduces invention, but a person still reviews the output. Retrieval over a stale register spreads its old errors to more people.
+Link the model to approved internal repositories and official external sources. Ensure that it only answers from these sources. Instead of filling gaps, make it name what is missing. Ensure that it cites the document behind each statement. Check the cited passage against the claim it supports. Although retrieval reduces invention, a person still needs to review the output. Retrieval from an outdated register spreads its errors further.
 
 ## 4. What AI never does alone
 
@@ -28,7 +28,7 @@ Not allowed or tightly limited:
 - changing controlled records without review
 - interpreting law or regulation without expert review
 
-A person may draft such a statement with AI support, as long as a named person issues it. Permissions enforce these limits (IMDA, 2026, section 2.3.1; NCSC and CISA, 2023). Prompt wording only asks for them.
+With AI support, a person may draft such a statement, provided it is issued by a named person. These limits must be enforced through permissions (IMDA, 2026, section 2.3.1; NCSC and CISA, 2023).
 
 Fully prohibited, and no approval makes it acceptable:
 
@@ -39,7 +39,7 @@ Review enforces these two. A record that fails the citation check in principle 3
 
 ## 5. Value, not speed
 
-Success means better quality, ease of use, insight and governance, and work done on time. A large document that looks complete is not always useful, accurate or credible in practice. Do not generate plans in bulk.
+Success means better quality, ease of use, insight, governance and timely completion of work. A large document that appears complete is not necessarily useful, accurate or credible. Do not generate plans in bulk.
 
 ## Minimum control checklist
 

@@ -27,7 +27,9 @@ pytestmark = pytest.mark.skipif(
 # units/prompts/README.md (2026-09-29), 104 -> 105. The final-edition content pass (2026-09-29)
 # drops the 'Case studies and scheduled awareness' heading of stages/embed.md, 105 -> 104;
 # seven other headings renamed.
-EXPECTED_CHUNKS = 104
+# Synced to print r15 (2026-10-02): quick-start.md replaces checklist-card-a4.html and the
+# units carry the 2026-10-01/02 owner rounds, 104 -> 114.
+EXPECTED_CHUNKS = 114
 
 
 def test_source_constants_are_local_not_vault():

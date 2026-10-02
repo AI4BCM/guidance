@@ -98,6 +98,10 @@ def build(repo: Path, dest: Path) -> None:
     readme_unit = skill / "units" / "prompts" / "README.md"
     readme_unit.write_text(re.sub(r"(?ms)^## Further reading\n.*?(?=^Hoekstra, W\.)", "",
                                   readme_unit.read_text(encoding="utf-8")), encoding="utf-8")
+    # Since 2026-10-01 the vendor guides sit in references.md (owner: "keep the further reading in the back").
+    refs_unit = skill / "units" / "references.md"
+    refs_unit.write_text(re.sub(r"(?ms)^### Prompting and skill guides\n.*?(?=^## )", "",
+                                refs_unit.read_text(encoding="utf-8")), encoding="utf-8")
     for extra in ("principles-a4.html",):
         target = skill / "units" / extra
         if not target.exists() and (VAULT_UNITS / extra).exists():

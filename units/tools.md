@@ -17,19 +17,9 @@ No vendor is named here, on purpose. Products, licence terms and retention setti
 - **Incident notification and communication tools** — staff notification, escalation routing and communications drafts; sending stays supervised.
 - **Private or controlled model hosting** — governed access inside your own environment.
 
-## Where a tool can run
-
-| Where it runs | Suitability for BCM | Main caution |
-|---|---|---|
-| Free public service | Generic brainstorming only, no confidential content | Never use it for BCM data, internal records, incident or licensed material |
-| Individual paid service | Low-risk individual productivity, if formally approved | Better features do not mean acceptable privacy, governance or licensing |
-| Team or business subscription | Basic internal use if approved and governed | Do due diligence on access control, retention, administration and contract |
-| Enterprise or corporate licence | Often right for live BCM work | It depends on configuration, retention, identity integration, connector control and contract terms. The licence covers the platform, never the material you upload |
-| Private, self-hosted or on-premise | Highly sensitive or regulated use cases | It needs technical skill, mature governance and operational support |
-
 ## Selection guide
 
-The table shows which type of tool fits each task and where it may run. The sensitivity column says whether the data is low, medium or high in sensitivity; `data-rules.md` lists what counts as high. The environment column says where the tool runs and names no vendor. Public tools appear in the first two rows only, for material that says nothing about your organisation. Once internal detail comes in, the work moves to the approved environment.
+The table shows which type of tool fits each task and where it may run. The sensitivity column indicates whether the data is low, medium or high in sensitivity; `data-rules.md` lists what constitutes high sensitivity. The environment column indicates where the tool runs and does not name a vendor. Public tools only appear in the first two rows, for material that says nothing about your organisation. Once internal detail comes in, the work moves to the approved environment.
 
 | Stage | Task | Sensitivity | Type of tool | Where it may run |
 |---|---|---|---|---|
@@ -50,9 +40,19 @@ The table shows which type of tool fits each task and where it may run. The sens
 | Validate | Scenario, inject and debrief material; findings across exercises | high | generative assistant, retrieval over validation records, analytics for recurring findings | approved corporate environment only |
 | Validate | Evidence-gap scan against a checklist; management review narrative | medium to high | retrieval over BCMS records, BI and reporting | approved corporate environment |
 
+## Where a tool can run
+
+| Where it runs | Suitability for BCM | Main caution |
+|---|---|---|
+| Free public service | Generic brainstorming only, no confidential content | Never use it for BCM data, internal records, incident or licensed material |
+| Individual paid service | Low-risk individual productivity, if formally approved | Better features do not mean acceptable privacy, governance or licensing |
+| Team or business subscription | Basic internal use if approved and governed | Do due diligence on access control, retention, administration and contract |
+| Enterprise or corporate licence | Often right for live BCM work | It depends on configuration, retention, identity integration, connector control and contract terms. The licence covers the platform, never the material you upload |
+| Private, self-hosted or on-premise | Highly sensitive or regulated use cases | It needs technical skill, mature governance and operational support |
+
 ## Before you approve a tool
 
-A tool gets your data only after it passes these checks.
+These checks must be passed before a tool can access your data.
 
 Before you approve a tool for a class of data, check:
 
@@ -71,6 +71,6 @@ Before you approve a tool for a class of data, check:
 - compliance with internal AI policy and information classification rules
 - a date to check these answers again, at each renewal and whenever the provider changes the model
 
-An enterprise label only says where the tool runs. If you want to upload a licensed standard or a copyrighted publication, the permission comes from the licence you hold for it. What the provider keeps is set by the contract, its published retention policy and your admin settings. Read all four before the label means anything. Record the answers with the approval. In a chat app the vendor can switch or retire the model without asking, and you usually cannot pin one, so set a fixed date for the re-check as well. Self-check question 1 in `levels.md` asks whether the team knows which tool is approved for which data. Most of the list repeats the source document's Annex A4 and matches the due-diligence and contract requirements in ETSI EN 304 223 (2025, provisions 5.1.2-7 and 5.2.2-6), the four data-handling questions in the UK Government AI Playbook (2025, "Working with your organisational data"), the supply-chain and failover practice in the NCSC and CISA guidelines (2023, "Secure your supply chain") and the third-party inventory with termination plans in the SEI model (2026, section 4.11.2). You can find the full entries for these four sources in `references.md`. The provider-breach item and the re-check date go beyond Annex A4. ETSI EN 304 223 (2025, provision 5.2.2-5) asks for an AI incident management plan and a recovery plan that are created, tested and maintained, and the SEI model (2026, section 4.11.2) asks for the third-party list to be updated periodically and for third parties to be assessed against their contracts. Neither source says what a provider owes you after a breach of its own, so that term comes from the contract.
+An enterprise label only indicates where the tool is used. The provider's retention policy and admin settings determine what data is kept. Read all of them before you rely on the label. Record the answers with the approval. In a chat app, the vendor can switch or retire the model without asking, and you cannot pin one, so set a fixed date for the re-check. *Self-check* question 1 in `levels.md` asks whether the team knows which tool is approved for which data. Most of the list repeats the source document's Annex A4 and matches the due-diligence and contract requirements in ETSI EN 304 223 (2025, provisions 5.1.2-7 and 5.2.2-6), the four data-handling questions in the UK Government AI Playbook (2025, "Working with your organisational data"), the supply-chain and failover practice in the NCSC and CISA guidelines (2023, "Secure your supply chain") and the third-party inventory with termination plans in the SEI model (2026, section 4.11.2). You can find the full entries for these four sources in `references.md`. The provider-breach item and the re-check date go beyond Annex A4. ETSI EN 304 223 (2025, provision 5.2.2-5) asks for an AI incident management plan and a recovery plan that are created, tested and maintained, and the SEI model (2026, section 4.11.2) asks for the third-party list to be updated periodically and for third parties to be assessed against their contracts. Neither source says what a provider owes you after a breach of its own, so that term comes from the contract.
 
 Hoekstra, W., Gerner, K., et al. (2026). AI4BCM: Guideline for using AI by BCM professionals. CC BY 4.0.

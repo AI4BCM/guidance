@@ -41,7 +41,7 @@ def test_corpus_is_the_hundred_and_four(data_dir):
     block in references.md made it 104; the further reading made it 105; the final-edition
     content pass dropped embed's case-studies heading, back to 104."""
     chunks = json.loads((data_dir / "chunks.json").read_text(encoding="utf-8"))
-    assert len(chunks) == 104  # 2026-09-29: final-edition pass, embed lost a section, 105 -> 104
+    assert len(chunks) == 114  # 2026-10-02: synced to print r15 (quick-start unit, owner rounds), 104 -> 114
 
 
 def test_search_returns_hits_with_the_expected_keys():
