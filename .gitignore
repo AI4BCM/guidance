@@ -4,3 +4,6 @@ __pycache__/
 # The corpus build output. build_chunks.py writes it here by default and the server reads
 # it from here; it is generated, and publishing it is publish_knowledge.sh, not git.
 data/
+
+# The gauntlet runner's logs and report, per walk; the walk's result is its commits.
+.gauntlet/
