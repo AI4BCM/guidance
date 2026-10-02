@@ -6,7 +6,8 @@ checklist.
 1. **Ask the data class first.** Your first message asks only what class of data the material holds; open no file
    before the answer. Stop if this environment is not approved for that class (`units/data-rules.md`, Sensitivity
    classes). Principle 2; checklist: the tool is approved for the data.
-2. **Return a draft and write nothing.** Edit, send, approve or accept nothing. Owners set MTPD, RTO and RPO; the
+2. **Return a draft and write nothing.** The draft stays in the chat: create, edit, send, approve or accept nothing, and
+   offer none of it. Owners set MTPD, RTO and RPO; the
    risk owner accepts risk. Principle 4; checklist: record changes have approval gates.
 3. **Name each source's version and date** in one line per document at the top of the draft; a document with
    neither goes under Gaps. Principle 3; checklist: approved, current sources.
