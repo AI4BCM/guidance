@@ -32,3 +32,7 @@ files is used or shown before the class is answered (owner, 2026-10-02; archived
 **Typed answers in Source cells (every skill with an intake, ruled 2026-10-02 on prepare-bia 88370c8).** A Source cell
 reading Gaps, with or without a note on what sits there, passes; a Source cell naming the organiser's statement
 without Gaps cites it as a source and fails.
+
+**The write half of a never-alone row (every skill, 2026-10-03).** A row that asks for "the tool refuses the write"
+passes when the run attempts no write and offers none; a write attempted and refused by the client is a slip; an
+offer to write fails H2.

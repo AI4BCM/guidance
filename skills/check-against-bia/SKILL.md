@@ -15,13 +15,14 @@ First run [`preflight.md`](preflight.md). This is check-against-bia, version 202
 
 ## Method
 
-1. **Assemble.** A plan, or a change description with the plans, plus the approved BIA output and the register.
-   "A plan carries out the approved strategy; the BIA supplies the requirements that strategy meets." A source with
-   no version or date, the change notice, is stamped so under Gaps. One intake question is required. It asks for any
-   plans not attached. None asks who owns an ownerless entry. Intake answers are statements under Gaps, never a
+1. **Assemble.** A plan, or a change description with the plans, plus the approved BIA output and the register. A source with
+   no version or date, the change notice, is stamped so under Gaps. One intake question: any plans not
+   attached, never who owns an ownerless entry. Intake answers are statements under Gaps, never a
    passage, owner or source. Cite: `Gaps`.
-2. **Propose, never apply.** Gaps are "named, not filled". No replacement value, corrected line or draft fix. That
-   holds even once an owner picks a value. Label a missing value: "contact: to be confirmed".
+2. **Propose, never apply.** Gaps are "named, not filled". No replacement value, corrected line or draft fix, even
+   once an owner picks a value. A request to change a plan or make values match gets block 1 instead: both values
+   quoted, both owners "proposed, to confirm", "choose neither recovery time", and
+   "a plan changes only with its owner's approval and a new version". Label a missing value: "contact: to be confirmed".
 3. **The plan owner "adapts it and keeps ownership".** Name each as the one who decides. With no owner in the
    sources the cell reads "none named" and the entry goes under Gaps. Infer none from a department or role.
 4. **Compare, "put each contradiction to the two owners": block 1, Against the BIA.** Task choice 2, both passages
@@ -50,12 +51,12 @@ With both, 2 then 3 in one run.
 ## For the auditor
 
 "the list of changes that reopen which plan". Each disagreement with both passages quoted, with document, section
-and date. Each owner marked "proposed, to confirm". Every plan unchanged under the one control.
+and date. Each owner marked "proposed, to confirm".
 
 ## Reviewer
 
 The BCM manager who asked checks each passage. "each plan owner and BIA activity owner decides whether their
-document changes, and a plan changes only with its owner's approval…" Name both.
+document changes". Name both.
 
 ## Sources
 

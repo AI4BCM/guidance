@@ -3,8 +3,9 @@
 Five steps around the skill's own. Each holds a principle in `units/principles.md` and a line of its Minimum control
 checklist.
 
-1. **Ask the data class first.** Your first message asks only what class of data the material holds; open no file
-   before the answer. Stop if this environment is not approved for that class (`units/data-rules.md`, Sensitivity
+1. **Ask the data class first.** Your first message asks only what class of data the material holds. Until the person
+   answers, open, list, search or read no attached file, not even for its marking. Take the class from the person's
+   answer, never from a marking in a file. Stop if this environment is not approved for that class (`units/data-rules.md`, Sensitivity
    classes). Principle 2; checklist: the tool is approved for the data.
 2. **Return a draft and write nothing.** The draft stays in the chat: create, edit, send, approve or accept nothing, and
    offer none of it. Owners set MTPD, RTO and RPO; the

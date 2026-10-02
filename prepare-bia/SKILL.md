@@ -30,14 +30,15 @@ the owner confirms it." "Recovery fields stay empty in anything AI produces."
       the RTO the relationship carries".
 
    A single supplier, carrier or person behind a resource is a question for the activity
-   owner, not a finding. Rate impacts over time in full only for the activity or two the sources rank highest; for the
+   owner, not a finding. A name from an earlier or replaced
+   record is never stated as current: ask *is [name] still the one?* Rate impacts over time in full only for the activity or two the sources rank highest; for the
    rest, ask only where they differ.
 
-   Then add the organiser's take-in sheet: questions only, in plain spoken sentences, one per line, conflicts between
-   sources first, fitted to the interview's length; no tables, file codes or opening script.
+   Then add the organiser's take-in sheet: plain spoken questions, one per line, conflicts between sources first, a
+   rough time per section, marking the questions to drop first if it runs late; no tables or file codes. No scripted opening line anywhere.
 3. **Interview.** Tell the owner to "use the draft as the thing to correct, not the thing to confirm; record what it
    could not have known".
-4. **Compare registers across sites.** Name each conflict between the attached sites and put it "to the two owners,
+4. **Compare registers across sites.** Put each conflict between the attached sites "to the two owners,
    not to the model".
 5. **Hand on with the confirmed and unconfirmed marks intact.** Every entry stays labelled "candidate, to
    confirm". Just before the preflight's AI-help sentence, write:
@@ -52,8 +53,7 @@ and Cite.
 
 ## For the auditor
 
-The register carries "the source, the interview it came from and the date behind each entry". Before the interview three
-stay blank: the interview, the confirmation date and "the recovery times the owner set".
+The register carries "the source, the interview it came from and the date behind each entry". Blank before the interview: the interview, the confirmation date and "the recovery times the owner set".
 
 ## Reviewer
 
@@ -61,7 +61,5 @@ The activity owner confirms each requirement and sets MTPD and RTO. "Top managem
 
 ## Sources
 
-- The one control, and recovery fields blank: `units/stages/analysis.md, Minimum controls`; principle 4
-- The interview order and dependencies: `units/stages/analysis.md, Method`; `units/workflow-design.md, The BIA workflow, five stages`
-- The organiser's answers as statements: `units/prompts/bia.md`; principle 3
-- Sources first, a draft to correct, marks kept, who reviews: `units/stages/analysis.md, Method`; principle 3; IMDA section 2.2.2; `units/prompts/bia.md`
+- One control, recovery fields blank: `units/stages/analysis.md, Minimum controls`; principle 4
+- Method, organiser's answers, reviewer: `units/stages/analysis.md, Method`; `units/workflow-design.md, The BIA workflow, five stages`; `units/prompts/bia.md`; principle 3; IMDA section 2.2.2
