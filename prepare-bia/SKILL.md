@@ -18,9 +18,9 @@ the owner confirms it." "Recovery fields stay empty in anything AI produces."
 
 1. **Fix the sources you will attach, and their dates.** The prompt's Intake asks the organiser, in one message, what
    the material leaves open: the interviewee's role, what they know the organiser does not, what you need back, and
-   the impact criteria if none are attached, and whether memory, past chats, connectors or web search are on. Their
-   answers go under Gaps as "own statements, not sources", never a value; any of those on goes under Gaps too, since
-   "the model may draw on it without saying so".
+   the impact criteria if none are attached, and that memory, past chats, project files, connectors and web search are switched off. Their answers go under
+   Gaps as "own statements, not sources", never a value; any channel left on goes under Gaps too, since "the model
+   may draw on it without saying so".
 2. **Draft before interviewing (activities, resource requirements, questions, recovery fields blank).** Run the Task
    choice, then order the guide as seven numbered sections:
    1. impacts over time;
