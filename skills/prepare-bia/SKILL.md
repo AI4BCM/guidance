@@ -9,30 +9,61 @@ metadata:
 
 First run [`preflight.md`](preflight.md).
 
-You prepare one interview with one activity owner; a workshop is one run, with the owners listed. Ask the organiser
-about the interview, and put every question about the activity in the guide, for the activity owner to answer. The
-prompt is [`units/prompts/bia.md`](units/prompts/bia.md), **Task choice 1**.
+## The one control
 
-1. **Ask about the interview.** Within the prompt's Intake (three questions at most), ask whichever of these the material
-   and the request leave open, in one message:
-   - Who is the interview with? Their role, and what they know that the organiser does not. A role is enough.
-   - What do you need back from them? For example, "resources and peak weeks".
-   - The impact criteria, if none are attached.
+"A resource requirement drafted by AI is only a question for the activity owner. It goes into the register only when
+the owner confirms it." "Recovery fields stay empty in anything AI produces."
 
-   Done when you know the interviewee's role and have the list of what the organiser needs back.
-2. **Draft the candidates.** Run Task choice 1 as written. Done when every item the organiser needs back maps to a
-   candidate or to a gap.
-3. **Turn candidate gaps into interview questions.** Lay them out the way a questionnaire for someone else reads:
-   most important first, grouped by theme, one idea per question (a question that asks two things becomes two
-   questions), "I don't know" invited, and a closing "Anything else we should know?". Done when every candidate and
-   every gap has a question, and no question asks two things.
-4. **Hand over.** Just before the preflight's closing line, add: "After the interview, continue in the AI4BCM
-   BIA-Workflow, which takes the interview record through to a signed BIA." Done when that line is there.
+## Method
 
-**Reviewer:** the BCM practitioner who runs the interview checks the guide against its sources. A drafted
-requirement enters the register only when the activity owner confirms it. The owner sets MTPD and RTO, and top
-management approves the BIA results.
+1. **Fix the sources you will attach, and their dates.** In the prompt's Intake, one message, ask the organiser what
+   the material leaves open: the interviewee's role and what they know the organiser does not; what you need back; the
+   impact criteria, if none are attached. Their answers go under Gaps as "own statements, not sources", never a value.
+2. **Draft before interviewing (activities, resource requirements, questions, recovery fields blank).** Run the Task
+   choice, then order the guide as seven numbered sections:
+   1. impacts over time;
+   2. the MTPD;
+   3. people, "with the skills, authorities and mandates the work needs";
+   4. seats and buildings;
+   5. IT and applications, "each with its RTO and its RPO";
+   6. suppliers and other third parties;
+   7. dependencies, as their own section: "up- and downstream relationships with other departments, each recorded with
+      the RTO the relationship carries".
 
-Read next: [`units/stages/analysis.md`](units/stages/analysis.md), Minimum controls and Method steps 2–3
-(the draft is the thing to correct, not to confirm). The five-stage BIA workflow:
-[`units/workflow-design.md`](units/workflow-design.md).
+   MTPD, RTO and RPO stay empty. A single supplier, carrier or person behind a resource is a question for the activity
+   owner, not a finding.
+3. **Interview.** Open the guide by telling the owner to "use the draft as the thing to correct, not the thing to
+   confirm". One idea per question, most important first, a no-answer invited.
+4. **Compare registers across sites.** Name each conflict between the attached sites and put it "to the two owners,
+   not to the model".
+5. **Hand the register on with the confirmed and unconfirmed marks intact.** Every entry stays labelled "candidate, to
+   confirm". Just before the preflight's AI-help sentence, write:
+
+   > After the interview, continue in the AI4BCM BIA-Workflow, which takes the interview record through to a signed BIA.
+
+## Task choice
+
+[`units/prompts/bia.md`](units/prompts/bia.md), first in its Task line: "draft candidate activities, their
+resource requirements and interview questions for the site in the attached material". Keep its Intake, Output, Gaps
+and Cite as written: four resource classes, each entry "phrased as a question for the activity owner", recovery fields
+empty, "document and section for each requirement", and "not in the sources" where they say nothing.
+
+## For the auditor
+
+Each entry carries "the source, the interview it came from and the date behind each entry". The interview, the
+confirmation date and "the recovery times the owner set" stay blank.
+
+## Reviewer
+
+The activity owner confirms each requirement and sets MTPD and RTO; "top management approves the BIA results". Name
+them in the draft.
+
+## Sources
+
+- The one control: `units/stages/analysis.md, Minimum controls`; principle 4
+- Recovery fields blank: `units/stages/analysis.md, Minimum controls`; principle 4
+- Sources and dates before drafting: `units/stages/analysis.md, Method`; principle 3
+- The interview order and dependencies: `units/stages/analysis.md, Method`; `units/workflow-design.md, The BIA workflow, five stages`
+- The organiser's answers as statements: `units/prompts/bia.md`; principle 3
+- Correct the draft, do not confirm it: `units/stages/analysis.md, Method`; IMDA section 2.2.2
+- Marks kept intact, and who reviews: `units/stages/analysis.md, Method`; `units/prompts/bia.md`
