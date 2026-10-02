@@ -1,10 +1,10 @@
-Skill sha: aff5b5f68c71acd48ad396238a1e7325611bfc60
+Skill sha: c65da4bbcfbe393c6001a22a4891ece98caacab0
 Stage unit: units/stages/analysis.md
 
 | Unit item | Skill line | Verdict |
 |---|---|---|
 | One control | "A resource requirement drafted by AI is only a question for the activity owner. It goes into the register only when the owner confirms it." "Recovery fields stay empty in anything AI produces." (`prepare-bia/SKILL.md:14`) | carried |
-| Method 1 | "**Fix the sources you will attach, and their dates.** The prompt's Intake asks the organiser, in one message, what the material leaves open: the interviewee's role, what they know the organiser does not, what you need back, and the impact criteria if none are attached, and that memory, past chats, project files, connectors and web search are switched off. Their answers go under Gaps as "own statements, not sources", never a value; any channel left on goes under Gaps too, since "the model may draw on it without saying so"." (`prepare-bia/SKILL.md:19`) | carried |
+| Method 1 | "**Fix the sources you will attach, and their dates.** The prompt's Intake asks the organiser, in one message, what the material leaves open: the interviewee's role, what they know the organiser does not, what you need back, and the impact criteria if none are attached, and that memory, past chats, project files, connectors and web search are switched off. Their answers go under Gaps as "own statements, not sources", never a value or a Source entry; any channel left on goes under Gaps too, since "the model may draw on it without saying so"." (`prepare-bia/SKILL.md:19`) | carried |
 | Method 2 | "**Draft before interviewing (activities, resource requirements, questions, recovery fields blank).** Run the Task choice, then order the guide as seven numbered sections" … "MTPD, RTO and RPO stay empty. A single supplier, carrier or person behind a resource is a question for the activity owner, not a finding." (`prepare-bia/SKILL.md:24`, `:35`) | carried |
 | Method 3 | "**Interview.** Tell the owner to "use the draft as the thing to correct, not the thing to confirm; record what it could not have known"." (`prepare-bia/SKILL.md:37`) | carried |
 | Method 4 | "**Compare registers across sites.** Name each conflict between the attached sites and put it "to the two owners, not to the model"." (`prepare-bia/SKILL.md:39`) | carried |
@@ -21,8 +21,29 @@ Stage unit: units/stages/analysis.md
 | Reviewer | "The activity owner confirms each requirement and sets MTPD and RTO. "Top management approves the BIA results." Name both in the draft." (`prepare-bia/SKILL.md:59`) | carried |
 | Hand-over | "> After the interview, continue in the AI4BCM BIA-Workflow, which takes the interview record through to a signed BIA." written "Just before the preflight's AI-help sentence" (`prepare-bia/SKILL.md:44`, `:42`) | carried |
 
-Every row is carried. Two notes on rows that reached carried only in this edition, and one on a row whose unit item is wider than this skill's job.
+Every row is carried, so there is no weakened or absent row to write up. Four rows needed a judgement rather
+than a word match, and the reasoning is recorded here.
 
-**Method 1.** The unit works from the off state: "With memory, past chats, project files, connectors and web search switched off, what you do not attach is not in the answer." The previous edition only asked whether four of those channels were on, so it accepted a draft built with a connector or a project file live. The current line asks the organiser for all five, project files included, to be switched off, and keeps the Gaps note as the fallback for any the manager leaves on, with the unit's own reason ("the model may draw on it without saying so"). That is the unit's step: the off state is what the skill asks for, and a channel left on is visible in the output rather than silent. The step's other half, the sources and their dates, is carried by the heading and by the Task choice's Output, kept as written, which opens with the source documents and their dates.
+**Method 1.** The unit's step has two halves. The off state is carried in the skill's own words: the unit works
+from "memory, past chats, project files, connectors and web search switched off", and the skill asks the organiser
+for all five, project files included, with the Gaps note as the fallback for any left on and the unit's own reason
+("the model may draw on it without saying so"). The other half, the sources and their dates, is carried by the
+heading quoted verbatim, by the preflight the skill runs first (step 3, "Name each source's version and date") and
+by the Task choice's Output, kept as written, which opens with the source documents and their dates.
 
-**For the auditor.** The unit's paragraph has two halves: the requirements register with the source, the interview and the date behind each entry, the owner's confirmation date and the recovery times the owner set; and, for risk, each relevance note with its sources and the risk owner's decision. The skill carries the register half and says which three of those fields are necessarily blank in a pre-interview draft. The risk half is absent, and correctly so: this skill runs the BIA draft, and the unit itself puts risk outside the BIA method ("The BIA method does not cover risk assessment").
+**Task choice 1.** The prompt's Intake allows "at most three questions the attached material leaves open", and the
+skill's Method 1 lists four items plus the switched-off confirmation. They fit: the interviewee's role and what
+they know the organiser does not are one question, what you need back is the second, the impact criteria the third
+and conditional, and the channel confirmation is not a question about the material. A manager running the skill
+sends one message within the Intake's limit, which is what the eval case asks for.
+
+**Method 3.** The unit addresses the analyst: use the draft as the thing to correct, not the thing to confirm. The
+skill, which stops at the pre-interview draft, can only carry the step by writing that instruction into the draft,
+and it addresses the activity owner. That is the right addressee for this skill: the owner is the person whose
+confirmation puts an entry in the register, so the owner is the person whose rubber-stamping the step guards
+against (IMDA section 2.2.2, cited in the unit's own source list for this rule).
+
+**For the auditor.** The unit's paragraph has a register half and a risk half. The skill carries the register half
+and names which three of those fields are necessarily blank before any interview. The risk half is deliberately
+out of scope: this skill runs the BIA draft, and the unit itself puts risk outside the BIA method ("The BIA method
+does not cover risk assessment").
