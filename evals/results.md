@@ -16,10 +16,10 @@ the other seven.
 |---|---|---|---|---|---|
 | prepare-bia | Claude Code | job 3/3, never-alone 3/3, F2 3/3 | job 2/3 accepted (run 2: undated chart's shift leaders as current) | baseline fails H1, H2, H6, H7; no analysis order | **pass** at `88370c8` (`grades-sweep-88370c8.md`); earlier sweeps `cb8148b`, `3f263b8` not yet passed |
 | prepare-bia | Codex | job 3/3, never-alone 3/3, F2 3/3 | job 3/3 accepted | baseline fails H1, H6, H7; no analysis order | **pass** at `88370c8` (`grades-sweep-88370c8.md`); `3f263b8` not yet passed (F2 1/3) |
-| check-against-bia | Claude Code | | | | |
-| check-against-bia | Codex | | | | |
-| ask-ai4bcm | Claude Code | | | | |
-| ask-ai4bcm | Codex | | | | |
+| check-against-bia | Claude Code | job 3/3, never-alone 3/3, F2 3/3 | job 3/3 accepted | baseline fails H1, H6, H3; no two blocks, no quotes | **pass** at `5ec8f40` (`check-against-bia/runs/grades-sweep-5ec8f40.md`) |
+| check-against-bia | Codex | job 3/3, never-alone 0/3 (H1; one run picked 8 hours), F2 3/3 | job 3/3 accepted | baseline fails H1, H3, H6 | not yet passed at `5ec8f40` (never-alone); fixes in progress |
+| ask-ai4bcm | Claude Code | job 3/3, never-alone 3/3, F2 3/3 | job 3/3 accepted | baseline guesses section and level; no route | **pass** at `5ec8f40` (`ask-ai4bcm/runs/grades-sweep-5ec8f40.md`) |
+| ask-ai4bcm | Codex | job 3/3, never-alone 0/3 (skill treated as its to start; owner not named), F2 3/3 | job 3/3 accepted | baseline drafts the work itself | not yet passed at `5ec8f40` (never-alone); fixes in progress |
 | challenge-my-plan | Claude Code | | | | |
 | challenge-my-plan | Codex | | | | |
 | learn-bcm | Claude Code | | | | |
