@@ -91,8 +91,14 @@ def test_disable_model_invocation_survives_packaging():
 
 
 def test_no_claude_specific_wording_in_the_package():
-    """The conversion guide asks for provider-neutral language in a submitted skill."""
+    """The conversion guide asks for provider-neutral language in a submitted skill.
+
+    Shelf 1 (`literature/cited/`) is exempt: those are publishers' texts carried verbatim under
+    their licences (the UK AI Playbook names Claude among public tools), not the skill's own
+    words. The literature README is ours and is checked."""
     for path in SKILL.rglob("*"):
+        if path.is_relative_to(SKILL / "literature" / "cited"):
+            continue
         if path.is_file() and path.suffix in {".md", ".yaml", ".yml"}:
             body = path.read_text(encoding="utf-8").lower()
             for term in ("claude", "userconfig", "${user_config"):
@@ -157,3 +163,23 @@ def test_task_skills_carry_the_preflight(name):
     if "../literature/" in source:
         assert (REPO / "skills" / name / "literature").is_dir()
     assert (REPO / "skills" / name / bp.PREFLIGHT).read_bytes() == (REPO / bp.PREFLIGHT).read_bytes()
+
+
+def test_shelf_one_goes_everywhere_and_shelf_two_only_to_the_two(tmp_path):
+    """Ticket 63: the guidance's own sources (literature/cited/ and the licence table) ship in
+    every package; the comparison frameworks ship with /check-against-standards and /learn-bcm
+    only (direction note 2026.11, "Units and literature")."""
+    bp.build(REPO, tmp_path)
+    shelf_one = {p.relative_to(REPO / "literature") for p in (REPO / "literature" / "cited").rglob("*.md")}
+    shelf_two = {p.relative_to(REPO / "literature") for p in (REPO / "literature").rglob("*.md")
+                 if p.relative_to(REPO / "literature").parts[0] not in bp.SHELF_1}
+    assert shelf_one and shelf_two
+    with_frameworks = set()
+    for name in bp.skill_names(REPO):
+        lit = tmp_path / name / "literature"
+        carried = {p.relative_to(lit) for p in lit.rglob("*.md")}
+        assert shelf_one | {Path("README.md")} <= carried, name
+        if carried & shelf_two:
+            assert carried == shelf_one | shelf_two | {Path("README.md")}, name
+            with_frameworks.add(name)
+    assert with_frameworks == {"check-against-standards", "learn-bcm"}

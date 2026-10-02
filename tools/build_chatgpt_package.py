@@ -76,8 +76,12 @@ README_REWRITES = {
     "../install/README.md": "https://github.com/AI4BCM/guidance/blob/main/install/README.md",
 }
 
+# Shelf 1 of `literature/`: what every package carries, whatever the skill reads.
+SHELF_1 = ("README.md", "cited")
+
 # Files the archive carries beside the skill: the two manifests and the licence the citation
-# line depends on. `install/`, `units/`, `literature/` and `tools/` are repository furniture.
+# line depends on. `install/`, `units/`, `literature/` and `tools/` are repository furniture
+# at the root; each skill folder carries its own copies of the units and the literature it ships.
 ARCHIVE_EXTRAS = ("plugin.json", ".claude-plugin/plugin.json", "LICENSE")
 
 
@@ -106,9 +110,7 @@ def build_one(repo: Path, dest: Path, name: str) -> None:
     (skill / "SKILL.md").write_text(text, encoding="utf-8")
     if PREFLIGHT in text:
         shutil.copy2(repo / PREFLIGHT, skill / PREFLIGHT)
-    if reads_literature:
-        shutil.copytree(repo / "literature", skill / "literature",
-                        ignore=shutil.ignore_patterns("__pycache__"))
+    copy_literature(repo, skill / "literature", both_shelves=reads_literature)
 
     if (src / "README.md").exists():
         readme = (src / "README.md").read_text(encoding="utf-8")
@@ -129,6 +131,23 @@ def build_one(repo: Path, dest: Path, name: str) -> None:
         target = skill / "units" / extra
         if not target.exists() and (VAULT_UNITS / extra).exists():
             shutil.copy2(VAULT_UNITS / extra, target)
+
+
+def copy_literature(repo: Path, dest: Path, both_shelves: bool) -> None:
+    """Shelf 1 (the guidance's own sources, `literature/cited/`, with the licence table in
+    `literature/README.md`) goes into every package. Shelf 2, the comparison frameworks, goes
+    only into a skill that links `../literature/` itself: `/check-against-standards` and
+    `/learn-bcm` (direction note 2026.11, "Units and literature")."""
+    if both_shelves:
+        shutil.copytree(repo / "literature", dest, ignore=shutil.ignore_patterns("__pycache__"))
+        return
+    dest.mkdir(parents=True)
+    for name in SHELF_1:
+        src = repo / "literature" / name
+        if src.is_dir():
+            shutil.copytree(src, dest / name, ignore=shutil.ignore_patterns("__pycache__"))
+        else:
+            shutil.copy2(src, dest / name)
 
 
 def tree_diff(left: Path, right: Path) -> list[str]:
