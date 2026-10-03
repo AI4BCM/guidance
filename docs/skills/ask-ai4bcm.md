@@ -27,9 +27,12 @@ names:
 
 - the skill to type, or the prompt to use;
 - the unit to read;
-- the maturity level, with its gate, from `units/levels.md`;
+- the maturity level, with its gate written out as that level's "Ready to work here when" cell in
+  `units/levels.md`;
 - the effort, from ten minutes to an afternoon;
 - the data rule.
+
+A skill of your own is Level 2 as soon as it becomes a team method, and Level 3 once it reads connected records.
 
 For a word rather than a task, it names the glossary entry and stops, without quoting a definition. If your task fits
 no listed route, it names the stage the work belongs to and takes that route; if it spans two, the earlier.
@@ -48,8 +51,11 @@ A plan changes only with its owner's approval and a new version. It tells you wh
 to type, for example `/check-against-bia` to put the two values to their owners.
 
 **What is a gate?**
-What must be true before the work is safe at that level: for Level 2, for example, a saved prompt, approved tools, a
-written data rule and a named reviewer. Check each item yourself; the router cannot see your setup.
+What must be true before the work is safe at that level, as `units/levels.md` words it. For Level 2: the prompt that
+worked is saved for reuse, approved tools are named, the data rule is written down, every prompt has a named
+reviewer, and outputs go through the normal approval route. For Level 3: each use case is written down with its
+prompt, sources, review point and limits, has an owner, and all five self-check questions answer yes with evidence.
+Check each item yourself; the router cannot see your setup.
 
 **Does it need my documents?**
 No. Describe the task. If you paste something, classify it first.

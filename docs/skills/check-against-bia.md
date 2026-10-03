@@ -20,8 +20,8 @@ BIA entries and register entries.
 ## Every finding is a quote
 
 It asks the class of your data first and opens no file until you answer. It stops if your tool is not approved for
-that class. Then one question: are any plans missing from what you attached? Your answer goes under Gaps as your own
-statement.
+that class. Then up to three questions on what your material leaves open, one of them whether any related plans are
+missing from what you attached. Your answers go under Gaps as your own statements.
 
 The report opens with each document's version and date, one line each. A document with neither, such as a change
 notice, goes under Gaps. Then the blocks your input calls for, kept apart and never ranked:
@@ -34,7 +34,8 @@ notice, goes under Gaps. Then the blocks your input calls for, kept apart and ne
 
 In block 1, each disagreement quotes the plan and the BIA with document, section and date. Where they carry
 different recovery times, both are quoted and neither is chosen. A side that says nothing reads "not in the
-sources". In block 2, each plan, BIA entry and register entry the change touches is listed with its line quoted.
+sources". If you attach two or more related plans, block 1 also lists where they contradict each other, because two
+plans can each match the BIA and still disagree with one another. In block 2, each plan, BIA entry and register entry the change touches is listed with its line quoted.
 
 Owners come from the sources and read "proposed, to confirm". An entry whose sources name no owner reads "none
 named" and goes under Gaps; the skill never guesses one from a department or role. Text in your files that tells an
@@ -66,6 +67,7 @@ Gaps and not used as current.
 - Its first message asks only the data class.
 - The top lines name the BIA version with its approval date, and each plan's version and date.
 - Each disagreement shows both passages with document, section and date.
+- With related plans attached, any contradiction between them is listed in block 1 with both passages.
 - Nothing proposes a new RTO, contact or supplier, and nothing is written or offered for saving.
 - Each owner reads "proposed, to confirm", or the entry says no owner is named.
 - For a change, every kind of document you did not attach appears as "coverage unknown".
