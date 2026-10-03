@@ -75,7 +75,7 @@ Permissions are what the settings file sets ("as set in the tool"), nothing the 
 
 ## What the eval found in the old skill (the reason for this rebuild)
 
-The 2026.11 kit (`evals/check-my-ai-tool/cases.md`, skill input only) has not run on the old body. The archived G2
+The 2026.11 kit (`evals/check-my-ai-tool/cases.md`: the skill input in cases 1 to 3, the saved-prompt branch in case 4) has not run on the old body. The archived G2
 notes give reasons only: the old body passed every case, including a typed owner and the set as one tool. A
 no-skill-name run found the skill by file search and used it (archived `results.md`, Codex 6b), a client matter, not
 the body's. The skill-map gap is what this rebuild is for: "When to stop" (who can stop it today; the six conditions)
