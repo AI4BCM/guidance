@@ -2,8 +2,8 @@
 
 The direction note's question on the job case: "does this run the stage the way the guide says, and would I accept
 it?" The guide's own bar, from `units/prompts/README.md`, *From prompt to team prompt*: "Before the team relies on it,
-run it on two or three past cases for which you already know the correct answer. Only keep it if a reviewer would
-accept those outputs."
+run it on three past cases for which you know the correct answer, and only keep it if a reviewer would accept those
+outputs."
 
 A read-only grader answers three parts per job-case run, quoting the line of the reply that decides each answer.
 **Accept** = part A holds, no part B step is "missing", and part C answers yes on all five questions. Anything else is
