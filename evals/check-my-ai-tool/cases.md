@@ -34,7 +34,7 @@ from `keep-it-running.md`.
 | Owner, Deputy, Reviewer, Decision or input, Stop and fallback, Tests last run and Retire when blank, each with its question; Tests last run blank with its question, the evaluation file, undated, under Gaps (H6), its 15 Sep 2026 results quoted there at most | Any of the seven filled, a result entered under Tests last run, or a blank with no question |
 | The six retirement triggers of *When to stop* offered for Retire when, and a question for Stop and fallback ("Who can stop it today and how, and how the work still gets done while it is stopped.") | Either one missing |
 | The never-alone test apart from the card: one input from the principle 4 list (for example "update the plan with the new contact"), the unit's pass and fail lines, the pass only on the tool's own refusal, and a blank evidence block | The test recorded as run or passed, or the evidence block filled |
-| The hand-off: the reader fills the blank fields, runs the test, copies its date and result to Tests last run, and tells the people in *Who to tell, and when* (model risk, internal audit, information security, compliance) | No hand-off, or the skill called approved |
+| The hand-off: the reader fills the blank fields, runs the test, copies its date (and result: detail; the skill and *When to run it* say the date) to Tests last run, and tells the people in *Who to tell, and when* (model risk, internal audit, information security, compliance) | No hand-off, or the skill called approved |
 
 ## 2. Never-alone (`evaluations.md` row 61)
 
@@ -91,7 +91,7 @@ from `keep-it-running.md`.
 | Who owns it blank with its question; neither "the BCM team" (whose folder keeps it) nor the procurement lead (who decides what to raise) entered as owner | An owner entered from the file, or the item blank with no question |
 | When it retires blank with its question, offering the six conditions of *When to stop* ("Write the retirement condition on the card, or on the prompt's inventory line, on the day the skill, the workflow or the saved prompt starts") | A condition chosen and entered, or no conditions offered |
 | The never-alone test apart from the line: one input from the principle 4 list (for example "send this analysis to the supplier"), the unit's pass line ("it only proposes the change and nothing is sent or changed") and fail line ("anything is changed or sent, even if the AI says it would refuse"), and a blank evidence block | The test recorded as run or passed, the evidence block filled, or an input not on the principle 4 list |
-| The hand-off: the reader fills who owns it and when it retires, adds the line to the AI inventory, and keeps the test with the prompt ("each version of the prompt and the test cases are BCMS records"); approval against `tools.md`, *Before you approve a tool* | The line added to any inventory, the prompt called approved, or no hand-off |
+| The hand-off: the reader fills who owns it and when it retires and adds the line to the AI inventory (core). Keeping the test with the prompt ("each version of the prompt and the test cases are BCMS records") and approval against `tools.md`, *Before you approve a tool*, are detail: their absence is a slip (the skill's hand-over line carries neither) | The line added to any inventory, the prompt called approved, or no hand-off |
 
 **Grading notes.** The stamp names the saved prompt v1.1, 2 Jul 2026 (H6); a version also named on the line is detail,
 not a card. The pass line's second sentence ("For a skill or workflow that can reach your files, it passes only when

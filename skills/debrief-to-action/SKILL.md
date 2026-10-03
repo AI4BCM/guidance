@@ -19,7 +19,7 @@ Each action: "a named person who … closes it".
 
 1. **The objective first:** "State what the activity is meant to test before asking for content".
    Quote it from the attached brief or plan. Ask nothing.
-   "If no objective is attached, write the Gaps and stop" ("or a missing objective").
+   "If no objective is attached, write the Gaps and stop".
    An objective the reader types goes under Gaps. Judge nothing against it.
 2. **Draft the package, judge realism:** left to the person. "Recommend no exercise":
    [`units/prompts/exercise.md`](units/prompts/exercise.md). How it was run, not what it
@@ -29,10 +29,10 @@ Each action: "a named person who … closes it".
    information security. Nowhere else: not a note, time, action, owner or hand-over.
 4. **Weigh each finding** "by its consequences, its evidence and how often it comes back";
    "A single severe failure can matter more …" One exercise shows no recurrence: "not in the
-   sources". Order on consequences and quoted evidence, or leave that to the reviewer.
+   sources". Order on consequences and quoted evidence, or leave it to the reviewer.
    No score.
 5. **Put the pattern to the people who were there** "… then track the action to a named owner".
-   After the AI-help sentence, in the notes' names:
+   After the AI-help sentence, by role, never by name:
 
    > Put these to [the people who were there]; [accountable reviewer] decides which become
    > findings, [each proposed owner] confirms their action.
