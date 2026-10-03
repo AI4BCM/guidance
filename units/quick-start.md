@@ -93,3 +93,5 @@ Type /ask-ai4bcm and your task in your AI tool: it finds the right skill, prompt
 The editors share their working method, pitfalls included, with BCM teams and the advisers who support them.
 
 Konstantin Gerner, editor
+
+Hoekstra, W., Gerner, K., et al. (2026). AI4BCM: Guideline for using AI by BCM professionals. CC BY 4.0.
