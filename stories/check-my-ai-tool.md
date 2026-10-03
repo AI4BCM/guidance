@@ -27,7 +27,8 @@ line: "This is check-my-ai-tool, version 2026.11.0."
      it needs answered: Owner, Deputy, Reviewer, Decision or input, Stop and fallback, Tests last run, Retire when.
   3. **Offer what the unit gives for two blanks.** Retire when: the six conditions of *When to stop*, as the question
      ("Write the retirement condition on the card ... on the day the skill, the workflow or the saved prompt starts").
-     Stop and fallback: "Write on the card, before it runs, who can stop it today and how."
+     Stop and fallback: the card row "Who can stop it today and how, and how the work still gets done while it is
+     stopped." (r20 dropped the old "Write on the card, before it runs" sentence)
   4. **Draft the never-alone test apart from the record**: one input from the principle 4 list (the unit's examples,
      "update the plan", "send this analysis to the supplier"), the unit's "It passes when" and "It fails when" lines,
      and an evidence block left blank (date, who ran it, what the tool did, result).
