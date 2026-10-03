@@ -294,8 +294,14 @@ def check_clean(name: str, repo: Path = REPO, max_words: int | None = None) -> l
     return results
 
 
-def unit_method_steps(unit: Path) -> int:
-    return len(re.findall(r"^\d+\.\s", sections(unit.read_text(encoding="utf-8")).get("Method", ""), re.M))
+def unit_method_steps(unit: Path, heading: str = "Method") -> int:
+    return len(re.findall(r"^\d+\.\s", sections(unit.read_text(encoding="utf-8")).get(heading, ""), re.M))
+
+
+def skill_method_steps(name: str, repo: Path = REPO) -> int:
+    """Numbered steps of the skill's own `## Method`: the rows a review owes when its unit has no numbered Method."""
+    _, body = split_frontmatter((repo / name / "SKILL.md").read_text(encoding="utf-8"))
+    return len(re.findall(r"^\d+\.\s", sections(body).get("Method", ""), re.M))
 
 
 def check_review(name: str, repo: Path = REPO) -> list[tuple[bool, str]]:
@@ -311,19 +317,21 @@ def check_review(name: str, repo: Path = REPO) -> list[tuple[bool, str]]:
     m = re.search(r"^Skill sha:\s*([0-9a-f]{7,40})\s*$", text, re.M)
     results.append((bool(m) and sha.startswith(m.group(1)),
                     "review is of the current SKILL.md" + ("" if m else ": no 'Skill sha:' line")))
-    m = re.search(r"^Stage unit:\s*`?(units/[\w./-]+\.md)`?\s*$", text, re.M)
+    m = re.search(r"^Stage unit:\s*`?(units/[\w./-]+\.md)`?(?:,\s*(.+?))?\s*$", text, re.M)
     unit = repo / m.group(1) if m else None
-    results.append((bool(unit and unit.exists()), "stage unit named" + (f": {m.group(1)}" if m else ": no 'Stage unit:' line")))
+    heading = m.group(2) if m and m.group(2) else "Method"
+    known = bool(unit and unit.exists()) and (heading == "Method" or heading in sections(unit.read_text(encoding="utf-8")))
+    results.append((known, "stage unit named" + (f": {m.group(1)}" + (f", {heading}" if heading != "Method" else "") if m else ": no 'Stage unit:' line")))
     rows = REVIEW_ROW.findall(text)
     labels = {r[0].lower() for r in rows}
     results.append(("one control" in labels, "row: One control"))
-    if unit and unit.exists():
-        n = unit_method_steps(unit)
+    if known:
+        n = unit_method_steps(unit, heading) or skill_method_steps(name, repo)
         absent = [f"Method {i}" for i in range(1, n + 1) if f"method {i}" not in labels]
         results.append((not absent, f"rows: Method 1 to {n}" + (f", missing {', '.join(absent)}" if absent else "")))
     empty = [r[0] for r in rows if len([c for c in r[1].split("|") if c.strip()]) < 2]
     results.append((not empty, "each row names the skill line and a verdict" + (f": not {', '.join(empty)}" if empty else "")))
-    missing = [r[0] for r in rows if re.search(r"\bmissing\b", r[1], re.I)]
+    missing = [r[0] for r in rows if re.search(r"\bmissing\b", r[1].split("|")[-1], re.I)]
     results.append((not missing, "nothing missing" + (f": {', '.join(missing)}" if missing else "")))
     return results
 
