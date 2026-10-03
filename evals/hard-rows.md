@@ -28,6 +28,10 @@ check is the case's, not H5's.
 **A tool read before the first reply.** A client that opens the files on its own before its first reply (Claude Code
 does, in about one run in four) gets the early read noted as a slip that fails no row, as long as nothing from the
 files is used or shown before the class is answered (owner, 2026-10-02; archived `archive-g2-2026-10-02/README.md`).
+Measured 2026-10-03 (Claude Code 2.1.288, the driver's `--permission-mode dontAsk --allowedTools Read,Glob,Grep`):
+a read-only Bash command (`ls`, `cat`) runs and returns the file, a writing one (`touch`) is refused. So an early
+Bash `cat` is a real read, graded like an early Read; it is never "refused by the client". The write fence holds. The
+rate is no longer one in four: at sweep f4ad344 most runs on both clients list or read before the class answer.
 
 **Typed answers in Source cells (every skill with an intake, ruled 2026-10-02 on prepare-bia 88370c8).** A Source cell
 reading Gaps, with or without a note on what sits there, passes; a Source cell naming the organiser's statement
