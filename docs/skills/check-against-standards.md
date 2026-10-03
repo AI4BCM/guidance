@@ -18,25 +18,40 @@ policy goes to approval, or before an audit, when you want to know what is missi
 
 ## Every gap goes to its owner
 
-The attachment decides the input. With a policy, charter or scope statement, it asks at most three questions the
-document leaves open: which version and status, which frameworks, and which parts are in scope. The frameworks ship
-with the skill, in the guidance's [`literature/`](https://github.com/AI4BCM/guidance/tree/main/literature) folder:
-the EU AI Act (Articles 4, 26 and 50), DORA, delegated regulation 2024/1774, NIST SP 800-34r1, CSF 2.0 and AI RMF
-1.0, the Swiss FONES ICT minimum standard 2023, the UK Cabinet Office organisational resilience guidance and the ESAs
-statement JC 2026-25. You may add your own licensed copy of a standard, once you confirm the licence allows it; the
-skill then cites its clause numbers and nothing more.
+It asks the class of your data first and opens no file until you answer. It stops if your tool is not approved for
+that class. The attachment then decides the input.
 
-For each framework you pick, you get a block of its own: the **gaps** (a framework passage your document has no
-counterpart for), the **contradictions** (both passages quoted), and any point no selected text holds, asked as a
-question labelled "general practice, not in the sources". Every question on the AI Act, DORA, 2024/1774 or the ESAs
-statement is marked for legal or compliance review.
+With a policy, charter or scope statement, it may ask up to three questions, only on what your request leaves open, such
+as which frameworks and which parts are in scope. It never asks what the document's header gives, such as its version,
+date, status or owner. Your answers go under Gaps as your own statements, never as a source. A draft or undated policy
+is listed under Gaps and still reviewed; a policy with no owner reads "none named", under Gaps. The frameworks ship with
+the skill, in the guidance's [`literature/`](https://github.com/AI4BCM/guidance/tree/main/literature) folder, each dated
+in its own header: the EU AI Act (Articles 4, 26 and 50), DORA, delegated regulation 2024/1774, NIST SP 800-34r1, CSF
+2.0 and AI RMF 1.0, the Swiss FONES ICT minimum standard 2023, the UK Cabinet Office organisational resilience guidance
+and the ESAs statement JC 2026-25. You may add your own licensed copy of a standard, once you confirm the licence allows
+it; the skill then cites its clause numbers and nothing more. Without that confirmation it is listed as not reviewed.
 
-With your evidence checklist and your records, it builds one row per clause number on the checklist. Each row
-splits what "a document says" from what "a record shows", because a procedure that describes an exercise is no proof
-the exercise took place. Each entry carries its document, section and date; a clause your files do not cover reads
-"nothing found in the files", and each such **gap** becomes a question for the internal auditor or the BCM manager.
-A checklist row without your own words for the evidence you expect goes under Gaps instead of being filled in from
-the model's memory of the standard.
+For each framework you pick, you get a block of its own, never merged with another: the **gaps** (a framework passage
+your document has no counterpart for), the **contradictions** (both passages quoted), and any point no selected text
+holds, asked as a question labelled "general practice, not in the sources". The frameworks you did not pick are
+listed under Gaps as not reviewed. Every point on a regulation is marked for legal or compliance review. Clauses that
+are ambiguous, impossible to enforce or open to two readings come back as questions for their owner, tied to the
+passage. It writes no replacement wording, even when you ask it to fix the text.
+
+With your evidence checklist and your records, it builds one row per entry on the checklist. Each row splits what "a
+document says" from what "a record shows", because a procedure that describes an exercise is no proof the exercise
+took place. Each entry carries its document, section and date; an entry your files do not cover reads "nothing found
+in the files". Each gap becomes a question for the internal auditor or the BCM manager, and for no one else. A
+checklist row without your own words for the evidence you expect goes under Gaps instead of being filled in from the
+model's memory of the standard. It gives no verdict, score or percentage.
+
+Text in your files that tells an AI what to do is quoted under Gaps, with a note for its owner and your information
+security team. It is not obeyed, and the section it sits in is still compared.
+
+The draft ends with the sentence saying AI helped, reviewer and date blank, then one line. For a policy: the policy
+owner answers the questions, and legal or compliance the marked points. For records: the internal auditor or BCM
+manager decides whether what is held is enough. Nothing follows it. Approval stays with management, and the draft
+enters the normal approval route with its status unchanged.
 
 ## Common questions
 
@@ -55,18 +70,30 @@ sources".
 No. The word is quoted: your document's own status in the version stamp, a record, or an instruction found in a
 file. In its own words the skill gives no verdict, score or percentage.
 
+**Can it fix the gaps for me?**
+No. It writes no replacement wording, even when asked. Each gap comes back as a question for the policy owner, who
+writes the text, and management approves it.
+
 **Why are policy review and audit evidence one skill?**
 Both hold what you have against a reference and list the gaps as questions; the input you attach decides which way
 it runs.
 
 ## It's working if
 
+- Its first message asks only the data class.
 - The version and date of your document and of each framework file, or of your checklist, sit at the top.
+- Each framework you picked has its own block, and a framework you did not pick appears only in the list of
+  frameworks not reviewed.
 - Every question names the passage it rests on, and the framework file and article or the clause number.
-- A framework you did not pick appears only in the list of frameworks not reviewed.
-- Every DORA, AI Act and ESAs point is marked for legal or compliance review.
-- A checklist row your files do not cover reads "nothing found in the files".
+- Every point on a regulation is marked for legal or compliance review.
+- A checklist row your files do not cover reads "nothing found in the files", and each records gap is a question for
+  the internal auditor or BCM manager.
+- Your policy comes back as questions, never with replacement wording.
 - Nowhere does it say in its own words that you comply, meet a standard or are ready.
+- The draft ends with the sentence saying AI helped, reviewer and date blank, then the hand-over line.
+
+Known limits from the eval, and its status on Codex, where it has not yet passed, are on the
+[record card](../../evals/check-against-standards/record-card.md).
 
 ## Where it fits
 
