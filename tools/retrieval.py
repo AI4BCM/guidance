@@ -11,6 +11,19 @@ from pathlib import Path
 
 DEFAULT_DATA_DIR = Path(__file__).resolve().parent.parent / "data"  # file-relative (C15; tools/ beside data/, kb-move 02)
 TOKEN_RE = re.compile(r"[a-z0-9][a-z0-9-]{1,}", re.I)
+# English function words, dropped from a query before scoring (ranking ticket, 2026-10-03). Every
+# long chunk holds them, so they let a 4,000-word literature section outrank the unit a question
+# is about. Question words only: "use", "set" and "guidance" carry meaning here and stay.
+STOPWORDS = frozenset("""
+a an the of to in on at by for from with about as and or but if so
+is are was were be been being do does did done has have had can could should would will shall may
+might must what which who whom whose when where why how
+i me my we us our you your it its they them their this that these those there here
+not no just still also than then very too much many some any all each
+""".split())
+# A references section lists the sources a unit cites, in the unit's own words, so it matches
+# every topic it cites. Halved, it stays findable and stops outranking the unit itself.
+REFERENCE_WEIGHT = 0.5
 
 
 @dataclass
@@ -79,6 +92,7 @@ class GuidanceIndex:
         terms = tokenize(query)
         if not terms:
             return []
+        terms = [term for term in terms if term not in STOPWORDS] or terms
         unit_norm = unit.lower() if unit else None
         ot_norm = output_type.lower() if output_type else None
         rl_norm = risk_level.lower() if risk_level else None
@@ -116,6 +130,8 @@ class GuidanceIndex:
                     score += (1 + math.log(tf)) * idf
             if unit_norm and chunk.unit == unit_norm:
                 score *= 1.15
+            if chunk.section_type == "reference":
+                score *= REFERENCE_WEIGHT
             if score > 0:
                 scored.append((score / length_norm, chunk))
         scored.sort(key=lambda item: item[0], reverse=True)

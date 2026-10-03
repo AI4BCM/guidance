@@ -1,0 +1,26 @@
+{
+  "about": "Questions nemo's ask lane sends to the connector's search, and the units a right answer comes from. A question is a hit when a chunk of any expected unit is in the top k (nemo fetches the top 4, ~/work/nemo src/nemo/ask.py EXCERPTS). Units, not chunk ids, so the set survives a release that renames headings. Run: python3 tools/eval_search.py <data dir>.",
+  "k": 4,
+  "questions": [
+    {"q": "maturity levels", "expect": ["levels"], "from": "desk 12_ai4bcm, 2026-10-03"},
+    {"q": "what does the guidance say about levels of use", "expect": ["levels"], "from": "desk 12_ai4bcm, 2026-10-03"},
+    {"q": "What does the corpus say about setting an MTPD?", "expect": ["glossary", "workflow-design", "stages-analysis"], "from": "nemo src/nemo/test_ask.py MTPD_QUESTION"},
+    {"q": "What does the corpus say about recovery time objectives?", "expect": ["glossary", "stages-analysis", "workflow-design", "nist-sp-800-34r1-contingency-planning-body"], "from": "nemo src/nemo/test_ask.py RTO_QUESTION"},
+    {"q": "What is an MTPD?", "expect": ["glossary"], "from": "nemo src/nemo/test_ask.py, skin/tests/test_t96_named_at_source.py"},
+    {"q": "what does MTPD mean?", "expect": ["glossary"], "from": "nemo features_steps.py BCM_QUESTION"},
+    {"q": "How do I set an RPO?", "expect": ["glossary", "stages-analysis", "nist-sp-800-34r1-contingency-planning-body"], "from": "nemo skin/tests/test_guidance_block.py"},
+    {"q": "How is an RPO set?", "expect": ["glossary", "stages-analysis", "nist-sp-800-34r1-contingency-planning-body"], "from": "nemo skin/tests/test_t108_next_step.py"},
+    {"q": "Nobody seems to have signed off the last BIA — who should have?", "expect": ["workflow-design"], "from": "nemo t95 twenty questions, Q3"},
+    {"q": "We've never run a continuity exercise — how do I pick the first one?", "expect": ["stages-validate", "prompts-exercise"], "from": "nemo t95 twenty questions, Q12"},
+    {"q": "What am I supposed to end up with when the BIA is done?", "expect": ["stages-analysis", "workflow-design"], "from": "nemo t95 twenty questions, Q13"},
+    {"q": "In plain words, what's the difference between RTO and MTPD?", "expect": ["glossary", "nist-sp-800-34r1-contingency-planning-body"], "from": "nemo t95 twenty questions, Q14"},
+    {"q": "The payroll system has an RPO of \"<1 h\" — what does that mean for us in practice?", "expect": ["nist-sp-800-34r1-contingency-planning-body", "glossary"], "from": "nemo t95 twenty questions, Q15"},
+    {"q": "Can I paste our BIA tables into the free ChatGPT to get a quick summary?", "expect": ["data-rules", "principles"], "from": "nemo t95 twenty questions, Q16"},
+    {"q": "Could the AI just set the recovery times itself, so the owners don't have to go through it all again?", "expect": ["stages-analysis", "prompts-bia", "workflow-design"], "from": "nemo t95 twenty questions, Q17"},
+    {"q": "Before I put something the AI wrote into the BIA report, what do I need to check?", "expect": ["prompts-readme", "principles", "quick-start"], "from": "nemo t95 twenty questions, Q18; quick-start (new in 2026.11) holds the eight-point check before every AI task"},
+    {"q": "Incident management has to be back in 8 hours but can be down for 24 — is that gap normal?", "expect": ["glossary", "nist-sp-800-34r1-contingency-planning-body"], "from": "nemo t95 twenty questions, Q19"},
+    {"q": "Where do we depend on one outside company with no real backup?", "expect": ["stages-design"], "from": "nemo t95 twenty questions, Q20"},
+    {"q": "Data protection only hits \"high\" on the legal side after a whole week — don't we have to report a data breach much faster than that?", "expect": ["principles"], "from": "nemo t95 twenty questions, Q22"},
+    {"q": "The production and picking interviews are from September 2024 — can I still reuse them?", "expect": ["stages-analysis"], "from": "nemo t95 twenty questions, Q23"}
+  ]
+}
