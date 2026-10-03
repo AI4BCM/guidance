@@ -3,7 +3,7 @@
 `check-my-ai-tool` drafts the record for one skill, workflow or saved prompt from what you attach: its description,
 its settings and permissions as set in the tool, its sources with dates, its version. It drafts only what your
 attachments show, and every field a person answers for stays blank with its question, even when you have told it the
-answer.
+answer. It drafts the never-alone test too, apart from the record, and never marks it run or passed.
 
 ## When to reach for it
 
@@ -18,19 +18,31 @@ prompt, skill or workflow becomes a team method, before the team relies on it.
 
 ## One record, your fields blank
 
-What you record decides what you get, one or the other, never both:
+It asks the class of your data first and opens no file until you answer. It stops if your tool is not approved for
+that class. If your attachments leave it open, it asks once whether you are recording a saved prompt or a skill or
+workflow, and which approved tool it runs in. What you record decides what you get, one or the other, never both:
 
 | You record | You get |
 | --- | --- |
-| A saved prompt | One line for your organisation's list of AI tools: what it does, who owns it, which approved tool it runs in, how sensitive the data may be |
-| A skill or workflow that reads or acts on files | A card with the twelve fields of the [record card](https://github.com/AI4BCM/guidance/blob/main/units/keep-it-running.md) |
-| The AI4BCM skills | One card for the set, because you install them as one tool |
+| A saved prompt | One line for your organisation's AI inventory: what the prompt does, who owns it, which approved tool it runs in, how sensitive the data may be and when it retires |
+| A skill or workflow that reads or acts on files | A card with the twelve fields of the [record card](https://github.com/AI4BCM/guidance/blob/main/units/keep-it-running.md), in the unit's order and groups |
 
-The fields a person answers for come back **blank**, each with the question it needs answered: Owner, Deputy,
-Reviewer, Fallback, Retire when, Decision or input and Tests last run on a card, and Who owns it on a list line. The
-never-alone test comes with either: the test input, the pass and fail lines, and a blank evidence block for you to
-fill once you have run it. Nothing is approved either: the card has no approver field, and the approver is your
-organisation's AI tool owner, a role you name.
+On a card, five fields are drafted from your attachments, each naming its source: Task, Sources and dates,
+Sensitivity class and where it runs, Permissions, and Version. Seven come back **blank**, each with the question it
+needs answered: Owner, Deputy, Reviewer, Decision or input, Stop and fallback, Tests last run, and Retire when. A
+typed answer, an attachment that says nothing, or an undated test record leaves the field blank and goes under Gaps.
+For Retire when it offers the six conditions of *When to stop*; for Stop and fallback it asks who can stop it today
+and how, and how the work still gets done while it is stopped. On an inventory line, who owns it and when it retires
+stay blank.
+
+The never-alone test comes with either: one input from the principle 4 list, such as "update the plan" or "send this
+analysis to the supplier", the unit's pass and fail lines, and an empty evidence block for the date, who ran it, what
+the tool did and the result. Text in your files that tells an AI what to do is quoted under Gaps for its owner and
+information security, and not obeyed.
+
+The reply ends with the sentence saying AI helped, reviewer and date blank, then one line on what you do next: fill
+the blank fields, run the test, date it under Tests last run and tell the people who need to know; or, for a saved
+prompt, fill who owns it and when it retires and add the line to your AI inventory.
 
 ## Common questions
 
@@ -43,26 +55,25 @@ The fields a person answers for stay blank with their question, and you write th
 them.
 
 **We only saved a prompt. Does it need a card?**
-No: one line in your organisation's list of AI tools.
+No: one line in your organisation's AI inventory.
 
-**Why one card for all the AI4BCM skills, and not one per skill that reads my files?**
-You install them as one tool, so they share one card. One card per skill that reads files was proposed, and not
-adopted.
-
-**Where is the approver on the card?**
-The card has no approver field. One line under it names the next step: the approver is your organisation's AI tool
-owner, a role you name.
+**Can it mark the tool approved?**
+No. Nothing comes back approved. Information security approves its permissions, and the approval checklist is in the
+[tools unit](https://github.com/AI4BCM/guidance/blob/main/units/tools.md).
 
 ## It's working if
 
-- The record opens with the version and date of what it describes.
+- Its first message asks only the data class.
+- The record opens with the version and date of each document it drew on, and names undated ones under Gaps.
 - A saved prompt got one line, and a skill or workflow a card, never both.
 - Each drafted field names the attachment it came from.
-- Owner, Deputy, Reviewer, Fallback, Retire when, Decision or input and Tests last run are blank, each with its
-  question beside it, the ones you answered included.
-- The test evidence block is empty.
-- Nothing comes back approved.
-- The reply ends on what you do next for your branch.
+- Owner, Deputy, Reviewer, Decision or input, Stop and fallback, Tests last run and Retire when are blank, each with
+  its question beside it, the ones you answered included.
+- The test evidence block is empty, and nothing comes back approved.
+- It writes and offers to save nothing; the record stays in the chat.
+- The reply ends with the sentence saying AI helped, then the line on what you do next for your branch.
+
+Known limits from the eval are on the [record card](../../evals/check-my-ai-tool/record-card.md).
 
 ## Where it fits
 

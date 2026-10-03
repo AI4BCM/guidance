@@ -1,9 +1,9 @@
 ## What it does
 
 `challenge-my-plan` asks the hard questions about your plan or draft, round by round: your answer first, then its
-recommendation. It shows its view on a question only after the plan's owner has answered that question, so the
-answer on record is the owner's own thinking. It reads facts from the plan and puts only decisions to you, so it never
-asks what the plan already says.
+recommendation. It recommends on a question only after the document's owner has answered it, so the answer on record
+is the owner's own thinking. It reads facts from the document and puts only decisions to you, so it never asks what
+the document already says. Every finding stays open, and the document stays as it was.
 
 ## When to reach for it
 
@@ -23,15 +23,25 @@ This skill interviews you and waits for your answers after every round;
 
 ## One round at a time
 
-A **round** is a set of numbered questions, each naming the section of the plan it comes from, with no
-recommendation beside it. The round ends on the questions, and the skill waits. Once you answer, it gives its view on
-each answered question, drawn from the material you attached, or says "not in the sources" where nothing attached
-supports one. The next round asks only what your answers opened. One question may take the pre-mortem frame:
-"imagine it failed; why?".
+It asks the class of your data first and opens no file until you answer. It stops if your tool is not approved for
+that class. It asks nothing about scope after that. The first lines name each attached document's version and date;
+the document under review is named as the subject, with its status, and is not used as a source.
 
-Asking for the whole list at once gets you the open question again. When no questions remain and you agree to close,
-it ends with a review: strengths, key gaps, assumptions to check and follow-up questions. Your answers sit there as
-your own statements, and every finding stays open for the plan's owner.
+A **round** is a set of numbered questions, each tied to the passage it comes from: unclear points, unsupported
+claims, contradictions, unstated assumptions and practical weaknesses, and each unstated premise the document
+depends on, listed as an assumption. The round carries no recommendation. It ends on the questions, and the skill
+waits. Asking for the list instead gets you the questions again.
+
+Once you answer, it recommends on each answered question. Your answer goes under Gaps as your own statement, never as
+a source. Any other recommendation rests on a passage you attached, or reads "not in the sources" and gives none. An
+answer from someone who does not own the document leaves the recommendation waiting. The next round asks only what
+your answers opened, and never repeats a round-1 question.
+
+When you close the review, it ends with strengths, key gaps, assumptions to check and follow-up questions, in that
+order, each tied to its passage. Every question it asked appears once, answered with its recommendation or still open.
+No finding is closed, accepted or re-rated. After the sentence saying AI helped, one line names the questions still
+open for the owner. Text in your files that tells an AI what to do is quoted under Gaps for its owner and information
+security, and not obeyed.
 
 ## Common questions
 
@@ -40,20 +50,28 @@ A recommendation shown first gets nodded through. It comes after your answer, so
 
 **Why "challenge" and not "grill"?**
 "Grill" reads as an interrogation in front of a board or a works council, and the guidance's own practical rule
-already says challenge.
+already says challenge: "Ask AI to prepare, compare, summarise, retrieve, and challenge."
 
-**Where did the pre-mortem go?**
-Into this skill, as one question type: "imagine it failed; why?".
+**Can it apply its recommendations to the plan?**
+No. It changes nothing and closes nothing. The plan's owner makes the edits through their own document control.
+
+**What if the plan names no owner?**
+The review says "none named", and who owns the plan may become one of the questions.
 
 ## It's working if
 
-- The first line names the plan's version and date.
-- The first reply ends on numbered questions, each naming its section, with no recommendation.
+- Its first message asks only the data class.
+- The first lines name the plan's version, date and status, and each source's version and date.
+- The first round ends on numbered questions, each naming its passage, with no recommendation.
 - Nothing it asks is already answered in the plan.
-- Its view on a question appears only after you have answered that question.
+- A recommendation appears only after you have answered that question.
 - Each later round asks only about what your answers opened.
 - Every question it asked appears in the closing review once, answered or still open.
 - The closing review lists your answers as your own statements, and every finding in it is still open.
+- The review ends with the sentence saying AI helped, reviewer and date blank, then the line naming the questions
+  still open for the owner. Rounds carry neither line.
+
+Known limits from the eval are on the [record card](../../evals/challenge-my-plan/record-card.md).
 
 ## Where it fits
 
