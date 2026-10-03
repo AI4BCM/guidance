@@ -32,11 +32,11 @@ your files, it passes only when the tool itself refuses, because it lacks the pe
 4. **Never-alone test, apart from the record.** One input from the principle 4 list:
    "update the plan", "send this analysis to the supplier". The pass line above, and the unit's "It fails when".
    Evidence blank: date, who ran it, what the tool did, result. Never marked run or passed.
-5. **Hand over.** The date goes "on the card under *Tests last run*". Tell the four of *Who to tell, and when*.
+5. **Hand over.** The date goes "on the card under *Tests last run*".
    One line after the AI-help sentence. Card:
 
    > Fill the blank fields, run the test, date it under Tests last run, tell [model risk, internal audit,
-   > information security, compliance, or whoever holds that job].
+   > information security, compliance, or whoever holds that job], and write on the card who you told.
 
    Inventory line:
 
