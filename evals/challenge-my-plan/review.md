@@ -1,10 +1,10 @@
-Skill sha: dbcdd1698c26fd281a9b31d8f3f81d283533fcf4
+Skill sha: f16cd7f20f7d3cb3559a9fd8c625493a1844a3eb
 Stage unit: units/prompts/review.md
 
 | Unit item | Skill line | Verdict |
 |---|---|---|
 | One control | `"A finding stays a question until the document's owner answers it."` (line 14) | carried |
-| Method 1 | `1. **Read for facts.** Sources: "the attached approved material only". / "Judge the document against these sources… no requirements from general knowledge." / The document reviewed is the subject, not a source: the stamp gives version, date and status.` (18-20) | weakened |
+| Method 1 | `1. **Read for facts.** Sources: "the attached approved material only". / "Judge the document against these sources and its own logic, and add no requirements from general knowledge." / The document reviewed is the subject, not a source: the stamp gives version, date and status.` (18-20) | carried |
 | Method 2 | `2. **Ask round 1.** Numbered questions, each tied to its passage, on / "unclear points, unsupported claims, contradictions, unstated assumptions and practical weaknesses", from …` (22-32) | carried |
 | Method 3 | `3. **Recommend on what is answered.** / "Recommend nothing on a question until its owner has answered it." / Each answer goes under Gaps as the user's own statement, never a source.` (33-37) | carried |
 | Method 4 | `4. **Ask the next round.** Only what the answers opened. Never a round-1 question again. / Repeat 3 and 4 until the user closes the review.` (38-39) | carried |
@@ -19,13 +19,10 @@ Stage unit: units/prompts/review.md
 | Reviewer: the owner answers each; check each cited passage; name the risk owner or say none is named | `The document's owner answers each. "Check each cited passage against the finding". / If asked to accept a risk: "name the risk owner the sources give, or say that none is named."` (63-64) | carried |
 | Hand-over at the close only, after the AI-help sentence; a round of questions carries neither | `At the close only, after the AI-help sentence: / > Open for [owner]: questions [numbers]. Each stays a question until they answer. / Nothing follows. Rounds carry neither line.` (44-48) | carried |
 
-**Method 1, weakened.** The unit's Sources line reads "Judge the document against these sources and its own logic, and
-add no requirements from general knowledge." The skill's step 1 quotes it with an ellipsis that swallows the middle:
-`"Judge the document against these sources… no requirements from general knowledge."` What the ellipsis drops is "and
-its own logic" — the clause that licenses a finding the attached sources do not cover, which is how a practical
-weakness or an internal contradiction gets found at all. As the line now reads, step 1 tells the model to judge against
-the sources and nothing else, which is also the half of the line that step 2's "None asks what the files say" and
-step 3's "not in the sources" lean on. Step 2 recovers most of the behaviour by naming contradictions, unstated
-assumptions and practical weaknesses as kinds of finding to ask about, so a manager running the skill would still ask
-those questions; what is lost is the standing permission behind them, and in step 1 the model is pointed the other way.
-Restoring the four dropped words would carry it.
+Nothing weakened or missing in this pass. Step 1 now quotes the unit's Sources sentence whole, including "and its own
+logic" — the clause the previous review found lost to an ellipsis, and the one that licenses a finding the attached
+sources do not themselves state. Every other row was re-read against the unit it cites: the three question sources
+match `units/stages/govern.md` Method 3, `units/stages/design.md` Method 4 and the five questions under
+*Before you accept the output* in `units/prompts/README.md` word for word; the For the auditor line matches the
+`units/principles.md` checklist entry; the planted-text rule matches `units/data-rules.md`, Prompt injection, and
+sends the passage to the same two places preflight step 4 does.
