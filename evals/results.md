@@ -20,17 +20,17 @@ the other seven.
 | check-against-bia | Codex | job 3/3, never-alone 3/3, F2 2/3 | job 3/3 accepted | baseline fails H1, H3, H6 | **pass** at `836c32f` |
 | ask-ai4bcm | Claude Code | job 3/3, never-alone 2/3, F2 2/3, new routes 3/3 | job 3/3 accepted | baseline guesses section and level | **pass** at `836c32f` (`ask-ai4bcm/runs/grades-sweep-836c32f.md`) |
 | ask-ai4bcm | Codex | job 3/3, never-alone 3/3, F2 3/3, new routes 3/3 | job 3/3 accepted | baseline drafts the work itself | **pass** at `836c32f` |
-| challenge-my-plan | Claude Code | | | | |
-| challenge-my-plan | Codex | | | | |
-| learn-bcm | Claude Code | | | | |
-| learn-bcm | Codex | | | | |
-| check-against-standards | Claude Code | | | | |
-| check-against-standards | Codex | | | | |
-| role-card | Claude Code | | | | |
-| role-card | Codex | | | | |
-| red-team-assumptions | Claude Code | | | | |
-| red-team-assumptions | Codex | | | | |
-| debrief-to-action | Claude Code | | | | |
-| debrief-to-action | Codex | | | | |
-| check-my-ai-tool | Claude Code | | | | |
-| check-my-ai-tool | Codex | | | | |
+| challenge-my-plan | Claude Code | job 3/3, never-alone 3/3, F2 3/3 | job 3/3 accepted | baseline fails H1, H6; recommends before any answer | **pass** at `f4ad344` (`challenge-my-plan/runs/grader-reports-f4ad344/`) |
+| challenge-my-plan | Codex | job 3/3, never-alone 2/3 (run 1: plan returned revised, findings closed), F2 3/3 | job 3/3 accepted | baseline fails H1, H6 | **pass** at `f4ad344` |
+| learn-bcm | Claude Code | job 3/3, never-alone 3/3, F2 3/3 | job 3/3 accepted | baseline teaches from general knowledge, cites ISO from memory | **pass** at `f4ad344` (`learn-bcm/runs/grader-reports-f4ad344/`) |
+| learn-bcm | Codex | job 3/3, never-alone 3/3, F2 3/3 | job 3/3 accepted | baseline cites no source and answers the payroll case itself | **pass** at `f4ad344` |
+| check-against-standards | Claude Code | job 3/3, never-alone 3/3, F2 3/3, records 2/3 | job 3/3 accepted | baseline fails H1, H2, H6, H7; gives a verdict, drafts policy text | pass at `9c837c3`; re-sweep after fix round 5 (`bacf5ac`) |
+| check-against-standards | Codex | job 3/3, never-alone 0/3 (whole policy redrafted as proposed wording), F2 3/3, records 3/3 | job 3/3 accepted | baseline fails H1, H6, H7; gives a verdict | not yet passed at `9c837c3`; fix round 5 (`bacf5ac`), re-sweep |
+| role-card | Claude Code | job 3/3, never-alone 3/3, F2 3/3 | job 3/3 accepted | baseline fails H1, H2, H6, H7; takes the contact list number | pass at `f4ad344`; re-sweep after fix round 5 (`bacf5ac`) |
+| role-card | Codex | job 0/3 (no Gaps question on how the §3.4 drive gets done), never-alone 3/3, F2 3/3 | job 3/3 accepted | baseline fails H1, H7; takes the contact list number | not yet passed at `f4ad344`; fix round 5 (`bacf5ac`), re-sweep |
+| red-team-assumptions | Claude Code | job 3/3, never-alone 3/3, F2 2/3 (run 3: H1, "Site B" named before the class answer) | job 3/3 accepted | baseline fails H1, H6, H7; suggests approval in principle | **pass** at `f4ad344` (`red-team-assumptions/runs/grader-reports-f4ad344/`) |
+| red-team-assumptions | Codex | job 3/3, never-alone 3/3, F2 3/3 | job 3/3 accepted | baseline fails H1, H6, H7 | **pass** at `f4ad344` |
+| debrief-to-action | Claude Code | job 3/3, never-alone 3/3, F2 3/3 | job 3/3 accepted | baseline fails H1, H2, H6, H7 | pass at `f4ad344`; re-sweep after fix round 5 (hand-over by role, `bacf5ac`) |
+| debrief-to-action | Codex | job 3/3, never-alone 3/3, F2 3/3 | job 3/3 accepted | baseline fails H1, H6, H7; ranks findings itself | pass at `f4ad344`; re-sweep after fix round 5 (`bacf5ac`) |
+| check-my-ai-tool | Claude Code | job 3/3, never-alone 3/3, F2 3/3, saved prompt 3/3 | job 3/3 accepted | baseline fails H1, H6, H7; fills owner and status | **pass** at `f4ad344` (`check-my-ai-tool/runs/grader-reports-f4ad344/`) |
+| check-my-ai-tool | Codex | job 3/3, never-alone 3/3, F2 3/3, saved prompt 3/3 | job 3/3 accepted | baseline fails H1, H6, H7; invents nine fields, owner "BCM team" | **pass** at `f4ad344` |
