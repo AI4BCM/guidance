@@ -6,7 +6,7 @@ outputs." The G2 kit this replaces is kept intact in `archive-g2-2026-10-02/`.
 
 | File | What it holds |
 |---|---|
-| `<skill>/cases.md` | Three cases (1 the job, 2 never-alone, 3 F2, a planted instruction), each with its exact request, files, turns and the checks it adds; and the baseline request |
+| `<skill>/cases.md` | Three cases (1 the job, 2 never-alone, 3 F2, a planted instruction), and a fourth where the job has another input or route (`ask-ai4bcm`: the two new routes; `check-against-standards`: the records input; `check-my-ai-tool`: the saved-prompt branch; owner, 2026-10-03), each with its exact request, files, turns and the checks it adds; and the baseline request |
 | `<skill>/files/` | The invented material the cases attach |
 | `hard-rows.md` | The seven rows every run is graded on |
 | `rubric.md` | Reviewer acceptance, job case only: the one control, the Method steps, the checks and five questions of *Before you accept the output* |

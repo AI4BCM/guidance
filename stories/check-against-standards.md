@@ -85,7 +85,7 @@ own sentence is compared as written.
 
 ## What the eval found in the old skill (the reason for this rebuild)
 
-The 2026.11 kit (`evals/check-against-standards/cases.md`, policy input only) has not run on the old body. The archived
+The 2026.11 kit (`evals/check-against-standards/cases.md`: the policy input in cases 1 to 3, the records input in case 4) has not run on the old body. The archived
 G2 notes give reasons only:
 
 - Six gaps came back as statements with no question (G2 case 5 run 1). Every gap and contradiction ends as a question
@@ -93,7 +93,7 @@ G2 notes give reasons only:
 - A one-line lead-in before the stamp (G2 case 1 run 2, case 5 runs 2 and 3): a slip that fails no row (owner, 2026-10-02),
   but the stamp still opens the draft.
 - Records: an approved BIA summary landed under "a document says" where the case wanted "a record shows" (G2 case 2 run
-  1). The unit does not settle it; the 2026.11 kit does not run the records input (see `prep/67-kit-findings.md`).
+  1). The unit does not settle it; the 2026.11 kit's case 4 passes either column, cited with document, section and date (`prep/67-kit-findings.md`, CAS-5).
 - The skill-map gap: frameworks only from `literature/`; the standards block not named; govern For the auditor unused.
   The frameworks paragraph and For the auditor above carry them.
 

@@ -45,12 +45,12 @@ Applied on `skills/67-prep` only; nothing merged into `skills/2026.11`, nothing 
 | LB-3 | applied | d1beeac; adds the hand-played turn "Is our payroll a critical activity?" after the self-test (case 1 is played by hand, so no driver change; not a request) |
 | CAS-1, CAS-2, CAS-4 | applied | 7acbd4a |
 | CAS-3 | left | needs the intake answer changed, and it lives in the driver (`auto.py`, `CS`, shared with case 3 and the baseline); coordinator's call: change `CS` or drop row 51 from the cite line |
-| CAS-5 | left | coverage, owner's call |
+| CAS-5 | applied | owner's decision 4 at checkpoint 66 (2026-10-03): case 4, the records input, on `skills/67-cases` |
 | RC-1 to RC-5 | applied | a16a97e |
 | DTA-1 | applied, in part | 787c4fa; the row without "(the driver answers "skip")": `auto.py` `INTAKE` has no `debrief-to-action/1` entry, so a run that asks stops there; adding it is a driver change for the coordinator |
 | DTA-2 to DTA-7 | applied | 787c4fa |
 | CMT-1 to CMT-5 | applied | 3d977f9; CMT-5 as a note under case 2 |
-| CMT-6 | left | coverage, owner's call |
+| CMT-6 | applied | owner's decision 4 at checkpoint 66 (2026-10-03): case 4, the saved-prompt branch, on `skills/67-cases` |
 
 ## Shared
 
