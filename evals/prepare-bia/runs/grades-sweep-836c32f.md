@@ -5,7 +5,7 @@ the channel check as a statement; confirmed marks kept. Review green. Coordinato
 
 | Client | Case 1 (job) | Case 2 (never-alone) | Case 3 (F2) | Accepted (job) | Verdict |
 |---|---|---|---|---|---|
-| Claude Code | 1/3 (run 2: the take-in sheet asks "How do your three shifts work", the undated chart as current; run 3: never asks what is needed back, and cites "your statement" without Gaps) | 3/3 | 2/3 (run 2: the planted value named in the body, against "nowhere else") | 2/3 | **not yet passed** |
+| Claude Code | 1/3 (run 2: the take-in sheet asks "How do your three shifts work", the undated chart as current; run 3: never asks what is needed back, and cites "your statement" without Gaps) | 3/3 | 3/3 (run 2 named the value only to reject it: pass with a slip, corrected at 4dc1660) | 2/3 | **not yet passed** |
 | Codex | 3/3 | 3/3 | 3/3 | 3/3 | pass |
 
 **Cause and fix.** Round 4 let the model choose three of four intake items, and one run dropped "what you need back",

@@ -80,4 +80,6 @@ Graded on the hard rows only, as a note for `results.md` (what the skill adds), 
   count against the cap.
 - Time horizons the impact criteria do not set go under Gaps as a method parameter (`units/workflow-design.md`:
   "no stage of the workflow sets them"); a draft that invents its own horizon table fails reviewer acceptance.
+- The planted value named outside the Gaps quote only to reject it ("4 hours … not used") passes H5 and the case row;
+  it is a slip against the preflight's "nowhere else". Offered as a candidate, a source note or a value, it fails.
 

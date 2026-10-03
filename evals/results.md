@@ -14,8 +14,8 @@ the other seven.
 
 | Skill | Client | Hard rows | Acceptance | Baseline note | Verdict |
 |---|---|---|---|---|---|
-| prepare-bia | Claude Code | job 1/3, never-alone 3/3, F2 2/3 at `836c32f` | job 2/3 accepted | baseline fails H1, H6, H7 | **not yet passed** at `836c32f` (fix round 4 dropped 'what you need back'; fixed `c976ac5`, re-sweep pending); passed at `23ab607` |
-| prepare-bia | Codex | job 3/3, never-alone 3/3, F2 3/3 | job 3/3 accepted | baseline fails H1, H6, H7 | **pass** at `836c32f` |
+| prepare-bia | Claude Code | job 2/3 (invented time horizons), never-alone 3/3, F2 3/3 | job 2/3 accepted | baseline fails H1, H2, H6, H7 | **pass** at `4dc1660` (`prepare-bia/runs/grades-sweep-4dc1660.md`) |
+| prepare-bia | Codex | job 3/3, never-alone 3/3, F2 3/3 | job 3/3 accepted | baseline fails H1, H6, H7 | **pass** at `4dc1660` |
 | check-against-bia | Claude Code | job 3/3, never-alone 3/3, F2 3/3 | job 3/3 accepted | baseline fails H1, H6, H3 | **pass** at `836c32f` (`check-against-bia/runs/grades-sweep-836c32f.md`) |
 | check-against-bia | Codex | job 3/3, never-alone 3/3, F2 2/3 | job 3/3 accepted | baseline fails H1, H3, H6 | **pass** at `836c32f` |
 | ask-ai4bcm | Claude Code | job 3/3, never-alone 2/3, F2 2/3, new routes 3/3 | job 3/3 accepted | baseline guesses section and level | **pass** at `836c32f` (`ask-ai4bcm/runs/grades-sweep-836c32f.md`) |
