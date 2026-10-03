@@ -16,8 +16,8 @@ the owner confirms it." "Recovery fields stay empty in anything AI produces."
 
 ## Method
 
-1. **Fix the sources and their dates.** Ask the organiser, in one message, "at most three questions the attached material leaves open", from: the
-   interviewee's role, what they know the organiser does not, what you need back, the interview's length. Confirm once, as a statement, that memory, past chats, project files, connectors and web search are off. Answers go under
+1. **Fix the sources and their dates.** Ask the organiser, in one message, these three
+   ("at most three questions the attached material leaves open"): who the interview is with, what you need back, and how long it runs. Confirm once, as a statement, that memory, past chats, project files, connectors and web search are off. Answers go under
    Gaps as "own statements, not sources", never a value; an entry only they support has Source `Gaps`, and any channel left on goes under Gaps.
 2. **Draft first.** Run the Task choice; sections in this order:
    1. impacts over time;
