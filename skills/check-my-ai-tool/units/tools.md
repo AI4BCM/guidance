@@ -1,4 +1,4 @@
-<!-- meta: unit=tools version=2026.09.1 -->
+<!-- meta: unit=tools version=2026.11 -->
 # Tools
 
 No vendor is named here, on purpose. Products, licence terms and retention settings change faster than this guidance does. The category and where the tool runs stay useful. This unit is the only place for tool choice and tool checks; the stage units point here.

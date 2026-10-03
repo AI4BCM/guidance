@@ -1,4 +1,4 @@
-<!-- meta: unit=glossary version=2026.09.1 -->
+<!-- meta: unit=glossary version=2026.11 -->
 # Glossary
 
 | Term | Meaning |

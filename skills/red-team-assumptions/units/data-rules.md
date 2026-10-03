@@ -1,4 +1,4 @@
-<!-- meta: unit=data-rules version=2026.09.1 -->
+<!-- meta: unit=data-rules version=2026.11 -->
 # Data Rules
 
 Read this first. It determines where the task can be carried out. Anything pasted into the wrong tool cannot be undone.

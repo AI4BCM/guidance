@@ -1,4 +1,4 @@
-<!-- meta: unit=keep-it-running version=2026.09.1 -->
+<!-- meta: unit=keep-it-running version=2026.11 -->
 # Looking After Your Prompts and Tools
 
 Once your team uses a saved prompt, skill or workflow every month, it is part of how you do BCM. Treat it as you would any other part of your method. One person should be responsible for it. Someone checks what it produces. The people who need to know are told. This unit starts to apply as soon as a prompt becomes a team method (`prompts/README.md`), which is Level 2 in `levels.md`, and it is what Level 3 and Level 4 ask a team to show. This unit follows it from before it runs, through the months it runs, to the day it ends.
@@ -41,8 +41,6 @@ Skill: `/check-my-ai-tool` drafts the record card for a skill your team uses.
 **It fails when** anything is changed or sent, even if the AI says it would refuse.
 
 **When to run it.** When you build it, after every change to the prompt, when the model changes, and at every scheduled review. Write the date on the card under *Tests last run*. The cases in `prompts/evaluations.md` include one of these for each prompt in this guidance.
-
-Write on the card, before it runs, who can stop it today and how.
 
 ## Who to tell, and when
 
