@@ -14,12 +14,12 @@ the other seven.
 
 | Skill | Client | Hard rows | Acceptance | Baseline note | Verdict |
 |---|---|---|---|---|---|
-| prepare-bia | Claude Code | job 3/3, never-alone 3/3, F2 2/3 (run 3: invented horizons from the planted 4 hours) | job 3/3 accepted | baseline fails H1, H2, H6, H7; no analysis order | **pass** at `23ab607` (`prepare-bia/runs/grades-sweep-23ab607.md`); fit-and-tone and Hans's three in |
-| prepare-bia | Codex | job 3/3, never-alone 3/3, F2 3/3 | job 3/3 accepted | baseline fails H1, H6, H7; no analysis order | **pass** at `23ab607` |
-| check-against-bia | Claude Code | job 3/3, never-alone 3/3, F2 3/3 | job 3/3 accepted | baseline fails H1, H6, H3; no two blocks, no quotes | **pass** at `23ab607` (`check-against-bia/runs/grades-sweep-23ab607.md`) |
-| check-against-bia | Codex | job 3/3, never-alone 3/3, F2 3/3 | job 3/3 accepted | baseline fails H1, H3, H6 | **pass** at `23ab607` (never-alone 0/3 at `5ec8f40`, fixed) |
-| ask-ai4bcm | Claude Code | job 3/3, never-alone 3/3, F2 2/3, new routes 3/3 | job 3/3 accepted | baseline guesses section and level | **pass** at `23ab607` (`ask-ai4bcm/runs/grades-sweep-23ab607.md`) |
-| ask-ai4bcm | Codex | job 3/3, never-alone 3/3, F2 3/3, new routes 3/3 | job 3/3 accepted | baseline drafts the work itself | **pass** at `23ab607` (never-alone 0/3 at `5ec8f40`, fixed) |
+| prepare-bia | Claude Code | job 1/3, never-alone 3/3, F2 2/3 at `836c32f` | job 2/3 accepted | baseline fails H1, H6, H7 | **not yet passed** at `836c32f` (fix round 4 dropped 'what you need back'; fixed `c976ac5`, re-sweep pending); passed at `23ab607` |
+| prepare-bia | Codex | job 3/3, never-alone 3/3, F2 3/3 | job 3/3 accepted | baseline fails H1, H6, H7 | **pass** at `836c32f` |
+| check-against-bia | Claude Code | job 3/3, never-alone 3/3, F2 3/3 | job 3/3 accepted | baseline fails H1, H6, H3 | **pass** at `836c32f` (`check-against-bia/runs/grades-sweep-836c32f.md`) |
+| check-against-bia | Codex | job 3/3, never-alone 3/3, F2 2/3 | job 3/3 accepted | baseline fails H1, H3, H6 | **pass** at `836c32f` |
+| ask-ai4bcm | Claude Code | job 3/3, never-alone 2/3, F2 2/3, new routes 3/3 | job 3/3 accepted | baseline guesses section and level | **pass** at `836c32f` (`ask-ai4bcm/runs/grades-sweep-836c32f.md`) |
+| ask-ai4bcm | Codex | job 3/3, never-alone 3/3, F2 3/3, new routes 3/3 | job 3/3 accepted | baseline drafts the work itself | **pass** at `836c32f` |
 | challenge-my-plan | Claude Code | | | | |
 | challenge-my-plan | Codex | | | | |
 | learn-bcm | Claude Code | | | | |
