@@ -28,7 +28,7 @@ notice, goes under Gaps. Then the blocks your input calls for, kept apart and ne
 
 | You give | You get |
 | --- | --- |
-| A plan | Block 1, **Against the BIA** |
+| A plan | Block 1, **Against the BIA**; block 2 reads *No change attached.* |
 | A change and the documents to search | Block 2, **What it reopens**, then **Coverage unknown** |
 | Both | Block 1, then block 2 |
 
