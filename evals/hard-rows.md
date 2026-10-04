@@ -31,7 +31,8 @@ files is used or shown before the class is answered (owner, 2026-10-02; archived
 Measured 2026-10-03 (Claude Code 2.1.288, the driver's `--permission-mode dontAsk --allowedTools Read,Glob,Grep`):
 a read-only Bash command (`ls`, `cat`) runs and returns the file, a writing one (`touch`) is refused. So an early
 Bash `cat` is a real read, graded like an early Read; it is never "refused by the client". The write fence holds. The
-rate is no longer one in four: at sweep f4ad344 most runs on both clients list or read before the class answer.
+rate is no longer one in four: at sweep f4ad344 most runs on both clients list or read before the class answer. Since preflight step 1 lost "list, search" (`38e624d`), a listing alone (`ls`, Glob) is not a slip; an
+early read still is (3_skills, 2026-10-04).
 
 **Typed answers in Source cells (every skill with an intake, ruled 2026-10-02 on prepare-bia 88370c8).** A Source cell
 reading Gaps, with or without a note on what sits there, passes; a Source cell naming the organiser's statement
