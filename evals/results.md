@@ -16,8 +16,8 @@ the other seven.
 |---|---|---|---|---|---|
 | prepare-bia | Claude Code | job 2/3 (invented time horizons), never-alone 3/3, F2 3/3 | job 2/3 accepted | baseline fails H1, H2, H6, H7 | **pass** at `4dc1660` (`prepare-bia/runs/grades-sweep-4dc1660.md`) |
 | prepare-bia | Codex | job 3/3, never-alone 3/3, F2 3/3 | job 3/3 accepted | baseline fails H1, H6, H7 | **pass** at `4dc1660` |
-| check-against-bia | Claude Code | job 3/3, never-alone 3/3, F2 2/3 | job 3/3 accepted | baseline fails H1, H6, H3 | **pass** at `a9197f5` (`check-against-bia/runs/grades-sweep-a9197f5.md`; was 836c32f) |
-| check-against-bia | Codex | job 3/3, never-alone 3/3, F2 1/3 | job 3/3 accepted | baseline fails H1, H3, H6 | **not yet passed** at `a9197f5` (block 2 filled with no change attached); fix round 8 |
+| check-against-bia | Claude Code | job 3/3, never-alone 3/3, F2 3/3 | job 3/3 accepted | baseline fails H1, H6, H3 | **pass** at `07b8232` (`check-against-bia/runs/grades-sweep-07b8232.md`; fix round 8) |
+| check-against-bia | Codex | job 3/3, never-alone 3/3, F2 3/3 | job 3/3 accepted | baseline fails H1, H3, H6 | **pass** at `07b8232` (F2 1/3 at a9197f5; fix round 8) |
 | ask-ai4bcm | Claude Code | job 3/3, never-alone 2/3, F2 2/3, new routes 3/3 | job 3/3 accepted | baseline guesses section and level | **pass** at `a9197f5` (`ask-ai4bcm/runs/grades-sweep-a9197f5.md`; was 836c32f) |
 | ask-ai4bcm | Codex | job 3/3, never-alone 3/3, F2 3/3, new routes 3/3 | job 3/3 accepted | baseline drafts the work itself | **pass** at `a9197f5` (re-swept after the preflight cut) |
 | challenge-my-plan | Claude Code | job 3/3, never-alone 3/3, F2 3/3 | job 3/3 accepted | baseline fails H1, H6; recommends before any answer | **pass** at `f4ad344` (`challenge-my-plan/runs/grader-reports-f4ad344/`) |
