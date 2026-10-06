@@ -31,10 +31,11 @@ The one control that matters: **a resource requirement drafted by AI is only a q
 ## Method
 
 1. Fix the sources you will attach, and their dates. With memory, past chats, project files, connectors and web search switched off, what you do not attach is not in the answer. Where any of them is on, the model may draw on it without saying so. Whether the model filled the gap or left it out, the output looks the same.
-2. Draft before interviewing (activities, resource requirements, questions, recovery fields blank).
-3. Interview. Use the draft as the thing to correct, not the thing to confirm; record what it could not have known.
-4. Compare registers across sites; put every conflict to the two owners, not to the model.
-5. Hand the register on with the confirmed and unconfirmed marks intact, so the next stage can see which entries were drafted and never challenged.
+2. Draft before interviewing (activities, resource requirements, questions, recovery fields blank). The draft is the organiser's homework and stays with the organiser.
+3. Turn the draft into a take-in sheet for the interview: plain spoken questions, conflicts between sources first, fitted to the interview's length, with a rough time per section and a mark on what to drop first. Rate impacts over time in full only for the one or two activities the sources rank highest; for the others, ask only where they differ.
+4. Interview from the sheet. The activity owner corrects the questions, not the draft; record what the draft could not have known.
+5. Compare registers across sites; put every conflict to the two owners, not to the model.
+6. Hand the register on with the confirmed and unconfirmed marks intact, so the next stage can see which entries were drafted and never challenged.
 
 Requirements come in four classes. Once the impacts and the MTPD are settled, the interview covers people, with the skills, authorities and mandates the work needs; then seats and buildings; then IT and applications, each with its RTO and its RPO; then suppliers and other third parties.
 
