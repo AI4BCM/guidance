@@ -36,44 +36,50 @@ hold the skills back on the other clients, and loads a skill when it judges it r
 
 ## Other tools, and no tool
 
-Three pages cover the AI tools the four routes above leave out, and the reader with no AI tool at
-all. They
-are on GitHub only: the PDF and the .md file carry the units, not these install notes.
+Use the pages below for Microsoft 365 Copilot, Claude outside Claude Code, or work without AI.
+These install notes are on GitHub only. The PDF and the .md file contain the guidance units.
 
 | Situation | Page |
 |---|---|
-| Microsoft 365 Copilot at work (not GitHub Copilot, a different product) | [microsoft-365-copilot.md](microsoft-365-copilot.md) |
+| Microsoft 365 Copilot at work (a different product from GitHub Copilot) | [microsoft-365-copilot.md](microsoft-365-copilot.md) |
 | Claude on the web or in the desktop app, outside Claude Code | [claude-apps.md](claude-apps.md) |
 | IT blocks outside AI tools, no route fits, or you work offline | [no-install-route.md](no-install-route.md) |
 
-A ChatGPT plan without skills (Free, Go, Plus, Pro) is covered at the end of [chatgpt.md](chatgpt.md).
+For ChatGPT without skills (Free, Go, Plus, Pro), see the end of [chatgpt.md](chatgpt.md).
 
 ## The connector, and whether you need it
 
-**You do not need it to use the skills.** No install route on these pages uses it: every package
-carries its own units, and none declares an MCP server.
+**You do not need the connector to use the skills.** Every package includes the guidance units.
+None declares an MCP server, so none of these install routes needs the connector.
 
-The connector is a second, separate way in. It is an open MCP server at
-`https://mcp.ai4bcm.org/mcp` that serves this guidance and its open literature, the same corpus the
-question box at ai4bcm.org/chat answers from. An AI tool that can add a remote MCP server can search
-the guidance through it while you work, instead of you attaching a file. It needs no account and no
-token.
+Use the connector if your tool accepts a remote MCP server but cannot accept a skill or a file.
+Otherwise, a skill or the .md file gives you the same guidance in your approved tool, without
+another service to approve.
 
-It reads nothing of yours: it has no access to your files or your tools. What reaches it is what your
-AI sends it: search words, a task described in a sentence, the name of a workflow or a prompt. Keep
-case detail out of those, as the data rules ask of any outside tool (`units/data-rules.md`).
+The connector lets an AI tool search the guidance while you work. This saves you attaching a
+file. It is an open MCP server at `https://mcp.ai4bcm.org/mcp`, with the guidance and its open
+literature. The question box at ai4bcm.org/chat uses the same sources. You need no account or token.
 
-For IT: it offers five read-only tools, `search`, `fetch` (one section's full text with its licence
-and citation line), `get_workflow`, `get_prompt_template` and `identify_ai_risks`. Its release and
-size are at <https://mcp.ai4bcm.org/health>, and every section it serves, with its GitHub link, at
-<https://mcp.ai4bcm.org/index.json>.
-Add it only where your organisation allows outside connectors, and treat it as one under *Before you
-approve a tool* in `units/tools.md`. Where you add it differs per tool: [claude-apps.md](claude-apps.md) and
-[microsoft-365-copilot.md](microsoft-365-copilot.md) say where. Adding it in ChatGPT is not covered yet.
+The connector cannot access your files or tools. It receives what your AI sends: search words,
+a sentence describing a task, or the name of a workflow or prompt. Keep case details out of
+these requests. The data rules for outside tools apply. Data classes are defined under
+*Classification levels* on page 7 of the PDF, or in
+[units/data-rules.md](../units/data-rules.md) on GitHub.
 
-Reach for the connector when your tool cannot take a skill or a file but can take a remote MCP
-server. Otherwise a skill, or the .md file, gives you the same guidance inside the tool you already
-approved, with no second service to approve.
+For IT, the connector offers five read-only tools:
+
+- `search`;
+- `fetch`, which returns one section's full text, licence and citation line;
+- `get_workflow`;
+- `get_prompt_template`;
+- `identify_ai_risks`.
+
+Its release and size are at <https://mcp.ai4bcm.org/health>. All sections it serves, with their
+GitHub links, are at <https://mcp.ai4bcm.org/index.json>.
+
+Add it only if your organisation allows outside connectors. Apply the checks in *Before you
+approve a tool* in `units/tools.md`. For setup steps, see [claude-apps.md](claude-apps.md) or
+[microsoft-365-copilot.md](microsoft-365-copilot.md). These pages do not yet cover adding it in ChatGPT.
 
 ## How the installs were checked
 

@@ -1,8 +1,8 @@
 # ChatGPT
 
-**It depends on your plan. On Business, Enterprise, Healthcare or Edu, your administrator can
-import the AI4BCM skills (Route B below). On Free, Go, Plus or Pro, add the .md file from
-<https://ai4bcm.org/guidance> to a ChatGPT project and ask there.** Either way, you decide what
+**On Business, Enterprise, Healthcare or Edu, ask your administrator to import the AI4BCM skills
+(Route B below); on Free, Go, Plus or Pro, add the .md file from <https://ai4bcm.org/guidance>
+to a ChatGPT project and ask there.** Either way, you decide what
 class of data you may paste; without the skills nothing asks you.
 
 Sources: [Skills in ChatGPT](https://help.openai.com/en/articles/20001066-skills-in-chatgpt), read
@@ -73,24 +73,26 @@ zips from a fresh clone, extracts them, and finds each skill byte for byte its p
 
 ## On a plan without skills
 
-On Free, Go, Plus or Pro, nothing asks you what class of data you are about to paste: that check
-is yours (`units/data-rules.md`). Give ChatGPT the text instead of the skills:
+On Free, Go, Plus or Pro, add the guidance file to a project or a chat. Check your data class
+before pasting: ChatGPT does not ask you to do this. The classes are defined under
+*Classification levels* on page 7 of the PDF, or in
+[units/data-rules.md](../units/data-rules.md) on GitHub.
 
-- **A project.** Projects are on every plan. Create one, add the .md file from
-  <https://ai4bcm.org/guidance> to its files (about 140 KB; if it is refused, rename it `.txt`), and add an instruction such as *Answer
-  from the AI4BCM guidance in this project and name the unit each answer comes from.* A Free
-  project holds 5 files, Go and Plus 25, Pro 40.
-- **One chat.** Attach the .md file to the chat and ask. Free accounts can upload 3 files a day.
-- **Not a custom GPT.** Personal accounts can no longer create GPTs, and OpenAI retires custom GPTs
-  on 11 December 2026.
+- **A project.** Projects are on every plan. Create one and add the .md file from
+  <https://ai4bcm.org/guidance> to its files. It is about 140 KB; if ChatGPT refuses it, rename it
+  `.txt`. Add an instruction such as *Use the AI4BCM guidance in this project to answer, and name
+  the unit you used.* A Free project holds 5 files, Go and Plus 25, Pro 40.
+- **One chat.** Attach the .md file and ask your question. Free accounts can upload 3 files a day.
+- **No custom GPT.** Personal accounts can no longer create GPTs. OpenAI retires custom GPTs on
+  11 December 2026.
 
-How sure this section is: not yet run. Sources, read 2026-11-01 from the help centre's search results only (every article answered HTTP 403
-from the build machine, so none was opened):
+How sure this section is: not yet run. Sources, read 2026-11-01 from help centre search results
+only. Every article answered HTTP 403 from the build machine, so none was opened:
 [Projects in ChatGPT](https://help.openai.com/en/articles/10169521-projects-in-chatgpt),
 [Uploading files](https://help.openai.com/en/articles/8555545-uploading-files-and-audio-to-chatgpt),
 [Creating and editing GPTs](https://help.openai.com/en/articles/8554397-creating-and-editing-gpts) and
 [Custom GPT retirement](https://help.openai.com/en/articles/20001519-custom-gpt-retirement-and-migration-faq).
-The plugins article and the July 2026 release notes speak of personal skills on paid plans other
-than Free and Go, and the pricing page lists skills on Free; the skills article above says
-Business, Enterprise, Healthcare and Edu. This page follows the skills article until a run settles
-it.
+The sources disagree. The plugins article and the July 2026 release notes describe personal
+skills on paid plans other than Free and Go. The pricing page lists skills on Free. The skills
+article above says Business, Enterprise, Healthcare and Edu. This page follows that article
+until testing confirms which plans work.
