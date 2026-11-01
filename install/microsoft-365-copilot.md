@@ -38,7 +38,8 @@ for its class (`units/data-rules.md`).
 
 For a team that wants the guidance at hand in every chat. In Copilot Chat, **Agents & Skills**, then
 **New agent**. Give it the guidance as knowledge and tell it, in its instructions, to answer from
-that text and to name the unit it took each answer from.
+that text and to name the unit it took each answer from. Turn on **Only use specified sources**:
+the agent then prefers the guidance, though Agent Builder cannot stop it using general knowledge.
 
 - **Knowledge.** Agent Builder takes uploaded files and SharePoint or OneDrive files, but its list of
   types is .doc, .docx, .pdf, .ppt, .pptx, .txt, .xls and .xlsx: not .md. Upload the PDF, or save the
@@ -62,7 +63,8 @@ them, or use the first way above.
 Copilot Studio agents can call MCP servers, so an agent built there can search the guidance through
 the AI4BCM connector rather than through uploaded files (see *The connector, and whether you need
 it* in [README.md](README.md)). It is a maker's route, set up in Copilot Studio with generative
-orchestration turned on, not something a reader does in chat. Agent Builder itself cannot add one.
+orchestration turned on, not something a reader does in chat, and Microsoft's pages tie it to
+licences or billing your administrator sets up. Agent Builder itself cannot add one.
 
 ## Which way for you
 

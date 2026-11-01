@@ -60,6 +60,7 @@ project, that question is yours (`units/data-rules.md`).
 Claude can add a remote MCP server as a custom connector on every plan (one on Free). For yourself:
 **Customize** (or **Plugins**), **Connectors**, **+ Add**, **Add custom connector**, and enter
 `https://mcp.ai4bcm.org/mcp`; it needs no sign-in. On Team and Enterprise an owner adds it under
-**Organization settings**, **Connectors**, and members then click **Connect**. What the connector is
+**Organization settings**, **Connectors**, **Add**, **Custom**, **Web**, and members then connect
+it for themselves. What the connector is
 and whether you need it: [README.md](README.md), *The connector, and whether you need it*.
 
