@@ -57,14 +57,16 @@ The connector is a second, separate way in. It is an open MCP server at
 `https://mcp.ai4bcm.org/mcp` that serves this guidance and its open literature, the same corpus the
 question box at ai4bcm.org/chat answers from. An AI tool that can add a remote MCP server can search
 the guidance through it while you work, instead of you attaching a file. It needs no account and no
-token. It offers five tools, all read-only: `search`, `fetch` (one section's full text with its
-licence and citation line), `get_workflow`, `get_prompt_template` and `identify_ai_risks`. Its
-release and size are at <https://mcp.ai4bcm.org/health>, and every section it serves, with its
-GitHub link, at <https://mcp.ai4bcm.org/index.json>.
+token.
 
 It reads nothing of yours: it has no access to your files or your tools. What reaches it is what your
 AI sends it: search words, a task described in a sentence, the name of a workflow or a prompt. Keep
 case detail out of those, as the data rules ask of any outside tool (`units/data-rules.md`).
+
+For IT: it offers five read-only tools, `search`, `fetch` (one section's full text with its licence
+and citation line), `get_workflow`, `get_prompt_template` and `identify_ai_risks`. Its release and
+size are at <https://mcp.ai4bcm.org/health>, and every section it serves, with its GitHub link, at
+<https://mcp.ai4bcm.org/index.json>.
 Add it only where your organisation allows outside connectors, and treat it as one under *Before you
 approve a tool* in `units/tools.md`. Where you add it differs per tool: [claude-apps.md](claude-apps.md) and
 [microsoft-365-copilot.md](microsoft-365-copilot.md) say where. Adding it in ChatGPT is not covered yet.

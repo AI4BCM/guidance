@@ -1,66 +1,58 @@
 # Claude on the web and the desktop app
 
-Sources, all read 2026-11-01:
-[Use plugins in Claude](https://support.claude.com/en/articles/13837440-use-plugins-in-claude),
-[One Plugins page](https://support.claude.com/en/articles/17740565-manage-plugins-skills-and-connectors-from-one-plugins-page),
-[Skill frontmatter outside Claude Code](https://code.claude.com/docs/en/skills#using-skill-frontmatter-outside-claude-code),
-[Using skills in Claude](https://support.claude.com/en/articles/12512180-using-skills-in-claude),
-[How to create custom skills](https://support.claude.com/en/articles/12512198-how-to-create-custom-skills),
-[What are projects?](https://support.claude.com/en/articles/9517075-what-are-projects),
-[What kinds of documents can I upload?](https://support.claude.com/en/articles/8241126-what-kinds-of-documents-can-i-upload-to-claude-ai)
-and [Custom connectors using remote MCP](https://support.claude.com/en/articles/11175166-getting-started-with-custom-connectors-using-remote-mcp).
-
-**Test tier: none.** The full eval runs on Claude Code ([claude-code.md](claude-code.md)). No route
-on this page has been run in claude.ai by the maintainer.
-
-Claude Code is the command-line and editor tool for developers. This page is for everyone else:
-Claude in a browser at claude.ai and the Claude desktop app. Three ways that work, and one that
-does not yet. The phone apps are not covered: nothing on this page has been checked there.
-
-**The menu is being renamed.** From 29 October 2026 (Enterprise from 30 November) the sidebar's
-**Customize** becomes **Plugins**, one page that holds plugins, skills and connectors. The steps
-below name the old menu; on the new page, look for the same items there.
-
-## The plugin, on a paid plan
-
-The same plugin Claude Code installs. On Pro, Max, Ultra, Team and Enterprise, plugins work in chat
-on the web, in the desktop app's Chat tab and in Cowork. Open **Customize** in the left sidebar,
-the **Plugins** tab, **Add**, then **Add marketplace**, **Add from a repository**, and enter
-`AI4BCM/guidance`. Install `ai4bcm-guidance` from it. If your organisation restricts marketplace
-sources, Claude refuses a repository it does not allow; ask your administrator to add it.
-
-Signed in with the same account, Claude Code (2.1.273 or later) picks up the installed plugin as
-well.
-
-## Uploading one skill does not work yet
-
-Skills are on Free, Pro, Max, Ultra, Team and Enterprise, with code execution turned on, and Claude
-takes a zip with the skill folder at its root, which is how the ChatGPT zips `<name>.zip` are built
-([chatgpt.md](chatgpt.md), Route A). **The AI4BCM packages are refused all the same.** An uploaded
-skill may carry only `name`, `description`, `license`, `compatibility`, `metadata` and
-`allowed-tools` in its frontmatter, and an upload with any other field fails. Every package carries
-`disable-model-invocation: true`, the line that stops Claude Code starting a skill you did not name
-([claude-code.md](claude-code.md)). Deleting that line would let the upload through and the skill
-start on its own, so do not; use the plugin or a project instead.
+**On any Claude plan, the free one included: make a project, add the .md file from
+<https://ai4bcm.org/guidance> to it, and ask.** On a paid plan you can add the AI4BCM plugin instead.
+This page is for claude.ai and the Claude desktop app; Claude Code, the developers' tool, has its
+own page, [claude-code.md](claude-code.md).
 
 ## A project with the guidance in it
 
-Projects are on every plan, the free one included (five projects there). Create a project, add the
-.md file from <https://ai4bcm.org/guidance> to its knowledge (the help centre takes PDF and text
-files, up to 30 MB each; the .md is about 140 KB; if it is refused, rename it `.txt`), and add an instruction such as *Answer from the
+Projects are on every plan (five on the free one). Create a project and add the .md file to its
+knowledge; if Claude refuses the .md, rename it `.txt`. Add an instruction such as *Answer from the
 AI4BCM guidance in this project and name the unit each answer comes from.* Every chat in the project
-then starts with the guidance in front of Claude. Attaching the file to one chat works too, for a
-single question.
+then starts with the guidance in front of Claude. For one question, attaching the file to a chat
+works too.
 
-A project carries no preflight. The task skills ask the data class before they start; with a
-project, that question is yours (`units/data-rules.md`).
+A project does not ask you what class of data you are about to paste; the skills do. With a project
+that check is yours (`units/data-rules.md`).
+
+## The plugin, on a paid plan
+
+The plugin Claude Code installs also works on claude.ai and in the desktop app on Pro, Max, Ultra,
+Team and Enterprise. In the sidebar, open **Customize** (called **Plugins** on newer accounts), go
+to **Plugins**, then **Add**, **Add marketplace**, **Add from a repository**, and enter
+`AI4BCM/guidance`. Install `ai4bcm-guidance`. If your organisation restricts where plugins may come
+from, ask your administrator to allow this one. Signed in with the same account, Claude Code
+(2.1.273 or later) gets the plugin too.
 
 ## The connector
 
-Claude can add a remote MCP server as a custom connector on every plan (one on Free). For yourself:
-**Customize** (or **Plugins**), **Connectors**, **+ Add**, **Add custom connector**, and enter
-`https://mcp.ai4bcm.org/mcp`; it needs no sign-in. On Team and Enterprise an owner adds it under
-**Organization settings**, **Connectors**, **Add**, **Custom**, **Web**, and members then connect
-it for themselves. What the connector is
-and whether you need it: [README.md](README.md), *The connector, and whether you need it*.
+The AI4BCM connector is an open search service for this guidance; [README.md](README.md) explains
+it under *The connector, and whether you need it*. To add it for yourself: **Customize**
+(**Plugins**), **Connectors**, **+ Add**, **Add custom connector**, and enter
+`https://mcp.ai4bcm.org/mcp`; it needs no sign-in. The free plan allows one custom connector. On
+Team and Enterprise an owner adds it under **Organization settings**, **Connectors**, **Add**,
+**Custom**, **Web**, and members then connect it for themselves.
 
+## Uploading one skill does not work yet
+
+claude.ai lets you upload a single skill as a zip, but it refuses the AI4BCM packages. An uploaded
+skill may carry only `name`, `description`, `license`, `compatibility`, `metadata` and
+`allowed-tools` in its frontmatter. Every AI4BCM package also carries
+`disable-model-invocation: true`, the line that stops Claude Code starting a skill you did not name
+([claude-code.md](claude-code.md)). Deleting that line would let the upload through and let the
+skill start on its own, so do not; use a project or the plugin.
+
+## How sure this page is
+
+Not yet run on claude.ai or in the desktop app; the full eval runs on Claude Code. The phone apps
+are not covered. Every step follows Anthropic's help centre as read on 1 November 2026, where the
+sidebar's **Customize** becomes **Plugins** from 29 October 2026 (Enterprise from 30 November):
+[Plugins](https://support.claude.com/en/articles/13837440-use-plugins-in-claude),
+[One Plugins page](https://support.claude.com/en/articles/17740565-manage-plugins-skills-and-connectors-from-one-plugins-page),
+[Skills](https://support.claude.com/en/articles/12512180-using-skills-in-claude),
+[Custom skills](https://support.claude.com/en/articles/12512198-how-to-create-custom-skills),
+[Skill frontmatter outside Claude Code](https://code.claude.com/docs/en/skills#using-skill-frontmatter-outside-claude-code),
+[Projects](https://support.claude.com/en/articles/9517075-what-are-projects),
+[Uploads](https://support.claude.com/en/articles/8241126-what-kinds-of-documents-can-i-upload-to-claude-ai),
+[Custom connectors](https://support.claude.com/en/articles/11175166-getting-started-with-custom-connectors-using-remote-mcp).

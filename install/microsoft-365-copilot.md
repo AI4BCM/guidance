@@ -1,76 +1,61 @@
 # Microsoft 365 Copilot
 
-Sources, all read 2026-11-01:
-[File upload in Microsoft Copilot](https://support.microsoft.com/en-us/microsoft-365-copilot/file-upload-in-microsoft-copilot),
-[Copilot FAQ](https://learn.microsoft.com/en-us/copilot/faq),
-[Refer to specific files](https://support.microsoft.com/en-us/microsoft-365-copilot/refer-to-specific-files-and-more-in-microsoft-365-copilot),
-[Agent capabilities and licensing](https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/prerequisites),
-[Add knowledge in Agent Builder](https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/agent-builder-add-knowledge),
-[Add skills in Agent Builder](https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/agent-builder-add-skills) and
-[MCP in Copilot Studio](https://learn.microsoft.com/en-us/microsoft-copilot-studio/agent-extend-action-mcp).
-
-**Test tier: none.** No route on this page has been run in a Microsoft 365 tenant by the maintainer.
+**Yes. Download the .md file from <https://ai4bcm.org/guidance>, attach it to a Copilot Chat
+conversation, and ask your question.** That works today, with or without a Copilot licence. There is
+no AI4BCM skill to install in Microsoft 365 Copilot.
 
 ## Not GitHub Copilot
 
 Microsoft 365 Copilot is the assistant in Teams, Outlook, Word and the Copilot app at
-m365.cloud.microsoft, signed in with your work account. GitHub Copilot is a coding assistant in
-code editors and on GitHub; its install page is [github-copilot.md](github-copilot.md) and none of
-it applies here. Microsoft 365 Copilot has no route that installs the ten skills the way Claude Code
-or Codex does. It can still work from the guidance, in three ways.
+m365.cloud.microsoft, signed in with your work account. GitHub Copilot is a coding assistant for
+developers, a different product; its page is [github-copilot.md](github-copilot.md) and none of it
+applies here.
 
 ## Attach the guidance to a chat
 
-The quickest way, and the one that works with or without a Microsoft 365 Copilot licence. Download
-the .md file (or the PDF) from <https://ai4bcm.org/guidance>, then in Copilot Chat use
-**Add content** (+) or drag the file into the box, and ask your question. Microsoft lists PDF, TXT
-and MD among the types a chat takes, up to 20 files in one conversation and 50 MB per file; the .md
-file is about 140 KB. An uploaded file is stored in your OneDrive for Business.
+In Copilot Chat, use **Add content** (+) or drag the .md file into the box, then ask. Copilot Chat
+takes PDF, TXT and MD files, up to 20 in one conversation and 50 MB each; the .md file is about
+140 KB. If the file is already in OneDrive or SharePoint, type **/** and its name instead.
 
-If the file is already in OneDrive or SharePoint, type **/** and the file name to point Copilot at it
-instead of uploading it again.
+The guidance is public, so the file is no risk. Your BCM material is not public: it still needs a
+tool approved for its class (`units/data-rules.md`).
 
-Your organisation's terms with Microsoft apply to the file and to everything you type next to it.
-The guidance is public, so the file itself is no risk; your BCM material still needs a tool approved
-for its class (`units/data-rules.md`).
+## For a team: an agent, set up with IT
 
-## Build an agent that knows the guidance
+If your team asks often, IT or a colleague who builds agents can make one that always has the
+guidance. In Copilot Chat: **Agents & Skills**, **New agent**. Give it the guidance as knowledge,
+tell it to answer from that text and name the unit behind each answer, and turn on **Only use
+specified sources** (the agent then prefers the guidance, though it can still fall back on general
+knowledge).
 
-For a team that wants the guidance at hand in every chat. In Copilot Chat, **Agents & Skills**, then
-**New agent**. Give it the guidance as knowledge and tell it, in its instructions, to answer from
-that text and to name the unit it took each answer from. Turn on **Only use specified sources**:
-the agent then prefers the guidance, though Agent Builder cannot stop it using general knowledge.
+- Agent Builder does not take .md files as knowledge. Upload the PDF, or save the .md file as .txt.
+- Uploaded files as knowledge need a Microsoft 365 Copilot licence, or pay-as-you-go billing turned
+  on for your organisation. Without either, an agent has web search and its instructions, not your
+  files.
+- Agent Builder also takes Agent Skills, the format of the AI4BCM skills (**Configure**, **Skills**,
+  **Add**, upload a zip; licence or pay-as-you-go; up to eight per agent). Microsoft wants
+  `SKILL.md` at the root of the zip, so zip the *contents* of `skills/<name>/`, not the folder. Claude
+  refuses these packages for a frontmatter field ([claude-apps.md](claude-apps.md)); Microsoft may
+  too, so check the upload.
 
-- **Knowledge.** Agent Builder takes uploaded files and SharePoint or OneDrive files, but its list of
-  types is .doc, .docx, .pdf, .ppt, .pptx, .txt, .xls and .xlsx: not .md. Upload the PDF, or save the
-  .md file as .txt first. Grounding on uploaded files or SharePoint needs a Microsoft 365 Copilot
-  licence, or pay-as-you-go billing turned on for your tenant; without either, an agent can use web
-  search and its instructions, but not your uploaded files or SharePoint.
-- **Skills.** Agent Builder also takes Agent Skills, the format the AI4BCM skills are written in:
-  **Configure**, **Skills**, **Add**, and upload a zip. It needs a Microsoft 365 Copilot licence or
-  pay-as-you-go, and allows up to eight skills per agent. Microsoft's package has `SKILL.md` at the
-  root of the zip, so zip the *contents* of a package folder `skills/<name>/`, not the folder
-  itself: the ChatGPT zips ([chatgpt.md](chatgpt.md)) have the folder at their root and are not
-  that format. Untested here: Claude refuses these packages for a frontmatter field
-  (`disable-model-invocation`, see [claude-apps.md](claude-apps.md)) and Microsoft may too, so check
-  the upload and that every file arrived before you rely on it.
+If you see no **New agent**, your administrator may have turned Agent Builder off.
 
-Your administrator can turn Agent Builder off for your tenant. If you see no **New agent**, ask
-them, or use the first way above.
+## For a maker: the AI4BCM connector
 
-## The connector, through Copilot Studio
+The AI4BCM connector is an open search service for this guidance, explained in
+[README.md](README.md) under *The connector, and whether you need it*. A Copilot Studio agent can
+call it, because Copilot Studio agents can use MCP servers (with generative orchestration on).
+Agent Builder cannot. Microsoft ties authoring in Copilot Studio to licences or billing your
+administrator sets up.
 
-Copilot Studio agents can call MCP servers, so an agent built there can search the guidance through
-the AI4BCM connector rather than through uploaded files (see *The connector, and whether you need
-it* in [README.md](README.md)). It is a maker's route, set up in Copilot Studio with generative
-orchestration turned on, not something a reader does in chat, and Microsoft's pages tie it to
-licences or billing your administrator sets up. Agent Builder itself cannot add one.
+## How sure this page is
 
-## Which way for you
-
-| You have | Do this |
-|---|---|
-| Copilot Chat, with or without a licence | attach the .md file to the chat |
-| A Microsoft 365 Copilot licence, and a team that asks often | an agent with the PDF as knowledge, or with skills |
-| Copilot Studio and an agent maker | an agent that calls the connector |
-| Nothing approved, or IT blocks outside tools | [no-install-route.md](no-install-route.md) |
+Not yet run in a live Microsoft 365 tenant. Every step follows Microsoft's documentation as read on
+1 November 2026:
+[File upload](https://support.microsoft.com/en-us/microsoft-365-copilot/file-upload-in-microsoft-copilot),
+[Copilot FAQ](https://learn.microsoft.com/en-us/copilot/faq),
+[Refer to files](https://support.microsoft.com/en-us/microsoft-365-copilot/refer-to-specific-files-and-more-in-microsoft-365-copilot),
+[Agent licensing](https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/prerequisites),
+[Agent knowledge](https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/agent-builder-add-knowledge),
+[Agent skills](https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/agent-builder-add-skills),
+[MCP in Copilot Studio](https://learn.microsoft.com/en-us/microsoft-copilot-studio/agent-extend-action-mcp).

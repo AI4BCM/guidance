@@ -1,5 +1,10 @@
 # ChatGPT
 
+**It depends on your plan. On Business, Enterprise, Healthcare or Edu, your administrator can
+import the AI4BCM skills (Route B below). On Free, Go, Plus or Pro, add the .md file from
+<https://ai4bcm.org/guidance> to a ChatGPT project and ask there.** Either way, you decide what
+class of data you may paste; without the skills nothing asks you.
+
 Sources: [Skills in ChatGPT](https://help.openai.com/en/articles/20001066-skills-in-chatgpt), read
 2026-10-02 in a browser (the help centre answers HTTP 403 to `curl` from some networks);
 [Build skills](https://learn.chatgpt.com/docs/build-skills.md) and
@@ -68,18 +73,8 @@ zips from a fresh clone, extracts them, and finds each skill byte for byte its p
 
 ## On a plan without skills
 
-Sources, read 2026-11-01 from the help centre's search results only (every article answered HTTP 403
-from the build machine, so none was opened):
-[Projects in ChatGPT](https://help.openai.com/en/articles/10169521-projects-in-chatgpt),
-[Uploading files](https://help.openai.com/en/articles/8555545-uploading-files-and-audio-to-chatgpt),
-[Creating and editing GPTs](https://help.openai.com/en/articles/8554397-creating-and-editing-gpts) and
-[Custom GPT retirement](https://help.openai.com/en/articles/20001519-custom-gpt-retirement-and-migration-faq).
-The plugins article and the July 2026 release notes speak of personal skills on paid plans other
-than Free and Go, and the pricing page lists skills on Free; the skills article above says
-Business, Enterprise, Healthcare and Edu. This page follows the skills article until a run settles
-it.
-
-On Free, Go, Plus or Pro, give ChatGPT the text instead of the skills:
+On Free, Go, Plus or Pro, nothing asks you what class of data you are about to paste: that check
+is yours (`units/data-rules.md`). Give ChatGPT the text instead of the skills:
 
 - **A project.** Projects are on every plan. Create one, add the .md file from
   <https://ai4bcm.org/guidance> to its files (about 140 KB; if it is refused, rename it `.txt`), and add an instruction such as *Answer
@@ -89,5 +84,13 @@ On Free, Go, Plus or Pro, give ChatGPT the text instead of the skills:
 - **Not a custom GPT.** Personal accounts can no longer create GPTs, and OpenAI retires custom GPTs
   on 11 December 2026.
 
-Neither a project nor an attached file carries the preflight. The task skills ask the data class
-before they start; without them, that question is yours (`units/data-rules.md`).
+How sure this section is: not yet run. Sources, read 2026-11-01 from the help centre's search results only (every article answered HTTP 403
+from the build machine, so none was opened):
+[Projects in ChatGPT](https://help.openai.com/en/articles/10169521-projects-in-chatgpt),
+[Uploading files](https://help.openai.com/en/articles/8555545-uploading-files-and-audio-to-chatgpt),
+[Creating and editing GPTs](https://help.openai.com/en/articles/8554397-creating-and-editing-gpts) and
+[Custom GPT retirement](https://help.openai.com/en/articles/20001519-custom-gpt-retirement-and-migration-faq).
+The plugins article and the July 2026 release notes speak of personal skills on paid plans other
+than Free and Go, and the pricing page lists skills on Free; the skills article above says
+Business, Enterprise, Healthcare and Edu. This page follows the skills article until a run settles
+it.
