@@ -6,9 +6,8 @@
 #
 #   python3 -m venv .venv && .venv/bin/pip install -r tools/requirements.txt
 #
-# Pinned to the version the BIA server has run on since 2026-08 and the version the payload
-# comparison in ticket 04 was measured against. Bump deliberately.
-mcp==1.28.0
+# MCP SDK 2 migration: preserve the five tools, payloads, stateless HTTP and host checks.
+mcp==2.3.0
 # Imported directly by server.py rather than merely pulled in by mcp: the health and root
 # routes are starlette responses, and main() serves with uvicorn. They arrive transitively
 # today, so a different mcp pin would break the import with no line here to explain why.

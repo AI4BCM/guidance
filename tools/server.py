@@ -40,7 +40,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
-from mcp.server.fastmcp import FastMCP
+from mcp.server.mcpserver import MCPServer
 from mcp.server.transport_security import TransportSecuritySettings
 from mcp.types import CallToolResult, TextContent, ToolAnnotations
 from starlette.responses import JSONResponse, PlainTextResponse
@@ -106,29 +106,22 @@ READ_ONLY = ToolAnnotations(
     idempotentHint=True,
 )
 
-mcp = FastMCP(
-    "ai4bcm-guidance",
-    instructions=INSTRUCTIONS,
-    host="127.0.0.1",
-    port=8788,  # 8787 is the BIA endpoint's; the two run side by side until ticket 06 says otherwise
-    streamable_http_path="/mcp",
-    json_response=True,
-    # Same reasoning as the BIA server: stateless Streamable HTTP is the SDK's recommended
-    # production config and the most compatible with connectors that do not reliably carry an
-    # Mcp-Session-Id. With no auth there is nothing a session would have held anyway.
-    stateless_http=True,
-    transport_security=TransportSecuritySettings(
-        enable_dns_rebinding_protection=True,
-        allowed_hosts=["127.0.0.1:*", "localhost:*", *ALLOWED_HOSTS],
-        allowed_origins=[
-            "http://127.0.0.1:*",
-            "http://localhost:*",
-            "https://chatgpt.com",
-            "https://chat.openai.com",
-            "https://claude.ai",
-        ],
-    ),
-)
+mcp = MCPServer("ai4bcm-guidance", instructions=INSTRUCTIONS)
+
+
+def streamable_app():
+    """Keep the public stateless transport contract on MCP SDK 2."""
+    return mcp.streamable_http_app(
+        host="127.0.0.1", streamable_http_path="/mcp",
+        json_response=True, stateless_http=True,
+        transport_security=TransportSecuritySettings(
+            enable_dns_rebinding_protection=True,
+            allowed_hosts=["127.0.0.1:*", "localhost:*", *ALLOWED_HOSTS],
+            allowed_origins=["http://127.0.0.1:*", "http://localhost:*",
+                             "https://chatgpt.com", "https://chat.openai.com", "https://claude.ai"],
+        ),
+    )
+
 
 
 def tool_result(payload: dict[str, Any], *, is_error: bool = False) -> CallToolResult:
@@ -311,7 +304,7 @@ def main() -> int:
     logger.info("index ready: %d chunks from %s", chunks, DATA_DIR)
     logger.info("starting AI4BCM guidance MCP server on %s:%s/mcp (open, no token)",
                 args.host, args.port)
-    uvicorn.run(mcp.streamable_http_app(), host=args.host, port=args.port)
+    uvicorn.run(streamable_app(), host=args.host, port=args.port)
     return 0
 
 

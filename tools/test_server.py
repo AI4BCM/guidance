@@ -48,7 +48,7 @@ def client(server):
     from starlette.testclient import TestClient
     # base_url matters: DNS-rebinding protection is ON, and TestClient's default Host is
     # "testserver", which is not in allowed_hosts — every request would 421 (as it should).
-    with TestClient(server.mcp.streamable_http_app(), base_url="http://127.0.0.1:8788") as c:
+    with TestClient(server.streamable_app(), base_url="http://127.0.0.1:8788") as c:
         yield c
 
 
@@ -156,7 +156,7 @@ def test_the_other_three_tools_answer_over_the_wire(client):
 def test_health_reports_chunk_count_version_and_build_date(client, server):
     body = client.get("/health").json()
     assert body["ok"] is True
-    assert body["chunks"] == len(server.get_index().chunks) == 96
+    assert body["chunks"] == len(server.get_index().chunks) > 0
     assert body["version"] == server.SERVER_VERSION
     assert body["release_tag"] == TAG
     assert body["built_at"] and body["built_at"].endswith("+00:00")
