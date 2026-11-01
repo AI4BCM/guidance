@@ -92,16 +92,18 @@ UNIT_DEFAULTS: dict[str, tuple[str, str, str]] = {
 
 # `identify_ai_risks` reads this type. In the units the never-alone list is principle 4;
 # nothing else carries it.
-DO_NOT_USE_IDS = {"principles-4-what-ai-never-does-alone"}
+DO_NOT_USE_IDS = {"principles-3-checking-ai-output-and-approving-what-it-does"}  # 2026.11.1: the print's principle 3 holds what was principle 4, "What AI never does alone"
 
 # Types the units are expected to supply. `faq` and the old per-tool `comparison` pages
 # went with the snapshot; the FAQ has no home in the units (recorded as a guidance finding
 # by ticket 05).
 REQUIRED_SECTION_TYPES = frozenset({"prompt", "workflow", "do_not_use", "comparison"})
 
-# Every stage unit owes these four: the BIA journey cites them.
+# Every stage unit owes these four: the BIA journey cites them. Contract version 3 (release
+# 2026.11.1): the units took the print edition's headings, so "Typical AI uses" became "Where does
+# AI help, and where are its limits?"; the other three headings stayed.
 STAGE_UNITS = ("govern", "embed", "analysis", "design", "implement", "validate")
-STAGE_REQUIRED_SECTIONS = ("typical-ai-uses", "minimum-controls", "method", "level")
+STAGE_REQUIRED_SECTIONS = ("where-does-ai-help-and-where-are-its-limits", "minimum-controls", "method", "level")
 
 # --- The reserved set (kb-move ticket 07, 2026-09-10) ----------------------------------
 #

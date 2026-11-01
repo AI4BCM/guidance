@@ -1,23 +1,54 @@
-<!-- meta: unit=stages/govern version=2026.11 -->
-# Establishing and Governing BCM
+<!-- meta: unit=stages/govern version=2026.11.1 -->
+# Establishing and governing BCM
 
-## Situation
+Stage 1 of six.
 
-Most of the governance work involves writing: policy, scope, roles, management reporting. It is at this stage that AI produces the fastest results. However, **a smooth draft can be problematic at this stage**, as a well-written policy can appear to have been agreed upon long before it actually has.
+## What this stage covers
 
-The line is fixed. AI may prepare and challenge governance material. It cannot set management intent, assign accountability, or declare a BCMS compliant. Those are decided through the organisation's own governance route, by people who can be held to them.
+This stage covers the establishment and governance of BCM, including policy, scope, roles and responsibilities, governance arrangements, management reporting, and the management framework needed to operate and improve continuity capabilities over time.
 
-## Typical AI uses
+## Where does AI help, and where are its limits?
 
-- drafting policy, charter and scope statements from the approved framework
-- reviewing governance documents for ambiguity, gaps and contradiction
-- preparing implementation roadmaps and governance work plans
-- turning BCMS metrics and open actions into a management report draft
-- producing role and responsibility summaries for review
-- summarising changes in official guidance or regulation for a person to interpret, on request or from a workflow that watches approved official sources
-- helping a newer practitioner learn the BCMS's structure, vocabulary and expected outputs from approved governance material
+Much of this stage is drafting, reviewing and summarising, and AI does that well. It writes first drafts, finds unclear wording and makes reports easier to read. It also helps monitor changes in official guidance, regulation, or organisational context that could affect the BCMS.
 
-The type of tool and the environment for each use are in the selection guide in `tools.md`.
+This stage also decides who is accountable. AI helps prepare and challenge material. Policy, management intent, accountability and any statement that a BCMS is compliant stay with named people, through the organisation's established governance process.
+
+**Used today.** Cited public example, source in References, p. 31.
+
+ClearBank, a UK clearing bank, uses generative AI to check its internal policies against each other so that key policies do not fall out of line; this is described by the bank in a UK government collection of case studies (2024), not reported as a result.
+
+## What AI can do, by activity
+
+Give the AI the authoritative material for the task: internal governance frameworks, strategy statements, policy templates, organisation structure, prior management review outputs, approved role descriptions, or internally prepared requirement summaries. If external requirements are relevant, use official sources and handle any licensed material in accordance with permission and policy (*Data rules*, p. 7).
+
+## Context and requirements
+
+- Summarising official regulatory or guidance developments for review (L1)
+- A simple workflow monitors approved official sources and prepares a short note on their relevance for you. (L4)
+
+## Scope and policy
+
+AI can help in two ways: it can write a first draft and review subsequent drafts for inconsistencies and mistakes. AI is usually more useful for the latter. Ask the AI to highlight unclear wording, unsubstantiated statements and governance gaps, such as missing owners or approval steps. Before the draft goes into formal approval, have the relevant departments check it, such as Legal, Compliance, Information Security, Records Management, and the document owners.
+
+- **Grounded drafting.** Use an enterprise AI assistant alongside approved internal documents to create a first draft of a policy, scope statement or governance note. You can then customise the draft using your own terms and structure. (L2)
+- **Red-team review.** Ask the AI to identify any clauses that are unclear, unrealistic, inconsistent or ambiguous. (L2)
+
+## Roles, responsibilities and competence
+
+- AI can be used to help draft or refine role summaries, such as RACI-style mappings or governance descriptions. Top management can then agree on who is responsible for what and who has which authority. (L2)
+- Drafting interview questions for hiring BCM staff (L2)
+- **Onboarding support.** A dedicated internal assistant helps new practitioners to understand the structure, terminology and expected outputs, based on approved BCMS governance material. (L3)
+
+## Objectives and programme
+
+- Preparing the plan to achieve the business continuity objectives: what needs to be done, what resources are required, who will do it and by when? (L2)
+
+## Reporting and management review
+
+- **Structured management reporting.** Use AI to summarise BCMS metrics, open actions, validation results and review data for management. (L2)
+- Reports that combine several BCMS data sources. They are written with the AI functions of your reporting tools. (L3)
+
+L1 Ad hoc · L2 Repeatable · L3 Defined · L4 Measured · L5 Optimising
 
 ## Minimum controls
 

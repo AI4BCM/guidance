@@ -3,8 +3,11 @@
 **Producer:** `AI4BCM/guidance` — this repository mints chunk identifiers and publishes the corpus.
 **Consumers:** anything outside this repository that names a chunk id in a file it ships. Today that
 is `KoGerner/workflow-design` (`run-bia.yaml`, 16 citations across 9 distinct ids).
-**Contract version:** 2. **Written:** 2026-09-10. **Revised:** 2026-09-12 — the citation base moved
-from `agent.ai4bcm.org/demo/kb` to this repository on GitHub.
+**Contract version:** 3. **Written:** 2026-09-10. **Revised:** 2026-09-12 — the citation base moved
+from `agent.ai4bcm.org/demo/kb` to this repository on GitHub. **Revised:** 2026-11-01, release
+`2026.11.1` — the units took the print edition's headings, so `stages-<stage>-typical-ai-uses`
+became `stages-<stage>-where-does-ai-help-and-where-are-its-limits` (owner decision Q2 B,
+2026-11-01); `run-bia.yaml` moves its two such citations in the same round.
 
 Until 2026-09-10 the citing file and the corpus that answered it lived in one working tree, so the
 coupling needed no words. They are now in two organisations on two release cadences. This file is
@@ -30,7 +33,7 @@ rather than a published corpus with a dead citation in it.
 `design`, `implement`, `validate`:
 
 ```
-stages-<stage>-typical-ai-uses
+stages-<stage>-where-does-ai-help-and-where-are-its-limits
 stages-<stage>-minimum-controls
 stages-<stage>-method
 stages-<stage>-level
@@ -62,7 +65,7 @@ other id may change whenever an editor rewords a heading, and carries no promise
 
 - **A chunk's citation is this repository, pinned to the release tag, anchored on the chunk's
   heading** — `https://github.com/AI4BCM/guidance/blob/<tag>/<source_file>#<anchor>`, e.g.
-  `https://github.com/AI4BCM/guidance/blob/2026.09.1/units/stages/govern.md#level`.
+  `https://github.com/AI4BCM/guidance/blob/2026.11.1/units/stages/govern.md#level`.
   Measured 2026-09-12: all 26 reserved ids and a sample of the literature answer 200 with the
   anchor landing on the named heading.
 - **The anchor is GitHub's, not the chunk id's.** GitHub lowercases a heading, deletes its

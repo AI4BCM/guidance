@@ -1,22 +1,56 @@
-<!-- meta: unit=stages/design version=2026.11 -->
-# Continuity Strategies and Solutions Design
+<!-- meta: unit=stages/design version=2026.11.1 -->
+# Continuity strategies and solutions design
 
-## Situation
+Stage 4 of six.
 
-Designing involves turning the analysis into options that cost money. The work involves comparing what the BIA requires with what the organisation can currently do and determining which option is worth the cost in terms of money and complexity.
+## What this stage covers
 
-AI is useful here for two tasks that are difficult to perform manually. Firstly, it can consider all the options at once, and secondly, it can challenge an option that everyone in the room already likes. It does not make decisions. Investment, priority and risk acceptance are business decisions that are approved through governance.
+This stage covers the design and selection of continuity strategies and solutions to meet business requirements. It is where the organisation moves from analysis to action by considering how it will protect critical activities, recover within required timeframes, and manage trade-offs between cost, resilience, complexity, and practicality.
 
-## Typical AI uses
+AI finds the cheapest option that still meets the RTO
 
-- gap analysis between required recovery outcomes and current capability
-- generating a long-list of strategy options by resource type
-- comparing shortlisted options against internal constraints
-- naming shared suppliers, systems and routes and the single points of failure they create
-- drafting the structure of an option paper or business case
-- controlled scanning for new service models, for human review
+ILLUSTRATIVE. AI PLACES THE OPTIONS BY COST AND RECOVERY TIME AND FINDS THE CHEAPEST THAT MEETS THE RTO.
 
-The type of tool and the environment for each use are in the selection guide in `tools.md`.
+## Where does AI help, and where are its limits?
+
+AI compares options, shows gaps between what you have and what you need, challenges assumptions and organises the facts for a decision. It also brings together information from BIA outputs, dependency maps, location constraints, supplier arrangements, technical architecture, and indicative cost assumptions.
+
+AI should not be allowed to decide what the organisation invests in, accepts or prioritises without effective safeguards and quality checks in place. Management should make decisions after consulting those affected.
+
+**Used today.** Cited public example, source in References, p. 31.
+
+The US Army Materiel Command contracted AI mapping and monitoring of its multi-tier supply chains to see where vulnerabilities sit and where alternative sources are viable; this was announced at contract award in 2025, not reported as a result.
+
+## What AI can do, by activity
+
+Use approved internal source material such as BIA summaries, dependency maps, site constraints, technical architecture notes, current contracts, and investment templates (*Data rules*, p. 7).
+
+## Gap analysis
+
+- **Structured gap analysis.** Ask the AI to compare the required recovery outcomes and critical dependencies with the current arrangements, and to identify any gaps, assumptions or missing information. (L2)
+
+## Identifying strategy options
+
+- **Generate a long list by resource type.** Prompt the AI to suggest possible continuity strategies categorised by area, such as the workplace, staff, technology, suppliers, inventory, records, logistics and process workarounds. (L2)
+- Scanning the market for recovery services and options (L1)
+- **Horizon scanning workflows.** Use workflow and search-enabled AI to produce regular updates on relevant developments in recovery technology or service models. (L4)
+
+## Reducing risks and single points of failure
+
+It is often more valuable to test how a solution might fail than to explore additional options.
+
+- **Solution red-teaming.** Ask the AI to act as a reviewer and identify how a proposed solution could fail in the event of a real disruption, taking into account hidden assumptions and shared dependency risks. (L2)
+- Testing the shortlist against approved internal data in order to identify the limits of sites, suppliers, systems and people. (L3)
+
+## Selecting solutions and resources
+
+Before a solution is chosen, the business owner and the relevant specialists confirm that it is effective and that they understand who is responsible for it.
+
+- **Business case drafting support.** Use AI to summarise structured option data and create a concise comparison paper for management. Ensure that the AI clearly labels assumptions and avoids unsupported claims. (L2)
+- Comparison of shortlisted solution alternatives and their trade-offs (L3)
+- A BCM or resilience platform where results measured across sites indicate which options should be kept, changed or retired. (L5)
+
+L1 Ad hoc · L2 Repeatable · L3 Defined · L4 Measured · L5 Optimising
 
 ## Minimum controls
 

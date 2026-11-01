@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "ai4bcm-guidance",
-  "version": "2026.9.0",
+  "version": "2026.11.1",
   "description": "The AI4BCM guidance and its router. /ask-ai4bcm names the unit to read, the prompt to run and the maturity level the work needs, for AI use in business continuity management.",
   "author": { "name": "AI4BCM", "url": "https://ai4bcm.org" },
   "homepage": "https://ai4bcm.org/guidance",
@@ -19,6 +19,6 @@
         "websiteURL": "https://ai4bcm.org/guidance"
       }
     },
-    "org.ai4bcm": { "releaseTag": "2026.09" }
+    "org.ai4bcm": { "releaseTag": "2026.11.1" }
   }
 }

@@ -4,7 +4,7 @@ description: Names the section, prompt, level, gate and data rule for your task,
 license: CC BY 4.0. LICENSE in the guidance repository carries the full terms.
 disable-model-invocation: true
 metadata:
-  version: "2026.11.0"
+  version: "2026.11.1"
 ---
 
 # Ask AI4BCM
@@ -30,13 +30,13 @@ install; otherwise read `units/` at github.com/AI4BCM/guidance.
 ## On-ramps
 
 - **"I inherited forty BIAs and no requirements register."** Stage 3 with **`/prepare-bia`** per interview: [`units/stages/analysis.md`](units/stages/analysis.md) + [`units/prompts/bia.md`](units/prompts/bia.md). Level 2; gate: approved tools, a written data rule, a named reviewer. An afternoon per site. Data: [`units/data-rules.md`](units/data-rules.md).
-- **"My board wants a one-page AI policy for BCM."** [`units/principles.md`](units/principles.md) (handout: [`units/principles-a4.html`](units/principles-a4.html)), adopted through your own route with [`units/prompts/draft.md`](units/prompts/draft.md); **`/check-against-standards`** holds the draft against your frameworks. Level 2; gate: fixed sources, a named reviewer. Forty minutes. Data: [`units/data-rules.md`](units/data-rules.md).
+- **"My board wants a one-page AI policy for BCM."** [`units/principles.md`](units/principles.md), adopted through your own route with [`units/prompts/draft.md`](units/prompts/draft.md); **`/check-against-standards`** holds the draft against your frameworks. Level 2; gate: fixed sources, a named reviewer. Forty minutes. Data: [`units/data-rules.md`](units/data-rules.md).
 - **"Where do we start?"** [`units/levels.md`](units/levels.md), Where to start, by level. **No prompt file here**: the row you land on names it. Level 1 or 2; gate: an approved tool, nothing confidential in. Ten minutes. Data: [`units/data-rules.md`](units/data-rules.md).
 - **"I have three years of exercise reports."** Stage 6: [`units/stages/validate.md`](units/stages/validate.md), its Prompts read-across, then [`units/prompts/exercise.md`](units/prompts/exercise.md). Level 3; gate: retrieval over the whole set. An afternoon. Data: [`units/data-rules.md`](units/data-rules.md).
 - **"What do I hold for clause 8.4?"** **`/check-against-standards`** with your own evidence checklist and records. **No prompt file here**: the skill runs Task choice 3 in [`units/stages/validate.md`](units/stages/validate.md). Level 2; gate: the checklist in your own words, a named reviewer. An hour. Data: [`units/data-rules.md`](units/data-rules.md).
 - **"We are acquiring a company."** The main flow from the top, not from analysis: [`units/stages/govern.md`](units/stages/govern.md) + [`units/prompts/draft.md`](units/prompts/draft.md). Level 2; gate: approved tools, a written data rule, a named reviewer. Weeks in all. Data: [`units/data-rules.md`](units/data-rules.md).
 - **"Which tool may I paste this into?"** [`units/data-rules.md`](units/data-rules.md), then [`units/tools.md`](units/tools.md); the prompt pattern is [`units/prompts/README.md`](units/prompts/README.md). **No prompt needed**. Level 2; gate: the data rules are written down; until then the answer is "none yet". Ten minutes.
-- **"Which type of tool fits, and may we approve it?"** [`units/tools.md`](units/tools.md), the selection guide and Before you approve a tool. Installing these skills is such an approval. **No prompt needed**. Level 2; gate: the answers recorded with the approval. An hour. Data: [`units/data-rules.md`](units/data-rules.md).
+- **"Which type of tool fits, and may we approve it?"** [`units/tools.md`](units/tools.md), Which tool for which task and Before you approve a tool. Installing these skills is such an approval. **No prompt needed**. Level 2; gate: the answers recorded with the approval. An hour. Data: [`units/data-rules.md`](units/data-rules.md).
 - **"We run this every month now. What do we keep?"** [`units/keep-it-running.md`](units/keep-it-running.md); **`/check-my-ai-tool`** drafts the record. **No prompt needed**. Level 2; gate: the card names an owner, a reviewer and a retire-when condition. An hour for the first card. Data: [`units/data-rules.md`](units/data-rules.md).
 - **Your situation is not listed.** Name the stage the work belongs to and take that route from the main flow; if it spans two, take the earlier. That route names the rest, so this entry names none of its own. Not placeable at all: [`units/principles.md`](units/principles.md) says what the guidance covers.
 

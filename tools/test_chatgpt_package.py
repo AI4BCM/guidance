@@ -59,14 +59,14 @@ def test_no_dangling_links(tmp_path):
             checked += 1
             resolved = (md.parent / target.split("#")[0]).resolve()
             assert resolved.exists(), f"{md.relative_to(built)} -> {target}"
-    assert checked >= 50, f"the router carried 50 links; only {checked} were checked"
+    assert checked >= 49, f"the router carried 49 links; only {checked} were checked"
 
 
 def test_the_router_still_carries_all_of_its_links():
     source = relative_links((REPO / "ask-ai4bcm" / "SKILL.md").read_text(encoding="utf-8"))
     packaged = relative_links((SKILL / "SKILL.md").read_text(encoding="utf-8"))
     # 46 until 2026-09-28; the keep-it-running on-ramp carries two more.
-    assert len(source) == len(packaged) == 50  # 48 until the r15 sync (2026-10-02)
+    assert len(source) == len(packaged) == 49  # 48 until the r15 sync (2026-10-02); 49 since 2026.11.1 dropped the principles-a4 handout link
 
 
 def test_no_mcp_declaration_anywhere_in_the_package():
@@ -90,9 +90,12 @@ def test_disable_model_invocation_survives_packaging():
 
 
 def test_no_claude_specific_wording_in_the_package():
-    """The conversion guide asks for provider-neutral language in a submitted skill."""
+    """The conversion guide asks for provider-neutral language in a submitted skill. The two units
+    that cite sources are exempt: the print edition's reference list names the vendors' own guides,
+    and its AI-use disclosure names the models used (2026.11.1)."""
+    CITING = {"units/references.md", "units/glossary.md"}
     for path in SKILL.rglob("*"):
-        if path.is_file() and path.suffix in {".md", ".yaml", ".yml"}:
+        if path.is_file() and path.suffix in {".md", ".yaml", ".yml"} and str(path.relative_to(SKILL)) not in CITING:
             body = path.read_text(encoding="utf-8").lower()
             for term in ("claude", "userconfig", "${user_config"):
                 assert term not in body, f"{path.relative_to(SKILL)} still says {term!r}"

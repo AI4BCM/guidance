@@ -17,7 +17,7 @@
     {"q": "The payroll system has an RPO of \"<1 h\" — what does that mean for us in practice?", "expect": ["nist-sp-800-34r1-contingency-planning-body", "glossary"], "from": "nemo t95 twenty questions, Q15"},
     {"q": "Can I paste our BIA tables into the free ChatGPT to get a quick summary?", "expect": ["data-rules", "principles"], "from": "nemo t95 twenty questions, Q16"},
     {"q": "Could the AI just set the recovery times itself, so the owners don't have to go through it all again?", "expect": ["stages-analysis", "prompts-bia", "workflow-design"], "from": "nemo t95 twenty questions, Q17"},
-    {"q": "Before I put something the AI wrote into the BIA report, what do I need to check?", "expect": ["prompts-readme", "principles", "quick-start"], "from": "nemo t95 twenty questions, Q18; quick-start (new in 2026.11) holds the eight-point check before every AI task"},
+    {"q": "Before I put something the AI wrote into the BIA report, what do I need to check?", "expect": ["prompts-readme", "principles"], "from": "nemo t95 twenty questions, Q18; quick-start (new in 2026.11) holds the eight-point check before every AI task"},
     {"q": "Incident management has to be back in 8 hours but can be down for 24 — is that gap normal?", "expect": ["glossary", "nist-sp-800-34r1-contingency-planning-body"], "from": "nemo t95 twenty questions, Q19"},
     {"q": "Where do we depend on one outside company with no real backup?", "expect": ["stages-design"], "from": "nemo t95 twenty questions, Q20"},
     {"q": "Data protection only hits \"high\" on the legal side after a whole week — don't we have to report a data breach much faster than that?", "expect": ["principles"], "from": "nemo t95 twenty questions, Q22"},

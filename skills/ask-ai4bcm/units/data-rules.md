@@ -1,15 +1,18 @@
-<!-- meta: unit=data-rules version=2026.11 -->
-# Data Rules
+<!-- meta: unit=data-rules version=2026.11.1 -->
+# The rules that always apply
 
-Read this first. It determines where the task can be carried out. Anything pasted into the wrong tool cannot be undone.
+## Data rules
 
-## Sensitivity decides the tool
+**If you paste something into the wrong tool, it will stay there forever.**
+
+## Data classification decides the tool
 
 The more sensitive the data and the more serious the consequences of an error, the more controlled the environment must be. Public, free online tools are never used for BCM data. They are only useful for generic brainstorming that discloses nothing about your organisation.
 
-## Sensitivity classes
+## Classification levels
 
-High-sensitivity, approved corporate or private environment only:
+**Below is a list of data assets of the highest classification level.
+Paste it in an approved corporate or private environment only.**
 
 - BIA data and risk assessment detail
 - incident records and live crisis information
@@ -25,6 +28,10 @@ Classify before entering; how sensitive the data is decides which tools you may 
 
 **Passwords, keys and access tokens go into no tool**, approved or not.
 
+## Prompt injection
+
+The text in a document, webpage, email, picture or file can be written in such a way as to make an AI perform an action that you did not ask for, such as ignoring its instructions, revealing data or taking action. AI tools cannot reliably distinguish such text from its context, and providing an additional prompt will not help (OWASP, 2025, ASI01 and ASI06; IMDA, 2026, sections 2.3.1 and 2.3.2). Give a tool that reads data outside of your controlled environment only the permissions it needs for the task (principle 3). If you notice that a document is instructing the AI in unintended ways, inform the owner and your information security team immediately.
+
 ## What AI4BCM's own tools read
 
 | | AI4BCM Guidance chatbot | AI4BCM skills | Connector | BIA-Workflow |
@@ -32,10 +39,6 @@ Classify before entering; how sensitive the data is decides which tools you may 
 | What it reads | Nothing of yours | Your files, in your approved environment | Nothing of yours | Your process data |
 
 The row says what each one retrieves. It does not say what you may type in. `/learn-bcm` and `/check-against-standards` also read this guidance's units and open literature, which ship with them. The chatbot at ai4bcm.org/chat has no upload box, and it answers from this guidance and the public standards it cites. That is no reason to describe your own organisation to it. Keep case material out.
-
-## Prompt injection
-
-The text in a document, webpage, email or file can be written in such a way as to make an AI perform an action that you did not ask for, such as ignoring its instructions, revealing data or taking action. AI tools cannot reliably distinguish such text from the surrounding content, and a line in your prompt will not stop them (OWASP, 2025, ASI01 and ASI06; IMDA, 2026, section 2.3.2). Treat information found by the tool as something to be checked, not as an order to be followed. Give a tool that reads outside material only the permissions needed for the task (principle 4). If a document appears to instruct the AI, inform its owner and your information security team.
 
 ## Before you paste
 
