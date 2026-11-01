@@ -64,3 +64,28 @@ Neither route has been run in a Business, Enterprise, Healthcare or Edu workspac
 repository's build machine. What is checked is the files: `tools/check_installs.py` builds the ten
 zips from a fresh clone, extracts them, and finds each skill byte for byte its package, with
 `preflight.md` and `units/`.
+
+## On a plan without skills
+
+Sources, read 2026-11-01 from the help centre's search results only (every article answered HTTP 403
+from the build machine, so none was opened):
+[Projects in ChatGPT](https://help.openai.com/en/articles/10169521-projects-in-chatgpt),
+[Uploading files](https://help.openai.com/en/articles/8555545-uploading-files-and-audio-to-chatgpt),
+[Creating and editing GPTs](https://help.openai.com/en/articles/8554397-creating-and-editing-gpts) and
+[Custom GPT retirement](https://help.openai.com/en/articles/20001519-custom-gpt-retirement-and-migration-faq).
+The plugins article and the July 2026 release notes speak of personal skills on paid plans other
+than Free and Go; the skills article above says Business, Enterprise, Healthcare and Edu. This page
+follows the skills article until a run settles it.
+
+On Free, Go, Plus or Pro, give ChatGPT the text instead of the skills:
+
+- **A project.** Projects are on every plan. Create one, add the .md file from
+  <https://ai4bcm.org/guidance> to its files (about 140 KB), and add an instruction such as *Answer
+  from the AI4BCM guidance in this project and name the unit each answer comes from.* A Free
+  project holds 5 files, Go and Plus 25, Pro 40.
+- **One chat.** Attach the .md file to the chat and ask. Free accounts can upload 3 files a day.
+- **Not a custom GPT.** Personal accounts can no longer create GPTs, and OpenAI retires custom GPTs
+  on 11 December 2026.
+
+Neither a project nor an attached file carries the preflight. The skills ask the data class before
+they start; without them, that question is yours (`units/data-rules.md`).

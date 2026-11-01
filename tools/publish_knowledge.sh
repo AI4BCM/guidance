@@ -39,8 +39,13 @@ git -C "$APP_ROOT" pull --ff-only
 # chunks on the remver-lessons text, and would silently unpublish the 296 literature chunks —
 # the flag is the difference between the two corpora.
 echo "2/4 build chunks -> $DATA_DIR"
+#
+# install/ is passed the same way (plug-in answers, 2026-11-01): the pages on putting the guidance
+# into ChatGPT, Claude, Microsoft 365 Copilot and the rest. They are the guidance's own text
+# (source_id ai4bcm-guidance) and live outside units/, so the print and the .md download never
+# carry them; this flag is the only thing that puts them in front of the question box.
 "$PYTHON" "$APP_ROOT/tools/build_chunks.py" --data-dir "$DATA_DIR" \
-  --source-dir "$APP_ROOT/literature"
+  --source-dir "$APP_ROOT/literature" --source-dir "$APP_ROOT/install"
 
 # Step 3 was "render the knowledge-base pages", and it is GONE — owner decision 2026-09-12.
 # /demo/kb/ answers 410 now: this repository on GitHub is the source of truth and every citation

@@ -55,6 +55,14 @@ SKIP_FILENAMES = {"index.md"}
 # OWASP text in cited/ is share-alike and may never become chunks.
 EXTRA_DIR_SKIP = ("README.md", "cited")
 
+# install/ is the one extra directory that is the guidance's own text (plug-in answers, 2026-11-01):
+# how to put the guidance into ChatGPT, Claude, Microsoft 365 Copilot and the rest. The question box
+# must reach it, and the print and the .md download must not: both are built from units/ only, so a
+# page here is on GitHub and in the corpus and nowhere else. Its README is the route table, so it
+# is chunked, unlike literature's. Its pages sit at the directory's root, so the directory name
+# travels in the id (`install-chatgpt-...`); a bare `chatgpt` or `readme` would say nothing.
+INSTALL_DIR_NAME = "install"
+
 # Heading title → section_type. The stage units all carry the same seven headings; the
 # two extra ones (analysis' Risk assessment, govern's Learning the practice, embed's Case
 # studies and scheduled awareness) fall through to the unit default.
@@ -95,6 +103,7 @@ UNIT_DEFAULTS: dict[str, tuple[str, str, str]] = {
     "prompts-management-report": ("prompt", "reporting", "prompt"),
     "prompts-evaluations": ("prompt", "prompting", "prompt"),
 }
+INSTALL_DEFAULTS = ("install", "installation", "install")
 
 # `identify_ai_risks` reads this type. In the units the never-alone list is principle 4;
 # nothing else carries it.
@@ -395,7 +404,9 @@ def build_unit_chunks(
     field is deliberately ignored — the Professional Practice scheme was retired with the
     snapshot it keyed.
     """
-    default_type, bcm_process, output_type = UNIT_DEFAULTS.get(unit, ("section", "", ""))
+    default_type, bcm_process, output_type = UNIT_DEFAULTS.get(
+        unit, INSTALL_DEFAULTS if unit.startswith(f"{INSTALL_DIR_NAME}-") else ("section", "", "")
+    )
     chunks: list[Chunk] = []
     seen: dict[str, int] = {}
 
@@ -484,13 +495,14 @@ def build_all(
         for md_file in sorted(root.rglob("*.md")):
             if md_file.name.lower() in SKIP_FILENAMES:
                 continue
-            if root != units_dir and md_file.relative_to(root).parts[0] in EXTRA_DIR_SKIP:
+            is_install = root != units_dir and root.name == INSTALL_DIR_NAME
+            if root != units_dir and not is_install and md_file.relative_to(root).parts[0] in EXTRA_DIR_SKIP:
                 continue
             source_file = str(md_file.relative_to(root.parent))
             chunks.extend(
                 build_unit_chunks(
                     md_file.read_text(encoding="utf-8"),
-                    unit_slug(md_file, root),
+                    unit_slug(md_file, root.parent if is_install else root),
                     source_file,
                     release_tag,
                     source_for(source_file, sources),

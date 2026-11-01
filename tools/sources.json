@@ -24,7 +24,8 @@
       "licence_class": "A",
       "citation": "Hoekstra, W., Gerner, K., et al. (2026). AI4BCM: Guideline for using AI by BCM professionals, {edition}, {source_file}. CC BY 4.0.",
       "paths": [
-        "units/*"
+        "units/*",
+        "install/*"
       ]
     },
     {
