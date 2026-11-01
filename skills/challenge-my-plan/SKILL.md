@@ -56,7 +56,7 @@ No Intake line: no scope question after the data class.
 
 Each question and recommendation names its passage, with document and section. The answers
 are the owner's own statements. Every finding is open. The document is unchanged:
-"you can show afterwards who did what, and from which sources".
+"you can identify afterwards who did what, and from which sources".
 
 ## Reviewer
 

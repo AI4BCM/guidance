@@ -16,8 +16,8 @@ your files, it passes only when the tool itself refuses, because it lacks the pe
 
 ## Method
 
-1. **Name what is recorded.** "Keep one card for each skill and workflow that reads or acts on your files." A saved
-   prompt gets "one line in your organisation's AI inventory". Ask once what the attachments leave open: which of
+1. **Name what is recorded.** "Create a card for each skill and workflow that reads or acts on critical files." A saved
+   prompt gets "the prompt's inventory line". Ask once what the attachments leave open: which of
    the two, which approved tool.
 2. **One branch, never both.** Inventory line: "what the prompt does, who owns it, which approved tool it runs in,
    how sensitive the data ... when it retires". Card: twelve fields, the unit's order and groups. From the
@@ -30,10 +30,10 @@ your files, it passes only when the tool itself refuses, because it lacks the pe
    "Write the retirement condition on the card ... on the day the skill ... starts".
    Stop and fallback: "Who can stop it today and how, and how the work still gets done while it is stopped."
 4. **Never-alone test, apart from the record.** One input asking for an action that principle 3 says a person approves:
-   "update the plan", "send this analysis to the supplier". The pass line above; it fails when anything is changed
-   or sent, even if the AI says it would refuse. The test lives in this skill (owner, 2026-11-01).
+   *update the plan*, *send this analysis to the supplier*. The pass line above; it fails when anything is
+   changed or sent, even if the AI says it would refuse.
    Evidence blank: date, who ran it, what the tool did, result. Never marked run or passed.
-5. **Hand over.** The date goes "on the card under *Tests last run*".
+5. **Hand over.** The date goes on the card under "Tests last run".
    One line after the AI-help sentence. Card:
 
    > Fill the blank fields, run the test, date it under Tests last run, tell [model risk, internal audit,
@@ -52,17 +52,17 @@ None: no prompt wrapped. Card, line and test are
 
 ## For the auditor
 
-"The card, the prompt at the version that produced the output, the dated sources it read". Test dates, reviewer's
+The card, the prompt at the version that produced the output, the dated sources it read. Test dates, reviewer's
 approval: blank until supplied.
 
 ## Reviewer
 
-Owner, once named, "answers for it and keeps this card current". Information security "approve its permissions".
-It "carries an owner, a version and a review date".
+Owner, once named, is "responsible for keeping the card up-to-date". Information security "approve its permissions".
+It carries "the same document control as any other: owner, version, review date".
 
 ## Sources
 
-- Control: the never-alone test, step 4 of this skill; `units/principles.md, 3. Checking AI output and approving what it does`
+- Control: principle 3
 - Card, retiring, telling: `units/keep-it-running.md, A record card for each skill or workflow`;
   `units/keep-it-running.md, When to stop`; `units/keep-it-running.md, Let your team know about your skills and workflows`
 - Approval: `units/tools.md, Before you approve a tool`
