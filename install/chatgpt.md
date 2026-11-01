@@ -46,11 +46,12 @@ packages are.
 3. **Branch, tag, or commit**: empty to follow the default branch, or a release tag to pin the
    wording your organisation reviewed.
 4. **Import marketplace**, and authorise GitHub access.
-5. Open the imported `ai4bcm-guidance` plugin and set its **Installation policy**. Import does not
-   read a policy from the repository, so until you set one nobody has the plugin.
+5. Open the imported `ai4bcm-guidance` plugin and check its **Installation policy**. Import does not
+   read a policy from the repository: a newly imported plugin starts as **Available**, which lets
+   eligible members install it, and **Installed** puts it in front of them. Review it before anyone
+   uses it (help centre search result, 2026-11-01; the article answers 403 from the build machine).
 
-The package declares no MCP server: a plugin that declares one is labelled Desktop only and loses
-ChatGPT on the web.
+The package declares no MCP server, so nothing in it needs the desktop app.
 
 ## Using a skill
 
@@ -74,18 +75,19 @@ from the build machine, so none was opened):
 [Creating and editing GPTs](https://help.openai.com/en/articles/8554397-creating-and-editing-gpts) and
 [Custom GPT retirement](https://help.openai.com/en/articles/20001519-custom-gpt-retirement-and-migration-faq).
 The plugins article and the July 2026 release notes speak of personal skills on paid plans other
-than Free and Go; the skills article above says Business, Enterprise, Healthcare and Edu. This page
-follows the skills article until a run settles it.
+than Free and Go, and the pricing page lists skills on Free; the skills article above says
+Business, Enterprise, Healthcare and Edu. This page follows the skills article until a run settles
+it.
 
 On Free, Go, Plus or Pro, give ChatGPT the text instead of the skills:
 
 - **A project.** Projects are on every plan. Create one, add the .md file from
-  <https://ai4bcm.org/guidance> to its files (about 140 KB), and add an instruction such as *Answer
+  <https://ai4bcm.org/guidance> to its files (about 140 KB; if it is refused, rename it `.txt`), and add an instruction such as *Answer
   from the AI4BCM guidance in this project and name the unit each answer comes from.* A Free
   project holds 5 files, Go and Plus 25, Pro 40.
 - **One chat.** Attach the .md file to the chat and ask. Free accounts can upload 3 files a day.
 - **Not a custom GPT.** Personal accounts can no longer create GPTs, and OpenAI retires custom GPTs
   on 11 December 2026.
 
-Neither a project nor an attached file carries the preflight. The skills ask the data class before
-they start; without them, that question is yours (`units/data-rules.md`).
+Neither a project nor an attached file carries the preflight. The task skills ask the data class
+before they start; without them, that question is yours (`units/data-rules.md`).

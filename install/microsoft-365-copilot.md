@@ -43,17 +43,19 @@ that text and to name the unit it took each answer from.
 - **Knowledge.** Agent Builder takes uploaded files and SharePoint or OneDrive files, but its list of
   types is .doc, .docx, .pdf, .ppt, .pptx, .txt, .xls and .xlsx: not .md. Upload the PDF, or save the
   .md file as .txt first. Grounding on uploaded files or SharePoint needs a Microsoft 365 Copilot
-  licence, or pay-as-you-go billing turned on for your tenant; without either, an agent gets web
-  search and its instructions only.
+  licence, or pay-as-you-go billing turned on for your tenant; without either, an agent can use web
+  search and its instructions, but not your uploaded files or SharePoint.
 - **Skills.** Agent Builder also takes Agent Skills, the format the AI4BCM skills are written in:
   **Configure**, **Skills**, **Add**, and upload a zip. It needs a Microsoft 365 Copilot licence or
   pay-as-you-go, and allows up to eight skills per agent. Microsoft's package has `SKILL.md` at the
   root of the zip, so zip the *contents* of a package folder `skills/<name>/`, not the folder
   itself: the ChatGPT zips ([chatgpt.md](chatgpt.md)) have the folder at their root and are not
-  that format. Untested here, so check that the skill's files all arrived before you rely on it.
+  that format. Untested here: Claude refuses these packages for a frontmatter field
+  (`disable-model-invocation`, see [claude-apps.md](claude-apps.md)) and Microsoft may too, so check
+  the upload and that every file arrived before you rely on it.
 
-Your administrator can turn Agent Builder off for your tenant. If **New agent** is missing, it is
-off for you; ask them, or use the first way above.
+Your administrator can turn Agent Builder off for your tenant. If you see no **New agent**, ask
+them, or use the first way above.
 
 ## The connector, through Copilot Studio
 

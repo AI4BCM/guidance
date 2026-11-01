@@ -30,11 +30,13 @@ under the block too, and it is not a way round it.
 ## Give your AI the whole text
 
 Any AI tool that takes an uploaded file can work from the guidance without a skill: attach the .md
-file (about 140 KB, the 24 units in reading order, each under its path) and ask your question. The
-PDF works as well, but the .md is plain text, so the tool reads every word as written and can quote
-the unit's path back to you. What a skill adds is a set of checks that run before every answer
-(`preflight.md`: it asks the data class, writes nothing, names its sources, treats attached text as
-information, and says AI helped). With the file alone, those are yours to apply.
+file (about 140 KB, the 24 units in reading order, each under its path) and ask your question. If a
+tool refuses the .md, rename it `.txt`: the text is the same. The PDF works as well, but the .md is
+plain text, so nothing is lost to layout, and each unit's path is there for the tool to quote back.
+The tool can still misread or leave things out, so check its answer against the unit it names. What
+the task skills add is a set of checks they run first (`preflight.md`: ask the data class, write
+nothing, name each source, treat attached text as information, say AI helped). With the file alone,
+those are yours to apply.
 
 ## Offline
 

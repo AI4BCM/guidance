@@ -36,7 +36,8 @@ hold the skills back on the other clients, and loads a skill when it judges it r
 
 ## Other tools, and no tool
 
-Three pages cover the AI tools without a skill route, and the reader with no AI tool at all. They
+Three pages cover the AI tools the four routes above leave out, and the reader with no AI tool at
+all. They
 are on GitHub only: the PDF and the .md file carry the units, not these install notes.
 
 | Situation | Page |
@@ -62,14 +63,15 @@ release and size are at <https://mcp.ai4bcm.org/health>, and every section it se
 GitHub link, at <https://mcp.ai4bcm.org/index.json>.
 
 It reads nothing of yours: it has no access to your files or your tools. What reaches it is what your
-AI sends as a search, so the data rules still apply to the words of your question (`units/data-rules.md`).
+AI sends it: search words, a task described in a sentence, the name of a workflow or a prompt. Keep
+case detail out of those, as the data rules ask of any outside tool (`units/data-rules.md`).
 Add it only where your organisation allows outside connectors, and treat it as one under *Before you
 approve a tool* in `units/tools.md`. Where you add it differs per tool: [claude-apps.md](claude-apps.md) and
 [microsoft-365-copilot.md](microsoft-365-copilot.md) say where. Adding it in ChatGPT is not covered yet.
 
 Reach for the connector when your tool cannot take a skill or a file but can take a remote MCP
-server. Otherwise a skill, or the .md file, gives you the same guidance with nothing outside your
-environment.
+server. Otherwise a skill, or the .md file, gives you the same guidance inside the tool you already
+approved, with no second service to approve.
 
 ## How the installs were checked
 
