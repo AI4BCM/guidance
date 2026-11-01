@@ -17,7 +17,7 @@ Culture still changes through people. AI makes messages more relevant and quicke
 
 **Used today.** Cited public example, source in References, p. 31.
 
-Fairfax County’s 911 call centre in Virginia collaborated with George Mason University to build an AI voicebot that plays practice scenarios to callers for new and experienced call-takers. The university reports this as a tested prototype for 2025, not reported as a result.
+Fairfax County’s 911 call centre in Virginia collaborated with George Mason University to build an AI voicebot that plays the caller in practice scenarios for new and experienced call-takers. The university reports this as a tested prototype for 2025, not reported as a result.
 
 ## What AI can do, by activity
 
