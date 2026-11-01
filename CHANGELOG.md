@@ -55,7 +55,7 @@ The reserved set, the id-minting rule and the guarantee are all unchanged, so th
 the contract rather than a version of the corpus. `CITATION-CONTRACT.md` carries the detail,
 including why a GitHub anchor is not a chunk id and must never be derived from one.
 
-## 2026.11.1 — Release 2026.11.1, the final print edition — minted 2026-11-01, tag at `6d834d0`
+## 2026.11.1 — Release 2026.11.1, the final print edition — minted 2026-11-01, tag at `e4ed690`
 
 The tag was first set on `f60db07` and moved the same day to `99cd07d` (owner, 2026-11-01: "make sure the website
 is now 100% updated to the final pdf … and that .md and pdf is the newest"). The move carries one sentence the
@@ -74,6 +74,14 @@ Invention, Invoke, Machine learning, RAG, RPO, Tenant), with principle numbers i
 labels no longer end another section's chunk: "All of it is open source" (p. 36) is a heading of its own, and the
 part label "Words and sources" (p. 31) tops `references.md`. Chunk ids: one added,
 `glossary-all-of-it-is-open-source`; none removed or renamed.
+
+And a fourth time, to `e4ed690`, for the question box (owner, 2026-11-01: "answer it correctly ONLY on github,
+so the chatbox can reach the answers, but keep them out of the pdf"). `install/` now holds pages for Microsoft 365
+Copilot, Claude on the web and the desktop app, readers whose IT blocks outside tools, ChatGPT without skills, and
+the connector at `mcp.ai4bcm.org`. The corpus build chunks `install/` as the guidance's own text
+(`--source-dir install`, chunk ids `install-*`), so the units, the PDF, the .md download and every pinned hash are
+unchanged; `tools/test_install_pages.py` checks that no install sentence reaches the PDF. Chunk ids: 42 added, all
+`install-*`; none removed or renamed.
 
 The guide text of the final print edition: the A4 guidance, 36 pages
 (`print/ai4bcm-guidance-2026.11.1.pdf`, sha256 `f059726c…`), which replaces the 2026.11 print of 3 October. The units
