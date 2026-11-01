@@ -37,8 +37,8 @@ the folder paths each one scans and what each does about a skill it was not aske
 - `ask-ai4bcm/` — the router, `SKILL.md`. See [ask-ai4bcm/README.md](ask-ai4bcm/README.md).
 - `install/` — installing the router in Claude Code, Codex, GitHub Copilot or ChatGPT.
   See [install/README.md](install/README.md).
-- `print/` — the print edition as PDF: the full guidance (A4) and the Quick Start handout (A5),
-  built from these units.
+- `print/` — the print edition as PDF: the full guidance (A4, 36 pages). The units carry its
+  words.
 - `releases/` — one manifest per release, resolving its tag to a commit and to a hash per
   citable file.
 
@@ -51,10 +51,10 @@ of every unit intact. The terms, the review cycle and who owns the living prompt
 
 ## Releases
 
-Releases are tagged by calendar month, `YYYY.MM`. The first is `2026.09`; the next is
-`2026.11`. A citation naming a tag names the text as it stood at that tag, and
+Releases are tagged by calendar month, `YYYY.MM`, with a point release as `YYYY.MM.N`. The current
+release is `2026.11.1`, the final print edition. A citation naming a tag names the text as it stood at that tag, and
 [`releases/<tag>.json`](releases/) resolves the tag to a commit and a hash per citable file.
-`2026.09`, `2026.09.1` and `2026.11` are tagged. What each release contains and how to cite a unit at one:
+`2026.09`, `2026.09.1`, `2026.11` and `2026.11.1` are tagged. What each release contains and how to cite a unit at one:
 [CHANGELOG.md](CHANGELOG.md).
 
 ## Licence

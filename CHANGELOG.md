@@ -55,6 +55,36 @@ The reserved set, the id-minting rule and the guarantee are all unchanged, so th
 the contract rather than a version of the corpus. `CITATION-CONTRACT.md` carries the detail,
 including why a GitHub anchor is not a chunk id and must never be derived from one.
 
+## 2026.11.1 — Release 2026.11.1, the final print edition — mint pending
+
+The guide text of the final print edition: the A4 guidance, 36 pages
+(`print/ai4bcm-guidance-2026.11.1.pdf`), which replaces the 2026.11 print of 3 October. The units
+now carry the PDF's words and headings; GitHub keeps the practical aids the print leaves out.
+
+- Units = the print, word for word and heading for heading. New: `units/introduction.md`
+  (pp. 1–4) and `units/stages/README.md` (the lifecycle, p. 10). The five principles take the
+  print's names and order: 1 Know AI and its limits, 2 Match the tool to the classification,
+  3 Checking AI output and approving what it does, 4 AI answers only from approved sources, and
+  cites them, 5 Quality over impressing. "Sensitivity" becomes "classification".
+- Kept, though not in the print (owner, 2026-11-01): the self-check, where to start by level,
+  what AI4BCM's own tools read, before you paste, onboarding new BCM staff, and in each stage the
+  minimum controls, method, prompts, case example and level; the tool categories and where a tool
+  can run; when to stop. In `stages/analysis.md` the old risk-assessment section is now
+  *Risk assessment with AI support*. Dropped: *The rule* (now the Purpose line) and *The
+  never-alone test*.
+- Archived: `units/quick-start.md` and `units/principles-a4.html` move to `archive/units/`; the
+  A5 Quick Start handout and the two-page principles handout are no longer published. The
+  2026.11 tag keeps both.
+- Citation contract version 3: `stages-<stage>-typical-ai-uses` becomes
+  `stages-<stage>-where-does-ai-help-and-where-are-its-limits`. `KoGerner/workflow-design`
+  `run-bia.yaml` moves its two such citations and names `cites_release: "2026.11.1"`.
+- The ten AI4BCM skills ship in this release, in this repository only; the print does not
+  describe them.
+- Corpus: 155 chunks from the units, 451 with the literature. Search eval hit@4: 16 of 20.
+
+`2026.11` stays exactly as minted (`e81ea8a`), so everyone who cited it keeps the text they cited.
+Its manifest moves to `releases/archive/2026.11.json`.
+
 ## 2026.11 — minted 2026-10-03
 
 The guide text and print edition of 3 October 2026: the A4 guidance (40 pages, `print/ai4bcm-guidance-2026.11.pdf`)
