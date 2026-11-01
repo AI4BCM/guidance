@@ -55,7 +55,7 @@ The reserved set, the id-minting rule and the guarantee are all unchanged, so th
 the contract rather than a version of the corpus. `CITATION-CONTRACT.md` carries the detail,
 including why a GitHub anchor is not a chunk id and must never be derived from one.
 
-## 2026.11.1 — Release 2026.11.1, the final print edition — mint pending
+## 2026.11.1 — Release 2026.11.1, the final print edition — minted 2026-11-01, tag at `f60db07`
 
 The guide text of the final print edition: the A4 guidance, 36 pages
 (`print/ai4bcm-guidance-2026.11.1.pdf`), which replaces the 2026.11 print of 3 October. The units
