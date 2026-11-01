@@ -152,3 +152,21 @@ def test_the_corpus_may_hold_more_chunks_than_the_units_alone(tmp_path):
         for n in range(400)
     ]
     bc.validate(chunks + stage_fillers + filler, "2026.09")  # no SystemExit
+
+
+def test_the_literature_readme_and_shelf_one_stay_out_of_the_corpus(tmp_path):
+    """Ticket 63: literature/README.md is the licence table and literature/cited/ is shelf 1,
+    which ships in the skill packages. Neither is registered, and neither may stop the build
+    or enter the chunks; a prompts/README.md under units/ is still a unit."""
+    units = write_units(tmp_path)
+    (units / "prompts").mkdir()
+    (units / "prompts" / "README.md").write_text(UNIT, encoding="utf-8")
+    lit = tmp_path / "literature"
+    (lit / "cited" / "owasp").mkdir(parents=True)
+    (lit / "README.md").write_text(UNIT, encoding="utf-8")
+    (lit / "cited" / "owasp" / "top-10.md").write_text(UNIT, encoding="utf-8")
+    registry = bc.load_sources(write_registry(tmp_path, [ROW]))
+    chunks = bc.build_all(units, "2026.09", registry, (lit,))
+    files = {chunk.source_file for chunk in chunks}
+    assert "units/prompts/README.md" in files
+    assert not any(f.startswith("literature/") for f in files)

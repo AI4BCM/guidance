@@ -1,0 +1,5 @@
+interface:
+  display_name: "Debrief to Action"
+  short_description: "Turn exercise notes into proposed findings and actions"
+policy:
+  allow_implicit_invocation: false

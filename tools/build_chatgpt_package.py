@@ -1,12 +1,20 @@
 #!/usr/bin/env python3
-"""build_chatgpt_package.py — generate `skills/` so the router travels with its units.
+"""build_chatgpt_package.py — generate `skills/`, one self-contained package per skill.
 
-The Claude route ships the whole repository: `.claude-plugin/plugin.json` declares
-`"skills": ["./"]`, the client reads `ask-ai4bcm/SKILL.md` from the repository root, and the
-router's 46 relative links into `units/` resolve because `units/` is sitting right there.
+Every install route reads these packages, never the source folders at the repository root
+(ticket 68, 2026-10-02):
 
-A portable Agent Plugins package does not work that way. It discovers skills from
-`skills/<name>/` and nothing else:
+- Claude Code: the plugin's manifest declares no `skills` path, so the client scans its default
+  `skills/` and nothing else. A `"skills": ["./"]` key *adds* the root to that scan ("Adds to the
+  default: `skills`", https://code.claude.com/docs/en/plugins-reference.md, read 2026-10-02), and
+  `claude plugin details` on 2.1.284 then counted 20 skills, each name twice.
+- Codex and GitHub Copilot: `npx skills add AI4BCM/guidance/skills`. The `skills` CLI (1.7.0) walks
+  the repository root before `skills/` and keeps the first skill of a name, so a bare
+  `AI4BCM/guidance` installs the root folder, which carries only `SKILL.md` and `agents/`.
+- ChatGPT: `--zips DIR` writes `<name>.zip` per package, the folder at the archive root.
+
+A portable Agent Plugins package (ChatGPT's plugin route) discovers skills from `skills/<name>/`
+and nothing else:
 
     "Portable packages always discover skills in `skills/`"
     — https://developers.openai.com/plugins/build/plugins.md, read 2026-09-10
@@ -14,22 +22,20 @@ A portable Agent Plugins package does not work that way. It discovers skills fro
 and the same paragraph says a `skills` declaration in the inline extension or the compatibility
 overlay cannot replace, disable or add to that discovery. (Paraphrased rather than quoted: the
 sentence names a manifest key this package must not contain anywhere, and the acceptance check
-for "no MCP declaration" is a grep over the whole tree.)
-
-So `"skills": ["./"]` cannot carry `units/` into a ChatGPT install, and a router placed at
+for "no MCP declaration" is a grep over the whole tree.) A router placed at
 `skills/ask-ai4bcm/SKILL.md` with the units left at the package root resolves `../units/` to
-`skills/units/`, which does not exist: all 46 links dangle. That was measured, not assumed.
+`skills/units/`, which does not exist: all its links dangle. That was measured, not assumed.
 
-This script is the answer. It copies the router and the units into `skills/ask-ai4bcm/` so the
-skill carries its own references, as the format intends —
+This script is the answer. It copies each skill, `preflight.md`, the units and the literature it
+ships into `skills/<name>/`, so the skill carries its own references, as the format intends —
 
     "Keep each skill with its `SKILL.md`, scripts, references, and assets."
     — https://developers.openai.com/plugins/guides/submit-claude-plugin.md, read 2026-09-10
     "When referencing other files in your skill, use relative paths from the skill root."
     — https://agentskills.io/specification.md, read 2026-09-10
 
-— and rewrites `../units/` to `units/` in `SKILL.md` to match the move. That rewrite is the
-only edit made to the router's text, it is mechanical, and `--check` proves it by regenerating
+— and rewrites `../units/`, `../preflight.md` and `../literature/` in `SKILL.md` to match the move.
+That rewrite is the only edit made to a skill's text, it is mechanical, and `--check` proves it by regenerating
 the whole tree from source and comparing.
 
 `skills/` is generated and committed. It has to be committed, because a workspace admin
@@ -41,6 +47,7 @@ Usage:
   build_chatgpt_package.py --check         exit 1 if the committed skills/ tree has drifted
   build_chatgpt_package.py --links DIR     resolve every relative link under DIR, exit 1 on dangle
   build_chatgpt_package.py --archive PATH  write the uploadable .tar.gz
+  build_chatgpt_package.py --zips DIR      write one uploadable <name>.zip per skill into DIR
 
 This script never commits, never tags and never pushes.
 """
@@ -56,6 +63,16 @@ from pathlib import Path
 
 DEFAULT_REPO = Path(__file__).resolve().parent.parent
 SKILL_NAME = "ask-ai4bcm"
+# The shared preflight every skill runs first (AI4BCM skill set, 2026.11). It sits at the
+# repository root beside the skill folders, and every package carries a copy (direction note:
+# "one source file, copied into every package"), the router's too.
+PREFLIGHT = "preflight.md"
+
+
+def skill_names(repo: Path) -> list[str]:
+    """Every source skill: a top-level folder holding a SKILL.md, router first."""
+    names = sorted(p.parent.name for p in repo.glob("*/SKILL.md"))
+    return sorted(names, key=lambda n: n != SKILL_NAME)
 
 # The handout is published guidance the router links to, and it lives in the vault. It is
 # copied in rather than generated; VAULT_ONLY names what the repository does not carry itself.
@@ -67,27 +84,46 @@ README_REWRITES = {
     "../install/README.md": "https://github.com/AI4BCM/guidance/blob/main/install/README.md",
 }
 
+# Shelf 1 of `literature/`: what every package carries, whatever the skill reads.
+SHELF_1 = ("README.md", "cited")
+
 # Files the archive carries beside the skill: the two manifests and the licence the citation
-# line depends on. `install/`, `units/`, `literature/` and `tools/` are repository furniture.
+# line depends on. `install/`, `units/`, `literature/` and `tools/` are repository furniture
+# at the root; each skill folder carries its own copies of the units and the literature it ships.
 ARCHIVE_EXTRAS = ("plugin.json", ".claude-plugin/plugin.json", "LICENSE")
 
 
 def build(repo: Path, dest: Path) -> None:
-    """Write the packaged skill tree at `dest` (which becomes `<dest>/<SKILL_NAME>/`)."""
-    skill = dest / SKILL_NAME
+    """Write every packaged skill tree at `dest/<name>/`."""
+    for name in skill_names(repo):
+        build_one(repo, dest, name)
+
+
+def build_one(repo: Path, dest: Path, name: str) -> None:
+    """Write one packaged skill tree at `dest/<name>/`."""
+    skill = dest / name
     if skill.exists():
         shutil.rmtree(skill)
     (skill / "agents").mkdir(parents=True)
 
-    src = repo / SKILL_NAME
-    # SKILL.md: the one edit. `../units/` becomes `units/` because the units move inside.
+    src = repo / name
+    # SKILL.md: the one edit. `../units/` and `../preflight.md` lose their `../` because both
+    # move inside the skill folder.
     text = (src / "SKILL.md").read_text(encoding="utf-8")
-    (skill / "SKILL.md").write_text(text.replace("../units/", "units/"), encoding="utf-8")
+    # A skill that reads the open literature as a source carries it too: preflight 6 allows no web, so a
+    # link to the repository on GitHub would be a source the skill may not open.
+    reads_literature = "../literature/" in text
+    text = text.replace("../units/", "units/").replace(f"../{PREFLIGHT}", PREFLIGHT)
+    text = text.replace("../literature/", "literature/")
+    (skill / "SKILL.md").write_text(text, encoding="utf-8")
+    shutil.copy2(repo / PREFLIGHT, skill / PREFLIGHT)
+    copy_literature(repo, skill / "literature", both_shelves=reads_literature)
 
-    readme = (src / "README.md").read_text(encoding="utf-8")
-    for old, new in README_REWRITES.items():
-        readme = readme.replace(old, new)
-    (skill / "README.md").write_text(readme, encoding="utf-8")
+    if (src / "README.md").exists():
+        readme = (src / "README.md").read_text(encoding="utf-8")
+        for old, new in README_REWRITES.items():
+            readme = readme.replace(old, new)
+        (skill / "README.md").write_text(readme, encoding="utf-8")
 
     shutil.copy2(src / "agents" / "openai.yaml", skill / "agents" / "openai.yaml")
 
@@ -106,6 +142,23 @@ def build(repo: Path, dest: Path) -> None:
         target = skill / "units" / extra
         if not target.exists() and (VAULT_UNITS / extra).exists():
             shutil.copy2(VAULT_UNITS / extra, target)
+
+
+def copy_literature(repo: Path, dest: Path, both_shelves: bool) -> None:
+    """Shelf 1 (the guidance's own sources, `literature/cited/`, with the licence table in
+    `literature/README.md`) goes into every package. Shelf 2, the comparison frameworks, goes
+    only into a skill that links `../literature/` itself: `/check-against-standards` and
+    `/learn-bcm` (direction note 2026.11, "Units and literature")."""
+    if both_shelves:
+        shutil.copytree(repo / "literature", dest, ignore=shutil.ignore_patterns("__pycache__"))
+        return
+    dest.mkdir(parents=True)
+    for name in SHELF_1:
+        src = repo / "literature" / name
+        if src.is_dir():
+            shutil.copytree(src, dest / name, ignore=shutil.ignore_patterns("__pycache__"))
+        else:
+            shutil.copy2(src, dest / name)
 
 
 def tree_diff(left: Path, right: Path) -> list[str]:
@@ -154,12 +207,38 @@ def write_archive(repo: Path, out: Path) -> None:
                 tar.add(path, arcname=str(path.relative_to(repo)))
 
 
+# A fixed timestamp, so the same package always zips to the same bytes.
+ZIP_DATE = (2026, 11, 1, 0, 0, 0)
+
+
+def write_zips(repo: Path, out_dir: Path) -> list[Path]:
+    """One `<name>.zip` per package, holding `<name>/SKILL.md` and everything beside it: the
+    ChatGPT upload (Skills > Create > Upload from your computer)."""
+    import zipfile
+
+    out_dir.mkdir(parents=True, exist_ok=True)
+    written = []
+    for name in skill_names(repo):
+        src = repo / "skills" / name
+        out = out_dir / f"{name}.zip"
+        with zipfile.ZipFile(out, "w", zipfile.ZIP_DEFLATED) as zf:
+            for path in sorted(src.rglob("*")):
+                if path.is_file() and "__pycache__" not in path.parts:
+                    info = zipfile.ZipInfo(f"{name}/{path.relative_to(src)}", ZIP_DATE)
+                    info.compress_type = zipfile.ZIP_DEFLATED
+                    info.external_attr = 0o644 << 16
+                    zf.writestr(info, path.read_bytes())
+        written.append(out)
+    return written
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     ap.add_argument("--repo", type=Path, default=DEFAULT_REPO)
     ap.add_argument("--check", action="store_true", help="exit 1 if skills/ has drifted")
     ap.add_argument("--links", type=Path, help="resolve every relative link under this directory")
     ap.add_argument("--archive", type=Path, help="write the uploadable .tar.gz here")
+    ap.add_argument("--zips", type=Path, help="write one uploadable <name>.zip per skill into this directory")
     args = ap.parse_args()
 
     repo = args.repo.resolve()
@@ -168,20 +247,25 @@ def main() -> int:
         return 1 if check_links(args.links.resolve()) else 0
 
     if args.check:
+        names = skill_names(repo)
         with tempfile.TemporaryDirectory() as tmp:
             build(repo, Path(tmp))
-            drift = tree_diff(repo / "skills" / SKILL_NAME, Path(tmp) / SKILL_NAME)
+            drift = tree_diff(repo / "skills", Path(tmp))
         if drift:
-            print("skills/ has drifted from ask-ai4bcm/ and units/:")
+            print("skills/ has drifted from the skill folders, preflight.md and units/:")
             for line in drift:
                 print(f"  {line}")
             print("regenerate with: build_chatgpt_package.py")
             return 1
-        print(f"skills/{SKILL_NAME} is in sync with ask-ai4bcm/ and units/")
+        print(f"skills/ is in sync for {len(names)} skills: {', '.join(names)}")
         return 0
 
     build(repo, repo / "skills")
-    print(f"wrote {repo / 'skills' / SKILL_NAME}")
+    for name in skill_names(repo):
+        print(f"wrote {repo / 'skills' / name}")
+    if args.zips:
+        for out in write_zips(repo, args.zips.resolve()):
+            print(f"wrote {out} ({os.path.getsize(out)} bytes)")
     if args.archive:
         write_archive(repo, args.archive.resolve())
         size = os.path.getsize(args.archive.resolve())

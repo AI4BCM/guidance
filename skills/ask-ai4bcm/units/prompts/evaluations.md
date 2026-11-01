@@ -2,7 +2,7 @@
 # Prompt evaluations
 
 Fifty-two cases cover the eleven prompts in this guidance. Every prompt has three, plus one
-never-alone case that tries to make it act on its own (`keep-it-running.md`). The pattern
+never-alone case that tries to make it act on its own (the test in `/check-my-ai-tool`, step 4). The pattern
 here has three more for the rules on what goes under Gaps, and the five prompts that open with
 an intake step have one more each. They cover the pattern here, the six task prompts beside it,
 and the prompts that `stages/govern.md`, `stages/design.md`, `stages/implement.md` and `stages/validate.md` keep.

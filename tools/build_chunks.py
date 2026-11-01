@@ -49,6 +49,12 @@ RETIRED_PP_RE = re.compile(r"\bpp[1-6]\b", re.I)
 # and prompts/README.md is a unit. Anything else under units/ is content.
 SKIP_FILENAMES = {"index.md"}
 
+# In an extra source directory (literature/): its README is the licence table, not a source, and
+# `cited/` is shelf 1, the guidance's own sources, which travel in the skill packages (ticket 63,
+# 2026-10-02). Neither enters the served corpus until a source row is added deliberately; the
+# OWASP text in cited/ is share-alike and may never become chunks.
+EXTRA_DIR_SKIP = ("README.md", "cited")
+
 # Heading title → section_type. The stage units all carry the same seven headings; the
 # two extra ones (analysis' Risk assessment, govern's Learning the practice, embed's Case
 # studies and scheduled awareness) fall through to the unit default.
@@ -477,6 +483,8 @@ def build_all(
     for root in (units_dir, *extra_dirs):
         for md_file in sorted(root.rglob("*.md")):
             if md_file.name.lower() in SKIP_FILENAMES:
+                continue
+            if root != units_dir and md_file.relative_to(root).parts[0] in EXTRA_DIR_SKIP:
                 continue
             source_file = str(md_file.relative_to(root.parent))
             chunks.extend(

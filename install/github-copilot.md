@@ -2,54 +2,49 @@
 
 Sources: https://docs.github.com/en/copilot/concepts/agents/about-agent-skills and
 https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/add-skills, both read
-2026-09-10.
+2026-10-02; the `skills` CLI 1.7.0, run 2026-10-02.
 
-## Where the folder goes
+**Test tier: smoke test.** About 12 runs by the maintainer, not the full eval. Results:
+[`evals/results.md`](../evals/results.md).
 
-Inside a repository, any of:
+## Copilot may start a skill you did not name
 
-```
-.github/skills
-.claude/skills
-.agents/skills
-```
-
-Personal, shared across your projects:
-
-```
-~/.copilot/skills
-~/.agents/skills
-```
+Copilot reads neither `disable-model-invocation` nor `policy.allow_implicit_invocation`. Its
+documentation says it decides when to use a skill from your prompt and the skill's description. So
+a skill can open while you are asking about something else, which it cannot do in Claude Code or
+Codex. When one does, it still runs its preflight first: it asks what class of data your material
+holds, and it writes nothing. If you want a skill only on request, install it only when you need
+it, or disable it with `/skills` in the Copilot CLI (`copilot skill disable <name>` from a
+terminal).
 
 ## The short way
 
+Inside the repository you work in:
+
 ```
-npx skills@latest add AI4BCM/guidance
+npx skills@latest add AI4BCM/guidance/skills
 ```
 
-The `skills` CLI finds `ask-ai4bcm` in the repository and copies it into the agent directories it
-detects, recording what it installed in `skills-lock.json`; `npx skills update` refreshes it. It
-copies the skill folder alone, so the units named in the router are not beside it. Either read them
-from the repository, or take the folder route below, which puts `units/` where the router expects.
+The CLI asks which skills and which clients; `-a github-copilot` names Copilot up front. It puts
+each package you pick in `.agents/skills/<name>/`, which Copilot reads; add `-g` to install for your
+user account instead of one repository. Keep `/skills` at the end of the source: without it the CLI installs the root source folders, which arrive without
+`preflight.md` and the units ([codex.md](codex.md) has the measurement).
 
-## Steps
+## By hand, as folders
 
-1. Clone or download this repository.
-2. Copy `ask-ai4bcm/` into `~/.copilot/skills/`, or into `.github/skills/` in the repository you
-   work in.
-3. Copy `units/` alongside it, so the relative links from `SKILL.md` into `../units/` resolve.
-4. In the GitHub Copilot CLI, invoke it by name: `/ask-ai4bcm`.
+Copy the package folder `skills/<name>/` into one of:
 
-`gh skill` in the GitHub CLI searches for, installs, updates and publishes agent skills, and
-`copilot skill add <FILE | URL | DIRECTORY>` adds one from a path.
+```
+.github/skills    .claude/skills    .agents/skills    (in a repository)
+~/.copilot/skills    ~/.agents/skills                 (for you, in every project)
+```
 
-Copilot reads the skill in the cloud agent, in Copilot code review, in the GitHub Copilot CLI, in
-the GitHub Copilot app, and in agent mode in Visual Studio Code and JetBrains IDEs.
+`copilot skill add <DIRECTORY>` adds one from a path. In a running CLI session, `/skills reload`
+picks up a new one and `/skills info <name>` shows where it came from.
 
-## What Copilot does not read
+## Using a skill
 
-Copilot reads neither `disable-model-invocation` nor `policy.allow_implicit_invocation`. Its
-documentation says Copilot loads a skill when it judges the skill relevant to the task, and that
-skills in `.github/skills` are also available to Copilot code review. So in Copilot the router can
-open on its own, which it cannot do in Claude Code or Codex. It still routes and nothing more, naming a unit,
-a prompt and a level, and running nothing itself.
+Name it in your prompt with a slash: `Use /prepare-bia for tomorrow's interview with Logistics.`
+Copilot reads skills in the cloud agent, Copilot code review, the Copilot CLI, the Copilot app, and
+agent mode in Visual Studio Code and JetBrains IDEs. Skills in `.github/skills` are also available
+to Copilot code review.

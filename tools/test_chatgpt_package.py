@@ -65,8 +65,9 @@ def test_no_dangling_links(tmp_path):
 def test_the_router_still_carries_all_of_its_links():
     source = relative_links((REPO / "ask-ai4bcm" / "SKILL.md").read_text(encoding="utf-8"))
     packaged = relative_links((SKILL / "SKILL.md").read_text(encoding="utf-8"))
-    # 46 until 2026-09-28; the keep-it-running on-ramp carries two more.
-    assert len(source) == len(packaged) == 49  # 48 until the r15 sync (2026-10-02); 49 since 2026.11.1 dropped the principles-a4 handout link
+    # 46 until 2026-09-28; the keep-it-running on-ramp carries two more. The 2026.11 rebuild (ticket 13) adds
+    # the clause 8.4 on-ramp's two links (data rules, the Validate stage prompt): 50.
+    assert len(source) == len(packaged) == 49  # 50 in the 3 Oct router; 2026.11.1 drops the principles-a4 handout link
 
 
 def test_no_mcp_declaration_anywhere_in_the_package():
@@ -90,11 +91,17 @@ def test_disable_model_invocation_survives_packaging():
 
 
 def test_no_claude_specific_wording_in_the_package():
-    """The conversion guide asks for provider-neutral language in a submitted skill. The two units
-    that cite sources are exempt: the print edition's reference list names the vendors' own guides,
-    and its AI-use disclosure names the models used (2026.11.1)."""
+    """The conversion guide asks for provider-neutral language in a submitted skill.
+
+    Shelf 1 (`literature/cited/`) is exempt: those are publishers' texts carried verbatim under
+    their licences (the UK AI Playbook names Claude among public tools), not the skill's own
+    words. The literature README is ours and is checked. The two units that cite sources are
+    exempt too (owner, 2026-11-01): the print edition's reference list names the vendors' own
+    guides, and its AI-use disclosure names the models used (2026.11.1)."""
     CITING = {"units/references.md", "units/glossary.md"}
     for path in SKILL.rglob("*"):
+        if path.is_relative_to(SKILL / "literature" / "cited"):
+            continue
         if path.is_file() and path.suffix in {".md", ".yaml", ".yml"} and str(path.relative_to(SKILL)) not in CITING:
             body = path.read_text(encoding="utf-8").lower()
             for term in ("claude", "userconfig", "${user_config"):
@@ -134,3 +141,85 @@ def test_cli_check_exits_zero_on_the_committed_tree():
         capture_output=True, text=True,
     )
     assert proc.returncode == 0, proc.stdout + proc.stderr
+
+
+@pytest.mark.parametrize("name", bp.skill_names(REPO))
+def test_every_skill_is_user_invoked_only(name):
+    """Preflight 4: a skill runs only when the user types its name, on every client that reads a flag."""
+    text = (REPO / name / "SKILL.md").read_text(encoding="utf-8")
+    front = text.split("---", 2)[1]
+    assert re.search(r"^name: " + re.escape(name) + r"$", front, re.M)
+    assert re.search(r"^disable-model-invocation: true$", front, re.M)
+    policy = (REPO / name / "agents" / "openai.yaml").read_text(encoding="utf-8")
+    assert re.search(r"^\s+allow_implicit_invocation: false$", policy, re.M)
+
+
+@pytest.mark.parametrize("name", [n for n in bp.skill_names(REPO) if n != bp.SKILL_NAME])
+def test_task_skills_carry_the_preflight(name):
+    """Every task skill opens on the shared preflight, and its package carries a copy of it."""
+    source = (REPO / name / "SKILL.md").read_text(encoding="utf-8")
+    body = source.split("---", 2)[2]
+    assert body.lstrip().split("\n\n")[0].startswith(f"First run [`../{bp.PREFLIGHT}`](../{bp.PREFLIGHT}).")
+    packaged = (REPO / "skills" / name / "SKILL.md").read_text(encoding="utf-8")
+    assert packaged == (source.replace("../units/", "units/").replace(f"../{bp.PREFLIGHT}", bp.PREFLIGHT)
+                        .replace("../literature/", "literature/"))
+    if "../literature/" in source:
+        assert (REPO / "skills" / name / "literature").is_dir()
+
+
+@pytest.mark.parametrize("name", bp.skill_names(REPO))
+def test_every_package_carries_the_preflight_and_the_units(name):
+    """Ticket 68: a package is self-contained, the router's included ("one source file, copied
+    into every package")."""
+    package = REPO / "skills" / name
+    assert (package / bp.PREFLIGHT).read_bytes() == (REPO / bp.PREFLIGHT).read_bytes()
+    assert (package / "units" / "data-rules.md").is_file()
+    assert (package / "literature" / "README.md").is_file()
+
+
+def test_claude_plugin_scans_only_the_packages():
+    """A `skills` key in the Claude manifest adds to the default `skills/` scan; `"./"` there made
+    `claude plugin details` count every skill twice (2.1.284, 2026-10-02), the root copy without
+    its preflight and units. The plugin loads the packages and nothing else."""
+    manifest = json.loads((REPO / ".claude-plugin" / "plugin.json").read_text())
+    assert "skills" not in manifest
+    market = json.loads((REPO / ".claude-plugin" / "marketplace.json").read_text())
+    assert all("skills" not in p for p in market["plugins"])
+
+
+def test_zips_hold_one_package_each_at_the_archive_root(tmp_path):
+    """The ChatGPT upload: `<name>.zip` holding `<name>/SKILL.md`, the preflight and the units,
+    byte for byte the committed package, and the same bytes on every build."""
+    import zipfile
+
+    first = bp.write_zips(REPO, tmp_path / "a")
+    second = bp.write_zips(REPO, tmp_path / "b")
+    assert [p.name for p in first] == [f"{n}.zip" for n in bp.skill_names(REPO)]
+    for a, b in zip(first, second):
+        assert a.read_bytes() == b.read_bytes(), a.name
+    name = "prepare-bia"
+    with zipfile.ZipFile(tmp_path / "a" / f"{name}.zip") as zf:
+        names = set(zf.namelist())
+        assert {f"{name}/SKILL.md", f"{name}/{bp.PREFLIGHT}", f"{name}/units/data-rules.md"} <= names
+        assert all(n.startswith(f"{name}/") for n in names)
+        assert zf.read(f"{name}/SKILL.md") == (REPO / "skills" / name / "SKILL.md").read_bytes()
+
+
+def test_shelf_one_goes_everywhere_and_shelf_two_only_to_the_two(tmp_path):
+    """Ticket 63: the guidance's own sources (literature/cited/ and the licence table) ship in
+    every package; the comparison frameworks ship with /check-against-standards and /learn-bcm
+    only (direction note 2026.11, "Units and literature")."""
+    bp.build(REPO, tmp_path)
+    shelf_one = {p.relative_to(REPO / "literature") for p in (REPO / "literature" / "cited").rglob("*.md")}
+    shelf_two = {p.relative_to(REPO / "literature") for p in (REPO / "literature").rglob("*.md")
+                 if p.relative_to(REPO / "literature").parts[0] not in bp.SHELF_1}
+    assert shelf_one and shelf_two
+    with_frameworks = set()
+    for name in bp.skill_names(REPO):
+        lit = tmp_path / name / "literature"
+        carried = {p.relative_to(lit) for p in lit.rglob("*.md")}
+        assert shelf_one | {Path("README.md")} <= carried, name
+        if carried & shelf_two:
+            assert carried == shelf_one | shelf_two | {Path("README.md")}, name
+            with_frameworks.add(name)
+    assert with_frameworks == {"check-against-standards", "learn-bcm"}
