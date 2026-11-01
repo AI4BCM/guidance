@@ -1,4 +1,10 @@
 <!-- meta: unit=introduction version=2026.11.1 -->
+Framework-neutral guidance for BCM practitioners
+
+Nobody taught BCM professionals how to use AI. AI4BCM Guidance does.
+
+AI for BCM, not BCM for AI.
+
 # Will AI replace BCM managers?
 
 When tasks become cheaper, people often do more of them, for as long as demand keeps growing (Bessen, 2018). The increased efficiency of steam engines led to greater coal consumption (Jevons, 1865). Similarly, when writing reports becomes cheaper, more BIAs, refreshers and exercises are requested. The role of the BCM will change and grow for as long as there is a significant amount of BCM work that AI cannot do.
