@@ -4,7 +4,7 @@ description: Given a plan or a change, lists where it disagrees with the BIA or 
 license: CC BY 4.0. LICENSE in the guidance repository carries the full terms.
 disable-model-invocation: true
 metadata:
-  version: "2026.11.0"
+  version: "2026.11.1"
 ---
 
 First run [`../preflight.md`](../preflight.md). This is check-against-bia, version 2026.11.0.
@@ -60,9 +60,9 @@ document changes". Name both.
 
 ## Sources
 
-- One control: `units/stages/implement.md, Minimum controls`; principle 4
+- One control: `units/stages/implement.md, Minimum controls`; principle 3
 - Method 1 to 5: `units/stages/implement.md, Method`
 - Task choices, reviewer: `units/stages/implement.md, Prompts`
-- Reopened records: `units/stages/analysis.md, Typical AI uses`
+- Reopened records: `units/stages/analysis.md, Where does AI help, and where are its limits?`
 - No owner inferred: `units/prompts/evaluations.md`
 - Planted text: `units/data-rules.md, Prompt injection`; IMDA section 2.3.2

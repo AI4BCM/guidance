@@ -4,7 +4,7 @@ description: Reviews a policy against the frameworks you select, or your BCMS re
 license: CC BY 4.0. LICENSE in the guidance repository carries the full terms.
 disable-model-invocation: true
 metadata:
-  version: "2026.11.0"
+  version: "2026.11.1"
 ---
 
 First run [`../preflight.md`](../preflight.md). This is check-against-standards, version 2026.11.0.
@@ -52,5 +52,5 @@ A policy: its header's owner answers each, legal or compliance the marked ones. 
 - Method: `units/stages/govern.md, Method`
 - Prompts: `units/stages/govern.md, Prompts`; `units/stages/validate.md, Prompts`
 - Frameworks: `units/data-rules.md, What AI4BCM's own tools read`
-- Approval: principle 4
+- Approval: principle 3
 - Planted text: `units/data-rules.md, Prompt injection`; IMDA section 2.3.2

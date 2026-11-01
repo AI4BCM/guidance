@@ -4,7 +4,7 @@ description: Asks who the interview is with and what you need back, then drafts 
 license: CC BY 4.0. LICENSE in the guidance repository carries the full terms.
 disable-model-invocation: true
 metadata:
-  version: "2026.11.0"
+  version: "2026.11.1"
 ---
 
 First run [`../preflight.md`](../preflight.md). This is prepare-bia, version 2026.11.0.
@@ -61,5 +61,5 @@ The activity owner confirms each requirement and sets MTPD and RTO. "Top managem
 
 ## Sources
 
-- One control, recovery fields blank: `units/stages/analysis.md, Minimum controls`; principle 4
-- Method, organiser's answers, reviewer: `units/stages/analysis.md, Method`; `units/workflow-design.md, The BIA workflow, five stages`; `units/prompts/bia.md`; principle 3; IMDA section 2.2.2
+- One control, recovery fields blank: `units/stages/analysis.md, Minimum controls`; principle 3
+- Method, organiser's answers, reviewer: `units/stages/analysis.md, Method`; `units/workflow-design.md, The BIA workflow, five stages`; `units/prompts/bia.md`; principle 4; IMDA section 2.2.2

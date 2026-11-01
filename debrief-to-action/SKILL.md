@@ -4,7 +4,7 @@ description: Turns exercise notes into proposed findings tied to the missed obje
 license: CC BY 4.0. LICENSE in the guidance repository carries the full terms.
 disable-model-invocation: true
 metadata:
-  version: "2026.11.0"
+  version: "2026.11.1"
 ---
 
 First run [`../preflight.md`](../preflight.md). This is debrief-to-action, version 2026.11.0.
@@ -69,6 +69,6 @@ else "none named".
 
 ## Sources
 
-- Control, Method, Task choice, auditor, reviewer: `units/stages/validate.md, Minimum controls`; `units/stages/validate.md, Method`; `units/stages/validate.md, Prompts`; principle 4
-- Debrief level, sensitivity: `units/levels.md, Where to start, by level`; `units/data-rules.md, Sensitivity classes`
+- Control, Method, Task choice, auditor, reviewer: `units/stages/validate.md, Minimum controls`; `units/stages/validate.md, Method`; `units/stages/validate.md, Prompts`; principle 3
+- Debrief level, sensitivity: `units/levels.md, Where to start, by level`; `units/data-rules.md, Classification levels`
 - Planted text: `units/data-rules.md, Prompt injection`; IMDA section 2.3.2

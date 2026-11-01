@@ -4,7 +4,7 @@ description: Rewrites one approved document for one audience, a role card from a
 license: CC BY 4.0. LICENSE in the guidance repository carries the full terms.
 disable-model-invocation: true
 metadata:
-  version: "2026.11.0"
+  version: "2026.11.1"
 ---
 
 First run [`../preflight.md`](../preflight.md). This is role-card, version 2026.11.0.
@@ -47,5 +47,5 @@ Card: "the plan owner approves the card's content and versions it with the plan,
 - Method: `units/stages/embed.md, Method`
 - Card: `units/stages/implement.md, Prompts`
 - Message: `units/prompts/awareness.md`
-- Publishing: principle 4
+- Publishing: principle 3
 - Planted text: `units/data-rules.md, Prompt injection`; IMDA section 2.3.2

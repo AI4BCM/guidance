@@ -4,7 +4,7 @@ description: Teaches a BCM beginner one part of the practice per session, from t
 license: CC BY 4.0. LICENSE in the guidance repository carries the full terms.
 disable-model-invocation: true
 metadata:
-  version: "2026.11.0"
+  version: "2026.11.1"
 ---
 
 First run [`../preflight.md`](../preflight.md). This is learn-bcm, version 2026.11.0.
@@ -64,7 +64,7 @@ The learner or a colleague, as the control says. A case goes to the BC manager. 
 
 ## Sources
 
-- One control, reviewer: `units/stages/govern.md, Onboarding new BCM staff`; principle 3
-- Shipped sources, tool: `units/data-rules.md, What AI4BCM's own tools read`; `units/tools.md, Selection guide`
-- Standards, conformity, auditor: `units/stages/govern.md, Minimum controls`; principle 4
+- One control, reviewer: `units/stages/govern.md, Onboarding new BCM staff`; principle 4
+- Shipped sources, tool: `units/data-rules.md, What AI4BCM's own tools read`; `units/tools.md, Which tool for which task`
+- Standards, conformity, auditor: `units/stages/govern.md, Minimum controls`; principle 3
 - Planted text: `units/data-rules.md, Prompt injection`; IMDA section 2.3.2

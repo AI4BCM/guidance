@@ -4,7 +4,7 @@ description: Asks the hard questions about your plan or draft, round by round; y
 license: CC BY 4.0. LICENSE in the guidance repository carries the full terms.
 disable-model-invocation: true
 metadata:
-  version: "2026.11.0"
+  version: "2026.11.1"
 ---
 
 First run [`../preflight.md`](../preflight.md). This is challenge-my-plan, version 2026.11.0.
@@ -68,6 +68,6 @@ If asked to accept a risk: "name the risk owner the sources give, or say that no
 - One control, prompt, Output, scope: `units/prompts/review.md`
 - Question sources: `units/stages/govern.md, Method`; `units/stages/design.md, Method`; `units/prompts/README.md, Before you accept the output`
 - Rounds, not one list: principle 5
-- Risk ownership: principle 4
+- Risk ownership: principle 3
 - Planted text: `units/data-rules.md, Prompt injection`; IMDA section 2.3.2
 - For the auditor: `units/principles.md, Minimum control checklist`

@@ -4,7 +4,7 @@ description: Lists what the strategy silently relies on, and the check that woul
 license: CC BY 4.0. LICENSE in the guidance repository carries the full terms.
 disable-model-invocation: true
 metadata:
-  version: "2026.11.0"
+  version: "2026.11.1"
 ---
 
 First run [`../preflight.md`](../preflight.md). This is red-team-assumptions, version 2026.11.0.
@@ -68,7 +68,7 @@ Name each, or "none named".
 
 ## Sources
 
-- One control, assumptions visible: `units/stages/design.md, Minimum controls`; principle 4
+- One control, assumptions visible: `units/stages/design.md, Minimum controls`; principle 3
 - Method, Task choice, reviewer: `units/stages/design.md, Method`; `units/stages/design.md, Prompts`; `units/prompts/review.md`
 - No owner inferred: `units/prompts/evaluations.md`
 - Planted text: `units/data-rules.md, Prompt injection`; IMDA section 2.3.2
