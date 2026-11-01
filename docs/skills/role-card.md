@@ -83,8 +83,6 @@ approval lets the owner make the edit, never the skill.
 - You got one card or message, for one audience.
 - The draft ends with the sentence saying AI helped, reviewer and date blank, then the release line.
 
-Known limits from the eval are on the [record card](../../evals/role-card/record-card.md).
-
 ## Where it fits
 
 `role-card` is the Embed stage skill in the [AI4BCM Guidance](https://ai4bcm.org/guidance/); for a role card it

@@ -68,8 +68,6 @@ already know when you start the next one.
 - It never gives a standard's text: with your licensed copy and the licence confirmed it cites clause numbers;
   without one, it says "not in the sources".
 
-Known limits from the eval are on the [record card](../../evals/learn-bcm/record-card.md).
-
 ## Where it fits
 
 `learn-bcm` is an any-stage skill in the [AI4BCM Guidance](https://ai4bcm.org/guidance/), built on the Govern stage's

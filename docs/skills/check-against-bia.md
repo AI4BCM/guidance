@@ -73,8 +73,6 @@ Gaps and not used as current.
 - For a change, every kind of document you did not attach appears as "coverage unknown".
 - The reply ends with the AI-help sentence, then a `review.md` line for each flagged plan.
 
-Known limits from the eval are on the [record card](../../evals/check-against-bia/record-card.md).
-
 ## Where it fits
 
 `check-against-bia` is the Implement stage skill in the [AI4BCM Guidance](https://ai4bcm.org/guidance/). Before

@@ -74,10 +74,6 @@ def skill_names(repo: Path) -> list[str]:
     names = sorted(p.parent.name for p in repo.glob("*/SKILL.md"))
     return sorted(names, key=lambda n: n != SKILL_NAME)
 
-# The handout is published guidance the router links to, and it lives in the vault. It is
-# copied in rather than generated; VAULT_ONLY names what the repository does not carry itself.
-VAULT_UNITS = Path("/opt/brain-live/02-Projects/ai4bcm/guidance-rewrite/units")
-
 # `ask-ai4bcm/README.md` points at `install/`, which is repository-only and never enters the
 # package. In the package that link has to reach the repository on the web instead.
 README_REWRITES = {
@@ -138,10 +134,6 @@ def build_one(repo: Path, dest: Path, name: str) -> None:
     refs_unit = skill / "units" / "references.md"
     refs_unit.write_text(re.sub(r"(?ms)^### Prompting and skill guides\n.*?(?=^## )", "",
                                 refs_unit.read_text(encoding="utf-8")), encoding="utf-8")
-    for extra in ("principles-a4.html",):
-        target = skill / "units" / extra
-        if not target.exists() and (VAULT_UNITS / extra).exists():
-            shutil.copy2(VAULT_UNITS / extra, target)
 
 
 def copy_literature(repo: Path, dest: Path, both_shelves: bool) -> None:

@@ -70,8 +70,6 @@ No. Describe the task. If you paste something, classify it first.
 - A pasted instruction to an AI is named for its sender and information security, and not followed.
 - It writes and offers to save nothing.
 
-Known limits from the eval are on the [record card](../../evals/ask-ai4bcm/record-card.md).
-
 ## Where it fits
 
 `ask-ai4bcm` is the way into the [AI4BCM Guidance](https://ai4bcm.org/guidance/). It sits before every other skill:

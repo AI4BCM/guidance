@@ -30,9 +30,6 @@ preflight and its units. Install from `skills/`.
 | GitHub Copilot | `npx skills add AI4BCM/guidance/skills` | smoke test, about 12 runs, by the maintainer | [github-copilot.md](github-copilot.md) |
 | ChatGPT | upload one `<name>.zip` per skill | smoke test, about 12 runs, by the maintainer | [chatgpt.md](chatgpt.md) |
 
-The results per skill and client are in [`evals/results.md`](../evals/results.md). A skill that
-has not yet passed on a client is marked there, and on its record card.
-
 **GitHub Copilot can start a skill you did not name.** It reads neither of the two settings that
 hold the skills back on the other clients, and loads a skill when it judges it relevant. Read
 [github-copilot.md](github-copilot.md) before you rely on it.

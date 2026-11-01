@@ -76,7 +76,7 @@ A new practitioner will learn the BCMS more quickly from its own documents than 
 | | Onboarding new BCM staff |
 |---|---|
 | Inputs | the approved policy, framework, scope statement, procedures and glossary, with their dates; licensed standards text only where the licence permits |
-| Type of tool | the "Learning BCM terms and methods as a newer practitioner" row of the `tools.md` selection guide |
+| Type of tool | the "Learning BCM terms and methods as a newer practitioner" row of *Which tool for which task* in `tools.md` |
 | Output | an explanation of a term, a structure or an expected output, tied to the document that defines it here and marked where the documents are silent |
 | Review boundary | the practitioner or a colleague checks the explanation against the source before acting on it; the assistant explains what the documents say and does not interpret a standard or decide a case |
 

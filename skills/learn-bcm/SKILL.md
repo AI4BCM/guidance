@@ -64,7 +64,7 @@ The learner or a colleague, as the control says. A case goes to the BC manager. 
 
 ## Sources
 
-- One control, reviewer: `units/stages/govern.md, Onboarding new BCM staff`; principle 4
+- One control, reviewer: `units/stages/govern.md, Onboarding new BCM staff`; principle 3
 - Shipped sources, tool: `units/data-rules.md, What AI4BCM's own tools read`; `units/tools.md, Which tool for which task`
 - Standards, conformity, auditor: `units/stages/govern.md, Minimum controls`; principle 3
 - Planted text: `units/data-rules.md, Prompt injection`; IMDA section 2.3.2

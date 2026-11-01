@@ -8,8 +8,7 @@ Sources: [Skills in ChatGPT](https://help.openai.com/en/articles/20001066-skills
 [Importing and syncing plugin marketplaces from GitHub](https://help.openai.com/en/articles/20001504-importing-and-syncing-plugin-marketplaces-from-github),
 read 2026-09-10.
 
-**Test tier: smoke test.** About 12 runs by the maintainer, not the full eval. Results:
-[`evals/results.md`](../evals/results.md).
+**Test tier: smoke test.** About 12 runs by the maintainer, not the full eval.
 
 ## Who can install skills in ChatGPT
 

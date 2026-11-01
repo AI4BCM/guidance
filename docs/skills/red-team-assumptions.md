@@ -77,8 +77,6 @@ One waits for your answers round by round; this one returns everything at once.
 - It says what in the paper holds up, and why.
 - The reply ends with the sentence saying AI helped, then the line handing the paper to the group that chooses.
 
-Known limits from the eval are on the [record card](../../evals/red-team-assumptions/record-card.md).
-
 ## Where it fits
 
 `red-team-assumptions` is the Design stage skill in the [AI4BCM Guidance](https://ai4bcm.org/guidance/). Before it

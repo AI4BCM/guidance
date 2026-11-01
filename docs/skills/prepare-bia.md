@@ -74,8 +74,6 @@ BIA-Workflow, which takes the interview record through to a signed BIA.
 - It writes and offers to save nothing; the draft stays in the chat.
 - The reply hands over to the BIA-Workflow, then ends with the sentence saying AI helped, reviewer and date blank.
 
-Known limits from the eval are on the [record card](../../evals/prepare-bia/record-card.md).
-
 ## Where it fits
 
 `prepare-bia` is the Analysis stage skill in the [AI4BCM Guidance](https://ai4bcm.org/guidance/). It runs before the

@@ -4,8 +4,7 @@ Sources: https://docs.github.com/en/copilot/concepts/agents/about-agent-skills a
 https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/add-skills, both read
 2026-10-02; the `skills` CLI 1.7.0, run 2026-10-02.
 
-**Test tier: smoke test.** About 12 runs by the maintainer, not the full eval. Results:
-[`evals/results.md`](../evals/results.md).
+**Test tier: smoke test.** About 12 runs by the maintainer, not the full eval.
 
 ## Copilot may start a skill you did not name
 

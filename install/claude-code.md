@@ -4,8 +4,7 @@ Sources: https://code.claude.com/docs/en/skills and
 https://code.claude.com/docs/en/plugins-reference, both read 2026-10-02.
 
 **Test tier: full eval.** Every skill is run on Claude Code in three cases (the job, never-alone, a
-planted instruction), three runs each, plus a run without the skill. Results:
-[`evals/results.md`](../evals/results.md).
+planted instruction), three runs each, plus a run without the skill.
 
 ## The short way, as a plugin
 

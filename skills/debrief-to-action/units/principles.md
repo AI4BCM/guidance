@@ -39,6 +39,4 @@ Before any AI-assisted BCM task, check that:
 - you can identify afterwards who did what, and from which sources
 - fallback methods exist if the tool is unavailable
 
-AI across the BCM lifecycle
-
 Hoekstra, W., Gerner, K., et al. (2026). AI4BCM: Guideline for using AI by BCM professionals. CC BY 4.0.

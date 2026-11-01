@@ -72,7 +72,7 @@ now carry the PDF's words and headings; GitHub keeps the practical aids the prin
   can run; when to stop. In `stages/analysis.md` the old risk-assessment section is now
   *Risk assessment with AI support*. Dropped: *The rule* (now the Purpose line) and *The
   never-alone test*.
-- Archived: `units/quick-start.md` and `units/principles-a4.html` move to `archive/units/`; the
+- Removed: `units/quick-start.md` and `units/principles-a4.html` leave `main`; the
   A5 Quick Start handout and the two-page principles handout are no longer published. The
   2026.11 tag keeps both.
 - Citation contract version 3: `stages-<stage>-typical-ai-uses` becomes

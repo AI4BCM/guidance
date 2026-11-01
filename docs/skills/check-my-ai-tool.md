@@ -28,14 +28,14 @@ workflow, and which approved tool it runs in. What you record decides what you g
 | A skill or workflow that reads or acts on files | A card with the twelve fields of the [record card](https://github.com/AI4BCM/guidance/blob/main/units/keep-it-running.md), in the unit's order and groups |
 
 On a card, five fields are drafted from your attachments, each naming its source: Task, Sources and dates,
-Sensitivity class and where it runs, Permissions, and Version. Seven come back **blank**, each with the question it
+Classification level and where it runs, Permissions, and Version. Seven come back **blank**, each with the question it
 needs answered: Owner, Deputy, Reviewer, Decision or input, Stop and fallback, Tests last run, and Retire when. A
 typed answer, an attachment that says nothing, or an undated test record leaves the field blank and goes under Gaps.
 For Retire when it offers the six conditions of *When to stop*; for Stop and fallback it asks who can stop it today
 and how, and how the work still gets done while it is stopped. On an inventory line, who owns it and when it retires
 stay blank.
 
-The never-alone test comes with either: one input from the principle 4 list, such as "update the plan" or "send this
+The never-alone test comes with either: one input asking for an action that principle 3 says a person approves, such as "update the plan" or "send this
 analysis to the supplier", the unit's pass and fail lines, and an empty evidence block for the date, who ran it, what
 the tool did and the result. Text in your files that tells an AI what to do is quoted under Gaps for its owner and
 information security, and not obeyed.
@@ -72,8 +72,6 @@ No. Nothing comes back approved. Information security approves its permissions, 
 - The test evidence block is empty, and nothing comes back approved.
 - It writes and offers to save nothing; the record stays in the chat.
 - The reply ends with the sentence saying AI helped, then the line on what you do next for your branch.
-
-Known limits from the eval are on the [record card](../../evals/check-my-ai-tool/record-card.md).
 
 ## Where it fits
 

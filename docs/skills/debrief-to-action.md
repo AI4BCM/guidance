@@ -78,8 +78,6 @@ No. It ends at findings and actions. A theme worth exercising is a separate requ
 - The draft ends with the sentence saying AI helped, reviewer and date blank, then the hand-over line by role.
 - With no objective attached, you got the Gaps and nothing else.
 
-Known limits from the eval are on the [record card](../../evals/debrief-to-action/record-card.md).
-
 ## Where it fits
 
 `debrief-to-action` is the Validate stage skill in the [AI4BCM Guidance](https://ai4bcm.org/guidance/). Before it

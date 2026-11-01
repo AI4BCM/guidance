@@ -111,6 +111,6 @@ Skill: `/prepare-bia` drafts the interview guide from your material.
 
 ## Level
 
-Level 2, Repeatable. The pre-interview draft needs no connector: it works from the sources you attach, so what it takes is agreed tools, a written data rule, a saved prompt, a named reviewer and the normal approval route. Write down the method and the dates of those sources as you go, so a reviewer can see what the draft was built from. BIA support and threat relevance over connected records are Level 3, Defined, where retrieval reaches the live inventory under a written, owned method, the draft can be regenerated when the inventory changes, and all five self-check questions in `levels.md` answer yes with evidence.
+Level 2, Repeatable. The pre-interview draft needs no connector: it works from the sources you attach, so what it takes is agreed tools, a written data rule, a saved prompt, a named reviewer and the normal approval route. Write down the method and the dates of those sources as you go, so a reviewer can see what the draft was built from. BIA support over connected records is Level 3, Defined, where retrieval reaches the live inventory under a written, owned method, the draft can be regenerated when the inventory changes, and all five self-check questions in `levels.md` answer yes with evidence. Threat relevance over connected records is Level 4, Measured, as *Risk assessment* marks risk scenario support.
 
 Hoekstra, W., Gerner, K., et al. (2026). AI4BCM: Guideline for using AI by BCM professionals. CC BY 4.0.

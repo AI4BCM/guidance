@@ -92,8 +92,7 @@ it runs.
 - Nowhere does it say in its own words that you comply, meet a standard or are ready.
 - The draft ends with the sentence saying AI helped, reviewer and date blank, then the hand-over line.
 
-Known limits from the eval, and its status on Codex, where it has not yet passed, are on the
-[record card](../../evals/check-against-standards/record-card.md).
+It has not yet passed its eval on Codex.
 
 ## Where it fits
 

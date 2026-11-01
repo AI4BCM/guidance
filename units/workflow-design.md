@@ -5,7 +5,7 @@ A workflow runs a defined process over approved inputs with named human gates, s
 
 ## The design checklist
 
-Define all eight before the workflow runs on anything real. Five of them stay with the workflow afterwards on the record card in `keep-it-running.md`, which also says who to tell about it and when to retire it.
+Define all eight before the workflow runs on anything real. Five of them stay with the workflow afterwards on the record card in `keep-it-running.md`, which also says how to let your team know about it and when to retire it.
 
 | Define | What it means | Example |
 |---|---|---|

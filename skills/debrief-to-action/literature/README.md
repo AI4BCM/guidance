@@ -4,7 +4,7 @@ Two shelves of source texts travel with the skills, each file a Markdown convers
 retrieval date and reuse terms in its own header.
 
 - **Shelf 1, `cited/`: the guidance's own sources.** The works `units/references.md` lists under
-  "Cited in the units", where the publisher's licence allows the full text to ship. The packager
+  "Cited on these pages", where the publisher's licence allows the full text to ship. The packager
   copies shelf 1 into every packaged skill.
 - **Shelf 2, everything else here: the comparison frameworks** (DORA, the AI Act, NIST and the
   others). They ship with `/check-against-standards` and `/learn-bcm` only.

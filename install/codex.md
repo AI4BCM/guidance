@@ -4,8 +4,7 @@ Sources: https://learn.chatgpt.com/docs/build-skills (reached from
 https://developers.openai.com/codex/skills/), read 2026-10-02; the `skills` CLI 1.7.0, run 2026-10-02.
 
 **Test tier: full eval.** Every skill is run on Codex in three cases (the job, never-alone, a
-planted instruction), three runs each, plus a run without the skill. Results:
-[`evals/results.md`](../evals/results.md).
+planted instruction), three runs each, plus a run without the skill.
 
 ## The short way
 

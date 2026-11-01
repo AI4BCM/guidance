@@ -71,8 +71,6 @@ The review says "none named", and who owns the plan may become one of the questi
 - The review ends with the sentence saying AI helped, reviewer and date blank, then the line naming the questions
   still open for the owner. Rounds carry neither line.
 
-Known limits from the eval are on the [record card](../../evals/challenge-my-plan/record-card.md).
-
 ## Where it fits
 
 `challenge-my-plan` is an any-stage skill in the [AI4BCM Guidance](https://ai4bcm.org/guidance/), for any plan, draft
