@@ -92,6 +92,6 @@ Skill: `/check-against-bia` finds where a plan or change departs from the BIA.
 
 ## Level
 
-Level 3, Defined. Checking that plans across a suite agree needs retrieval over the approved plan repository and a written, auditable use case. The version that runs when something changes, reopening plans on its own after a structural change, is Level 4, Measured, and needs a named owner, approval gates, counted results and a tested fallback first.
+Level 3, Defined. Checking that plans across a suite agree needs retrieval over the approved plan repository and a written, auditable use case. The version that runs when something changes, flagging which plans to reopen after a structural change, is also Level 3, Defined.
 
 Hoekstra, W., Gerner, K., et al. (2026). AI4BCM: Guideline for using AI by BCM professionals. CC BY 4.0.

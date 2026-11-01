@@ -1,4 +1,6 @@
 <!-- meta: unit=stages/README version=2026.11.1 -->
+AI across the BCM lifecycle
+
 # The lifecycle, applied
 
 Each stage chapter names one organisation that uses AI for that stage’s work today, cited in References, p. 31.

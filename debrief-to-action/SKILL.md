@@ -70,5 +70,5 @@ else "none named".
 ## Sources
 
 - Control, Method, Task choice, auditor, reviewer: `units/stages/validate.md, Minimum controls`; `units/stages/validate.md, Method`; `units/stages/validate.md, Prompts`; principle 3
-- Debrief level, sensitivity: `units/levels.md, Where to start, by level`; `units/data-rules.md, Classification levels`
+- Debrief level, classification: `units/levels.md, Where to start, by level`; `units/data-rules.md, Classification levels`
 - Planted text: `units/data-rules.md, Prompt injection`; IMDA section 2.3.2
