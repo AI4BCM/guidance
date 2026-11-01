@@ -35,7 +35,7 @@ Hoekstra, W., Gerner, K., et al. (2026). *AI4BCM: Guideline for using AI by
 BCM professionals*. CC BY 4.0.
 
 Licensed CC BY 4.0: share and adapt with
-attribution. Edition tag `Working copy 2026.10.27`. Corrections go to the guidance
+attribution. Edition tag `Release 2026.11.1`. Corrections go to the guidance
 repository, linked from <https://ai4bcm.org/guidance> — one issue per change, quoting the page.
 
 Parts of this guidance were drafted, edited and

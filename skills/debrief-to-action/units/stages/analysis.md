@@ -63,7 +63,6 @@ L1 Ad hoc · L2 Repeatable · L3 Defined · L4 Measured · L5 Optimising
 
 The one control that matters: **a resource requirement drafted by AI is only a question for the activity owner.** It goes into the register only when the owner confirms it.
 
-- **AI can test whether a proposed RTO fits the impact criteria. It does not set the RTO.** The same holds for MTPD.
 - The draft names its source data and that data's date. An out-of-date inventory yields a BIA that looks current and is wrong.
 - Recovery fields stay empty in anything AI produces.
 

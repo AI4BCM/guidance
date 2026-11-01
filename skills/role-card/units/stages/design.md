@@ -56,7 +56,7 @@ L1 Ad hoc · L2 Repeatable · L3 Defined · L4 Measured · L5 Optimising
 
 The one control that matters: **an option from AI stays a proposal until a named owner confirms it will work for you.**
 
-- Internal design, architecture, cost and supplier detail is handled in approved environments only. Generic brainstorming may happen elsewhere, with no internal detail disclosed.
+- Internal design, architecture, cost and supplier detail is handled in approved environments only.
 - Financial and commercial assumptions are checked by finance or procurement. AI does not justify an investment on its own authority.
 - Assumptions, requirements and residual risks stay visible in the paper instead of being hidden.
 

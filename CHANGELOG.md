@@ -80,7 +80,7 @@ now carry the PDF's words and headings; GitHub keeps the practical aids the prin
   `run-bia.yaml` moves its two such citations and names `cites_release: "2026.11.1"`.
 - The ten AI4BCM skills ship in this release, in this repository only; the print does not
   describe them.
-- Corpus: 155 chunks from the units, 451 with the literature. Search eval hit@4: 16 of 20.
+- Corpus: 156 chunks from the units, 452 with the literature. Search eval hit@4: 16 of 20.
 
 `2026.11` stays exactly as minted (`e81ea8a`), so everyone who cited it keeps the text they cited.
 Its manifest moves to `releases/archive/2026.11.json`.

@@ -56,7 +56,6 @@ L1 Ad hoc · L2 Repeatable · L3 Defined · L4 Measured · L5 Optimising
 
 The one control that matters: **the organisation stays the author.** Staff-facing material is reviewed for accuracy, tone and local credibility before publication, by someone who will be asked about it afterwards.
 
-- Employee comments, transcripts and survey text are handled in approved environments only, only as combined results, under privacy and retention rules.
 - AI is not used to monitor, score or label individuals.
 - An internal assistant is based on approved staff-facing content only, and respects existing access rights.
 

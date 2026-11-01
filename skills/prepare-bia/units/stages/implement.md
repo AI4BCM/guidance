@@ -52,7 +52,7 @@ L1 Ad hoc · L2 Repeatable · L3 Defined · L4 Measured · L5 Optimising
 
 The one control that matters: **no live plan can be changed without the owner's approval and the creation of a new version.**
 
-- The team expected to use the plan confirms that activation criteria, roles and actions are realistic. AI cannot test ease of use under pressure.
+- AI cannot test ease of use under pressure.
 - Material decisions during an incident stay under human authority, and external communications are never sent unsupervised.
 - Every AI-supported step requires a fallback method. If the response only works while the tool is operational, the arrangement is not resilient.
 

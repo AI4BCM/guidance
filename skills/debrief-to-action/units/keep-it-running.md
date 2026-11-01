@@ -45,6 +45,15 @@ Tell your team how to use each skill or workflow, and what to watch out for.
 - **Information security**, before it reaches any file or system. They approve its permissions.
 - **Compliance**, when its output touches a legal or regulatory duty.
 
+## Keep it up to date
+
+Make sure to keep your skill or workflow up to date, and retire it when one of the conditions below applies.
+
+- A source it depends on is deleted, replaced or out of date, and nobody updates it.
+- The tool loses its approval for the classification level it runs on, or the provider's terms or model change.
+- More of its output is rewritten or rejected by you or reviewers.
+- The skill or workflow owner retires, and nobody keeps it up to date.
+
 ## Say that AI helped
 
 A document that AI helped to produce says so inside the document, beside its owner, version and review date. One sentence does it.

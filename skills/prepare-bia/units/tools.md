@@ -45,12 +45,12 @@ An enterprise label does not inform you about the provider's retention policy an
 
 ## Where a tool can run
 
-| Where it runs | Suitability for BCM | Main caution |
-|---|---|---|
-| Free public service | Generic brainstorming only, no confidential content | Never use it for BCM data, internal records, incident or licensed material |
-| Individual paid service | Low-risk individual productivity, if formally approved | Better features do not mean acceptable privacy, governance or licensing |
-| Team or business subscription | Basic internal use if approved and governed | Do due diligence on access control, retention, administration and contract |
-| Enterprise or corporate licence | Often right for live BCM work | It depends on configuration, retention, identity integration, connector control and contract terms. The licence covers the platform, never the material you upload |
-| Private, self-hosted or on-premise | Highly sensitive or regulated use cases | It needs technical skill, mature governance and operational support |
+| Where it runs | Main caution |
+|---|---|
+| Free public service | Never use it for BCM data, internal records, incident or licensed material |
+| Individual paid service | Better features do not mean acceptable privacy, governance or licensing |
+| Team or business subscription | Do due diligence on access control, retention, administration and contract |
+| Enterprise or corporate licence | It depends on configuration, retention, identity integration, connector control and contract terms. The licence covers the platform, never the material you upload |
+| Private, self-hosted or on-premise | It needs technical skill, mature governance and operational support |
 
 Hoekstra, W., Gerner, K., et al. (2026). AI4BCM: Guideline for using AI by BCM professionals. CC BY 4.0.
