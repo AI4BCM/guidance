@@ -80,7 +80,7 @@ now carry the PDF's words and headings; GitHub keeps the practical aids the prin
   never-alone test*.
 - Removed: `units/quick-start.md` and `units/principles-a4.html` leave `main`; the
   A5 Quick Start handout and the two-page principles handout are no longer published. The
-  2026.11 tag keeps both.
+  2026.11 tag kept both until it was withdrawn (see below).
 - Citation contract version 3: `stages-<stage>-typical-ai-uses` becomes
   `stages-<stage>-where-does-ai-help-and-where-are-its-limits`. `KoGerner/workflow-design`
   `run-bia.yaml` moves its two such citations and names `cites_release: "2026.11.1"`.
@@ -88,8 +88,9 @@ now carry the PDF's words and headings; GitHub keeps the practical aids the prin
   describe them.
 - Corpus: 156 chunks from the units, 452 with the literature. Search eval hit@4: 16 of 20.
 
-`2026.11` stays exactly as minted (`e81ea8a`), so everyone who cited it keeps the text they cited.
-Its manifest moves to `releases/archive/2026.11.json`.
+The `2026.11` tag (`e81ea8a`) was withdrawn on 2026-11-01 once the website and the guidance connector served
+2026.11.1 (owner: he does not need the old tag "after all is updated"); nothing cited it any more. Its manifest
+stays at `releases/archive/2026.11.json`, and its tree is kept outside the repository.
 
 ## 2026.11 — minted 2026-10-03
 

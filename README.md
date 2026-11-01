@@ -89,7 +89,7 @@ of every unit intact. The terms, the review cycle and who owns the living prompt
 Releases are tagged by calendar month, `YYYY.MM`, with a point release as `YYYY.MM.N`. The current
 release is `2026.11.1`, the final print edition. A citation naming a tag names the text as it stood at that tag, and
 [`releases/<tag>.json`](releases/) resolves the tag to a commit and a hash per citable file.
-`2026.09`, `2026.09.1`, `2026.11` and `2026.11.1` are tagged. What each release contains and how to cite a unit at one:
+`2026.09`, `2026.09.1` and `2026.11.1` are tagged; `2026.11` was withdrawn when 2026.11.1 replaced it. What each release contains and how to cite a unit at one:
 [CHANGELOG.md](CHANGELOG.md).
 
 ## Licence
