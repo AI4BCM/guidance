@@ -29,7 +29,7 @@ pytestmark = pytest.mark.skipif(
 # seven other headings renamed.
 # Synced to print r15 (2026-10-02): quick-start.md replaces checklist-card-a4.html and the
 # units carry the 2026-10-01/02 owner rounds, 104 -> 114.
-EXPECTED_CHUNKS = 156  # 2026-11-01: units = the 36-page print 2026.11.1, 114 -> 155; +1 Keep it up to date (final PDF pass)
+EXPECTED_CHUNKS = 157  # 2026-11-01: units = the 36-page print 2026.11.1, 114 -> 155; +1 Keep it up to date (final PDF pass); +1 the glossary's "All of it is open source" heading (2026-11-01 corpus fix)
 
 
 def test_source_constants_are_local_not_vault():

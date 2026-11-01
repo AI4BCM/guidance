@@ -1,4 +1,6 @@
 <!-- meta: unit=references version=2026.11.1 -->
+Words and sources
+
 # References and further reading
 
 ## Cited on these pages

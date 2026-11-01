@@ -60,8 +60,6 @@ A document that AI helped to produce says so inside the document, beside its own
 
 Parts of this document were drafted with AI support ([tool or skill], version [x]) from the sources listed. [Name] reviewed it on [date].
 
-Words and sources
-
 ## When to stop
 
 Write the retirement condition on the card, or on the prompt's inventory line, on the day the skill, the workflow or the saved prompt starts, and read it again at every review. Retire it when one of these becomes true.

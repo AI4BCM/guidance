@@ -42,7 +42,7 @@ def test_corpus_is_the_hundred_and_five(data_dir):
     content pass dropped embed's case-studies heading, back to 104; the skill-set units pass added
     data-rules.md 'Prompt injection', 105."""
     chunks = json.loads((data_dir / "chunks.json").read_text(encoding="utf-8"))
-    assert len(chunks) == 156  # 2026-11-01: units = the 36-page print 2026.11.1 (new headings, kept practical aids), 114 -> 155; +1 Keep it up to date
+    assert len(chunks) == 157  # 2026-11-01: units = the 36-page print 2026.11.1 (new headings, kept practical aids), 114 -> 155; +1 Keep it up to date; +1 the glossary's "All of it is open source" heading
 
 
 def test_search_returns_hits_with_the_expected_keys():
