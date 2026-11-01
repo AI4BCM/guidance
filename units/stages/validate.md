@@ -1,22 +1,57 @@
-<!-- meta: unit=stages/validate version=2026.11 -->
-# Validation, Exercising, Review and Improvement
+<!-- meta: unit=stages/validate version=2026.11.1 -->
+# Validation, exercising, review and improvement
 
-## Situation
+Stage 6 of six.
 
-After each round of validation, exercise reports, debrief notes, audit observations and post-incident material pile up, often faster than anyone can read them. Read together, they reveal recurring weaknesses and severe failures.
+## What this stage covers
 
-AI is useful both before and after the event: before, it adds variation so that the fourth exercise is not just a repeat of the third; after, it turns volume into a pattern. However, it does not replace the exercise director, facilitator or auditor. The material is sensitive. Debriefs and incident records name individuals and weaknesses, so they must remain in approved environments.
+This stage covers the validation and continual improvement of continuity arrangements through exercising, review, assurance activity, lessons identified, maintenance, and management review. Its purpose is to confirm that continuity arrangements are realistic, usable, current, and capable of supporting the organisation during disruption.
 
-## Typical AI uses
+AI groups the debrief notes into themes. The facilitator picks the findings.
 
-- generating scenarios, timed injects and facilitator notes to a stated objective
-- drafting role-play messages from regulators, customers, suppliers or media
-- transcribing and structuring debriefs into strengths, weaknesses, actions and open questions
-- clustering lessons and comparing findings across exercises and incidents
-- scanning BCMS material against a checklist for possible evidence gaps
-- turning validation metrics and action progress into a management review narrative
+Illustrative. The facilitator reads the notes behind each theme before deciding it is a finding.
 
-The type of tool and the environment for each use are in the selection guide in `tools.md`.
+## Where does AI help, and where are its limits?
+
+AI can write exercise scenarios, play external parties, summarise debriefs, group lessons identified and compare results across events. It can also prepare material for management review or audit. It can read large volumes of notes, actions and evidence more quickly than people can.
+
+Although AI adds variety and speed, the exercise director, facilitator and auditor still judge the results. As exercise records, debrief comments, audit observations and post-incident material may contain sensitive operational details or personal data, only approved environments should be used for this work.
+
+**Used today.** Cited public example, source in References, p. 31.
+
+Fayette County Public Schools in Georgia run virtual tabletop exercises on cyber and physical incidents for their leaders with custom AI assistants (2025).
+
+## What AI can do, by activity
+
+First, state what the exercise, review or audit is meant to test.
+
+## Exercises
+
+- **Scenario and inject generation.** Ask the AI to provide a scenario package tailored to the exercise type, sector, participants and learning objectives. This package should include timed injects and facilitator guidance. (L2)
+- **Controlled role-play support.** Use AI to generate realistic external messages from regulators, customers, suppliers, the media or partners, all of which are subject to facilitator control. (L2)
+
+## Debriefs and lessons identified
+
+- **Debriefing and hot debriefing summarisation.** Structure post-exercise or post-incident discussions around the following areas: strengths, weaknesses, issues, actions and unresolved questions. Ensure that privacy and retention requirements are met. (L2)
+- Clustering lessons, recurring weaknesses, and improvement actions (L3)
+- **Cross-event lessons analysis.** Ask AI to analyse the results of several exercises or incidents and identify any patterns that could suggest underlying capability gaps. (L3)
+
+## Keeping the BCMS up to date
+
+- **Periodic BIA and plan review.** AI can list the BIA entries and plans that are due for review, as well as any changes to organisational structure, role ownership, site details or technical dependencies that have occurred since the last review. Each owner confirms or corrects the relevant entry and records the review date. (L4)
+
+## Audit
+
+- **Audit and evidence gap scanning.** Use AI-based retrieval to compare current BCMS documents and records with internal checklists or approved requirement summaries, flagging any missing evidence for human review. (L3)
+
+## Management review and improvement
+
+AI can group actions and report on progress. People are responsible for each action and decide when it is complete.
+
+- **Management review support.** Use AI to summarise exercise statistics, action progress, maintenance records and assurance findings for top management. (L2)
+- Analytical tools for analysing trends and performance across all exercises, incidents and audit findings. These tools propose the next exercise, which is then decided by the exercise owner. (L5)
+
+L1 Ad hoc · L2 Repeatable · L3 Defined · L4 Measured · L5 Optimising
 
 ## Minimum controls
 

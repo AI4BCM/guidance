@@ -1,22 +1,63 @@
-<!-- meta: unit=stages/analysis version=2026.11 -->
-# Analysis: Business Impact and Risk
+<!-- meta: unit=stages/analysis version=2026.11.1 -->
+# Analysis: business impact and risk
 
-## Situation
+Stage 3 of six.
 
-Much of what the analysis team needs has not yet been documented. Before the first interview, a candidate activity list, a set of resource requirements and a set of questions must be produced. AI can draft the initial versions using the information from your other sites. However, it cannot know what only the acquired site's staff know.
+## What this stage covers
 
-Analysis also involves some of the most sensitive material in BCM: live BIA and risk data must be entered into an approved environment.
+This stage covers BCM analysis activities, especially business impact analysis (BIA), risk assessment, and the identification of dependencies, priorities, and recovery requirements. These activities draw on many people and systems, and their inputs have to be compared and checked.
 
-## Typical AI uses
+AI shows where impact becomes unacceptable; the activity owner decides where the line sits
 
-- drafting candidate activities, their resource requirements and the interview guide from existing site data
-- summarising interviews into impacts, resource requirements, assumptions and unresolved points
-- comparing requirements registers across sites to surface shared suppliers
-- naming where two teams' recovery assumptions contradict
-- summarising public threat developments for a person's risk review, and clustering risks, issues and recurring themes
-- re-opening affected BIA and risk records when a system, supplier or site changes
+EXAMPLE. AI DRAWS THE CURVE FROM THE INTERVIEWS AND MARKS WHERE IMPACT TURNS UNACCEPTABLE.
 
-The type of tool and the environment for each use are in the selection guide in `tools.md`.
+## Where does AI help, and where are its limits?
+
+AI can structure interviews, summarise workshops, spot inconsistencies and dependencies, and compare data sets. It can also flag records for review when something changes. It can also link information from internal systems, such as HR, application inventories, supplier records, location data and previous incident reports.
+
+This stage involves handling some of the most sensitive information in BCM. The BIA and risk assessment data includes information on financial impacts, staffing dependencies, concentration risks, vulnerabilities, supplier weaknesses and internal operational constraints. Always keep live BIA and risk data in approved corporate or private environments, never in public tools.
+
+**Used today.** Cited public example, source in References, p. 31.
+
+The US Defense Logistics Agency uses AI risk-assessment models to identify unreliable suppliers and those providing counterfeit or non-conforming parts (2025).
+
+## What AI can do, by activity
+
+Gather the approved source material for the analysis. This should include activity lists, organisational structures, system inventories, supplier records, location data, impact criteria, prior incident material and existing risk information (*Data rules*, p. 7).
+
+## Preparing the BIA
+
+- Explaining BIA terms such as maximum tolerable period of disruption (MTPD) and recovery time objective (RTO) in easier language (L1)
+- **BIA interview support.** Use an enterprise AI assistant to prepare interview guides and workshop questions, explain definitions, and structure the expected outputs of the discussion. (L2)
+
+## BIA interviews and workshops
+
+- Transcribing and summarising workshops and interviews. The summary includes impacts, dependencies, assumptions, gaps and open questions, rather than just providing a well organised summary. (L2)
+
+## Dependencies and consistency
+
+- **Consistency checking across responses.** Ask the AI to compare BIA outputs from related departments and identify where one team's assumptions or recovery expectations conflict with another's. (L2)
+- **Dependency mapping.** Compare activities with systems, people, suppliers, sites and data to identify shared dependencies, single points of failure and areas of concentration risk. (L3)
+
+## Recovery requirements
+
+AI verifies the proposed recovery requirements, but does not set them.
+
+- **Recovery target review support.** Use AI to test whether a proposed RTO is consistent with impact thresholds, dependencies, and comparable activities. The activity owner and management set the target. (L2)
+
+## Risk assessment
+
+- **Risk scenario support.** Search-enabled tools identify current public threat developments. AI then writes a relevance note for each threat, naming the source and the risk record affected. This is followed by questions for the risk owner. The risk owner then decides on the next steps. (L4)
+- Clustering risks, issues, and recurring themes (L3)
+
+## Keeping the analysis up to date
+
+Where possible, a connected workflow can detect changes such as application retirement, restructuring, changes to suppliers, or site closure.
+
+- Prompting a review when the organisation or its systems change (L4)
+- **Continuous review workflows.** A workflow tool monitors changes in approved source systems and flags any potentially affected BIA or risk assessment records for human review. (L5)
+
+L1 Ad hoc · L2 Repeatable · L3 Defined · L4 Measured · L5 Optimising
 
 ## Minimum controls
 
@@ -43,9 +84,9 @@ Dependencies are a separate item and keep the narrower meaning of up- and downst
 
 The five-stage BIA workflow (identification of scope, structured interview, conversion to the standardised template, listing the requirements, consolidation and handover) is set out in `workflow-design.md`.
 
-## Risk assessment
+## Risk assessment with AI support
 
-The BIA method does not cover risk assessment. Risk assessment with AI support has public and internal aspects. The data rule distinguishes between the two. Public threat, regulatory and incident reporting data can be collected in any approved tool. This is because it contains no information about your organisation. However, once you judge relevance against your own records, the work becomes high-sensitivity. It then moves to the approved environment.
+The BIA method does not cover risk assessment. Risk assessment with AI support has public and internal aspects. The data rule distinguishes between the two. Public threat, regulatory and incident reporting data can be collected in any approved tool. This is because it contains no information about your organisation. However, once you judge relevance against your own records, the work moves to the highest classification level. It then moves to the approved environment.
 
 | | Risk assessment with AI support |
 |---|---|
