@@ -10,7 +10,7 @@ What it checks, each a line in the output, any FAIL makes the exit 1:
 - frontmatter: `name` equals the folder, `description`, `license`, `disable-model-invocation: true`,
   `metadata.version`;
 - a stage skill links `../preflight.md` (the router reads no files and drafts nothing);
-- the body is at most 500 words (`ask-ai4bcm`, the router, 1,000);
+- the body is at most 515 words (500 before 2026.11.1) (`ask-ai4bcm`, the router, 1,000);
 - a stage skill carries the six headings in REQUIRED, and its Method holds a numbered list;
 - every phrase in double quotes ("…" or “…”) of three words or more stands verbatim in `units/`.
   A line the skill tells the model to say is not a quote: write it as a `> ` blockquote;
@@ -43,7 +43,7 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
 ROUTER = "ask-ai4bcm"
-MAX_WORDS = 500
+MAX_WORDS = 515  # 500 until 2026.11.1; the owner allowed 515 for this release (2026-11-01): the print's longer headings
 MAX_WORDS_ROUTER = 1000
 MIN_QUOTE_WORDS = 3
 REQUIRED = ("The one control", "Method", "Task choice", "For the auditor", "Reviewer", "Sources")

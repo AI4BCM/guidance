@@ -82,8 +82,8 @@ def test_a_broken_link_is_red(repo):
 
 
 def test_a_long_body_is_red(repo):
-    edit(repo, "## Reviewer", "## Reviewer\n\n" + "word " * 500)
-    assert any("words (at most 500)" in f for f in failures(repo))
+    edit(repo, "## Reviewer", "## Reviewer\n\n" + "word " * 515)
+    assert any("words (at most 515)" in f for f in failures(repo))
 
 
 def test_the_router_may_run_to_a_thousand_words(repo):
