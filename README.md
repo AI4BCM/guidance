@@ -1,46 +1,81 @@
 # AI4BCM guidance — machine edition
 
 The machine edition of the AI4BCM guidance: one markdown unit per topic, sized so a
-model can read a whole unit and cite it. The same markdown is the source for the print
-edition published at `ai4bcm.org/guidance`, so text is written once and published twice.
+model can read a whole unit and cite it. The units carry the words of the print edition,
+the 36-page A4 PDF published at `ai4bcm.org/guidance`, which is the source of truth. This
+repository adds what the print leaves out: the self-checks, checklists, prompts and the ten skills.
 
 > Hoekstra, W., Gerner, K., et al. (2026). AI4BCM: Guideline for using AI by BCM professionals. CC BY 4.0.
 
 ## The three ways in
 
-- **Guidance chatbot** — not built yet; when it ships, ask the guidance questions in the browser, and it reads nothing of yours.
+- **Guidance chatbot** — at [ai4bcm.org/chat](https://ai4bcm.org/chat): ask the guidance questions in the browser, and it reads nothing of yours.
 - **`/ask-ai4bcm` skill** — a router you invoke in your own assistant; it points you at the unit, the prompt and the maturity level for your situation, and reads your files inside your own tenant.
 - **BIA workflow** — the five-stage business impact analysis run against your own process data.
 
-## Installing the router
+## The skills
 
-In Claude Code, where the units install alongside the router:
+Ten skills, one job each, all **user-invoked**: each starts only when you type its name, and none starts on its own or
+starts another. Every one returns a draft in the chat for a named reviewer and writes nothing. Each skill's page,
+with when to reach for it, is under [docs/skills/](docs/skills/).
+
+### User-invoked
+
+- **[`/ask-ai4bcm`](skills/ask-ai4bcm/SKILL.md)** (any stage): Names the section, prompt, level, gate and data rule for your task, then stops.
+- **[`/challenge-my-plan`](skills/challenge-my-plan/SKILL.md)** (any stage): Asks the hard questions about your plan or draft, round by round; your answer first, then its recommendation.
+- **[`/learn-bcm`](skills/learn-bcm/SKILL.md)** (any stage): Teaches a BCM beginner one part of the practice per session, from the guidance and its open sources, with a short self-test.
+- **[`/check-against-standards`](skills/check-against-standards/SKILL.md)** (Govern): Reviews a policy against the frameworks you select, or your BCMS records against your own evidence checklist, and lists the gaps as questions for their owner.
+- **[`/role-card`](skills/role-card/SKILL.md)** (Embed): Rewrites one approved document for one audience, a role card from a plan or a message for staff.
+- **[`/prepare-bia`](skills/prepare-bia/SKILL.md)** (Analysis): Asks who the interview is with and what you need back, then drafts the interview guide from your material.
+- **[`/red-team-assumptions`](skills/red-team-assumptions/SKILL.md)** (Design): Lists what the strategy silently relies on, and the check that would settle each.
+- **[`/check-against-bia`](skills/check-against-bia/SKILL.md)** (Implement): Given a plan or a change, lists where it disagrees with the BIA or what it reopens, with proposed owners.
+- **[`/debrief-to-action`](skills/debrief-to-action/SKILL.md)** (Validate): Turns exercise notes into proposed findings tied to the missed objective, each with a proposed owner.
+- **[`/check-my-ai-tool`](skills/check-my-ai-tool/SKILL.md)** (Keep it running): Drafts the record for one skill, workflow or saved prompt from what you attach; the fields only you can fill stay blank.
+
+## Installing the skills
+
+Every route installs the packages under `skills/`: each skill with `preflight.md` (its shared
+controls), the units and the literature it ships.
+
+In Claude Code, as a plugin:
 
 ```
 /plugin marketplace add AI4BCM/guidance
 /plugin install ai4bcm-guidance@ai4bcm
 ```
 
-In Codex, GitHub Copilot and anything else the `skills` CLI knows:
+In Codex, GitHub Copilot and anything else the `skills` CLI knows (keep `/skills` at the end: without
+it the CLI takes the source folders at the root, which lack the preflight and the units):
 
 ```
-npx skills@latest add AI4BCM/guidance
+npx skills@latest add AI4BCM/guidance/skills
 ```
 
-That second route copies the skill folder alone, so the units stay here. One page per client, with
-the folder paths each one scans and what each does about a skill it was not asked for, is in
-[install/](install/README.md).
+In ChatGPT (Business, Enterprise, Healthcare and Edu workspaces), upload a skill's zip or import the
+repository as a plugin marketplace. One page per client, with how each is tested and what each does
+about a skill it was not asked for, is in [install/](install/README.md).
 
 ## Layout
 
 - `units/` — the guidance itself, one file per topic.
 - `ask-ai4bcm/` — the router, `SKILL.md`. See [ask-ai4bcm/README.md](ask-ai4bcm/README.md).
-- `install/` — installing the router in Claude Code, Codex, GitHub Copilot or ChatGPT.
+- `<skill>/` — the source of each other skill, beside `preflight.md`, which every skill runs first.
+- `skills/` — the packages every install route reads: each skill with `preflight.md`, the units and the
+  literature it ships; generated by `tools/build_chatgpt_package.py`, never edited by hand.
+- `docs/skills/` — one page per skill: what it does, when to reach for it, and how to tell it is working.
+- `install/` — installing the skills in Claude Code, Codex, GitHub Copilot or ChatGPT.
   See [install/README.md](install/README.md).
-- `print/` — the print edition as PDF: the full guidance (A4) and the Quick Start handout (A5),
-  built from these units.
+- `literature/` — the open source texts the skills may read, each with its source, date and reuse
+  terms. See [literature/README.md](literature/README.md).
+- `print/` — the print edition as PDF: the full guidance (A4, 36 pages). The units carry its
+  words.
 - `releases/` — one manifest per release, resolving its tag to a commit and to a hash per
   citable file.
+- `tools/` — the knowledge-base build, the search server and the checks.
+  See [tools/README.md](tools/README.md). `deploy/` holds its service and web-server files.
+- `docs/adr/` — the design decisions behind the layout.
+- [CITATION-CONTRACT.md](CITATION-CONTRACT.md) — how a citation points at a unit, and what keeps it
+  stable across releases.
 
 ## Sending changes
 
@@ -51,10 +86,10 @@ of every unit intact. The terms, the review cycle and who owns the living prompt
 
 ## Releases
 
-Releases are tagged by calendar month, `YYYY.MM`. The first is `2026.09`; the next is
-`2026.11`. A citation naming a tag names the text as it stood at that tag, and
+Releases are tagged by calendar month, `YYYY.MM`, with a point release as `YYYY.MM.N`. The current
+release is `2026.11.1`, the final print edition. A citation naming a tag names the text as it stood at that tag, and
 [`releases/<tag>.json`](releases/) resolves the tag to a commit and a hash per citable file.
-`2026.09`, `2026.09.1` and `2026.11` are tagged. What each release contains and how to cite a unit at one:
+`2026.09`, `2026.09.1`, `2026.11` and `2026.11.1` are tagged. What each release contains and how to cite a unit at one:
 [CHANGELOG.md](CHANGELOG.md).
 
 ## Licence

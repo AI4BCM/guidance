@@ -1,24 +1,35 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "ai4bcm-guidance",
-  "version": "2026.9.0",
-  "description": "The AI4BCM guidance and its router. /ask-ai4bcm names the unit to read, the prompt to run and the maturity level the work needs, for AI use in business continuity management.",
-  "author": { "name": "AI4BCM", "url": "https://ai4bcm.org" },
+  "version": "2026.11.1",
+  "description": "The AI4BCM guidance and its ten skills, for AI use in business continuity management. /ask-ai4bcm names the skill, prompt and maturity level for your task; nine more each do one job, from preparing a BIA interview to checking a plan against the BIA. Every skill starts only when you type its name and writes nothing.",
+  "author": {
+    "name": "AI4BCM",
+    "url": "https://ai4bcm.org"
+  },
   "homepage": "https://ai4bcm.org/guidance",
   "repository": "https://github.com/AI4BCM/guidance",
   "license": "CC-BY-4.0",
-  "keywords": ["business-continuity", "bcm", "bia", "ai-governance", "iso-22301"],
+  "keywords": [
+    "business-continuity",
+    "bcm",
+    "bia",
+    "ai-governance",
+    "iso-22301"
+  ],
   "extensions": {
     "com.openai": {
       "interface": {
         "displayName": "AI4BCM guidance",
-        "shortDescription": "Route a BCM situation to a unit, a prompt and a level",
-        "longDescription": "The AI4BCM guidance units, and the /ask-ai4bcm router that reads a situation and names the unit to read, the prompt to run, the maturity level the work needs and the data rule that runs first. It routes and hands over; it never runs a prompt itself.",
+        "shortDescription": "Ten BCM skills and the router that names the right one",
+        "longDescription": "The AI4BCM guidance units and ten skills for business continuity work: /ask-ai4bcm names the skill, prompt, maturity level and gate for a task, and nine more each do one job, such as drafting a BIA interview guide or listing where a plan departs from the BIA. Each starts only when you type its name, returns a draft for a named reviewer, and writes nothing.",
         "developerName": "AI4BCM",
         "category": "Productivity",
         "websiteURL": "https://ai4bcm.org/guidance"
       }
     },
-    "org.ai4bcm": { "releaseTag": "2026.09" }
+    "org.ai4bcm": {
+      "releaseTag": "2026.11.1"
+    }
   }
 }

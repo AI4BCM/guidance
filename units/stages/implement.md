@@ -1,28 +1,58 @@
-<!-- meta: unit=stages/implement version=2026.11 -->
-# Implementing Continuity Arrangements
+<!-- meta: unit=stages/implement version=2026.11.1 -->
+# Implementing continuity arrangements
 
-## Situation
+Stage 5 of six.
 
-The implementation stage is where the number of documents tends to grow faster than anyone can keep up with. These documents include plans, action cards, contact lists and escalation routes. A common issue is having eleven plans that do not align with each other or the organisation chart.
+## What this stage covers
 
-AI excels at finding and comparing documents. This stage is also the closest to a real incident. During an incident, AI can be used to find, summarise and draft documents. However, it does not invoke a plan, declare anything or send messages outside the organisation.
+This stage covers the implementation and operation of continuity arrangements, including plans, response structures, communications arrangements, supporting information, and the practical preparation needed for effective action during disruption.
 
-## Typical AI uses
+One system change affects five plans, each of which requires the owner's approval and a new version.
 
-- drafting or refreshing a plan against the controlled template
-- checking a suite of plans for contradictory roles, thresholds and escalation routes
-- generating role-based action cards from the approved plan
-- identifying which documents a structural, system or site change affects
-- drafting holding statements and staff messages before an incident, for approval
-- retrieving plan content and summarising response meeting notes during an incident
+ILLUSTRATIVE. AI FINDS THE PLANS A CHANGE AFFECTS
 
-The type of tool and the environment for each use are in the selection guide in `tools.md`.
+## Where does AI help, and where are its limits?
+
+Much of this stage is writing, updating and comparing plans, and AI does that well. It drafts plans, checks plans against each other, writes action cards per role, drafts messages for review and flags plans to update when the organisation changes. AI also supports some bounded tasks during an incident, such as retrieving relevant plans, summarising incoming information, extracting actions, or preparing draft messages.
+
+**Used today.** Cited public example, source in References, p. 31.
+
+The UK Government Communication Service used its own generative AI tool to draft and evaluate crisis communication plans for 17 government departments (2024).
+
+## What AI can do, by activity
+
+Gather the following items: plan templates, recovery requirements, role information, escalation arrangements, communications guidance and any other approved source content (*Data rules*, p. 7).
+
+## Plans and procedures
+
+The team responsible for implementing the plan confirms that the activation criteria, roles, dependencies, decisions and actions are realistic and practical.
+
+- **Template-grounded plan drafting.** Give the AI the approved plan structure and ask for concise, directive wording that identifies any missing information, rather than making assumptions to fill the gaps. (L2)
+- **Role-based action card generation.** Ask the AI to extract the actions relevant to a named role, timeframe or scenario from the controlled plan. Then, ask the role owner to review them. (L2)
+- **Cross-plan consistency review.** Use AI-based retrieval to compare strategic, tactical, departmental and technical plans for contradictory roles, activation thresholds, communication routes and escalation logic. (L3)
+
+## Warning and communication
+
+- **Draft communications support.** Use AI to prepare holding statements and staff messages for likely disruption scenarios before any incident occurs. Communications and management must approve these before they are used. (L2)
+
+## Incident response
+
+If AI is used during an incident, limit it to retrieval, summarisation, action extraction, or draft message preparation within clear boundaries and approval gates.
+
+- Summarising notes or actions from response meetings (L2)
+- Retrieving relevant plan content during an incident, in a controlled environment (L4)
+
+## Keeping plans up to date
+
+- **Change-triggered maintenance workflows.** Use AI to identify which plans may need reviewing when key data changes, by connecting workflow tools with systems for organisational structure, role ownership, site details or technical dependencies. (L3)
+
+L1 Ad hoc · L2 Repeatable · L3 Defined · L4 Measured · L5 Optimising
 
 ## Minimum controls
 
 The one control that matters: **no live plan can be changed without the owner's approval and the creation of a new version.**
 
-- The team expected to use the plan confirms that activation criteria, roles and actions are realistic. AI cannot test ease of use under pressure.
+- AI cannot test ease of use under pressure.
 - Material decisions during an incident stay under human authority, and external communications are never sent unsupervised.
 - Every AI-supported step requires a fallback method. If the response only works while the tool is operational, the arrangement is not resilient.
 

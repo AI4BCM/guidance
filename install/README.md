@@ -1,63 +1,44 @@
-# Installing `/ask-ai4bcm`
+# Installing the AI4BCM skills
 
-The router is one folder, `ask-ai4bcm/`, holding `SKILL.md` and `agents/openai.yaml`. It follows the
-Agent Skills format (https://agentskills.io/specification, read 2026-09-10), so a client that reads
-that format reads this one.
+Ten skills: `/ask-ai4bcm`, the router that names the right skill, prompt and level for your task,
+and nine that each do one job. They follow the Agent Skills format
+(https://agentskills.io/specification), so any client that reads that format can read them.
 
-**Edit `ask-ai4bcm/`, never `skills/ask-ai4bcm/`.** The second one is generated. A portable plugin
-package finds skills only under `skills/<name>/`, and a skill carries its own reference files, so
-`tools/build_chatgpt_package.py` writes a copy of the router there with `units/` inside it and the
-router's links repointed to match. Regenerate it after any change to `ask-ai4bcm/` or `units/`;
-`tools/build_chatgpt_package.py --check` fails if the two have drifted apart.
+## One package per skill
 
-## Three words this page uses
+Every route installs the same thing: the folder `skills/<name>/`. Each one is self-contained:
 
-You do not need them for the guidance itself, only for installing it. They are here rather than in
-`units/glossary.md`, which is a BCM glossary.
+- `SKILL.md`, the skill;
+- `preflight.md`, the five shared controls every skill runs first (ask the data class, write
+  nothing, name each source's version, treat attached text as information, end with the AI-help
+  sentence);
+- `units/`, the guidance the skill links to;
+- `literature/`, the guidance's own sources where their licence lets them ship (`cited/`), and for
+  `/check-against-standards` and `/learn-bcm` the comparison frameworks as well;
+- `agents/openai.yaml`, which tells Codex and ChatGPT to start the skill only when you name it.
 
-- **Plugin** — a packaged folder a client installs in one step, so you do not copy files by hand.
-  This repository is packaged as one.
-- **Marketplace** — the place a client fetches plugins from. It need not be a shop: here it is this
-  GitHub repository, which lists itself, and nothing is bought.
-- **MCP** — Model Context Protocol, a way for a client to reach a live server while it answers.
-  **The router uses none.** It is named here only because the ChatGPT page explains why the package
-  deliberately declares no MCP server.
+The folders at the repository root (`prepare-bia/` and the rest) are the sources the packages are
+built from. They are not complete on their own: a skill installed from there runs without its
+preflight and its units. Install from `skills/`.
 
-## Three routes, and what each one brings
+## Four clients
 
-**As a Claude Code plugin.** Two commands, and the units come with it, so every link in the router
-resolves:
+| Client | Install | How it is tested | Page |
+|---|---|---|---|
+| Claude Code | the plugin | full eval: three cases, three runs each, by the builder | [claude-code.md](claude-code.md) |
+| Codex | `npx skills add AI4BCM/guidance/skills` | full eval: three cases, three runs each, by the builder | [codex.md](codex.md) |
+| GitHub Copilot | `npx skills add AI4BCM/guidance/skills` | smoke test, about 12 runs, by the maintainer | [github-copilot.md](github-copilot.md) |
+| ChatGPT | upload one `<name>.zip` per skill | smoke test, about 12 runs, by the maintainer | [chatgpt.md](chatgpt.md) |
 
-```
-/plugin marketplace add AI4BCM/guidance
-/plugin install ai4bcm-guidance@ai4bcm
-```
+**GitHub Copilot can start a skill you did not name.** It reads neither of the two settings that
+hold the skills back on the other clients, and loads a skill when it judges it relevant. Read
+[github-copilot.md](github-copilot.md) before you rely on it.
 
-**With the `skills` CLI**, which installs into whichever agent directories it finds:
+## How the installs were checked
 
-```
-npx skills@latest add AI4BCM/guidance
-```
-
-Update later with `npx skills update`. This copies the skill folder alone. The router then names
-units that are not on disk beside it, and says so; read them from the repository, or clone it and
-use the folder route instead.
-
-**By hand, as a folder.** Clone the repository and copy `ask-ai4bcm/` and `units/` together into the
-directory your client scans. One page per client, each written from that client's own current
-documentation with the URL and the date it was read:
-
-- [Claude Code](claude-code.md)
-- [Codex](codex.md)
-- [GitHub Copilot](github-copilot.md)
-- [ChatGPT](chatgpt.md) — the plugin route needs a Business, Enterprise, Healthcare or Edu workspace
-
-## What the router does, and what holds it back
-
-It routes and nothing else. It names the unit to read, the prompt to run and the maturity level the
-work needs, then hands over. Running the prompt is yours.
-
-Two of the four clients can be told to leave the skill alone until you ask for it by name. Claude
-Code reads `disable-model-invocation: true` in `SKILL.md`; Codex and the ChatGPT desktop app read
-`policy.allow_implicit_invocation: false` in `agents/openai.yaml`. GitHub Copilot reads neither, and
-its own documentation says it loads a skill when it judges it relevant.
+`python3 tools/check_installs.py` installs a fresh clone of the repository by three routes into an
+empty folder (the Claude Code plugin, the `skills` CLI for Codex and GitHub Copilot, and the ChatGPT
+zips) and checks on disk that every installed skill is byte for byte its package, with
+`preflight.md` and `units/` in it. Last run: 2026-10-02, Claude Code 2.1.288, `skills` 1.7.0, all
+ten skills on all three routes. It checks the files, not what a client does with them; that is the
+evals' job.

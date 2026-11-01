@@ -1,0 +1,57 @@
+# Words and phrases the cleaner gate refuses in a skill body, one per line, matched as whole words,
+# case-insensitive. Taken from the unconditional lists of the anti-ai-slop-writing skill
+# (sources: jalaalrd/anti-ai-slop-writing, copywriting-refiner, petergyang/no-ai-slop, all MIT),
+# 2026-10-02. Its vague qualifiers and conditional lists are left out: they need judgement, not a grep.
+delve
+tapestry
+mosaic
+realm
+beacon
+synergy
+synergies
+paradigm
+game changer
+vibrant
+pivotal
+crucial
+vital
+paramount
+multifaceted
+meticulous
+intricate
+transformative
+revolutionary
+cutting-edge
+best-in-class
+world-class
+holistic
+robust
+seamless
+seamlessly
+groundbreaking
+game-changing
+next-level
+leverage
+utilize
+facilitate
+empower
+elevate
+embark
+supercharge
+harness
+underscore
+foster
+propel
+spearhead
+catalyze
+let's dive in
+it's worth noting
+it's important to note
+needless to say
+moreover
+furthermore
+additionally
+in conclusion
+to summarize
+it goes without saying
+i hope this helps

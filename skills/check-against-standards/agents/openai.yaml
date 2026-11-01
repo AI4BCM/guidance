@@ -1,0 +1,5 @@
+interface:
+  display_name: "Check Against Standards"
+  short_description: "List the gaps in a policy or BCMS records, as questions"
+policy:
+  allow_implicit_invocation: false

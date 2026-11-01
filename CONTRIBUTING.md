@@ -47,5 +47,5 @@ them is a discussion first: open an issue.
 Issues and pull requests are read as they arrive. Accepted changes are folded into the next calendar
 release, tagged `YYYY.MM`; a citation that names a tag names the text as it stood at that tag, and
 `releases/<tag>.json` resolves the tag to a commit and to a hash per citable file. What each release
-contains, and the citation form: `CHANGELOG.md`. The current cycle runs to the `2026.11` release,
-with contributor comments closing 27 October 2026.
+contains, and the citation form: `CHANGELOG.md`. The current cycle ran to the `2026.11.1` release,
+the final print edition of November 2026; contributor comments closed on 27 October 2026.

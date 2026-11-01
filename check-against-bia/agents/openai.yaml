@@ -1,0 +1,5 @@
+interface:
+  display_name: "Check Against BIA"
+  short_description: "Find where a plan or change departs from the BIA"
+policy:
+  allow_implicit_invocation: false

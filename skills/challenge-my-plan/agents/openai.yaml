@@ -1,0 +1,5 @@
+interface:
+  display_name: "Challenge My Plan"
+  short_description: "Asks hard questions about your plan, round by round"
+policy:
+  allow_implicit_invocation: false

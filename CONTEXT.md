@@ -55,23 +55,18 @@ _Avoid_: version, build, bump
 
 ## The four questions
 
-**Sensitivity class**:
-What `data-rules.md` publishes: either the material is **high-sensitivity BCM material** — one of the
-nine kinds at `data-rules.md:14-22`, approved corporate or private environment only — or it
-**discloses nothing about the organisation** (`data-rules.md:8`). Two states, not a scale.
-Credentials sit outside both states: passwords, keys and access tokens go into no tool at all
-(`data-rules.md:26`).
-_Avoid_: sensitivity level, classification, risk class, data class
-
-**Sensitivity hint**:
-The `low | low to medium | medium | medium to high | high` value in the Selection guide's Sensitivity
-column (`tools.md:34-51`). An editorial note on one table row. Quotable verbatim as part of that row;
-never presented as a sensitivity class, despite `tools.md:32`.
-_Avoid_: class, sensitivity class, the five classes
+**Classification level**:
+What `data-rules.md` publishes under *Classification levels* (release 2026.11.1, the print's word):
+either the material is of the **highest classification level**, one of the nine kinds listed
+there, for an approved corporate or private environment only, or it discloses nothing about the
+organisation and may go to a public tool for generic brainstorming (*Data classification decides
+the tool*). Two states, not a scale. Credentials sit outside both: passwords, keys and access
+tokens go into no tool at all.
+_Avoid_: sensitivity class (the term until 2026.11), sensitivity level, risk class, data class
 
 **Where the tool runs**:
 One of the five rows of the table under "Where a tool can run" at `tools.md:22-28`, from free public
-service to private self-hosted. A closed list, and the thing a sensitivity class points at. The
+service to private self-hosted. A closed list, and the thing a classification level points at. The
 reader-facing name since 2026-09-29 (ai4bcm-final-edition, owner-approved word list row 5); it was
 "Tier" or "deployment tier" before. In running text: "where the tool runs", or "where it may run".
 _Avoid_: tier, deployment tier, environment, plan, licence, deployment level

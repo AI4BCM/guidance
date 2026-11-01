@@ -1,30 +1,61 @@
-<!-- meta: unit=stages/embed version=2026.11 -->
-# Embedding BCM in the Organisation
+<!-- meta: unit=stages/embed version=2026.11.1 -->
+# Embedding BCM in the organisation
 
-## Situation
+Stage 2 of six.
 
-Embedding means repeatedly explaining to people who are unfamiliar with your vocabulary. AI adapts one approved message for executives, line managers, new starters and a site that works in another language. AI can produce the twentieth version as easily as the first.
+## What this stage covers
 
-Success at this stage means that people understand and act. Repeated AI-generated messages that read as generic reduce engagement.
+This stage addresses the embedding of business continuity in organisational culture and practice, including awareness, engagement, education, communication, and the development of behaviours that support resilience in day-to-day work.
 
-## Typical AI uses
+ILLUSTRATIVE. AWARENESS AND COMMUNICATION AS IN ISO 22301:2019, 7.3 AND 7.4
 
-- drafting awareness plans, campaign themes and manager talking points
-- adapting one approved message by audience, function or site
-- simplifying policy and plan language, and translating it for review
-- creating FAQs, onboarding text, quiz items and microlearning content
-- clustering anonymised survey or workshop feedback into themes
-- answering routine staff questions through an assistant limited to approved staff-facing content
-- finding recent public incidents in the sector for awareness use, once a person has checked each fact against the original report
-- sending awareness reminders on a fixed calendar through a workflow, each one released by a named person
+## Where does AI help, and where are its limits?
 
-The type of tool and the environment for each use are in the selection guide in `tools.md`.
+Much of this stage is explaining, adapting messages for each audience and reading feedback, and AI does that well. It tailors messages by role, simplifies guidance, writes quiz questions, finds themes in staff feedback and answers routine staff questions.
+
+Culture still changes through people. AI makes messages more relevant and quicker to produce. The success of this stage should be judged by whether staff understand their role and participate, rather than by how much content is produced.
+
+**Used today.** Cited public example, source in References, p. 31.
+
+Fairfax County’s 911 call centre in Virginia collaborated with George Mason University to build an AI voicebot that plays practice scenarios to callers for new and experienced call-takers. The university reports this as a tested prototype for 2025, not reported as a result.
+
+## What AI can do, by activity
+
+Firstly, gather together the approved business continuity materials that staff can access. These may include policy extracts, awareness notes, role descriptions, onboarding content, exercise expectations and approved FAQs (*Data rules*, p. 7).
+
+## Understanding the culture
+
+Analyse surveys, workshop comments and free-text feedback in an approved, aggregated environment. The aim is to identify patterns, trends, areas of confusion and recurring concerns.
+
+- **Anonymised feedback analysis.** Use a corporate AI or analytics tool to group survey comments into themes such as 'confusion', 'ownership gaps', 'confidence', and 'positive examples'. (L2)
+
+## Awareness and communication
+
+Start from the behaviour you want: for example, more people taking part in BIA interviews, plan owners keeping their plans up to date, and staff familiarising themselves with their response roles. Adapt the wording for each audience, but keep the approved version.
+
+- **Simplification and translation.** Use AI to convert formal business continuity language into shorter, clearer wording or into other languages used within the organisation, with review before publication. (L1)
+- **Current case-study creation.** Search-enabled AI can help you to identify recent public incidents that are relevant to your sector. You must verify the facts before use. (L1)
+- Drafting an awareness campaign: creating messages, choosing formats and deciding on the timing for a specific audience and desired outcome. (L2)
+- **Audience-specific message drafting.** Ask the AI to explain a business continuity topic to executives, line managers, site managers and support staff in plain language and in a specified format. (L2)
+- **Scheduled awareness workflows.** A workflow can be set up to draft recurring awareness messages or manager reminders at regular intervals. Don't forget to approve each one before it is sent out. (L3)
+
+## Training and competence
+
+- Drafting FAQs, quiz questions, short learning texts, manager talking points, intranet pages and posters (L2)
+- **Internal chatbot support.** A virtual assistant can answer routine questions such as where to find a plan, what a person's business continuity role involves, and why an exercise is important. However, it must be based only on approved content. (L3)
+
+## Measuring the culture
+
+Use participation data, survey trends, manager feedback, and validation evidence to assess whether awareness and engagement are improving.
+
+- The themes in staff feedback and questions for the internal assistant show which awareness content should be changed, extended or stopped. (L4)
+
+L1 Ad hoc · L2 Repeatable · L3 Defined · L4 Measured · L5 Optimising
 
 ## Minimum controls
 
 The one control that matters: **the organisation stays the author.** Staff-facing material is reviewed for accuracy, tone and local credibility before publication, by someone who will be asked about it afterwards.
 
-- Employee comments, transcripts and survey text are handled in approved environments only, only as combined results, under privacy and retention rules.
 - AI is not used to monitor, score or label individuals.
 - An internal assistant is based on approved staff-facing content only, and respects existing access rights.
 

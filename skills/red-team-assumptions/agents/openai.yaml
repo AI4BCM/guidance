@@ -1,0 +1,5 @@
+interface:
+  display_name: "Red-Team Assumptions"
+  short_description: "Lists what your strategy relies on, with a check for each"
+policy:
+  allow_implicit_invocation: false

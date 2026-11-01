@@ -1,0 +1,5 @@
+interface:
+  display_name: "Check My AI Tool"
+  short_description: "Draft the record for a saved prompt, skill or workflow"
+policy:
+  allow_implicit_invocation: false

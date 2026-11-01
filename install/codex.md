@@ -1,11 +1,33 @@
 # Codex
 
-Source: https://learn.chatgpt.com/docs/build-skills, read 2026-09-10, reached by permanent redirect
-from https://developers.openai.com/codex/skills/.
+Sources: https://learn.chatgpt.com/docs/build-skills (reached from
+https://developers.openai.com/codex/skills/), read 2026-10-02; the `skills` CLI 1.7.0, run 2026-10-02.
 
-## Where the folder goes
+**Test tier: full eval.** Every skill is run on Codex in three cases (the job, never-alone, a
+planted instruction), three runs each, plus a run without the skill.
 
-Codex reads skills from repository, user, admin and system locations. The documented directories:
+## The short way
+
+Inside the project you work in:
+
+```
+npx skills@latest add AI4BCM/guidance/skills
+```
+
+The CLI asks which skills and which clients; `-a codex` names Codex up front. It puts each package
+you pick in `.agents/skills/<name>/`, where Codex looks, and records it in `skills-lock.json`;
+`npx skills update` is meant to refresh it (not yet measured against the published repository). Add
+`-g` to install for your user account instead of one project.
+
+**Keep `/skills` at the end of the source.** The `skills` CLI looks at the repository root before
+`skills/` and keeps the first skill of each name it finds, so `npx skills add AI4BCM/guidance`
+installs the source folders from the root: `SKILL.md` and `agents/openai.yaml`, with no
+`preflight.md`, no units and no literature (measured with 1.7.0 on 2026-10-02). With
+`AI4BCM/guidance/skills` it reads the packages, and every file arrives.
+
+## By hand, as folders
+
+Copy the package folder `skills/<name>/` into one of the folders Codex scans:
 
 ```
 $CWD/.agents/skills
@@ -15,37 +37,9 @@ $HOME/.agents/skills
 /etc/codex/skills
 ```
 
-For a router you want everywhere, `$HOME/.agents/skills/ask-ai4bcm/` is the one to use.
+## Using a skill
 
-## The short way
-
-```
-npx skills@latest add AI4BCM/guidance
-```
-
-The `skills` CLI finds `ask-ai4bcm` in the repository and copies it into the agent directories it
-detects, recording what it installed in `skills-lock.json`; `npx skills update` refreshes it. It
-copies the skill folder alone, so the units named in the router are not beside it. Either read them
-from the repository, or take the folder route below, which puts `units/` where the router expects.
-
-## Steps
-
-1. Clone or download this repository.
-2. Copy `ask-ai4bcm/` into `~/.agents/skills/`.
-3. Copy `units/` alongside it, or clone the whole repository and point `~/.agents/skills/ask-ai4bcm`
-   at the clone, so the relative links into `../units/` resolve.
-4. In the Codex CLI or IDE extension, type `$ask-ai4bcm`. `/skills` lists what Codex has found.
-
-Codex detects skill changes without a restart.
-
-## What `agents/openai.yaml` does here
-
-The file beside `SKILL.md` reads:
-
-```yaml
-policy:
-  allow_implicit_invocation: false
-```
-
-With that setting, only explicit invocation works. It is how Codex is told what
-`disable-model-invocation: true` tells Claude Code.
+Type `$prepare-bia` (or another skill's name) in the Codex CLI or IDE extension; `/skills` lists
+what Codex has found. Each package's `agents/openai.yaml` sets
+`policy.allow_implicit_invocation: false`: Codex will not start the skill on its own, and naming it
+still works.

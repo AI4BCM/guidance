@@ -19,7 +19,8 @@ import build_chunks as bc
 REPO = Path(__file__).resolve().parent.parent
 CONTRACT = REPO / "CITATION-CONTRACT.md"
 
-# The citations in run-bia.yaml at 26880b5, read out of that file on 2026-09-10. Copied rather
+# The citations in run-bia.yaml at 26880b5, read out of that file on 2026-09-10, with the two
+# typical-ai-uses ids moved to their contract-version-3 names (release 2026.11.1). Copied rather
 # than imported: the citing file is in another repository and is not on this box's test path.
 # If it grows a citation, this list and RESERVED_CHUNK_IDS both have to move — which is the
 # contract's "open an issue naming the citing file" step, done deliberately.
@@ -29,10 +30,10 @@ RUN_BIA_CITES = frozenset({
     "stages-analysis-level",
     "stages-analysis-method",
     "stages-analysis-minimum-controls",
-    "stages-analysis-typical-ai-uses",
+    "stages-analysis-where-does-ai-help-and-where-are-its-limits",
     "stages-design-method",
     "stages-design-minimum-controls",
-    "stages-design-typical-ai-uses",
+    "stages-design-where-does-ai-help-and-where-are-its-limits",
 })
 
 
