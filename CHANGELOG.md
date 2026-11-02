@@ -55,6 +55,19 @@ The reserved set, the id-minting rule and the guarantee are all unchanged, so th
 the contract rather than a version of the corpus. `CITATION-CONTRACT.md` carries the detail,
 including why a GitHub anchor is not a chunk id and must never be derived from one.
 
+## Credits on the cover — prepared, not yet minted (owner, 2026-11-02)
+
+The owner changed the editors and contributors in the Claude Design copy. The cover (p. 1) and the
+introduction unit now read "Editors: Willem A. Hoekstra · Konstantin Gerner" and "Contributors: Matthias Rosenberg ·
+Charlie Maclean-Bristol · Simon Contini · Totti Karpela · Sachin Kumar · Jason Hoss". Dropped from the credits:
+"FBCI" after Hoekstra's name and eight contributors (Austin Cruz, Ajaz Ahmad, Jason Buffington, Luis Andre Diaz,
+Mikaiiro Laitinen, Mohan Menon, Nathan Schoenkin, Tumi Mogashoa). Charlie Maclean Bristol is now Maclean-Bristol and
+Totti-Mikael Karpela is Totti Karpela. The citation line is unchanged. The only text difference from the 2026.11.1
+print is the credits block: pages 2–36 are word for word the same and render identically, 36 pages, 98 bookmarks. The
+PDF, `units/introduction.md` (and its copy in each of the ten skills) and the .md download change, so their sha256
+values change. `NOTICE` and the 2026.11.1 entry below keep "based on draft v0A by Willem A. Hoekstra FBCI" as the
+provenance of the first draft.
+
 ## 2026.11.1 — Release 2026.11.1, the final print edition — minted 2026-11-01, tag at `e4ed690`
 
 The tag was first set on `f60db07` and moved the same day to `99cd07d` (owner, 2026-11-01: "make sure the website

@@ -9,10 +9,9 @@ AI for BCM, not BCM for AI.
 
 When tasks become cheaper, people often do more of them, for as long as demand keeps growing (Bessen, 2018). The increased efficiency of steam engines led to greater coal consumption (Jevons, 1865). Similarly, when writing reports becomes cheaper, more BIAs, refreshers and exercises are requested. The role of the BCM will change and grow for as long as there is a significant amount of BCM work that AI cannot do.
 
-**Willem A. Hoekstra FBCI** and **Konstantin Gerner**, editors.
-Contributions from Austin Cruz, Ajaz Ahmad, Charlie Maclean Bristol, Jason Buffington, Jason Hoss,
-Luis Andre Diaz, Matthias Rosenberg, Mikaiiro Laitinen, Mohan Menon, Nathan Schoenkin,
-Sachin Kumar, Simon Contini, Tumi Mogashoa, Totti-Mikael Karpela.
+**Editors:** Willem A. Hoekstra · Konstantin Gerner
+
+**Contributors:** Matthias Rosenberg · Charlie Maclean-Bristol · Simon Contini · Totti Karpela · Sachin Kumar · Jason Hoss
 
 Hoekstra, W., Gerner, K., et al. (2026). *AI4BCM: Guideline for using AI by BCM professionals*.
 CC BY 4.0.
